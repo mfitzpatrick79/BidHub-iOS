@@ -7,7 +7,7 @@ import UIKit
 
 extension String {
     subscript (i: Int) -> String {
-        return String(Array(self)[i])
+        return String(Array(self.characters)[i])
     }
 }
 
@@ -50,10 +50,10 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
             tableView.rowHeight = UITableViewAutomaticDimension
         }
         self.tableView.alpha = 0.0
-        reloadData(silent: false, initialLoad: true)
+        reloadData(false, initialLoad: true)
 
         let user = PFUser.currentUser()
-        println("Logged in as: \(user.email)")
+        print("Logged in as: \(user.email)", terminator: "")
         
     }
     
@@ -98,7 +98,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
                 if !silent {
                     self.showError("Error getting Items")
                 }
-                println("Error getting items")
+                print("Error getting items", terminator: "")
                 
             }else{
                 self.items = items
@@ -134,9 +134,9 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
                 let attributes =  [NSFontAttributeName: font] as NSDictionary
                 let item = items[indexPath.row]
                 
-                let minSize = minHeightText.boundingRectWithSize(CGSize(width: (view.frame.size.width - 40), height: 1000), options: .UsesLineFragmentOrigin, attributes: attributes as [NSObject : AnyObject], context: nil).height
+                let minSize = minHeightText.boundingRectWithSize(CGSize(width: (view.frame.size.width - 40), height: 1000), options: .UsesLineFragmentOrigin, attributes: attributes as! [String : NSObject], context: nil).height
                 
-                let maxSize = item.itemDesctiption.boundingRectWithSize(CGSize(width: (view.frame.size.width - 40), height: 1000), options: .UsesLineFragmentOrigin, attributes: attributes as [NSObject : AnyObject], context: nil).height + 50
+                let maxSize = item.itemDesctiption.boundingRectWithSize(CGSize(width: (view.frame.size.width - 40), height: 1000), options: .UsesLineFragmentOrigin, attributes: attributes as! [String : NSObject], context: nil).height + 50
                 
                 return (max(minSize, maxSize) + CGFloat(padding))
 
@@ -158,35 +158,38 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         let item = items[indexPath.row]
         
         cell.itemImageView.image = nil
-        var url:NSURL = NSURL(string: item.imageUrl)!
+        let url:NSURL = NSURL(string: item.imageUrl)!
         cell.itemImageView.setImageWithURL(url)
         
 
-        let fullNameArr = item.donorName.componentsSeparatedByString(" ")
+        let fullNameArr = item.artist.componentsSeparatedByString(" ")
         cell.donorAvatar.image = nil;
         if fullNameArr.count > 1{
-            var firstName: String = fullNameArr[0]
-            var lastName: String = fullNameArr[1]
-            var inital: String = firstName[0]
-            var donorAvatarStringUrl = "https://api.hubapi.com/socialintel/v1/avatars?email=\(inital)\(lastName)@hubspot.com"
+            let firstName: String = fullNameArr[0]
+            let lastName: String = fullNameArr[1]
+            let inital: String = firstName[0]
+            let donorAvatarStringUrl = "http://fitz.guru/lab/mfa-auction/images/avatars/\(inital)\(lastName).jpg"
 
-            var donorAvatarUrl:NSURL = NSURL(string: donorAvatarStringUrl)!
+            let donorAvatarUrl:NSURL = NSURL(string: donorAvatarStringUrl)!
             
             cell.donorAvatar.setImageWithURLRequest(NSURLRequest(URL: donorAvatarUrl), placeholderImage: nil, success: { (urlRequest: NSURLRequest!, response: NSURLResponse!, image: UIImage!) -> Void in
                 cell.donorAvatar.image = image.resizedImageToSize(cell.donorAvatar.bounds.size)
                 
             }, failure: { (urlRequest: NSURLRequest!, response: NSURLResponse!, error: NSError!) -> Void in
-                println("error occured: \(error)")
+                print("error occured: \(error)", terminator: "")
             })
         }
         
-        cell.itemDonorLabel.text = item.donorName
-        cell.itemTitleLabel.text = item.name
+        //cell.itemDonorLabel.text = item.donorName
+        cell.itemTitleLabel.text = item.title
+        cell.itemArtistLabel.text = item.artist
+        cell.itemMediaLabel.text = item.media
+        cell.itemSizeLabel.text = item.size
         cell.itemDescriptionLabel.text = item.itemDesctiption
         
         if item.quantity > 1 {
-            var bidsString = ", ".join(item.currentPrice.map({bidPrice in "$\(bidPrice)"}))
-            if count(bidsString) == 0 {
+            var bidsString = item.currentPrice.map({bidPrice in "$\(bidPrice)"}).joinWithSeparator(", ")
+            if bidsString.characters.count == 0 {
                 bidsString = "(none yet)"
             }
             
@@ -203,11 +206,11 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         switch (item.winnerType) {
         case .Single:
             price = item.currentPrice.first
-            cell.availLabel.text = "1 Available"
+//            cell.availLabel.text = "1 Available"
         case .Multiple:
             price = item.currentPrice.first
             lowPrice = item.currentPrice.last
-            cell.availLabel.text = "\(item.quantity) Available"
+//            cell.availLabel.text = "\(item.quantity) Available"
         }
         
         let bidString = (item.numberOfBids == 1) ? "Bid":"Bids"
@@ -301,7 +304,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         
         DataManager().sharedInstance.bidOn(item, amount: amount) { (success, errorString) -> () in
             if success {
-                println("Wohooo")
+                print("Woohoo", terminator: "")
                 self.items = DataManager().sharedInstance.allItems
                 self.reloadData()
                 SVProgressHUD.dismiss()
@@ -323,7 +326,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
             let alertView = UIAlertController(title: "Error", message: errorString, preferredStyle: .Alert)
 
             let okAction = UIAlertAction(title: "Ok", style: .Default, handler: { (action) -> Void in
-                println("Ok Pressed")
+                print("Ok Pressed", terminator: "")
             })
             
             alertView.addAction(okAction)

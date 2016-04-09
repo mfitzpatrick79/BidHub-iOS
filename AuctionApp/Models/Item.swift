@@ -90,6 +90,59 @@ class Item: PFObject, PFSubclassing {
             self["donorname"] = newValue
         }
     }
+
+    var artist:String {
+        get {
+            if let artistName =  self["artist"] as? String{
+                return artistName
+            }else{
+                return ""
+            }
+        }
+        set {
+            self["artist"] = newValue
+        }
+    }
+    
+    var title:String {
+        get {
+            if let titleString =  self["title"] as? String{
+                return titleString
+            }else{
+                return ""
+            }
+        }
+        set {
+            self["title"] = newValue
+        }
+    }
+    
+    var media:String {
+        get {
+            if let mediaType =  self["media"] as? String{
+                return mediaType
+            }else{
+                return ""
+            }
+        }
+        set {
+            self["media"] = newValue
+        }
+    }
+    
+    var size:String {
+        get {
+            if let sizeString =  self["size"] as? String{
+                return sizeString
+            }else{
+                return ""
+            }
+        }
+        set {
+            self["size"] = newValue
+        }
+    }
+    
     var imageUrl:String {
         get {
             if let imageURLString = self["imageurl"] as? String {
@@ -163,7 +216,7 @@ class Item: PFObject, PFSubclassing {
     var minimumBid: Int {
         get {
             if !currentPrice.isEmpty {
-                return minElement(currentPrice)
+                return currentPrice.minElement()!
             }else{
                 return price
             }
@@ -173,7 +226,7 @@ class Item: PFObject, PFSubclassing {
     var isWinning: Bool {
         get {
             let user = PFUser.currentUser()
-            return contains(currentWinners, user.email)
+            return currentWinners.contains(user.email)
         }
     }
     
@@ -181,7 +234,7 @@ class Item: PFObject, PFSubclassing {
     var hasBid: Bool {
         get {
             let user = PFUser.currentUser()
-            return contains(allBidders, user.email)
+            return allBidders.contains(user.email)
         }
     }
     

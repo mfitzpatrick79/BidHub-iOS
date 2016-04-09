@@ -22,6 +22,9 @@ class ItemTableViewCell: UITableViewCell {
     @IBOutlet var moreInfoView: UIView!
     @IBOutlet var itemDescriptionLabel: UILabel!
     @IBOutlet var itemTitleLabel: UILabel!
+    @IBOutlet var itemArtistLabel: UILabel!
+    @IBOutlet var itemMediaLabel: UILabel!
+    @IBOutlet var itemSizeLabel: UILabel!
     @IBOutlet var itemImageView: UIImageView!
     @IBOutlet var currentBidLabel: UILabel!
     @IBOutlet var numberOfBidsLabel: UILabel!
@@ -73,7 +76,7 @@ class ItemTableViewCell: UITableViewCell {
             switch(itemUW.winnerType){
             case .Multiple:
                 let user = PFUser.currentUser()
-                if let index = find(itemUW.currentWinners, user.email){
+                if let index = itemUW.currentWinners.indexOf(user.email){
                     moreInfoLabel.text = "YOUR BID IS #\(index + 1)"
                 }else{
                     fallthrough
