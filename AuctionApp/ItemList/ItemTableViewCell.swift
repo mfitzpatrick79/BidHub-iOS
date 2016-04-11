@@ -6,9 +6,8 @@
 import UIKit
 
 protocol ItemTableViewCellDelegate {
-    
     func cellDidPressBid(item: Item)
-    
+    func cellImageTapped(item: Item)
 }
 
 class ItemTableViewCell: UITableViewCell {
@@ -40,14 +39,23 @@ class ItemTableViewCell: UITableViewCell {
     let defaultColor = UIColor(white: 0, alpha: 1)
     let winningColor = UIColor(red: 126.0/255.0, green: 211.0/255.0, blue: 33.0/255.0, alpha: 1)
     let outbidColor = UIColor(red: 243.0/255.0, green: 158.0/255.0, blue: 18.0/255.0, alpha: 1)
-    
+
     var delegate: ItemTableViewCellDelegate?
     var item: Item?
+
+    func viewDidLoad() {
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         itemImageView.contentMode = .ScaleAspectFill
         itemImageView.clipsToBounds = true
         alreadyLoaded = false
+
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ItemTableViewCell.didTapImage))
+        itemImageView.addGestureRecognizer(tapGestureRecognizer)
+        itemImageView.userInteractionEnabled = true
+        
         
         shadowView.backgroundColor = UIColor(patternImage: UIImage(named:"cellBackShadow")!)
         
@@ -66,23 +74,26 @@ class ItemTableViewCell: UITableViewCell {
             }
         }
     }
+
+    func didTapImage(){
+        delegate?.cellImageTapped(item!)
+    }
     
     func setWinning(){
         headerBackground.backgroundColor = winningBackgroundColor
         moreInfoView.hidden = false
         moreInfoView.backgroundColor = winningBackgroundColor
         if let itemUW = item {
-
             switch(itemUW.winnerType){
-            case .Multiple:
-                let user = PFUser.currentUser()
-                if let index = itemUW.currentWinners.indexOf(user.email){
-                    moreInfoLabel.text = "YOUR BID IS #\(index + 1)"
-                }else{
-                    fallthrough
-                }
-            case .Single:
-                moreInfoLabel.text = "YOUR BID IS WINNING. NICE!"
+                case .Multiple:
+                    let user = PFUser.currentUser()
+                    if let index = itemUW.currentWinners.indexOf(user.email){
+                        moreInfoLabel.text = "YOUR BID IS #\(index + 1)"
+                    }else{
+                        fallthrough
+                    }
+                case .Single:
+                    moreInfoLabel.text = "YOUR BID IS WINNING. NICE!"
             }
         }
     }
@@ -104,6 +115,5 @@ class ItemTableViewCell: UITableViewCell {
     @IBAction func bidNowPressed(sender: AnyObject) {
         callDelegateWithBid()
     }
-    
 
 }

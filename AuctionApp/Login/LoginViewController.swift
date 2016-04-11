@@ -5,6 +5,19 @@
 
 import UIKit
 
+private var kAssociationKeyNextField: UInt8 = 0
+
+extension UITextField {
+    @IBOutlet var nextField: UITextField? {
+        get {
+            return objc_getAssociatedObject(self, &kAssociationKeyNextField) as? UITextField
+        }
+        set(newField) {
+            objc_setAssociatedObject(self, &kAssociationKeyNextField, newField, .OBJC_ASSOCIATION_RETAIN)
+        }
+    }
+}
+
 class LoginViewController: UIViewController {
 
     @IBOutlet var nameTextField: UITextField!
@@ -17,11 +30,15 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func textFieldShouldReturn(textField: UITextField) {
+        textField.nextField?.becomeFirstResponder()
+    }
+    
     @IBAction func loginPressed(sender: AnyObject) {
         
         if nameTextField.text != "" && emailTextField.text != "" {
             
-            var user = PFUser()
+            let user = PFUser()
             user["fullname"] = nameTextField.text!.lowercaseString
             user.username = emailTextField.text!.lowercaseString
             user.password = "test"
@@ -34,10 +51,9 @@ class LoginViewController: UIViewController {
                     self.performSegueWithIdentifier("loginToItemSegue", sender: nil)
                 } else {
                     let errorString = error.userInfo["error"] as! NSString
-                    print("Error Signing up: \(error)", terminator: "")
+                    print("Error Signing up: \(errorString)", terminator: "")
                     PFUser.logInWithUsernameInBackground(user.username, password: user.password, block: { (user, error) -> Void in
                         if error == nil {
-                            
                             self.registerForPush()
                             self.performSegueWithIdentifier("loginToItemSegue", sender: nil)
                         }else{

@@ -259,8 +259,6 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     
     //Cell Delegate
     func cellDidPressBid(item: Item) {
-        
-        
         let bidVC = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("BiddingViewController") as? BiddingViewController
         if let biddingVC = bidVC {
             biddingVC.delegate = self
@@ -270,7 +268,29 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
             biddingVC.didMoveToParentViewController(self)
         }
     }
+
+    func cellImageTapped(item: Item) {
+        let overlay : UIView = UIView(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height))
         
+        let url:NSURL = NSURL(string: item.imageUrl)!
+        let imageView : UIImageView = UIImageView() // This includes your image in table view cell
+
+        imageView.setImageWithURL(url)
+        imageView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) // set up according to your requirements
+        
+        let doneBtn : UIButton = UIButton(frame: CGRectMake((self.view.frame.size.width - 53), 48, 48, 48)) // set up according to your requirements
+        doneBtn.addTarget(self, action: #selector(ItemListViewController.pressedClose(_:)), forControlEvents: .TouchUpInside)
+        
+        overlay.addSubview(imageView)
+        overlay.addSubview(doneBtn)
+        
+        self.view.addSubview(overlay)
+    }
+
+    func pressedClose(sender: UIButton!) {
+        sender.superview?.removeFromSuperview()
+    }
+    
     @IBAction func logoutPressed(sender: AnyObject) {
         PFUser.logOut()
         performSegueWithIdentifier("logoutSegue", sender: nil)
@@ -281,14 +301,14 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         searchBar.text = ""
         let segment = sender as! UISegmentedControl
         switch(segment.selectedSegmentIndex) {
-        case 0:
-          filterTable(.All)
-        case 1:
-            filterTable(.NoBids)
-        case 2:
-            filterTable(.MyItems)
-        default:
-            filterTable(.All)
+            case 0:
+              filterTable(.All)
+            case 1:
+                filterTable(.NoBids)
+            case 2:
+                filterTable(.MyItems)
+            default:
+                filterTable(.All)
         }
     }
     

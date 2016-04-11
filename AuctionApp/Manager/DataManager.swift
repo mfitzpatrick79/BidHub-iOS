@@ -102,40 +102,39 @@ enum FilterType: CustomStringConvertible {
     
     var description: String {
         switch self{
-        case .All:
-            return "All"
-        case .NoBids:
-            return "NoBids"
-        case .MyItems:
-            return "My Items"
-        case .Search:
-            return "Searching"
+            case .All:
+                return "All"
+            case .NoBids:
+                return "NoBids"
+            case .MyItems:
+                return "My Items"
+            case .Search:
+                return "Searching"
         }
     }
     
     var predicate: NSPredicate {
         switch self {
-        case .All:
-            return NSPredicate(value: true)
-        case .NoBids:
-            return NSPredicate(block: { (object, bindings) -> Bool in
-                if let item = object as? Item {
-                    return item.numberOfBids == 0
-                }
-                return false
-            })
-        case .MyItems:
-            return NSPredicate(block: { (object, bindings) -> Bool in
-                if let item = object as? Item {
-                    return item.hasBid
-                }
-                return false
-            })
-
-        case .Search(let searchTerm):
-            return NSPredicate(format: "(artist CONTAINS[c] %@) OR (title CONTAINS[c] %@) OR (itemDesctiption CONTAINS[c] %@) OR (media CONTAINS[c] %@)", searchTerm)
-        default:
-            return NSPredicate(value: true)
+            case .All:
+                return NSPredicate(value: true)
+            case .NoBids:
+                return NSPredicate(block: { (object, bindings) -> Bool in
+                    if let item = object as? Item {
+                        return item.numberOfBids == 0
+                    }
+                    return false
+                })
+            case .MyItems:
+                return NSPredicate(block: { (object, bindings) -> Bool in
+                    if let item = object as? Item {
+                        return item.hasBid
+                    }
+                    return false
+                })
+            case .Search(let searchTerm):
+                return NSPredicate(format: "(artist CONTAINS[c] %@) || (title CONTAINS[c] %@) || (itemDesctiption CONTAINS[c] %@) || (media CONTAINS[c] %@)", searchTerm, searchTerm, searchTerm, searchTerm)
+            default:
+                return NSPredicate(value: true)
         }
     }
 }

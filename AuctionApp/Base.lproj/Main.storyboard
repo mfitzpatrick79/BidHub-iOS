@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vrS-ky-ioH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F18b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vrS-ky-ioH">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -21,7 +21,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBlurredBackground" translatesAutoresizingMaskIntoConstraints="NO" id="rzw-Pv-l6j">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6Q-Wi-ymT">
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6Q-Wi-ymT">
                                 <rect key="frame" x="0.0" y="100" width="600" height="120"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gUk-KS-LZe">
@@ -29,7 +29,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="yCi-cy-wf0"/>
                                         </constraints>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="no" returnKeyType="next"/>
                                         <variation key="default">
@@ -37,15 +36,24 @@
                                                 <exclude reference="yCi-cy-wf0"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="textFieldShouldReturn:" destination="L1S-fT-33x" eventType="primaryActionTriggered" id="VWM-ln-fnb"/>
+                                            <outlet property="delegate" destination="L1S-fT-33x" id="sAt-Aa-DBe"/>
+                                            <outlet property="nextField" destination="dgC-2i-XYA" id="lbP-aX-AbN"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dgC-2i-XYA">
                                         <rect key="frame" x="16" y="70" width="568" height="30"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="go"/>
+                                        <connections>
+                                            <action selector="loginPressed:" destination="L1S-fT-33x" eventType="editingDidEnd" id="GzP-4N-IQ2"/>
+                                            <outlet property="delegate" destination="L1S-fT-33x" id="Wnh-rl-Ty8"/>
+                                            <outlet property="nextField" destination="gUk-KS-LZe" id="EGK-ds-QpV"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.14999999999999999" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="gUk-KS-LZe" firstAttribute="height" secondItem="dgC-2i-XYA" secondAttribute="height" id="4e7-VF-Y3c"/>
                                     <constraint firstAttribute="height" constant="120" id="AwQ-3R-zZJ"/>
@@ -63,7 +71,7 @@
                             </view>
                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pz4-RU-3Ta">
                                 <rect key="frame" x="0.0" y="220" width="600" height="50"/>
-                                <color key="backgroundColor" red="0.046166079006451935" green="0.0" blue="0.44957765501488556" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.89411764705882346" green="0.27843137254901962" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="s2z-Cg-lxA"/>
                                 </constraints>
@@ -108,6 +116,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ueS-5j-mNt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.95294117647058818" green="0.15686274509803921" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="DqX-rp-Oxg" kind="relationship" relationship="rootViewController" id="i1f-IL-bol"/>
@@ -137,7 +146,7 @@
                                 <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search" id="Kz2-GN-CoT">
                                     <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     <connections>
                                         <outlet property="delegate" destination="DqX-rp-Oxg" id="9Q1-1K-5Ig"/>
                                     </connections>
@@ -153,7 +162,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6t3-u9-uJq">
                                                     <rect key="frame" x="10" y="10" width="580" height="372"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HvP-HV-WdL">
+                                                        <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HvP-HV-WdL">
                                                             <rect key="frame" x="0.0" y="0.0" width="580" height="200"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="200" id="IbB-LO-XDY"/>
@@ -261,7 +270,7 @@
                                                                         <constraint firstAttribute="height" constant="40" id="rKX-wa-iQx"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="dmb-s5-XJW">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="dmb-s5-XJW">
                                                                     <rect key="frame" x="10" y="124" width="560" height="39"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
                                                                     <color key="textColor" red="0.12920839088397795" green="0.12920839088397795" blue="0.12920839088397795" alpha="1" colorSpace="calibratedRGB"/>
@@ -276,7 +285,7 @@
                                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Media" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XV9-QS-np1">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Media" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XV9-QS-np1">
                                                                     <rect key="frame" x="10" y="99" width="560" height="25"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="25" id="HmF-DA-EvZ"/>
@@ -444,7 +453,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="vdJ-NA-TiH">
                                                 <rect key="frame" x="0.0" y="5" width="160" height="73"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <state key="normal" title="+1$">
+                                                <state key="normal" title="+100$">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -453,7 +462,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="IFy-cv-3oR">
                                                 <rect key="frame" x="177" y="5" width="157" height="73"/>
-                                                <state key="normal" title="+5$">
+                                                <state key="normal" title="+500$">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -463,7 +472,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="0Vf-7Z-Ykb">
                                                 <rect key="frame" x="354" y="5" width="157.5" height="73"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
-                                                <state key="normal" title="+10$">
+                                                <state key="normal" title="+1000$">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>

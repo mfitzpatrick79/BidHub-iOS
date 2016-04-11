@@ -33,15 +33,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.rootViewController=loginVC
         }
         
-        UITextField.appearance().tintColor = UIColor.orangeColor()
+        UITextField.appearance().tintColor = UIColor(red: 221/255, green: 78/255, blue: 63/255, alpha: 1.0)
 
     
         window?.makeKeyAndVisible()
         
-        UINavigationBar.appearance().barTintColor = UIColor(red: 177/255, green: 23/255, blue: 50/255, alpha: 1.0)
+        UINavigationBar.appearance().barTintColor = UIColor(red: 221/255, green: 78/255, blue: 63/255, alpha: 1.0)
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         
-        UISearchBar.appearance().barTintColor = UIColor(red: 177/255, green: 23/255, blue: 50/255, alpha: 1.0)
+        UISearchBar.appearance().barTintColor = UIColor(red: 221/255, green: 78/255, blue: 63/255, alpha: 1.0)
         
         
         return true
@@ -53,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tokenChars = UnsafePointer<CChar>(deviceToken.bytes)
         var tokenString = ""
         
-        for var i = 0; i < deviceToken.length; i++ {
+        for i in 0 ..< deviceToken.length {
             tokenString += String(format: "%02.2hhx", arguments: [tokenChars[i]])
         }
         
@@ -65,8 +65,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         NSNotificationCenter.defaultCenter().postNotificationName("pushRecieved", object: userInfo)
-//        println("Push! \(userInfo)")
-        
     }
     
     func applicationDidBecomeActive(application: UIApplication) {
