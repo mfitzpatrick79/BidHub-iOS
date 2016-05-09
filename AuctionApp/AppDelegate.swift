@@ -33,15 +33,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.rootViewController=loginVC
         }
         
-        UITextField.appearance().tintColor = UIColor(red: 221/255, green: 78/255, blue: 63/255, alpha: 1.0)
+        UITextField.appearance().tintColor = UIColor(red: 100/255, green: 128/255, blue: 67/255, alpha: 1.0)
 
     
         window?.makeKeyAndVisible()
         
-        UINavigationBar.appearance().barTintColor = UIColor(red: 221/255, green: 78/255, blue: 63/255, alpha: 1.0)
+        UINavigationBar.appearance().barTintColor = UIColor(red: 100/255, green: 128/255, blue: 67/255, alpha: 1.0)
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         
-        UISearchBar.appearance().barTintColor = UIColor(red: 221/255, green: 78/255, blue: 63/255, alpha: 1.0)
+        UISearchBar.appearance().barTintColor = UIColor(red: 100/255, green: 128/255, blue: 67/255, alpha: 1.0)
         
         
         return true

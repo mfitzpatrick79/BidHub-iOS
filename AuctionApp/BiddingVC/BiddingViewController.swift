@@ -51,7 +51,6 @@ class BiddingViewController: UIViewController {
                 }else{
                     setupForSingle(itemUW.currentPrice.last!)
                 }
-//                setupForMultiple()
             case .Single:
                 if itemUW.currentWinners.isEmpty{
                     setupForSingle(itemUW.price)

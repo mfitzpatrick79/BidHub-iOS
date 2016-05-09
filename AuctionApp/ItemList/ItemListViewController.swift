@@ -26,7 +26,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        SVProgressHUD.setForegroundColor(UIColor(red: 157/225, green: 19/225, blue: 43/225, alpha: 1.0))
+        SVProgressHUD.setForegroundColor(UIColor(red: 100/225, green: 128/225, blue: 67/225, alpha: 1.0))
         SVProgressHUD.setRingThickness(2.0)
         
         
@@ -38,17 +38,16 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         let refreshView = UIView(frame: CGRect(x: 0, y: 10, width: 0, height: 0))
         tableView.insertSubview(refreshView, aboveSubview: colorView)
 
-        refreshControl.tintColor = UIColor(red: 157/225, green: 19/225, blue: 43/225, alpha: 1.0)
-        refreshControl.addTarget(self, action: "reloadItems", forControlEvents: .ValueChanged)
+        refreshControl.tintColor = UIColor(red: 100/225, green: 128/225, blue: 67/225, alpha: 1.0)
+        refreshControl.addTarget(self, action: #selector(ItemListViewController.reloadItems), forControlEvents: .ValueChanged)
         refreshView.addSubview(refreshControl)
         
         
         sizingCell = tableView.dequeueReusableCellWithIdentifier("ItemTableViewCell") as? ItemTableViewCell
 
-        if iOS8 {
-            tableView.estimatedRowHeight = 392
-            tableView.rowHeight = UITableViewAutomaticDimension
-        }
+        tableView.estimatedRowHeight = 392
+        tableView.rowHeight = UITableViewAutomaticDimension
+
         self.tableView.alpha = 0.0
         reloadData(false, initialLoad: true)
 
@@ -58,8 +57,8 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     override func viewDidAppear(animated: Bool) {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "pushRecieved:", name: "pushRecieved", object: nil)
-        timer = NSTimer.scheduledTimerWithTimeInterval(30.0, target: self, selector: "reloadItems", userInfo: nil, repeats: true)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ItemListViewController.pushRecieved(_:)), name: "pushRecieved", object: nil)
+        timer = NSTimer.scheduledTimerWithTimeInterval(30.0, target: self, selector: #selector(ItemListViewController.reloadItems), userInfo: nil, repeats: true)
         timer?.tolerance = 10.0
     }
     
@@ -122,29 +121,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if iOS8 {
-            return UITableViewAutomaticDimension
-        }else{
-
-            if let cell = sizingCell {
-                
-                let padding = 353
-                let minHeightText: NSString = "\n\n"
-                let font = UIFont(name: "Avenir Light", size: 15.0)!
-                let attributes =  [NSFontAttributeName: font] as NSDictionary
-                let item = items[indexPath.row]
-                
-                let minSize = minHeightText.boundingRectWithSize(CGSize(width: (view.frame.size.width - 40), height: 1000), options: .UsesLineFragmentOrigin, attributes: attributes as! [String : NSObject], context: nil).height
-                
-                let maxSize = item.itemDesctiption.boundingRectWithSize(CGSize(width: (view.frame.size.width - 40), height: 1000), options: .UsesLineFragmentOrigin, attributes: attributes as! [String : NSObject], context: nil).height + 50
-                
-                return (max(minSize, maxSize) + CGFloat(padding))
-
-            }else{
-                return 392
-            }
-            
-        }
+        return UITableViewAutomaticDimension
     }
     
     
@@ -206,11 +183,9 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         switch (item.winnerType) {
         case .Single:
             price = item.currentPrice.first
-//            cell.availLabel.text = "1 Available"
         case .Multiple:
             price = item.currentPrice.first
             lowPrice = item.currentPrice.last
-//            cell.availLabel.text = "\(item.quantity) Available"
         }
         
         let bidString = (item.numberOfBids == 1) ? "Bid":"Bids"
@@ -276,18 +251,26 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         let imageView : UIImageView = UIImageView() // This includes your image in table view cell
 
         imageView.setImageWithURL(url)
-        imageView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) // set up according to your requirements
+        imageView.frame = CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height) // set up according to your requirements
+        imageView.contentMode = .ScaleAspectFit
         
-        let doneBtn : UIButton = UIButton(frame: CGRectMake((self.view.frame.size.width - 53), 48, 48, 48)) // set up according to your requirements
+        
+        let doneBtn : UIButton = UIButton(frame: CGRectMake((self.view.frame.size.width - 53), 30, 48, 48)) // set up according to your requirements
+        doneBtn.setImage(UIImage(named: "close.png"), forState: UIControlState.Normal)
         doneBtn.addTarget(self, action: #selector(ItemListViewController.pressedClose(_:)), forControlEvents: .TouchUpInside)
         
+        overlay.backgroundColor = UIColor.whiteColor()
         overlay.addSubview(imageView)
         overlay.addSubview(doneBtn)
+
+        navigationController?.setNavigationBarHidden(navigationController?.navigationBarHidden == false, animated: true)
+        UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: .Fade)
         
         self.view.addSubview(overlay)
     }
 
     func pressedClose(sender: UIButton!) {
+        navigationController?.setNavigationBarHidden(navigationController?.navigationBarHidden == false, animated: true)
         sender.superview?.removeFromSuperview()
     }
     
@@ -339,7 +322,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     
     func showError(errorString: String) {
         
-        if let gotModernAlert: AnyClass = NSClassFromString("UIAlertController") {
+        if let _: AnyClass = NSClassFromString("UIAlertController") {
             
             
             //make and use a UIAlertController

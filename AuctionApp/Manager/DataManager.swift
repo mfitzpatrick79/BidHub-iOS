@@ -133,8 +133,6 @@ enum FilterType: CustomStringConvertible {
                 })
             case .Search(let searchTerm):
                 return NSPredicate(format: "(artist CONTAINS[c] %@) || (title CONTAINS[c] %@) || (itemDesctiption CONTAINS[c] %@) || (media CONTAINS[c] %@)", searchTerm, searchTerm, searchTerm, searchTerm)
-            default:
-                return NSPredicate(value: true)
         }
     }
 }

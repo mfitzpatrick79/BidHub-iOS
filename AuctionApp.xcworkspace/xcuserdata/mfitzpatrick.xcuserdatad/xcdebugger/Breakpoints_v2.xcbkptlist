@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AuctionApp/ItemList/ItemListViewController.swift"
-            timestampString = "471976877.831403"
+            timestampString = "484439002.739053"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "configureCellForIndexPath(_:indexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AuctionApp/ItemList/ItemListViewController.swift"
-            timestampString = "471977081.385704"
+            timestampString = "484439002.739053"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "219"
-            endingLineNumber = "219"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
             landmarkName = "configureCellForIndexPath(_:indexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AuctionApp/ItemList/ItemListViewController.swift"
-            timestampString = "482028529.843365"
+            timestampString = "484451019.762697"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "316"
-            endingLineNumber = "316"
+            startingLineNumber = "299"
+            endingLineNumber = "299"
             landmarkName = "filterTable(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AuctionApp/ItemList/ItemListViewController.swift"
-            timestampString = "482028529.843365"
+            timestampString = "484451019.762697"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "372"
-            endingLineNumber = "372"
+            startingLineNumber = "355"
+            endingLineNumber = "355"
             landmarkName = "searchBar(_:textDidChange:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -224,7 +224,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AuctionApp/ItemList/ItemTableViewCell.swift"
-            timestampString = "482028519.42112"
+            timestampString = "484448222.088249"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "78"
