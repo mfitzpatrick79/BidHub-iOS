@@ -132,32 +132,15 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func configureCellForIndexPath(cell: ItemTableViewCell, indexPath: NSIndexPath) -> ItemTableViewCell {
-        let item = items[indexPath.row]
+        let item = items[indexPath.row];
+
+//      cell.itemImageView.hnk_setImageFromURL(item.imageUrl)
         
         cell.itemImageView.image = nil
         let url:NSURL = NSURL(string: item.imageUrl)!
         cell.itemImageView.setImageWithURL(url)
-        
 
-        let fullNameArr = item.artist.componentsSeparatedByString(" ")
-        cell.donorAvatar.image = nil;
-        if fullNameArr.count > 1{
-            let firstName: String = fullNameArr[0]
-            let lastName: String = fullNameArr[1]
-            let inital: String = firstName[0]
-            let donorAvatarStringUrl = "http://fitz.guru/lab/mfa-auction/images/avatars/\(inital)\(lastName).jpg"
-
-            let donorAvatarUrl:NSURL = NSURL(string: donorAvatarStringUrl)!
-            
-            cell.donorAvatar.setImageWithURLRequest(NSURLRequest(URL: donorAvatarUrl), placeholderImage: nil, success: { (urlRequest: NSURLRequest!, response: NSURLResponse!, image: UIImage!) -> Void in
-                cell.donorAvatar.image = image.resizedImageToSize(cell.donorAvatar.bounds.size)
-                
-            }, failure: { (urlRequest: NSURLRequest!, response: NSURLResponse!, error: NSError!) -> Void in
-                print("error occured: \(error)", terminator: "")
-            })
-        }
-        
-        //cell.itemDonorLabel.text = item.donorName
+        cell.itemProgramNumberLabel.text = "\(item.programNumber)"
         cell.itemTitleLabel.text = item.title
         cell.itemArtistLabel.text = item.artist
         cell.itemMediaLabel.text = item.media

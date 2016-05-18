@@ -13,13 +13,13 @@ protocol ItemTableViewCellDelegate {
 class ItemTableViewCell: UITableViewCell {
 
     @IBOutlet var cardContainer: UIView!
-    @IBOutlet var donorAvatar: UIImageView!
     @IBOutlet var bidNowButton: UIButton!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var shadowView: UIView!
     @IBOutlet var moreInfoLabel: UILabel!
     @IBOutlet var moreInfoView: UIView!
     @IBOutlet var itemDescriptionLabel: UILabel!
+    @IBOutlet var itemProgramNumberLabel: UILabel!
     @IBOutlet var itemTitleLabel: UILabel!
     @IBOutlet var itemArtistLabel: UILabel!
     @IBOutlet var itemMediaLabel: UILabel!
@@ -55,13 +55,12 @@ class ItemTableViewCell: UITableViewCell {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ItemTableViewCell.didTapImage))
         itemImageView.addGestureRecognizer(tapGestureRecognizer)
         itemImageView.userInteractionEnabled = true
-        
+
+        itemProgramNumberLabel.layer.cornerRadius = itemProgramNumberLabel.frame.size.height/2
+        itemProgramNumberLabel.layer.masksToBounds = true
         
         shadowView.backgroundColor = UIColor(patternImage: UIImage(named:"cellBackShadow")!)
         
-        donorAvatar.layer.cornerRadius = donorAvatar.frame.size.height/2
-        donorAvatar.layer.masksToBounds = true
-
         cardContainer.layer.cornerRadius = 4
         cardContainer.clipsToBounds = true
 

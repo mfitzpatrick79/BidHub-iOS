@@ -24,8 +24,7 @@ class DataManager: NSObject {
     func getItems(completion: ([Item], NSError?) -> ()){
         let query = Item.query()
         query.limit = 1000
-        query.addAscendingOrder("closetime")
-        query.addAscendingOrder("name")
+        query.addAscendingOrder("programNumber")
         query.findObjectsInBackgroundWithBlock { (results, error) -> Void in
             if error != nil{
                 print("Error!! \(error)", terminator: "")
@@ -132,7 +131,7 @@ enum FilterType: CustomStringConvertible {
                     return false
                 })
             case .Search(let searchTerm):
-                return NSPredicate(format: "(artist CONTAINS[c] %@) || (title CONTAINS[c] %@) || (itemDesctiption CONTAINS[c] %@) || (media CONTAINS[c] %@)", searchTerm, searchTerm, searchTerm, searchTerm)
+                return NSPredicate(format: "(artist CONTAINS[c] %@) || (title CONTAINS[c] %@) || (itemDesctiption CONTAINS[c] %@) || (media CONTAINS[c] %@ || (programNumber CONTAINS[c] %@)", searchTerm, searchTerm, searchTerm, searchTerm, searchTerm)
         }
     }
 }
