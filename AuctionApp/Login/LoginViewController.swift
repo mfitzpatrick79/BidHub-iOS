@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import AFViewShaker
 
 private var kAssociationKeyNextField: UInt8 = 0
 

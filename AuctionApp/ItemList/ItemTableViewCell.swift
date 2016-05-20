@@ -24,6 +24,7 @@ class ItemTableViewCell: UITableViewCell {
     @IBOutlet var itemArtistLabel: UILabel!
     @IBOutlet var itemMediaLabel: UILabel!
     @IBOutlet var itemSizeLabel: UILabel!
+    @IBOutlet var itemFmvLabel: UILabel!
     @IBOutlet var itemImageView: UIImageView!
     @IBOutlet var currentBidLabel: UILabel!
     @IBOutlet var numberOfBidsLabel: UILabel!

@@ -2,49 +2,107 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AFViewShaker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CSNotificationView-CSNotificationView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CSNotificationView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>HanekeSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>IHKeyboardAvoiding.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>NSDate+RelativeTime.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-AuctionApp.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UIImage-Resize.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0CFAD405B0BEF9C77FB41756</key>
+		<key>0419D4084456EDBC1192A6DE08D7A061</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>248353293190DE5E13D2FFC0</key>
+		<key>1C3436CEA5C3D39764C5F54374794ECB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>306C8211A05D25096A47631F</key>
+		<key>1CA1DB34897F0BE98D5A4437E43DF828</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4752C40CE92E30225373FEAB</key>
+		<key>2189A727627A385231CCBFC87D36327A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>64079E1BBCD24970C5035801</key>
+		<key>2C2B1953A91633859BF7AD238FF567A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>72940D58492F853EFC77097B</key>
+		<key>4F47B5C04B192BB70F7FBF623E4BA3C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7384A6E3804C86D05304AE7D</key>
+		<key>7881ED5CFC738EB1BC788CAC055682D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C7451B7C8494F638609B8285</key>
+		<key>B2469C4EA993E8CA31E57B40FF8A84BE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C9779F73A3E0198666CCBCBF</key>
+		<key>DDFD5E397CBD3E44AB508DE6B196680D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E2AD14F013E068A960C97896601A9A9A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

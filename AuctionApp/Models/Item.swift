@@ -50,7 +50,7 @@ class Item: PFObject, PFSubclassing {
             self["currentWinners"] = newValue
         }
     }
-    
+
     var allBidders:[String] {
         get {
             if let array = self["allBidders"] as? [String] {
@@ -168,11 +168,10 @@ class Item: PFObject, PFSubclassing {
             self["imageurl"] = newValue
         }
     }
-    
 
     var itemDesctiption:String {
         get {
-            if let desc = self["description"] as? String{
+            if let desc = self["description"] as? String {
                 return desc
             }else{
                 return ""
@@ -180,6 +179,19 @@ class Item: PFObject, PFSubclassing {
         }
         set {
             self["description"] = newValue
+        }
+    }
+
+    var fairMarketValue:String {
+        get {
+            if let fmv = self["fmv"] as? String {
+                return "Fair Market Value: " + fmv
+            }else{
+                return ""
+            }
+        }
+        set {
+            self["fmv"] = newValue
         }
     }
     
@@ -195,7 +207,7 @@ class Item: PFObject, PFSubclassing {
             self["qty"] = newValue
         }
     }
-    
+
     var openTime: NSDate {
         get {
             if let open =  self["opentime"] as? NSDate{

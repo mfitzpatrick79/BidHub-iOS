@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import IHKeyboardAvoiding
 
 protocol BiddingViewControllerDelegate {
     func biddingViewControllerDidBid(viewController: BiddingViewController, onItem: Item, amount: Int)

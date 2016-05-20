@@ -4,6 +4,9 @@
 //
 
 import UIKit
+import SVProgressHUD
+import CSNotificationView
+import Haneke
 
 extension String {
     subscript (i: Int) -> String {
@@ -134,11 +137,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     func configureCellForIndexPath(cell: ItemTableViewCell, indexPath: NSIndexPath) -> ItemTableViewCell {
         let item = items[indexPath.row];
 
-//      cell.itemImageView.hnk_setImageFromURL(item.imageUrl)
-        
-        cell.itemImageView.image = nil
-        let url:NSURL = NSURL(string: item.imageUrl)!
-        cell.itemImageView.setImageWithURL(url)
+        cell.itemImageView.hnk_setImageFromURL(NSURL(string: item.imageUrl)!)
 
         cell.itemProgramNumberLabel.text = "\(item.programNumber)"
         cell.itemTitleLabel.text = item.title
@@ -146,6 +145,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         cell.itemMediaLabel.text = item.media
         cell.itemSizeLabel.text = item.size
         cell.itemDescriptionLabel.text = item.itemDesctiption
+        cell.itemFmvLabel.text = item.fairMarketValue
         
         if item.quantity > 1 {
             var bidsString = item.currentPrice.map({bidPrice in "$\(bidPrice)"}).joinWithSeparator(", ")

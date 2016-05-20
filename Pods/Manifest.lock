@@ -1,48 +1,66 @@
 PODS:
-  - AFNetworking (HEAD based on 2.5.0):
-    - AFNetworking/NSURLConnection (= HEAD based on 2.5.0)
-    - AFNetworking/NSURLSession (= HEAD based on 2.5.0)
-    - AFNetworking/Reachability (= HEAD based on 2.5.0)
-    - AFNetworking/Security (= HEAD based on 2.5.0)
-    - AFNetworking/Serialization (= HEAD based on 2.5.0)
-    - AFNetworking/UIKit (= HEAD based on 2.5.0)
-  - AFNetworking/NSURLConnection (HEAD based on 2.5.0):
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (HEAD based on 2.5.0):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (HEAD based on 2.5.0)
-  - AFNetworking/Security (HEAD based on 2.5.0)
-  - AFNetworking/Serialization (HEAD based on 2.5.0)
-  - AFNetworking/UIKit (HEAD based on 2.5.0):
-    - AFNetworking/NSURLConnection
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - AFViewShaker (0.0.2)
   - CSNotificationView (0.5.2)
+  - HanekeSwift (0.10.1)
   - IHKeyboardAvoiding (1.4)
   - NSDate+RelativeTime (1.0.1)
-  - SVProgressHUD (HEAD based on 1.1.1)
+  - SVProgressHUD (2.0.3)
   - UIImage-Resize (1.0.1)
 
 DEPENDENCIES:
-  - AFNetworking (HEAD)
+  - AFNetworking (from `https://github.com/AFNetworking/AFNetworking.git`)
   - AFViewShaker (~> 0.0.2)
   - CSNotificationView (~> 0.5)
+  - HanekeSwift (from `https://github.com/Haneke/HanekeSwift.git`)
   - IHKeyboardAvoiding (~> 1.1)
   - NSDate+RelativeTime (~> 1.0)
-  - SVProgressHUD (HEAD)
+  - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
   - UIImage-Resize (~> 1.0)
 
-SPEC CHECKSUMS:
-  AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
-  AFViewShaker: 40bd7a2725ea81a9472134f27f0086d398d1bf91
-  CSNotificationView: a01c96b12e4451c9ed42e93a6d494e586c91ad14
-  IHKeyboardAvoiding: b759f3fb1c995be6de74c977a6d425723fcc62bd
-  NSDate+RelativeTime: e8b48c62cd2354d9b372b3361cff579c96833b2e
-  SVProgressHUD: 11ef69ab2582c097479e76905ea916470371fc58
-  UIImage-Resize: fc57263eed2cd98f74e5ba4848bedae979a0bdf0
+EXTERNAL SOURCES:
+  AFNetworking:
+    :git: https://github.com/AFNetworking/AFNetworking.git
+  HanekeSwift:
+    :git: https://github.com/Haneke/HanekeSwift.git
+  SVProgressHUD:
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
 
-COCOAPODS: 0.35.0
+CHECKOUT OPTIONS:
+  AFNetworking:
+    :commit: 59d5111895d7ed04905a6dc0342ce842bf0e1975
+    :git: https://github.com/AFNetworking/AFNetworking.git
+  HanekeSwift:
+    :commit: d4fc957878c85bfa30802f37367180cf2bf76b07
+    :git: https://github.com/Haneke/HanekeSwift.git
+  SVProgressHUD:
+    :commit: c406f0ac1929b21ab444608eb4ab27035bb57a21
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AFViewShaker: 7e4bc215ca3e92347b78da436fca74e1730b52e8
+  CSNotificationView: aa7a0f283a6b6a300388db9e166636fcdebc10ba
+  HanekeSwift: 4113367892828e7700d24a384027de6ebc79aad1
+  IHKeyboardAvoiding: c1f65068505233454697d9f6ec98fe333064b3b7
+  NSDate+RelativeTime: 1b03a562615a4496a826e322096e5792e6706612
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  UIImage-Resize: fa776860f10e6900bbaf53a73e494bdceaaccc77
+
+PODFILE CHECKSUM: f7d502fd12db6994b6995f221391f0f7cd5a944d
+
+COCOAPODS: 1.0.0
