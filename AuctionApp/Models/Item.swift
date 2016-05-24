@@ -106,10 +106,23 @@ class Item: PFObject, PFSubclassing {
     
     var programNumber:Int {
         get {
-            if let programNumberString =  self["programNumber"] as? Int{
-                return programNumberString
+            if let itemProgramNumber =  self["programNumber"] as? Int{
+                return itemProgramNumber
             }else{
                 return -1
+            }
+        }
+        set {
+            self["programNumber"] = newValue
+        }
+    }
+
+    var programNumberString:String {
+        get {
+            if let itemProgramNumberString = self["programNumber"] as? Int{
+                return String(itemProgramNumberString)
+            }else{
+                return ""
             }
         }
         set {

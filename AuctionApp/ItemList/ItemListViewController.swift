@@ -7,6 +7,7 @@ import UIKit
 import SVProgressHUD
 import CSNotificationView
 import Haneke
+import NSDate_RelativeTime
 
 extension String {
     subscript (i: Int) -> String {
@@ -139,7 +140,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
 
         cell.itemImageView.hnk_setImageFromURL(NSURL(string: item.imageUrl)!)
 
-        cell.itemProgramNumberLabel.text = "\(item.programNumber)"
+        cell.itemProgramNumberLabel.text = item.programNumberString
         cell.itemTitleLabel.text = item.title
         cell.itemArtistLabel.text = item.artist
         cell.itemMediaLabel.text = item.media
@@ -230,13 +231,11 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     func cellImageTapped(item: Item) {
         let overlay : UIView = UIView(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height))
         
-        let url:NSURL = NSURL(string: item.imageUrl)!
         let imageView : UIImageView = UIImageView() // This includes your image in table view cell
-
-        imageView.setImageWithURL(url)
+        
         imageView.frame = CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height) // set up according to your requirements
         imageView.contentMode = .ScaleAspectFit
-        
+        imageView.hnk_setImageFromURL(NSURL(string: item.imageUrl)!)
         
         let doneBtn : UIButton = UIButton(frame: CGRectMake((self.view.frame.size.width - 53), 30, 48, 48)) // set up according to your requirements
         doneBtn.setImage(UIImage(named: "close.png"), forState: UIControlState.Normal)
