@@ -138,7 +138,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     func configureCellForIndexPath(cell: ItemTableViewCell, indexPath: NSIndexPath) -> ItemTableViewCell {
         let item = items[indexPath.row];
 
-        cell.itemImageView.hnk_setImageFromURL(NSURL(string: item.imageUrl)!)
+        cell.itemImageView.hnk_setImageFromURL(NSURL(string: item.imageUrl)!, placeholder: UIImage(named: "blank")!)
 
         cell.itemProgramNumberLabel.text = item.programNumberString
         cell.itemTitleLabel.text = item.title
@@ -235,7 +235,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         
         imageView.frame = CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height)
         imageView.contentMode = .ScaleAspectFit
-        imageView.hnk_setImageFromURL(NSURL(string: item.imageUrl)!)
+        imageView.hnk_setImageFromURL(NSURL(string: item.imageUrl)!, placeholder: UIImage(named: "blank")!)
         
         let doneBtn : UIButton = UIButton(frame: CGRectMake((self.view.frame.size.width - 53), 30, 48, 48))
         doneBtn.setImage(UIImage(named: "close.png"), forState: UIControlState.Normal)
