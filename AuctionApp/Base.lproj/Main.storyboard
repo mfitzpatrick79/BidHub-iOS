@@ -39,6 +39,7 @@
                                         <connections>
                                             <action selector="textFieldShouldReturn:" destination="L1S-fT-33x" eventType="primaryActionTriggered" id="VWM-ln-fnb"/>
                                             <outlet property="delegate" destination="L1S-fT-33x" id="sAt-Aa-DBe"/>
+                                            <outlet property="nextField" destination="dgC-2i-XYA" id="jK7-Kq-7tt"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dgC-2i-XYA">
@@ -48,7 +49,7 @@
                                         <connections>
                                             <action selector="textFieldShouldReturn:" destination="L1S-fT-33x" eventType="editingDidEnd" id="bf5-Jo-z5n"/>
                                             <outlet property="delegate" destination="L1S-fT-33x" id="Wnh-rl-Ty8"/>
-                                            <outlet property="nextField" destination="fa9-za-p0L" id="h53-yP-aXr"/>
+                                            <outlet property="nextField" destination="fa9-za-p0L" id="hbf-2G-n0n"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Telephone" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fa9-za-p0L" userLabel="Telephone Text Field" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
@@ -58,7 +59,7 @@
                                         <connections>
                                             <action selector="loginPressed:" destination="L1S-fT-33x" eventType="editingDidEnd" id="LAo-dX-uuf"/>
                                             <outlet property="delegate" destination="L1S-fT-33x" id="QcO-43-cON"/>
-                                            <outlet property="nextField" destination="dgC-2i-XYA" id="qKR-GS-R6w"/>
+                                            <outlet property="nextField" destination="gUk-KS-LZe" id="tog-Ko-C1O"/>
                                         </connections>
                                     </textField>
                                 </subviews>

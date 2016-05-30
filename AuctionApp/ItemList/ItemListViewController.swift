@@ -15,7 +15,7 @@ extension String {
     }
 }
 
-class ItemListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate,ItemTableViewCellDelegate, BiddingViewControllerDelegate {
+class ItemListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UIScrollViewDelegate, ItemTableViewCellDelegate, BiddingViewControllerDelegate {
     
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var segmentControl: UISegmentedControl!
@@ -28,6 +28,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     var sizingCell: ItemTableViewCell?
     var bottomContraint:NSLayoutConstraint!
     
+    var zoomOverlay: UIScrollView!
     var zoomImageView: UIImageView = UIImageView()
     
     override func viewDidLoad() {
@@ -230,41 +231,63 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
             biddingVC.didMoveToParentViewController(self)
         }
     }
-    
+
+    // Image Detail Zoom
     func cellImageTapped(item: Item) {
-        let vWidth = self.view.frame.size.width
-        let vHeight = self.view.frame.size.height
+        zoomImageView.frame = view.bounds
+        zoomImageView.clipsToBounds = false
+        zoomImageView.contentMode = .ScaleAspectFit
+        zoomImageView.hnk_setImageFromURL(NSURL(string: item.imageUrl)!, placeholder: UIImage(named: "blank")!)
         
-        let overlay : UIScrollView = UIScrollView(frame: CGRectMake(0, 0, vWidth, vHeight))
+        zoomOverlay = UIScrollView(frame: view.bounds)
         
-        overlay.tag = 420
-        overlay.delegate = self
-        overlay.backgroundColor = UIColor.darkGrayColor()
-        overlay.alwaysBounceVertical = false
-        overlay.alwaysBounceHorizontal = false
-        overlay.showsVerticalScrollIndicator = true
-        overlay.flashScrollIndicators()
+        zoomOverlay.tag = 420
+        zoomOverlay.delegate = self
+        zoomOverlay.backgroundColor = UIColor.darkGrayColor()
+        zoomOverlay.alwaysBounceVertical = false
+        zoomOverlay.alwaysBounceHorizontal = false
+        zoomOverlay.showsVerticalScrollIndicator = true
+        zoomOverlay.flashScrollIndicators()
         
-        overlay.minimumZoomScale = 1.0
-        overlay.maximumZoomScale = 6.0
-        
-        self.zoomImageView.frame = CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height)
-        self.zoomImageView.clipsToBounds = false
-        self.zoomImageView.contentMode = .ScaleAspectFit
-        self.zoomImageView.hnk_setImageFromURL(NSURL(string: item.imageUrl)!, placeholder: UIImage(named: "blank")!)
+        zoomOverlay.minimumZoomScale = 1.0
+        zoomOverlay.maximumZoomScale = 6.0
         
         let backButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: #selector(ItemListViewController.pressedClose(_:)))
         navigationItem.leftBarButtonItem = backButton
-        self.segmentControl.hidden = true
+        segmentControl.hidden = true
         
-        overlay.backgroundColor = UIColor.darkGrayColor()
-        overlay.addSubview(self.zoomImageView)
+        zoomOverlay.addSubview(zoomImageView)
         
-        self.view.addSubview(overlay)
+        self.view.addSubview(zoomOverlay)
+        setupZoomGestureRecognizer()
     }
     
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
-        return self.zoomImageView
+        return zoomImageView
+    }
+    
+    func scrollViewDidZoom(scrollView: UIScrollView) {
+        let imageViewSize = zoomImageView.frame.size
+        let scrollViewSize = zoomOverlay.bounds.size
+        
+        let verticalPadding = imageViewSize.height < scrollViewSize.height ? (scrollViewSize.height - imageViewSize.height) / 2 : 0
+        let horizontalPadding = imageViewSize.width < scrollViewSize.width ? (scrollViewSize.width - imageViewSize.width) / 2 : 0
+        
+        zoomOverlay.contentInset = UIEdgeInsets(top: verticalPadding, left: horizontalPadding, bottom: verticalPadding, right: horizontalPadding)
+    }
+    
+    func setupZoomGestureRecognizer() {
+        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(ItemListViewController.handleZoomImageDoubleTap(_:)))
+        doubleTap.numberOfTapsRequired = 2
+        zoomOverlay.addGestureRecognizer(doubleTap)
+    }
+    
+    func handleZoomImageDoubleTap(recognizer: UITapGestureRecognizer) {
+        if (zoomOverlay.zoomScale > zoomOverlay.minimumZoomScale) {
+            zoomOverlay.setZoomScale(zoomOverlay.minimumZoomScale, animated: true)
+        } else {
+            zoomOverlay.setZoomScale(zoomOverlay.maximumZoomScale, animated: true)
+        }
     }
     
     func pressedClose(sender: UIButton!) {
@@ -282,7 +305,8 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         let leftBarButton = UIBarButtonItem(customView: btnName)
         self.navigationItem.leftBarButtonItem = leftBarButton
     }
-    
+
+    // Actions
     @IBAction func logoutPressed(sender: AnyObject) {
         PFUser.logOut()
         performSegueWithIdentifier("logoutSegue", sender: nil)
