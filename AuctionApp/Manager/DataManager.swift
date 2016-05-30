@@ -52,7 +52,7 @@ class DataManager: NSObject {
         
         let user = PFUser.currentUser()
         
-        Bid(email: user.email, name: user.username, amount: amount, itemId: item.objectId)
+        Bid(email: user.email, name: user["fullname"] as! String, telephone: user["telephone"] as! String, amount: amount, itemId: item.objectId)
         .saveInBackgroundWithBlock { (success, error) -> Void in
             
             if error != nil {

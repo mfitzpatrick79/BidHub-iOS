@@ -233,11 +233,11 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         
         let imageView : UIImageView = UIImageView() // This includes your image in table view cell
         
-        imageView.frame = CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height) // set up according to your requirements
+        imageView.frame = CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height)
         imageView.contentMode = .ScaleAspectFit
         imageView.hnk_setImageFromURL(NSURL(string: item.imageUrl)!)
         
-        let doneBtn : UIButton = UIButton(frame: CGRectMake((self.view.frame.size.width - 53), 30, 48, 48)) // set up according to your requirements
+        let doneBtn : UIButton = UIButton(frame: CGRectMake((self.view.frame.size.width - 53), 30, 48, 48))
         doneBtn.setImage(UIImage(named: "close.png"), forState: UIControlState.Normal)
         doneBtn.addTarget(self, action: #selector(ItemListViewController.pressedClose(_:)), forControlEvents: .TouchUpInside)
         

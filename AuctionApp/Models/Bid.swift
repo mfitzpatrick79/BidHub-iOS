@@ -9,6 +9,7 @@ class Bid: PFObject, PFSubclassing {
     
     @NSManaged var email: String
     @NSManaged var name: String
+    @NSManaged var telephone: String
     
     var amount: Int {
         get {
@@ -33,10 +34,11 @@ class Bid: PFObject, PFSubclassing {
         super.init()
     }
     
-    init(email: String, name: String, amount: Int, itemId: String) {
+    init(email: String, name: String, telephone: String, amount: Int, itemId: String) {
         super.init()
         self.email = email
         self.name = name
+        self.telephone = telephone
         self.amount = amount
         self.itemId = itemId
     }

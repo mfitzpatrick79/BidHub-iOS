@@ -39,6 +39,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PhoneNumberKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-AuctionApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,11 +62,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0419D4084456EDBC1192A6DE08D7A061</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>1C3436CEA5C3D39764C5F54374794ECB</key>
 		<dict>
 			<key>primary</key>
@@ -82,17 +82,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>3EC0924C5AE0F08A7EC7D369FBC82FCA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4F47B5C04B192BB70F7FBF623E4BA3C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7881ED5CFC738EB1BC788CAC055682D0</key>
+		<key>76F81289B87C6B219B64C3FCE0CF2D1D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B2469C4EA993E8CA31E57B40FF8A84BE</key>
+		<key>A048CE71EA780FEAF7A3A7AD29D4268B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C050EB90AEDA8E52289FB70BB490AC44</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -90,6 +90,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/HanekeSwift/Haneke.framework"
   install_framework "$BUILT_PRODUCTS_DIR/IHKeyboardAvoiding/IHKeyboardAvoiding.framework"
   install_framework "$BUILT_PRODUCTS_DIR/NSDate+RelativeTime/NSDate_RelativeTime.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/PhoneNumberKit/PhoneNumberKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SVProgressHUD/SVProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/UIImage-Resize/UIImage_Resize.framework"
 fi
@@ -100,6 +101,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/HanekeSwift/Haneke.framework"
   install_framework "$BUILT_PRODUCTS_DIR/IHKeyboardAvoiding/IHKeyboardAvoiding.framework"
   install_framework "$BUILT_PRODUCTS_DIR/NSDate+RelativeTime/NSDate_RelativeTime.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/PhoneNumberKit/PhoneNumberKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SVProgressHUD/SVProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/UIImage-Resize/UIImage_Resize.framework"
 fi

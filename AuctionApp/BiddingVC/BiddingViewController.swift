@@ -42,19 +42,21 @@ class BiddingViewController: UIViewController {
         if let itemUW = item{
             
             incrementOne  = itemUW.priceIncrement
-            incrementFive = 2*itemUW.priceIncrement
-            incrementTen  = 5*itemUW.priceIncrement
+            incrementFive = 5*itemUW.priceIncrement
+            incrementTen  = 10*itemUW.priceIncrement
             
             switch(itemUW.winnerType){
             case .Multiple:
                 if itemUW.currentWinners.isEmpty{
-                    setupForSingle(itemUW.price)
+                    let openingBid = itemUW.price - itemUW.priceIncrement
+                    setupForSingle(openingBid)
                 }else{
                     setupForSingle(itemUW.currentPrice.last!)
                 }
             case .Single:
                 if itemUW.currentWinners.isEmpty{
-                    setupForSingle(itemUW.price)
+                    let openingBid = itemUW.price - itemUW.priceIncrement
+                    setupForSingle(openingBid)
                 }else{
                     setupForSingle(itemUW.currentPrice.first!)
                 }
@@ -95,7 +97,7 @@ class BiddingViewController: UIViewController {
         startPrice = startAmount
         
         let bidAttrs = [NSFontAttributeName : UIFont(name: "Avenir-Light", size: 14.0)! , NSForegroundColorAttributeName: UIColor.grayColor()] as NSDictionary
-        let otherAttrs = [NSFontAttributeName : UIFont(name: "Avenir-Light", size: 24.0)!, NSForegroundColorAttributeName: UIColor(red: 33/225, green: 161/225, blue: 219/225, alpha: 1)]
+        let otherAttrs = [NSFontAttributeName : UIFont(name: "Avenir-Light", size: 22.0)!, NSForegroundColorAttributeName: UIColor(red: 33/225, green: 161/225, blue: 219/225, alpha: 1)]
         
         plusOneButton.titleLabel?.textAlignment = .Center
         plusFiveButton.titleLabel?.textAlignment = .Center
@@ -165,15 +167,15 @@ class BiddingViewController: UIViewController {
         }
     }
 
-    @IBAction func bidOneDollarPressed(sender: AnyObject) {
+    @IBAction func bidOnePressed(sender: AnyObject) {
         didSelectAmount(.Extra(incrementOne))
     }
 
-    @IBAction func bidFiveDollarPressed(sender: AnyObject) {
+    @IBAction func bidFivePressed(sender: AnyObject) {
         didSelectAmount(.Extra(incrementFive))
     }
     
-    @IBAction func bidTenDollarPressed(sender: AnyObject) {
+    @IBAction func bidTenPressed(sender: AnyObject) {
         didSelectAmount(.Extra(incrementTen))
     }
     

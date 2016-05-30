@@ -5,6 +5,7 @@
 
 import UIKit
 import AFViewShaker
+import PhoneNumberKit
 
 private var kAssociationKeyNextField: UInt8 = 0
 
@@ -23,6 +24,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var telephoneTextField: UITextField!
     var viewShaker:AFViewShaker?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,13 +39,14 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginPressed(sender: AnyObject) {
         
-        if nameTextField.text != "" && emailTextField.text != "" {
+        if nameTextField.text != "" && emailTextField.text != "" && telephoneTextField.text != "" {
             
             let user = PFUser()
             user["fullname"] = nameTextField.text!.lowercaseString
             user.username = emailTextField.text!.lowercaseString
             user.password = "test"
             user.email = emailTextField.text!.lowercaseString
+            user["telephone"] = telephoneTextField.text!
             
             user.signUpInBackgroundWithBlock {
                 (succeeded: Bool, error: NSError!) -> Void in

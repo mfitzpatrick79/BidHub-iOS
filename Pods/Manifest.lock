@@ -19,6 +19,7 @@ PODS:
   - HanekeSwift (0.10.1)
   - IHKeyboardAvoiding (1.4)
   - NSDate+RelativeTime (1.0.1)
+  - PhoneNumberKit (0.8.3)
   - SVProgressHUD (2.0.3)
   - UIImage-Resize (1.0.1)
 
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - HanekeSwift (from `https://github.com/Haneke/HanekeSwift.git`)
   - IHKeyboardAvoiding (~> 1.1)
   - NSDate+RelativeTime (~> 1.0)
+  - PhoneNumberKit (~> 0.8)
   - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
   - UIImage-Resize (~> 1.0)
 
@@ -58,9 +60,10 @@ SPEC CHECKSUMS:
   HanekeSwift: 4113367892828e7700d24a384027de6ebc79aad1
   IHKeyboardAvoiding: c1f65068505233454697d9f6ec98fe333064b3b7
   NSDate+RelativeTime: 1b03a562615a4496a826e322096e5792e6706612
+  PhoneNumberKit: ff0be2a7078dda5ef7f3f1264d5e946124304880
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   UIImage-Resize: fa776860f10e6900bbaf53a73e494bdceaaccc77
 
-PODFILE CHECKSUM: f7d502fd12db6994b6995f221391f0f7cd5a944d
+PODFILE CHECKSUM: 21d4346030ca5c8369f99a352670e9b5e6791a63
 
 COCOAPODS: 1.0.0

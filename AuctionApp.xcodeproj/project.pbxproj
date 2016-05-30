@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FBD57351CFBFF530020DABB /* NSDate+RelativeTime.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0FBD57341CFBFF530020DABB /* NSDate+RelativeTime.bundle */; };
 		5A5B2462AB5000211FF7CD13 /* Pods_AuctionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F9F3E6FD2D6A6457DE2805 /* Pods_AuctionApp.framework */; };
 		634C33461A1A7C6C0002E9AD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634C33441A1A7C6C0002E9AD /* Bolts.framework */; };
 		634C33471A1A7C6C0002E9AD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634C33451A1A7C6C0002E9AD /* Parse.framework */; };
@@ -49,6 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0FBD57341CFBFF530020DABB /* NSDate+RelativeTime.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "NSDate+RelativeTime.bundle"; sourceTree = "<group>"; };
 		21F9F3E6FD2D6A6457DE2805 /* Pods_AuctionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuctionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		634C33441A1A7C6C0002E9AD /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		634C33451A1A7C6C0002E9AD /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				637EEC5E1A1A6D250091C60B /* LaunchScreen.xib */,
 				637EEC531A1A6D250091C60B /* Supporting Files */,
 				634C335C1A1A7CF40002E9AD /* AuctionApp-Bridging-Header.h */,
+				0FBD57341CFBFF530020DABB /* NSDate+RelativeTime.bundle */,
 			);
 			path = AuctionApp;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				637EEC5B1A1A6D250091C60B /* Main.storyboard in Resources */,
 				637EEC601A1A6D250091C60B /* LaunchScreen.xib in Resources */,
 				637EEC5D1A1A6D250091C60B /* Images.xcassets in Resources */,
+				0FBD57351CFBFF530020DABB /* NSDate+RelativeTime.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
