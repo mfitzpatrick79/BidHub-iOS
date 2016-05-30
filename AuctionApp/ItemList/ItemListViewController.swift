@@ -50,7 +50,6 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         refreshControl.addTarget(self, action: #selector(ItemListViewController.reloadItems), forControlEvents: .ValueChanged)
         refreshView.addSubview(refreshControl)
         
-        
         sizingCell = tableView.dequeueReusableCellWithIdentifier("ItemTableViewCell") as? ItemTableViewCell
         
         tableView.estimatedRowHeight = 392
@@ -63,7 +62,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         print("Logged in as: \(user.email)", terminator: "")
         
     }
-    
+
     override func viewDidAppear(animated: Bool) {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ItemListViewController.pushRecieved(_:)), name: "pushRecieved", object: nil)
         timer = NSTimer.scheduledTimerWithTimeInterval(30.0, target: self, selector: #selector(ItemListViewController.reloadItems), userInfo: nil, repeats: true)
@@ -220,7 +219,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
-    //Cell Delegate
+    ///Cell Delegate
     func cellDidPressBid(item: Item) {
         let bidVC = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("BiddingViewController") as? BiddingViewController
         if let biddingVC = bidVC {
@@ -303,10 +302,10 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         btnName.addTarget(self, action: #selector(ItemListViewController.logoutPressed(_:)), forControlEvents: .TouchUpInside)
         
         let leftBarButton = UIBarButtonItem(customView: btnName)
-        self.navigationItem.leftBarButtonItem = leftBarButton
+        navigationItem.leftBarButtonItem = leftBarButton
     }
 
-    // Actions
+    ///Actions
     @IBAction func logoutPressed(sender: AnyObject) {
         PFUser.logOut()
         performSegueWithIdentifier("logoutSegue", sender: nil)

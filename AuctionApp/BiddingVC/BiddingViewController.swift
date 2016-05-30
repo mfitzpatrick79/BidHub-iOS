@@ -135,19 +135,30 @@ class BiddingViewController: UIViewController {
             amount = startPrice + aditional
         }
         
-        if delegate != nil {
-            if let itemUW = item {
-                
-                UIView.animateWithDuration(0.2, animations: { () -> Void in
-                    self.popUpContainer.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.01, 0.01);
-                    self.darkView.alpha = 0
-                }, completion: { (finished: Bool) -> Void in
-                    self.delegate!.biddingViewControllerDidBid(self, onItem: itemUW, amount: amount)
-                })
-                
-                
+        let bidAlert = UIAlertController(title: "Confirm $\(amount) Bid", message: "You didn't think we'd let you bid $\(amount) without confirming it, did you?", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        bidAlert.addAction(UIAlertAction(title: "Bid", style: .Default, handler: { (action: UIAlertAction!) in
+            if self.delegate != nil {
+                if let itemUW = self.item {
+                    
+                    UIView.animateWithDuration(0.2, animations: { () -> Void in
+                        self.popUpContainer.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.01, 0.01);
+                        self.darkView.alpha = 0
+                        }, completion: { (finished: Bool) -> Void in
+                            self.delegate!.biddingViewControllerDidBid(self, onItem: itemUW, amount: amount)
+                    })
+                    
+                    
+                }
             }
-        }
+        }))
+        
+        bidAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction!) in
+            //self.didTapBackground(bidAlert)
+        }))
+        
+        presentViewController(bidAlert, animated: true, completion: nil)
+        
     }
     
     @IBAction func customAmountPressed(sender: AnyObject) {
