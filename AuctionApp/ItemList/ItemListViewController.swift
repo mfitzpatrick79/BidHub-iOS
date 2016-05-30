@@ -20,13 +20,16 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var segmentControl: UISegmentedControl!
     @IBOutlet var tableView: UITableView!
+    
     var refreshControl: UIRefreshControl = UIRefreshControl()
     var items:[Item] = [Item]()
     var timer:NSTimer?
     var filterType: FilterType = .All
     var sizingCell: ItemTableViewCell?
     var bottomContraint:NSLayoutConstraint!
-
+    
+    var zoomImageView: UIImageView = UIImageView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -37,24 +40,24 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         let colorView:UIView = UIView(frame: CGRectMake(0, -1000, view.frame.size.width, 1000))
         colorView.backgroundColor = UIColor.whiteColor()
         tableView.addSubview(colorView)
-
+        
         //Refresh Control
         let refreshView = UIView(frame: CGRect(x: 0, y: 10, width: 0, height: 0))
         tableView.insertSubview(refreshView, aboveSubview: colorView)
-
+        
         refreshControl.tintColor = UIColor(red: 100/225, green: 128/225, blue: 67/225, alpha: 1.0)
         refreshControl.addTarget(self, action: #selector(ItemListViewController.reloadItems), forControlEvents: .ValueChanged)
         refreshView.addSubview(refreshControl)
         
         
         sizingCell = tableView.dequeueReusableCellWithIdentifier("ItemTableViewCell") as? ItemTableViewCell
-
+        
         tableView.estimatedRowHeight = 392
         tableView.rowHeight = UITableViewAutomaticDimension
-
+        
         self.tableView.alpha = 0.0
         reloadData(false, initialLoad: true)
-
+        
         let user = PFUser.currentUser()
         print("Logged in as: \(user.email)", terminator: "")
         
@@ -95,7 +98,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
             SVProgressHUD.show()
         }
         DataManager().sharedInstance.getItems{ (items, error) in
-        
+            
             if error != nil {
                 //Error Case
                 if !silent {
@@ -137,9 +140,9 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     
     func configureCellForIndexPath(cell: ItemTableViewCell, indexPath: NSIndexPath) -> ItemTableViewCell {
         let item = items[indexPath.row];
-
+        
         cell.itemImageView.hnk_setImageFromURL(NSURL(string: item.imageUrl)!, placeholder: UIImage(named: "blank")!)
-
+        
         cell.itemProgramNumberLabel.text = item.programNumberString
         cell.itemTitleLabel.text = item.title
         cell.itemArtistLabel.text = item.artist
@@ -163,7 +166,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         
         var price: Int?
         var lowPrice: Int?
-
+        
         switch (item.winnerType) {
         case .Single:
             price = item.currentPrice.first
@@ -227,33 +230,57 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
             biddingVC.didMoveToParentViewController(self)
         }
     }
-
+    
     func cellImageTapped(item: Item) {
-        let overlay : UIView = UIView(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height))
+        let vWidth = self.view.frame.size.width
+        let vHeight = self.view.frame.size.height
         
-        let imageView : UIImageView = UIImageView() // This includes your image in table view cell
+        let overlay : UIScrollView = UIScrollView(frame: CGRectMake(0, 0, vWidth, vHeight))
         
-        imageView.frame = CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height)
-        imageView.contentMode = .ScaleAspectFit
-        imageView.hnk_setImageFromURL(NSURL(string: item.imageUrl)!, placeholder: UIImage(named: "blank")!)
+        overlay.tag = 420
+        overlay.delegate = self
+        overlay.backgroundColor = UIColor.darkGrayColor()
+        overlay.alwaysBounceVertical = false
+        overlay.alwaysBounceHorizontal = false
+        overlay.showsVerticalScrollIndicator = true
+        overlay.flashScrollIndicators()
         
-        let doneBtn : UIButton = UIButton(frame: CGRectMake((self.view.frame.size.width - 53), 30, 48, 48))
-        doneBtn.setImage(UIImage(named: "close.png"), forState: UIControlState.Normal)
-        doneBtn.addTarget(self, action: #selector(ItemListViewController.pressedClose(_:)), forControlEvents: .TouchUpInside)
+        overlay.minimumZoomScale = 1.0
+        overlay.maximumZoomScale = 6.0
         
-        overlay.backgroundColor = UIColor.whiteColor()
-        overlay.addSubview(imageView)
-        overlay.addSubview(doneBtn)
-
-        navigationController?.setNavigationBarHidden(navigationController?.navigationBarHidden == false, animated: true)
-        UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: .Fade)
+        self.zoomImageView.frame = CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height)
+        self.zoomImageView.clipsToBounds = false
+        self.zoomImageView.contentMode = .ScaleAspectFit
+        self.zoomImageView.hnk_setImageFromURL(NSURL(string: item.imageUrl)!, placeholder: UIImage(named: "blank")!)
+        
+        let backButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: #selector(ItemListViewController.pressedClose(_:)))
+        navigationItem.leftBarButtonItem = backButton
+        self.segmentControl.hidden = true
+        
+        overlay.backgroundColor = UIColor.darkGrayColor()
+        overlay.addSubview(self.zoomImageView)
         
         self.view.addSubview(overlay)
     }
-
+    
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return self.zoomImageView
+    }
+    
     func pressedClose(sender: UIButton!) {
-        navigationController?.setNavigationBarHidden(navigationController?.navigationBarHidden == false, animated: true)
-        sender.superview?.removeFromSuperview()
+        self.segmentControl.hidden = false
+        
+        if let viewWithTag = self.view.viewWithTag(420) {
+            viewWithTag.removeFromSuperview()
+        }
+        
+        let btnName = UIButton()
+        btnName.setImage(UIImage(named: "HSLogOutIcon"), forState: .Normal)
+        btnName.frame = CGRectMake(0, 0, 30, 30)
+        btnName.addTarget(self, action: #selector(ItemListViewController.logoutPressed(_:)), forControlEvents: .TouchUpInside)
+        
+        let leftBarButton = UIBarButtonItem(customView: btnName)
+        self.navigationItem.leftBarButtonItem = leftBarButton
     }
     
     @IBAction func logoutPressed(sender: AnyObject) {
@@ -266,14 +293,14 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         searchBar.text = ""
         let segment = sender as! UISegmentedControl
         switch(segment.selectedSegmentIndex) {
-            case 0:
-              filterTable(.All)
-            case 1:
-                filterTable(.NoBids)
-            case 2:
-                filterTable(.MyItems)
-            default:
-                filterTable(.All)
+        case 0:
+            filterTable(.All)
+        case 1:
+            filterTable(.NoBids)
+        case 2:
+            filterTable(.MyItems)
+        default:
+            filterTable(.All)
         }
     }
     
@@ -309,7 +336,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
             
             //make and use a UIAlertController
             let alertView = UIAlertController(title: "Error", message: errorString, preferredStyle: .Alert)
-
+            
             let okAction = UIAlertAction(title: "Ok", style: .Default, handler: { (action) -> Void in
                 print("Ok Pressed", terminator: "")
             })
