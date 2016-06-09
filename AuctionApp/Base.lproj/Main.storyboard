@@ -316,11 +316,11 @@
                                                                         <action selector="bidNowPressed:" destination="O6g-Ig-KSM" eventType="touchUpInside" id="93f-jP-kxS"/>
                                                                     </connections>
                                                                 </button>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="748" ambiguous="YES" text="Person" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ODJ-wf-vqT">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="748" ambiguous="YES" misplaced="YES" text="Person" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ODJ-wf-vqT">
                                                                     <rect key="frame" x="10" y="10" width="470" height="24"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="24" id="0VL-nz-NNG"/>
-                                                                        <constraint firstAttribute="height" constant="24" id="e1e-SV-Owy"/>
+                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="e1e-SV-Owy"/>
                                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="87.5" id="oxs-fi-vfM">
                                                                             <variation key="heightClass=regular" constant="474"/>
                                                                         </constraint>
@@ -342,20 +342,20 @@
                                                                         </mask>
                                                                     </variation>
                                                                 </label>
-                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8fw-64-Cpt">
+                                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8fw-64-Cpt">
                                                                     <rect key="frame" x="0.0" y="184.5" width="580" height="0.0"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" id="FY2-gH-7uB"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="dmb-s5-XJW">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="dmb-s5-XJW">
                                                                     <rect key="frame" x="10" y="159" width="560" height="20.5"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
                                                                     <color key="textColor" red="0.12920839088397795" green="0.12920839088397795" blue="0.12920839088397795" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Size" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXN-OD-5lL">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Size" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXN-OD-5lL">
                                                                     <rect key="frame" x="10" y="74" width="560" height="20"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="25" id="Ip9-wc-35B"/>
@@ -375,7 +375,7 @@
                                                                         </mask>
                                                                     </variation>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Start/End Time" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0X-Zb-K39">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Start/End Time" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0X-Zb-K39">
                                                                     <rect key="frame" x="10" y="39" width="470" height="20"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="87.5" id="1Gr-x7-L0M">
@@ -409,13 +409,13 @@
                                                                         </mask>
                                                                     </variation>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Fair Market Value" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIU-st-cXb">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Fair Market Value" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIU-st-cXb">
                                                                     <rect key="frame" x="10" y="99" width="560" height="20"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="13"/>
                                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Media" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XV9-QS-np1">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Media" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XV9-QS-np1">
                                                                     <rect key="frame" x="10" y="124" width="560" height="20"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="HmF-DA-EvZ"/>
@@ -592,14 +592,14 @@
                                             <outlet property="currentBidLabel" destination="Jov-f2-4YZ" id="3gv-oZ-D1M"/>
                                             <outlet property="dateLabel" destination="u0X-Zb-K39" id="hyi-dm-aVg"/>
                                             <outlet property="headerBackground" destination="6rJ-M5-Yt7" id="qkn-2F-Y9J"/>
-                                            <outlet property="itemArtistLabel" destination="ODJ-wf-vqT" id="UgN-Kb-Ara"/>
+                                            <outlet property="itemArtistLabel" destination="oOe-9S-Wo7" id="wI5-gV-dB7"/>
                                             <outlet property="itemDescriptionLabel" destination="dmb-s5-XJW" id="dfp-8H-2Wk"/>
                                             <outlet property="itemFmvLabel" destination="aIU-st-cXb" id="PbB-3L-QWy"/>
                                             <outlet property="itemImageView" destination="HvP-HV-WdL" id="ixo-Y7-syH"/>
                                             <outlet property="itemMediaLabel" destination="XV9-QS-np1" id="Lh6-Vc-n2M"/>
                                             <outlet property="itemProgramNumberLabel" destination="LTC-rl-YLD" id="kKU-Xs-RvK"/>
                                             <outlet property="itemSizeLabel" destination="jXN-OD-5lL" id="mQz-Av-EKU"/>
-                                            <outlet property="itemTitleLabel" destination="oOe-9S-Wo7" id="5bZ-Q9-1PZ"/>
+                                            <outlet property="itemTitleLabel" destination="ODJ-wf-vqT" id="8EJ-58-R5d"/>
                                             <outlet property="moreInfoLabel" destination="AtH-kJ-9l0" id="FPd-sx-INb"/>
                                             <outlet property="moreInfoView" destination="dDs-VO-6An" id="0c7-tM-gI4"/>
                                             <outlet property="numberOfBidsLabel" destination="4bM-cx-P9h" id="HdT-bN-H2y"/>
