@@ -25,12 +25,13 @@ class LoginViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var telephoneTextField: UITextField!
+
     var viewShaker:AFViewShaker?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewShaker = AFViewShaker(viewsArray: [nameTextField, emailTextField])
-        // Do any additional setup after loading the view.
+        viewShaker = AFViewShaker(viewsArray: [nameTextField, emailTextField, telephoneTextField])
     }
 
     @IBAction func textFieldShouldReturn(textField: UITextField) {
