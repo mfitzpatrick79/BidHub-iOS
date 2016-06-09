@@ -252,7 +252,8 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         zoomOverlay.maximumZoomScale = 6.0
         
         let backButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: #selector(ItemListViewController.pressedClose(_:)))
-        navigationItem.leftBarButtonItem = backButton
+        navigationItem.leftBarButtonItem = nil
+        navigationItem.rightBarButtonItem = backButton
         segmentControl.hidden = true
         
         zoomOverlay.addSubview(zoomImageView)
@@ -303,6 +304,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         
         let leftBarButton = UIBarButtonItem(customView: btnName)
         navigationItem.leftBarButtonItem = leftBarButton
+        navigationItem.rightBarButtonItem = nil
     }
 
     ///Actions
