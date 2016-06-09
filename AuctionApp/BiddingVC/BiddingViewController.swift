@@ -42,8 +42,8 @@ class BiddingViewController: UIViewController {
         if let itemUW = item{
             
             incrementOne  = itemUW.priceIncrement
-            incrementFive = 5*itemUW.priceIncrement
-            incrementTen  = 10*itemUW.priceIncrement
+            incrementFive = 2*itemUW.priceIncrement
+            incrementTen  = 5*itemUW.priceIncrement
             
             switch(itemUW.winnerType){
             case .Multiple:
