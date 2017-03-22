@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>CSNotificationView-CSNotificationView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -35,6 +40,11 @@
 			<false/>
 		</dict>
 		<key>NSDate+RelativeTime.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -62,11 +72,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0419D4084456EDBC1192A6DE08D7A061</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>1C3436CEA5C3D39764C5F54374794ECB</key>
 		<dict>
 			<key>primary</key>
@@ -87,7 +92,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3EC0924C5AE0F08A7EC7D369FBC82FCA</key>
+		<key>2C8AA1BAF35413BDB954A1DF93576ED1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,27 +102,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>76F81289B87C6B219B64C3FCE0CF2D1D</key>
+		<key>79514B4193522BEC86FF2B501F114AC2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7881ED5CFC738EB1BC788CAC055682D0</key>
+		<key>B272B33F162D6E5C3510BA50ECF2684B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A048CE71EA780FEAF7A3A7AD29D4268B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B2469C4EA993E8CA31E57B40FF8A84BE</key>
+		<key>BE57CD477ECBEA030CE3B04B5CE8C616</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C050EB90AEDA8E52289FB70BB490AC44</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D5F3B2CFBBB4969A6466771B7D095021</key>
 		<dict>
 			<key>primary</key>
 			<true/>

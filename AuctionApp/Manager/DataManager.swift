@@ -4,7 +4,7 @@
 //
 
 import UIKit
-
+import Parse
 
 class DataManager: NSObject {
  
@@ -23,9 +23,9 @@ class DataManager: NSObject {
     
     func getItems(completion: ([Item], NSError?) -> ()){
         let query = Item.query()
-        query.limit = 1000
-        query.addAscendingOrder("programNumber")
-        query.findObjectsInBackgroundWithBlock { (results, error) -> Void in
+        query!.limit = 1000
+        query!.addAscendingOrder("programNumber")
+        query!.findObjectsInBackgroundWithBlock { (results, error) -> Void in
             if error != nil{
                 print("Error!! \(error)", terminator: "")
                 completion([Item](), error)
@@ -52,12 +52,12 @@ class DataManager: NSObject {
         
         let user = PFUser.currentUser()
         
-        Bid(email: user.email, name: user["fullname"] as! String, telephone: user["telephone"] as! String, amount: amount, itemId: item.objectId)
+        Bid(email: user!.email!, name: user!["fullname"] as! String, telephone: user!["telephone"] as! String, amount: amount, itemId: item.objectId!)
         .saveInBackgroundWithBlock { (success, error) -> Void in
             
             if error != nil {
                 
-                if let errorString:String = error.userInfo["error"] as? String{
+                if let errorString:String = error!.userInfo["error"] as? String{
                     completion(false, errorCode: errorString)
                 }else{
                     completion(false, errorCode: "")
@@ -65,8 +65,8 @@ class DataManager: NSObject {
                 return
             }
             
-            let newItemQuery: PFQuery = Item.query()
-            newItemQuery.whereKey("objectId", equalTo: item.objectId)
+            let newItemQuery: PFQuery = Item.query()!
+            newItemQuery.whereKey("objectId", equalTo: item.objectId!)
             newItemQuery.getFirstObjectInBackgroundWithBlock({ (item, error) -> Void in
                 
                 if let itemUW = item as? Item {

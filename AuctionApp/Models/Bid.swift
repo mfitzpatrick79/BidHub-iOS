@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import Parse
 
 class Bid: PFObject, PFSubclassing {
     
@@ -50,7 +51,7 @@ class Bid: PFObject, PFSubclassing {
         }
     }
     
-    class func parseClassName() -> String! {
+    class func parseClassName() -> String {
         return "NewBid"
     }
 }

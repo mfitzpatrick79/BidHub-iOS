@@ -8,6 +8,7 @@ import SVProgressHUD
 import CSNotificationView
 import Haneke
 import NSDate_RelativeTime
+import Parse
 
 extension String {
     subscript (i: Int) -> String {
@@ -59,7 +60,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         reloadData(false, initialLoad: true)
         
         let user = PFUser.currentUser()
-        print("Logged in as: \(user.email)", terminator: "")
+        print("Logged in as: \(user!.email)", terminator: "")
         
     }
 

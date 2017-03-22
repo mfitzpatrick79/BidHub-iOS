@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import Parse
 
 enum ItemWinnerType {
     case Single
@@ -264,7 +265,7 @@ class Item: PFObject, PFSubclassing {
     var isWinning: Bool {
         get {
             let user = PFUser.currentUser()
-            return currentWinners.contains(user.email)
+            return currentWinners.contains(user!.email!)
         }
     }
     
@@ -272,7 +273,7 @@ class Item: PFObject, PFSubclassing {
     var hasBid: Bool {
         get {
             let user = PFUser.currentUser()
-            return allBidders.contains(user.email)
+            return allBidders.contains(user!.email!)
         }
     }
     
@@ -283,7 +284,7 @@ class Item: PFObject, PFSubclassing {
         }
     }
     
-    class func parseClassName() -> String! {
+    class func parseClassName() -> String {
         return "Item"
     }
 }

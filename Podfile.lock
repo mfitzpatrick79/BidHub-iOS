@@ -15,10 +15,13 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - AFViewShaker (0.0.2)
+  - Bolts/Tasks (1.7.0)
   - CSNotificationView (0.5.2)
   - HanekeSwift (0.10.1)
   - IHKeyboardAvoiding (1.4)
   - NSDate+RelativeTime (1.0.1)
+  - Parse (1.13.0):
+    - Bolts/Tasks (~> 1.6)
   - PhoneNumberKit (0.8.3)
   - SVProgressHUD (2.0.3)
   - UIImage-Resize (1.0.1)
@@ -30,6 +33,7 @@ DEPENDENCIES:
   - HanekeSwift (from `https://github.com/Haneke/HanekeSwift.git`)
   - IHKeyboardAvoiding (~> 1.1)
   - NSDate+RelativeTime (~> 1.0)
+  - Parse
   - PhoneNumberKit (~> 0.8)
   - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
   - UIImage-Resize (~> 1.0)
@@ -56,14 +60,16 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AFViewShaker: 7e4bc215ca3e92347b78da436fca74e1730b52e8
+  Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
   CSNotificationView: aa7a0f283a6b6a300388db9e166636fcdebc10ba
   HanekeSwift: 4113367892828e7700d24a384027de6ebc79aad1
   IHKeyboardAvoiding: c1f65068505233454697d9f6ec98fe333064b3b7
   NSDate+RelativeTime: 1b03a562615a4496a826e322096e5792e6706612
+  Parse: f51c24d2feb412e4b2d6cc73d37cb24e8d0089bc
   PhoneNumberKit: ff0be2a7078dda5ef7f3f1264d5e946124304880
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   UIImage-Resize: fa776860f10e6900bbaf53a73e494bdceaaccc77
 
-PODFILE CHECKSUM: 21d4346030ca5c8369f99a352670e9b5e6791a63
+PODFILE CHECKSUM: 333ec1ab0acb22c5cc5de0869bf2ea83dbe20357
 
 COCOAPODS: 1.0.0

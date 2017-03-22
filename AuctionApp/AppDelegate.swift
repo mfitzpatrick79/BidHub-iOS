@@ -5,7 +5,7 @@
 //
 
 import UIKit
-
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,8 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        Parse.setApplicationId("NSTu2o0vGr9UJ0JYM5iPXSYGoDoQQ3ulrERXUEG0", clientKey: "D3H1F21LuG2lOzf8xf9jRmlOE8aPjrA7pJXffx0L")
-        PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = "NSTu2o0vGr9UJ0JYM5iPXSYGoDoQQ3ulrERXUEG0"
+            $0.clientKey = "D3H1F21LuG2lOzf8xf9jRmlOE8aPjrA7pJXffx0L"
+            $0.server = "https://parse.fitz.guru/parse"
+            //$0.localDatastoreEnabled = true // If you need to enable local data store
+        }
+        Parse.initializeWithConfiguration(configuration)
+        //Parse.setApplicationId("NSTu2o0vGr9UJ0JYM5iPXSYGoDoQQ3ulrERXUEG0", clientKey: "D3H1F21LuG2lOzf8xf9jRmlOE8aPjrA7pJXffx0L")
+        //PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
         
 
         let frame = UIScreen.mainScreen().bounds

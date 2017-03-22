@@ -6,6 +6,7 @@
 import UIKit
 import AFViewShaker
 import PhoneNumberKit
+import Parse
 
 private var kAssociationKeyNextField: UInt8 = 0
 
@@ -50,14 +51,14 @@ class LoginViewController: UIViewController {
             user["telephone"] = telephoneTextField.text!
             
             user.signUpInBackgroundWithBlock {
-                (succeeded: Bool, error: NSError!) -> Void in
+                (succeeded, error) in
                 if succeeded == true {
                     self.registerForPush()
                     self.performSegueWithIdentifier("loginToItemSegue", sender: nil)
                 } else {
-                    let errorString = error.userInfo["error"] as! NSString
+                    let errorString = error!.userInfo["error"] as! NSString
                     print("Error Signing up: \(errorString)", terminator: "")
-                    PFUser.logInWithUsernameInBackground(user.username, password: user.password, block: { (user, error) -> Void in
+                    PFUser.logInWithUsernameInBackground(user.username!, password: user.password!, block: { (user, error) -> Void in
                         if error == nil {
                             self.registerForPush()
                             self.performSegueWithIdentifier("loginToItemSegue", sender: nil)
@@ -78,7 +79,7 @@ class LoginViewController: UIViewController {
     func registerForPush() {
         let user = PFUser.currentUser()
         let currentInstalation = PFInstallation.currentInstallation()
-        currentInstalation["email"] = user.email
+        currentInstalation["email"] = user!.email
         currentInstalation.saveInBackgroundWithBlock(nil)
 
         
