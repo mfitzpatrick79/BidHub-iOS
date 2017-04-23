@@ -5,6 +5,7 @@
 //
 
 import UIKit
+import OneSignal
 import Parse
 
 @UIApplicationMain
@@ -12,24 +13,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
         let configuration = ParseClientConfiguration {
             $0.applicationId = "NSTu2o0vGr9UJ0JYM5iPXSYGoDoQQ3ulrERXUEG0"
             $0.clientKey = "D3H1F21LuG2lOzf8xf9jRmlOE8aPjrA7pJXffx0L"
             $0.server = "https://parse.fitz.guru/parse"
             //$0.localDatastoreEnabled = true // If you need to enable local data store
         }
-        Parse.initializeWithConfiguration(configuration)
         //Parse.setApplicationId("NSTu2o0vGr9UJ0JYM5iPXSYGoDoQQ3ulrERXUEG0", clientKey: "D3H1F21LuG2lOzf8xf9jRmlOE8aPjrA7pJXffx0L")
         //PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
-        
+        Parse.initializeWithConfiguration(configuration)
+        OneSignal.initWithLaunchOptions(launchOptions, appId: "f047cf97-a1e9-4f4e-8629-2b4958977a4b")
 
         let frame = UIScreen.mainScreen().bounds
         window = UIWindow(frame: frame)
-        
         
         let currentUser = PFUser.currentUser()
         if currentUser != nil {
