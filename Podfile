@@ -14,5 +14,5 @@ target 'AuctionApp' do
   pod 'CSNotificationView', '~> 0.5'
   pod 'HanekeSwift', :git => 'https://github.com/Haneke/HanekeSwift.git'
   pod 'OneSignal', '~> 2.0'
-  pod 'PhoneNumberKit', '~> 0.8'
+  pod 'PhoneNumberKit', '~> 1.1.1'
 end

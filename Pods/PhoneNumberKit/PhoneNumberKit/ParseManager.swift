@@ -12,59 +12,66 @@ import Foundation
 Manager for parsing flow.
 */
 class ParseManager {
-    let metadata = Metadata.sharedInstance
-    let parser = PhoneNumberParser()
-    let regex = RegularExpressions.sharedInstance
-    fileprivate var multiParseArray = SynchronizedArray<PhoneNumber>()
     
+    weak var metadataManager: MetadataManager?
+    let parser: PhoneNumberParser
+    weak var regexManager: RegexManager?
+
+    init(metadataManager: MetadataManager, regexManager: RegexManager) {
+        self.metadataManager = metadataManager
+        self.parser = PhoneNumberParser(regex: regexManager, metadata: metadataManager)
+        self.regexManager = regexManager
+    }
+
     /**
     Parse a string into a phone number object with a custom region. Can throw.
-    - Parameter rawNumber: String to be parsed to phone number struct.
+    - Parameter numberString: String to be parsed to phone number struct.
     - Parameter region: ISO 639 compliant region code.
+    - parameter ignoreType:   Avoids number type checking for faster performance.
     */
-    func parsePhoneNumber(_ rawNumber: String, region: String) throws -> PhoneNumber {
+    func parse(_ numberString: String, withRegion region: String, ignoreType: Bool) throws -> PhoneNumber {
+        guard let metadataManager = metadataManager, let regexManager = regexManager else { throw PhoneNumberError.generalError }
         // Make sure region is in uppercase so that it matches metadata (1)
         let region = region.uppercased()
         // Extract number (2)
-        var nationalNumber = rawNumber
-        let matches = try self.regex.phoneDataDetectorMatches(rawNumber)
-        if let phoneNumber = matches.first?.phoneNumber {
-            nationalNumber = phoneNumber
-        }
+        var nationalNumber = numberString
+        let match = try regexManager.phoneDataDetectorMatch(numberString)
+        let matchedNumber = nationalNumber.substring(with: match.range)
+        nationalNumber = matchedNumber
+
         // Strip and extract extension (3)
-        let numberExtension = self.parser.stripExtension(&nationalNumber)
+        var numberExtension: String?
+        if let rawExtension = parser.stripExtension(&nationalNumber) {
+            numberExtension = parser.normalizePhoneNumber(rawExtension)
+        }
         // Country code parse (4)
-        guard var regionMetadata =  self.metadata.metadataPerCountry[region] else {
+        guard var regionMetadata =  metadataManager.territoriesByCountry[region] else {
             throw PhoneNumberError.invalidCountryCode
         }
         var countryCode: UInt64 = 0
         do {
-            countryCode = try self.parser.extractCountryCode(nationalNumber, nationalNumber: &nationalNumber, metadata: regionMetadata)
+            countryCode = try parser.extractCountryCode(nationalNumber, nationalNumber: &nationalNumber, metadata: regionMetadata)
         }
         catch {
-            do {
-                let plusRemovedNumberString = self.regex.replaceStringByRegex(PhoneNumberPatterns.leadingPlusCharsPattern, string: nationalNumber as String)
-                countryCode = try self.parser.extractCountryCode(plusRemovedNumberString, nationalNumber: &nationalNumber, metadata: regionMetadata)
-            }
-            catch {
-                throw PhoneNumberError.invalidCountryCode
-            }
+            let plusRemovedNumberString = regexManager.replaceStringByRegex(PhoneNumberPatterns.leadingPlusCharsPattern, string: nationalNumber as String)
+            countryCode = try parser.extractCountryCode(plusRemovedNumberString, nationalNumber: &nationalNumber, metadata: regionMetadata)
         }
         if countryCode == 0 {
             countryCode = regionMetadata.countryCode
         }
         // Nomralized number (5)
-        let normalizedNationalNumber = self.parser.normalizePhoneNumber(nationalNumber)
+        let normalizedNationalNumber = parser.normalizePhoneNumber(nationalNumber)
         nationalNumber = normalizedNationalNumber
+        
         // If country code is not default, grab correct metadata (6)
-        if countryCode != regionMetadata.countryCode, let countryMetadata = self.metadata.metadataPerCode[countryCode] {
+        if countryCode != regionMetadata.countryCode, let countryMetadata = metadataManager.mainTerritoryByCode[countryCode] {
             regionMetadata = countryMetadata
         }
         // National Prefix Strip (7)
-        self.parser.stripNationalPrefix(&nationalNumber, metadata: regionMetadata)
-        
+        parser.stripNationalPrefix(&nationalNumber, metadata: regionMetadata)
+		
         // Test number against general number description for correct metadata (8)
-        if let generalNumberDesc = regionMetadata.generalDesc, (self.regex.hasValue(generalNumberDesc.nationalNumberPattern) == false || self.parser.isNumberMatchingDesc(nationalNumber, numberDesc: generalNumberDesc) == false) {
+        if let generalNumberDesc = regionMetadata.generalDesc, (regexManager.hasValue(generalNumberDesc.nationalNumberPattern) == false || parser.isNumberMatchingDesc(nationalNumber, numberDesc: generalNumberDesc) == false) {
             throw PhoneNumberError.notANumber
         }
         // Finalize remaining parameters and create phone number object (9)
@@ -72,7 +79,20 @@ class ParseManager {
         guard let finalNationalNumber = UInt64(nationalNumber) else{
             throw PhoneNumberError.notANumber
         }
-        let phoneNumber = PhoneNumber(countryCode: countryCode, leadingZero: leadingZero, nationalNumber: finalNationalNumber, numberExtension: numberExtension, rawNumber: rawNumber)
+
+        // Check if the number if of a known type (10)
+        var type: PhoneNumberType = .unknown
+        if ignoreType == false {
+            if let regionCode = getRegionCode(of: finalNationalNumber, countryCode: countryCode, leadingZero: leadingZero), let foundMetadata = metadataManager.territoriesByCountry[regionCode] {
+                regionMetadata = foundMetadata
+            }
+            type = parser.checkNumberType(String(nationalNumber), metadata: regionMetadata, leadingZero: leadingZero)
+            if type == .unknown {
+                throw PhoneNumberError.unknownType
+            }
+        }
+
+        let phoneNumber = PhoneNumber(numberString: numberString, countryCode: countryCode, leadingZero: leadingZero, nationalNumber: finalNationalNumber, numberExtension: numberExtension, type: type)
         return phoneNumber
     }
     
@@ -80,65 +100,56 @@ class ParseManager {
     
     /**
     Fastest way to parse an array of phone numbers. Uses custom region code.
-    - Parameter rawNumbers: An array of raw number strings.
+    - Parameter numberStrings: An array of raw number strings.
     - Parameter region: ISO 639 compliant region code.
+    - parameter ignoreType:   Avoids number type checking for faster performance.
     - Returns: An array of valid PhoneNumber objects.
     */
-    func parseMultiple(_ rawNumbers: [String], region: String, testCallback: (()->())? = nil) -> [PhoneNumber] {
-        let rawNumbersCopy = rawNumbers
-        self.multiParseArray = SynchronizedArray<PhoneNumber>()
-        let queue = OperationQueue()
-        var operationArray: [ParseOperation<PhoneNumber>] = []
-        let completionOperation = ParseOperation<Bool>()
-        completionOperation.onStart { asyncOp in
-            asyncOp.finish(with: true)
-        }
-        completionOperation.whenFinished { asyncOp in
-        }
-        for (index, rawNumber) in rawNumbersCopy.enumerated() {
-            let parseTask = parseOperation(rawNumber, region:region)
-            parseTask.whenFinished { operation in
-                if let phoneNumber = operation.output.value {
-                    self.multiParseArray.append(phoneNumber)
-                }
-            }
-            operationArray.append(parseTask)
-            completionOperation.addDependency(parseTask)
-            if index == rawNumbers.count/2 {
+    func parseMultiple(_ numberStrings: [String], withRegion region: String, ignoreType: Bool, testCallback: (()->())? = nil) -> [PhoneNumber] {
+        var multiParseArray = [PhoneNumber]()
+        let group = DispatchGroup()
+        let queue = DispatchQueue(label: "com.phonenumberkit.multipleparse", qos: .default)
+        for (index, numberString) in numberStrings.enumerated() {
+            group.enter()
+            queue.async(group: group, execute: {
+                [weak self] in
+                do {
+                    if let phoneNumebr = try self?.parse(numberString, withRegion: region, ignoreType: ignoreType) {
+                        multiParseArray.append(phoneNumebr)
+                    }
+                } catch {}
+                group.leave()
+            })
+            if index == numberStrings.count/2 {
                 testCallback?()
             }
         }
-        queue.addOperations(operationArray, waitUntilFinished: false)
-        queue.addOperations([completionOperation], waitUntilFinished: true)
-        let localMultiParseArray = self.multiParseArray
-        return localMultiParseArray.array
+        group.wait()
+        return multiParseArray
     }
-    
-    /**
-     Single parsing task, used as an element of parseMultiple.
-     - Parameter rawNumbers: An array of raw number strings.
-     - Parameter region: ISO 639 compliant region code.
-     - Returns: Parse operation with an implementation handler and no completion handler.
-     */
-    func parseOperation(_ rawNumber: String, region: String) -> ParseOperation<PhoneNumber> {
-        let operation = ParseOperation<PhoneNumber>()
-        operation.onStart { asyncOp in
-            let phoneNumber = try self.parsePhoneNumber(rawNumber, region: region)
-            asyncOp.finish(with: phoneNumber)
-        }
-        return operation
-    }
-}
+            
+    func getRegionCode(of nationalNumber: UInt64, countryCode: UInt64, leadingZero: Bool) -> String? {
+        guard let regexManager = regexManager, let metadataManager = metadataManager, let regions = metadataManager.territoriesByCode[countryCode] else { return nil }
 
-/**
-Thread safe Swift array generic that locks on write.
-*/
-class SynchronizedArray<T> {
-    var array: [T] = []
-    fileprivate let accessQueue = DispatchQueue(label: "SynchronizedArrayAccess", attributes: [])
-    func append(_ newElement: T) {
-        self.accessQueue.async {
-            self.array.append(newElement)
+        if regions.count == 1 {
+            return regions[0].codeID
         }
+
+        let nationalNumberString = String(nationalNumber)
+        for region in regions {
+            if let leadingDigits = region.leadingDigits {
+                if regexManager.matchesAtStart(leadingDigits, string: nationalNumberString) {
+                    return region.codeID
+                }
+            }
+            if leadingZero && parser.checkNumberType("0" + nationalNumberString, metadata: region) != .unknown {
+                return region.codeID
+            }
+            if parser.checkNumberType(nationalNumberString, metadata: region) != .unknown {
+                return region.codeID
+            }
+        }
+        return nil
     }
+
 }

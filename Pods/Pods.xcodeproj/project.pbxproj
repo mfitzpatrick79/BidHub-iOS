@@ -66,7 +66,6 @@
 		1DF55828CA190AB3247AECB6F7FC6DD6 /* PFBaseState.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D8F917BBC3438FA6D8033D6892E74D4 /* PFBaseState.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1E2A6D057E20BE8F5ED3E594F7B8C286 /* AFNetworking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 17EC95C06CD75347C5D90CB91DBB0EE0 /* AFNetworking-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1ED99BD7D51196A0512F818EC2B000F1 /* PFRelationPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F21FCC5F4C5633BE51C1F381F153FFC /* PFRelationPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1F2A842AF4A91C9DA197A86299BE81D5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AF7F426B7F5287D835E2CDB6EC4354 /* Constants.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1F6645C82232EF314F8F21FCBA94B1B1 /* PFMutableQueryState.h in Headers */ = {isa = PBXBuildFile; fileRef = BE475A959B4CA2BD88CE572494D7E4D7 /* PFMutableQueryState.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1F92ABA52552FCCBD3727214F5339E79 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F111D5467E07B4F90AFB00EACB87A352 /* Data.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1FAC5BEEF80B9AB3559776C234066A98 /* PFFileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 820F19253D767378F6E79F5E85B3DA77 /* PFFileController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -99,11 +98,11 @@
 		2E212E88207D3F227F4F834D03FE70E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFE7669878CDE9CD4A8943454DBF147 /* Foundation.framework */; };
 		2F145AC3840C5D307EB4BA9D4B6EA42C /* PFRESTSessionCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = B512C16D83E9602B5E2CB45593D7BFD6 /* PFRESTSessionCommand.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2F34E5EA76741F4AD363F012918CC60C /* PFRESTFileCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C14DF13D25A5A94A3496C083FFDD6BDB /* PFRESTFileCommand.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2F75596A392C1DAFCD0116133F48EBB5 /* MetadataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026901C8291DE4A0122DBDC273613B07 /* MetadataTypes.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2F7D7FFFB64922367DCAA6C7D6C4A6CF /* Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D762D44DB9173AAF8422A961EDF1916 /* Haneke.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		30F0BAE1DBB79BBB6CBD957EA8B89E4B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EABD4F7FB0BD3CF14EEF415B7B6B826 /* MobileCoreServices.framework */; };
 		3123049844369414DA89BB5034C73A88 /* Parse-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 155E2326B35321C569023BB90E2148B6 /* Parse-dummy.m */; };
 		31B4C5F8F3156984B8C3A03AB15B60BC /* PFAsyncTaskQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DC4195B8EDED2DB805281091B77CF4 /* PFAsyncTaskQueue.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		31E4D363BC5C3521ACCF72841016FB4A /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C44F43F064AD430BE588D530957B21D /* TextField.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		33828E3579A46C1EC61375ED3D052A4A /* PFCloudCodeController.h in Headers */ = {isa = PBXBuildFile; fileRef = F78E16BE657A03DBD72567BB72530B96 /* PFCloudCodeController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		33884036F978D91844C06570BB347A8E /* PFDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D69E05C00E2F3CFDFDBDFC7C213418A /* PFDevice.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		33DAB2E489B77259CD2B8F106EB91CB5 /* PFMulticastDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 18A98B017C2D03CDDD749497A20A8BD5 /* PFMulticastDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -114,7 +113,6 @@
 		35CBB7B255FD8D412AFCECBC4311A847 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = E27B05938F1A3C4DE7307E42CFB4D855 /* AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35E5666D2B320987754727764F507FCF /* PFSQLiteDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 390F805C82C256A13164B2D5C8B56B72 /* PFSQLiteDatabase.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3618518B6C66473123B5269AC8E6F355 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2FFA66033AAAEF3723EAC498655618 /* CFNetwork.framework */; };
-		364CFD4752AA5C774A47653E22EA0851 /* PhoneNumberKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C475D44388988A20833657585C1709 /* PhoneNumberKit.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		372B96182CD6030263BA5084364F3611 /* PFInstallationPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0736A2F3C42B964CBDF04F8E85CF4CA3 /* PFInstallationPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		372DBCE40196DF182BDE117A2FFB4935 /* PFInstallationController.h in Headers */ = {isa = PBXBuildFile; fileRef = E5D4F3DD995DA2445128CF40A7D64CB4 /* PFInstallationController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3763BED8A247BCD893CC47425317E7B7 /* PFObjectControlling.h in Headers */ = {isa = PBXBuildFile; fileRef = EA11CA6EBC614F2EA154A0DF35705671 /* PFObjectControlling.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -166,14 +164,14 @@
 		4A6DA7E312EC9468F6195EBF2EC05A33 /* BFCancellationTokenRegistration.h in Headers */ = {isa = PBXBuildFile; fileRef = 46FF05C333B07DB97B7BCE6536FBF8B0 /* BFCancellationTokenRegistration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B7013BE9D0A56E6210F0AB384B23A5E /* PFPin.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CCE1B190100232163DCAE5B5615236 /* PFPin.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4B71230A0456F31D1535BD65B034F08D /* PFConfig_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 103502055B44232EAA6702CE9504703E /* PFConfig_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4B98D42F0524D116E7F88FBB91B2F3A4 /* ParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F729ABC76BE0EBA38D84A72FF48EAAD /* ParseManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4C7B62275BB944B5E66DF4C1BAEF3FE2 /* IHKeyboardAvoiding-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E7EE158CA3470048FB1AB030BD4E3C /* IHKeyboardAvoiding-dummy.m */; };
 		4CF4B9481DC72FC9AE98990E389CAFF2 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F948E01B8864A7C43715F63C07760D3 /* Format.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4E0CD82E3FE155C74F056A93525F805F /* PFQuery+Deprecated.h in Headers */ = {isa = PBXBuildFile; fileRef = 412B1EB4C3BEEF641C86E8FD0166EAAF /* PFQuery+Deprecated.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4EDD8ED0619B6F6401D8B7950A83966E /* NSRegularExpression+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28AA0F5BC1F6836CD57932E62C10B7D /* NSRegularExpression+Swift.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4EE3BD6F91C2EEDDE9FA1E2CD4B23F07 /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 65870A4683CCF892BDE32F79680FDC1C /* AFAutoPurgingImageCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4F4705637752C5613DF1F4DEEA964992 /* PFAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD78F88442370298FF691656EF1F616 /* PFAnalytics.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4F918DE1EFEE6F0DF5F866FABD584159 /* PFAnalyticsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F80B7E15C93A92413A241166754935 /* PFAnalyticsController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4F9F1A87FA2940B18DBD32B0180D50FA /* PhoneNumberMetadata.json in Resources */ = {isa = PBXBuildFile; fileRef = E4129CB90E922AEFD2C46AED9031B2B7 /* PhoneNumberMetadata.json */; };
+		4F9F1A87FA2940B18DBD32B0180D50FA /* PhoneNumberMetadata.json in Resources */ = {isa = PBXBuildFile; fileRef = 349E8990A87103C68DF283F1AB764AE6 /* PhoneNumberMetadata.json */; };
 		4FCC55FD233C301842D0B7E85B5FFFD3 /* PFPushChannelsController.h in Headers */ = {isa = PBXBuildFile; fileRef = D1C9314E4A82C5D63481E413BD75FE00 /* PFPushChannelsController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5024830859403A09AAE429DA4C7E0C66 /* PFInstallationIdentifierStore.h in Headers */ = {isa = PBXBuildFile; fileRef = E65456B5240172E0B9FECFB2EC7107A5 /* PFInstallationIdentifierStore.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5041423511678BC9A850DD5808517596 /* PFConfigController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3902A736AF5A099E87594C3CD9508438 /* PFConfigController.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -188,6 +186,7 @@
 		51EAFF4EF23BFADB9DF2F19730F94804 /* PFAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = 20A2BBE0BF054C4ABBB6D482CCC42014 /* PFAnalytics.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		520EB591C234B7E09BEFAEFC3BDDF0A0 /* PFSQLiteStatement.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DC0A71B10CC73BD684B80E986374D4D /* PFSQLiteStatement.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		52AE59DDD0FF27779D6B72CEF4BDB1B6 /* PFOfflineQueryController.h in Headers */ = {isa = PBXBuildFile; fileRef = 299CC0885412AFBB2EE8314F78953EE5 /* PFOfflineQueryController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		52BC57126E4B90E91A751C91F3108183 /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4F7929678F10B319ADCBCD3251494D /* PhoneNumber.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		53844CC828FFD918F89C185B6CDFD205 /* ParseClientConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 21ABC1DFB085C903F84151DDD966632E /* ParseClientConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		53E7D79DDE280F1C05854BA3C9E2C2A7 /* PFURLSessionFileDownloadTaskDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0770C34C5B8150750AEA89A84F2A780F /* PFURLSessionFileDownloadTaskDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		542F4F60674EBC83314CAF5DFE4AAFB3 /* PFUserPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 216C5D9DD16EE1282CF4194FA9A681B4 /* PFUserPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -199,6 +198,7 @@
 		574F02142E59E550500793FD8F03E104 /* PFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB5FF6631691C3F60D676FD5DCECBCE /* PFQuery.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		57A2A56E3D98A46FF11F88288A92B9A8 /* PFMutableUserState.h in Headers */ = {isa = PBXBuildFile; fileRef = 54550BCCD2E15B7A1A5E7EB0879D83DC /* PFMutableUserState.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		57F54B1F2DB1E654BA2DA951AAE14F8B /* PFUserController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4275206FE09E227EBCAA226304D31B98 /* PFUserController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		57F941EB815909EFF0E79BE085177AE9 /* PartialFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F78AA03080EBD71857E30E04581B3DF /* PartialFormatter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		58E147ADA6FBFD2AC23F3349AEFE48A0 /* PFURLSessionDataTaskDelegate_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DB8D9F0F0A8A15D3360A6646DFC067F /* PFURLSessionDataTaskDelegate_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5926BE8034239623BEEA8DA442330D40 /* PFOfflineObjectController.h in Headers */ = {isa = PBXBuildFile; fileRef = C94BBCB8C4B457EBEF720985F3EEDF79 /* PFOfflineObjectController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		593C927DFD88E57E57E6632925204E5E /* PFDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E33D0139C440A3BDBDD8B5DF4D74BD2 /* PFDecoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -226,7 +226,6 @@
 		665BA0AA742AF7362DB78DF8AC1B37C1 /* PFMutableFileState.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6FC3522633292D674E2D50328F0F16 /* PFMutableFileState.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		667F585E898B5257FAE80B5645B64CE5 /* PFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2188336C2F82205A1E19DC2647773C /* PFNetworkActivityIndicatorManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		67371B17B26091C3600BD04F1BC3AE46 /* PFSQLiteDatabaseResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F011C4BC3F474F78B09ED1E0D238417 /* PFSQLiteDatabaseResult.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		676764B354686AE19D0A464C73F2FE9E /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C44F43F064AD430BE588D530957B21D /* TextField.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		67DB259C75DA6A9372E22CB9852426DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFE7669878CDE9CD4A8943454DBF147 /* Foundation.framework */; };
 		69038626B7ECF18BF2664CCC6537D7D0 /* PFCurrentInstallationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A9C85BB7A7A5C82CB47E99638C2835 /* PFCurrentInstallationController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		69CE0C78915E418224DEF2A0DD4FECC5 /* PFACLState.m in Sources */ = {isa = PBXBuildFile; fileRef = CB972705BE5C0314F40C4F6901583A87 /* PFACLState.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -258,10 +257,11 @@
 		7A18F2E9A578B7608EF5331918D34C4E /* PFObjectConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 591A05C0D6A41B647480EDEC26F9672B /* PFObjectConstants.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7A85BA7D23688B43A349D6CB0749EAA8 /* PFPurchaseController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B3774CF4344124ABA4B27F577342B95 /* PFPurchaseController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7AB3D9A77E2EEC69F121DFBDE10D3C09 /* PFSQLiteDatabaseResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 22282AFF1F86B6A4BADE631EA1BF277A /* PFSQLiteDatabaseResult.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7B06E08ED42EBCD19CD43953A12F273B /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10458CF2CD650199C2C5FEAF4FCD60D0 /* Formatter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7B603EAC1BC5E5522952FA2A1F04AB93 /* UIImage-Resize-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A75A7EDE5D13F81A8BEFD5FB003706B /* UIImage-Resize-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7B6B8757629976FAD059A5ED2BA99985 /* PFObjectEstimatedData.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A7E8A5621F52CCE537C69F44D6E894 /* PFObjectEstimatedData.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7BB9DE7BB1BC7AAA7142D3464A12627B /* ParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA214C7C6D5C933DB34D1CAAA23682F /* ParseManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7BD11B66B92CF7CED09741FB08B23DF0 /* PFCloud.h in Headers */ = {isa = PBXBuildFile; fileRef = 48B7B73D82BC0A99FE1091442D8EC299 /* PFCloud.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7C0732AD5A99D1E40422D10A00155D8E /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B2E4DFE2839EA7CF9E15F80BE7BD1F /* PhoneNumber.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7D740F11766026463FA9FF858B71E6E1 /* PFFieldOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FFA89AA1AA32E07C2EC6CDEE70C28C /* PFFieldOperation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7DB8ECCE108D4E97C2314809198BF795 /* ParseClientConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = E723E732802BA96C49C204E67F9DBC8C /* ParseClientConfiguration.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7DF485E24E20F68C5F58B1F72FE6C2DA /* PFOperationSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 31ED4C47AF8F5FE1CD941FE1AD0958A9 /* PFOperationSet.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -271,7 +271,6 @@
 		7FD84D0688C211D9ACA0EF539C4DAF76 /* PFOfflineObjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0AD1CE220ED1F4D37B1E15A340A7C1 /* PFOfflineObjectController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		809726E367D48D7D89FB7CB07CC8E645 /* PFSessionUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 1397169FAAE6DC650951A83963667390 /* PFSessionUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		80FA3FDA6D01CA18BF75DD0B815B4DCD /* Bolts.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C1B930F33EA64BA6F23B1934108D96 /* Bolts.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		829D6AF381017FF733654E806E76170C /* RegularExpressions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872B0D4B563AB287F09F5FDBF2103DD /* RegularExpressions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		82CA6B855A724013545B6E02E8EE574F /* PFInternalUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 50739ED2B08BB7B8925C1280B72927CB /* PFInternalUtils.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		82D554EC9FB9A62D935B6555325F5898 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BEC4F951E7C9E474E6676201D2D995 /* Security.framework */; };
 		86BBE6ADB1DF38BD88ADAA1BE3C889AF /* CSLayerStealingBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0930CA3FE1F121D4237448EA5E38AD93 /* CSLayerStealingBlurView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -283,7 +282,6 @@
 		885D943648955A5F6309E137A013C7A2 /* PFObjectSubclassingController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA7F34D74E72A9533CF013F3F679D46 /* PFObjectSubclassingController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		88C682D13871BF5828E2EF8A9FBC4DAB /* PFRelationState.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2DA00BE840FE6BF1CCFA2D2E7ACC6 /* PFRelationState.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		89DD24BBC80CF7D7CA8A4F17FF36B42D /* CSNotificationView.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7D8C68913D23A38659815179BF663C /* CSNotificationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8A5187CADF9ABD90281F5FD3321BDF03 /* PartialFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BECC0322CE50447261957E42CCA880 /* PartialFormatter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8A69AB9332FB72A045E6871BE586305E /* BFTaskCompletionSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A68488D292DF890BFA1AA76162CA9 /* BFTaskCompletionSource.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8A9D3EEE3B3293EC50279FAA03886551 /* PFMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 06C7AB5EBCF4D05EED42348BBDCB4F30 /* PFMacros.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8AC48CCFC4BC91E61C19518CE9FF583B /* CryptoSwiftMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EAABB0789DE0D0F48347ABEB06D9CB /* CryptoSwiftMD5.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -313,7 +311,6 @@
 		93DFC0CC12E763AE770017349EE009D1 /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C03382CC251FD844277AB15FFC651865 /* AFNetworkReachabilityManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9415A64EE00D90159D0626B584419EEC /* BFTask+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B11221068E79003BE849307B3B3A91 /* BFTask+Private.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		948458DC0A9308A2D8C018C37FB7BBDD /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = ABFB36B6DF6ACDFE91282BE507B72CBD /* AFURLResponseSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		949EE65E8C949AFAA645E2904E3F0215 /* PhoneNumberKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB93B4D3B69F93AFA036A32CF626E447 /* PhoneNumberKit-dummy.m */; };
 		9590F19A138B7958D78399EFC7290BB4 /* PFWeakValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E32CFA3C465483C9D671C67AA321E7 /* PFWeakValue.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		95E2B191E95B4B69CB5F79037DA9F5FE /* PFCloudCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FE0875CBD6D59E1DDBE33135D212A2 /* PFCloudCodeController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		95FC0FEF5ADF047CB051976738B67239 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A04ABA41ECD9A2E818461171E5450AA /* AFURLResponseSerialization.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -325,6 +322,7 @@
 		9ABE6EDDFD1C75D979AD9701BB219357 /* NetworkFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD87F4A3076DF1D8AEB8292DEDD9CBA /* NetworkFetcher.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9AD80C36AECF07B6F843B425F80AB0E4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF5609BD9778EE1A861F317B3FD97A63 /* AudioToolbox.framework */; };
 		9BDB40D18A9FD3C09CAA59A047D16DB4 /* PFObject.h in Headers */ = {isa = PBXBuildFile; fileRef = C5DB3D5DE36B439573F07CDB0CB75CF5 /* PFObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C23AFCC4B3B2C626AF1A40C3BBBE179 /* PhoneNumberKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3E03C324DE4D6A68680F49700C2D3F /* PhoneNumberKit.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9C5E96261FF35C29BBBA9F0D218F9FA7 /* PFDataProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F8613176C1E93A61AC914FEE17044C4 /* PFDataProvider.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9CA33AFD11FE54C7766E4078801CC09B /* Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = D25190596ECD22C31F666FD97C5AA352 /* Parse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CAC10826D2183AE60C8BE4D0C4236A6 /* PFFile.h in Headers */ = {isa = PBXBuildFile; fileRef = BFB7157AF5D08A9BEC7C970527F423C3 /* PFFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -332,6 +330,7 @@
 		9D7BF3E372534121B939C42473171D38 /* BFCancellationTokenSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F86DC526FE78E8CF66751B33A430111 /* BFCancellationTokenSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DC80019A8A9F1014A1CF027A5A124D1 /* PFFileDataStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 424E90D11DE6BDC4E6F65951637A42E5 /* PFFileDataStream.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9E0EA27C896897A55A219AE62495A8CC /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 85529FAF491BA85E6454F31020E1B45E /* SVRadialGradientLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E8AE432453C6FB9202DFFF5654B63EB /* RegexManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED61789725B6199D1EFF7DFB1DBAE9B /* RegexManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9EFBBEE5FB1464DF29C82BD5FF0A9821 /* PFUser+Synchronous.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F8E97644C3A9B685EF9809C5BC681F5 /* PFUser+Synchronous.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F7815D28D2165DA6CABCA4EFDE1A3BA /* PFDateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 077BD3F2478F5EF66EFD8AD6792322B5 /* PFDateFormatter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9F9192EAF8907A8AB78A373A275FE6A4 /* PFFileStagingController.h in Headers */ = {isa = PBXBuildFile; fileRef = 11817C2524FE0B220D0FBA1AD58B58D4 /* PFFileStagingController.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -363,12 +362,13 @@
 		A9908D0D9F54847E2D37D97E27CBE728 /* PFMulticastDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FE494496FFFF28FFAD653D7ED54492 /* PFMulticastDelegate.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A9C78473F620B43C4A43FD032E27E65B /* UIButton+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F69D4515A42A9AD967D49E5357BE8EF /* UIButton+Haneke.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		AA615E91B5D60A9F8B1B1EB61A819764 /* PFThreadsafety.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B5BFF27B016D391F637F7E43E81E8FE /* PFThreadsafety.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		AA8FCAB82C2754366F331C15989ECD7A /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31476BB77632F20BBDCA363D21F0A37 /* Metadata.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		AA9BA324F1605A1C2EAF57D4F6B147A2 /* PFPushUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6A24EC3FD5AD5863530633E27FE85B /* PFPushUtilities.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AAFCB86872BC397A172DDAA4D0037391 /* PhoneNumberKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB93B4D3B69F93AFA036A32CF626E447 /* PhoneNumberKit-dummy.m */; };
 		AB6DBB26529EC8CD14A6DC8D227A61C6 /* PFUserAuthenticationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FE659129746D1DE231293711DBEB4 /* PFUserAuthenticationController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		ABFCCE7B9FC197B35B653DE445D81B2F /* PFPersistenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962B657B936EFDD5D049D47571922BE0 /* PFPersistenceController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		AC103108ECDD85921B96A2DA387170FD /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ADC2DEABB70E695AAB7C26E53F47C6 /* Fetcher.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		AD39C5C75D6BD277988873EC7DAB79F1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A988E82D2B376E7743297CE4F4CCF8 /* CoreGraphics.framework */; };
+		AD676AB8975C0D7A8FEBE67B64F4865B /* MetadataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD7451F762031EE95D743ECD6655BD /* MetadataTypes.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		AD87E373DF8DE491CF9951833EDE6D7B /* PFInstallationIdentifierStore_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = A211F9313E1F729CB3BCCF0296ECC701 /* PFInstallationIdentifierStore_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		AE057DC143E207B3D14A590B628F2852 /* PFObjectUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEAF06E5C7013E272E4ACD5B123C120 /* PFObjectUtilities.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		AE077C260D24C4DE7D5CF18FCE0F6190 /* PFUserFileCodingLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = F2624A0533FA9D55B5467879794542C1 /* PFUserFileCodingLogic.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -391,6 +391,7 @@
 		B6A9410B0C67309A525C684B3F04EFE5 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E6F4688E66E0E809C33AA32308935F /* SVProgressAnimatedView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B72DBD42F486FA0368ED4E8555BF8B2E /* PFURLSessionJSONDataTaskDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E300D86F97574E486B25D5EF9708004 /* PFURLSessionJSONDataTaskDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B77188D16DE63D60880D1E463B7217B4 /* PFPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 512850A134D22BAEA28EE97D2B41EC8B /* PFPush.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B7F0F5D3348658506C589DE9A1171080 /* PhoneNumberParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12097C0512EB84683315C5C881385EE9 /* PhoneNumberParser.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B82E5F92C6C2C65F88EB02617FB7F66C /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = F61675CCE3C49EC843A1E83282BCEB6C /* AFSecurityPolicy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B85AAD471DA55AAC6BD017A4E3D083BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFE7669878CDE9CD4A8943454DBF147 /* Foundation.framework */; };
 		B8D4E428B01E26B8268A921FD3D78320 /* PFRESTObjectBatchCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 278B16C44DBD43043A00F1110BDBC1FB /* PFRESTObjectBatchCommand.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -431,7 +432,6 @@
 		C88FF6EE4C29E56791F51219747D76CA /* PFPush+Synchronous.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D13D5C818E44B5A18AD1E0A91A02F0 /* PFPush+Synchronous.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9A0A3ED74B16D00534BE8DE8D729A82 /* PFLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E9460AE768F83935EAFF95DFABC4A7 /* PFLogger.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CA3CFDF52F1DC8D33E8246831F5E6DEF /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = B70D8B4C043318605B5C37F7DB52AFE1 /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA8BA557E522B6B8EBEB999A08BCE540 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD1A2174208A9CB34C0B721BE1AA64 /* Formatter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CA92B8CC1993E2B3D0E99C8608ED2870 /* PFProductsRequestHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C66A5AE76836696988526F3A7267CB /* PFProductsRequestHandler.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CACCC5574A30AD2FE661862B21B45A8C /* IHKeyboardAvoiding.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3585F52D9DAF83671C8BF991B62F8D /* IHKeyboardAvoiding.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CB9F825D7E0C64B1AEE54AAEBE6A8614 /* PFRESTUserCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B34DDF859A7DD6696FDD11951050B41 /* PFRESTUserCommand.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -452,7 +452,6 @@
 		D5A3A06BF3A551CFEFC1A84BE4A65A6E /* PFReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D6438AAEE4E84E8201A5CBFC835B2D9 /* PFReachability.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D669E99F982767DFF1E6A1B1050FC379 /* CSNotificationView_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = E00748E0C3DCA3315B931B1B20A05E74 /* CSNotificationView_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D79990B26ECFB7173CF54ACCA0E25F93 /* PFGeoPointPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = F422E37EC846F34AA5FC452931C49D74 /* PFGeoPointPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D80D6BFDD3ABFCD8C8801B35E3C5393C /* ParseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ADD2748504FCB72B047D248424769F /* ParseOperation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D8DF34D6EDC01D3039E2FE471FFE6E3C /* PFRole.m in Sources */ = {isa = PBXBuildFile; fileRef = DE06AFF2F7A5CDF946E4DD42F7835426 /* PFRole.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D90D3EBF9AD8743473548B7E7F17F30E /* PFCachedQueryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A7C999818060833C8CD5D43CAEA38 /* PFCachedQueryController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D92C1C503F6512167F4EEB9AEFAB2001 /* PFUserDefaultsPersistenceGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = C8897224711A08A35DF246F29E14A8C7 /* PFUserDefaultsPersistenceGroup.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -485,7 +484,6 @@
 		E74055E99E3610C4ABE32DD8E3835B4B /* ParseModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AD737D47058DAD10514838FADEC8EC /* ParseModule.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E7895127AAF6443A8E546C77C7212F24 /* PFObjectFileCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 751586586804580AAD0D6DF489B1ECBA /* PFObjectFileCoder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E7CDFE9F81CCE0296C9B64EAA13E9E51 /* PFSQLiteDatabaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = F300E27050C307231EA3CC96403A0C5D /* PFSQLiteDatabaseController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E9CED6F6EEC513B9D084EF33D08962E9 /* PhoneNumberParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB068A022828F736323F02BFF3C8E9D /* PhoneNumberParser.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		EAB1171A3B0D857FF19384F030FE7A9B /* PFLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF902588EFF9E1B3A0ABC09F6A1993 /* PFLocationManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		EAC47BB7AFEF34F9797A031154BFE74D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFE7669878CDE9CD4A8943454DBF147 /* Foundation.framework */; };
 		EB41A982FF8531BDFDF6522A7B24BA7A /* PFObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 146C3F292BB3B5BED4C094D51D12ED1A /* PFObject.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -493,6 +491,7 @@
 		EBAB8E08E2997CA623E7898BB17F9014 /* PFObjectPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = F5C1E75E43DCB707D421082E42319FD6 /* PFObjectPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EBEFB6443DC51154794557A58001FAE8 /* PFPinningObjectStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 485B20B332DF927BADBC132D661972D7 /* PFPinningObjectStore.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EC816DC3379B2AB9E2C1196687F4EF62 /* PFThreadsafety.m in Sources */ = {isa = PBXBuildFile; fileRef = 386C540E345C4E6E3CE8DFA6E7EDCAB9 /* PFThreadsafety.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		ECD5762282E069E59D1F36067454E159 /* MetadataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CC6E8E50E792D9A4F9E02513939C75 /* MetadataManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		ED6DB3ACDD11FD4CD5095D89F536499D /* PFFile+Synchronous.h in Headers */ = {isa = PBXBuildFile; fileRef = 820C14E4776ABF5039935AAD4096E99B /* PFFile+Synchronous.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE3CBF2CCC7C07AF10768DD86316F693 /* PFObjectFileCodingLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = 12AA0CFA08975032F23F0082EEFA94E0 /* PFObjectFileCodingLogic.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EE3E4EA44FA96A5930FCEF7044D3AB5E /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 383B73DCE6E371BC3AC333C8816F139D /* AFURLRequestSerialization.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -531,6 +530,7 @@
 		FAAEA5B885CFB257276A26846EABF3CC /* PFReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F2D7125789DF98F5B21D40F159D98B /* PFReachability.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FAE15E0FF602B1D165D79F918D48D08C /* PFTaskQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 09449CD65C44A7B7BF675C289319BBC6 /* PFTaskQueue.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		FAE8DC14A741C8A4C20C349128C5C828 /* PFConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = D493B131D73E0C00B8DBC344BBF351CD /* PFConfigController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FAEA85B780C3FDDE65005C49FEA8B758 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577285CAD49871A8B5691CF805AE60B8 /* Constants.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FB5B523D4533CA0099A4AF855BF22BDB /* PFKeychainStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AD12C0D469D0056DF28A0BE520AD533 /* PFKeychainStore.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		FBD5BC081F1620138D111F684C35F4CA /* PFURLSessionJSONDataTaskDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 328EE3936BD2588DF820B2B6BBCCBE02 /* PFURLSessionJSONDataTaskDelegate.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FC01584B054350E0A980749620821582 /* PFRESTQueryCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = BD09AFDFEA8E50AAABBE86EBB114EDDA /* PFRESTQueryCommand.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -644,7 +644,6 @@
 /* Begin PBXFileReference section */
 		008AAAAD74BC0CF13A98A1D8ABBE022E /* Parse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Parse.m; path = Parse/Parse.m; sourceTree = "<group>"; };
 		02585463E9E7BBF0A55CADAA2799D806 /* CGSize+Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+Swift.swift"; path = "Haneke/CGSize+Swift.swift"; sourceTree = "<group>"; };
-		026901C8291DE4A0122DBDC273613B07 /* MetadataTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MetadataTypes.swift; path = PhoneNumberKit/MetadataTypes.swift; sourceTree = "<group>"; };
 		0276C2F3D6A809A1157440D772F2DAF4 /* PFPushPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPushPrivate.h; path = Parse/Internal/Push/PFPushPrivate.h; sourceTree = "<group>"; };
 		02A835CFB1A5D3A9B233827F9B754B1F /* PFQueryState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFQueryState.h; path = Parse/Internal/Query/State/PFQueryState.h; sourceTree = "<group>"; };
 		03C80D8B9CC53B81215AC2A043178B83 /* HanekeSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-umbrella.h"; sourceTree = "<group>"; };
@@ -679,13 +678,14 @@
 		0D8F917BBC3438FA6D8033D6892E74D4 /* PFBaseState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFBaseState.h; path = Parse/Internal/PFBaseState.h; sourceTree = "<group>"; };
 		0DE7F3ECC7FC5F4E923CA7128CBD94F6 /* PFSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFSession.m; path = Parse/PFSession.m; sourceTree = "<group>"; };
 		0F41BFAD53EF97C6EEB1DC2CC2DD4DD8 /* PFMutableFileState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFMutableFileState.h; path = Parse/Internal/File/State/PFMutableFileState.h; sourceTree = "<group>"; };
-		0F729ABC76BE0EBA38D84A72FF48EAAD /* ParseManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParseManager.swift; path = PhoneNumberKit/ParseManager.swift; sourceTree = "<group>"; };
 		0FB95848DB27CEF195CD4802006C7D61 /* PFAssert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAssert.h; path = Parse/Internal/PFAssert.h; sourceTree = "<group>"; };
 		0FE65A46960931970252D668D759ABD9 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Parse/Resources/en.lproj; sourceTree = "<group>"; };
 		103502055B44232EAA6702CE9504703E /* PFConfig_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFConfig_Private.h; path = Parse/Internal/Config/PFConfig_Private.h; sourceTree = "<group>"; };
+		10458CF2CD650199C2C5FEAF4FCD60D0 /* Formatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Formatter.swift; path = PhoneNumberKit/Formatter.swift; sourceTree = "<group>"; };
 		10611CDAFD992B9BAE8137B8695F0BA4 /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActivityIndicatorView+AFNetworking.m"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
 		1091C5C378242A3B1ECC4EAF42C23346 /* PFConfig+Synchronous.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PFConfig+Synchronous.h"; path = "Parse/PFConfig+Synchronous.h"; sourceTree = "<group>"; };
 		11817C2524FE0B220D0FBA1AD58B58D4 /* PFFileStagingController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFFileStagingController.h; path = Parse/Internal/File/Controller/PFFileStagingController.h; sourceTree = "<group>"; };
+		12097C0512EB84683315C5C881385EE9 /* PhoneNumberParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhoneNumberParser.swift; path = PhoneNumberKit/PhoneNumberParser.swift; sourceTree = "<group>"; };
 		124AE79959FA3C90BE24C4DCC9B64617 /* PFMutableRelationState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFMutableRelationState.m; path = Parse/Internal/Relation/State/PFMutableRelationState.m; sourceTree = "<group>"; };
 		12AA0CFA08975032F23F0082EEFA94E0 /* PFObjectFileCodingLogic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectFileCodingLogic.h; path = Parse/Internal/Object/Coder/File/PFObjectFileCodingLogic.h; sourceTree = "<group>"; };
 		1325F42188F2BF6C71A0341E1CC1172A /* Pods-AuctionApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AuctionApp-frameworks.sh"; sourceTree = "<group>"; };
@@ -718,6 +718,7 @@
 		1E2BE464FF69CDAE7B004ED2DC90DDEB /* PFACLPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFACLPrivate.h; path = Parse/Internal/ACL/PFACLPrivate.h; sourceTree = "<group>"; };
 		1E3585F52D9DAF83671C8BF991B62F8D /* IHKeyboardAvoiding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IHKeyboardAvoiding.m; path = Classes/IHKeyboardAvoiding.m; sourceTree = "<group>"; };
 		1E37D403D2DB4F12CB99AF458F4D5274 /* PFAnalyticsController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAnalyticsController.h; path = Parse/Internal/Analytics/Controller/PFAnalyticsController.h; sourceTree = "<group>"; };
+		1E4F7929678F10B319ADCBCD3251494D /* PhoneNumber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhoneNumber.swift; path = PhoneNumberKit/PhoneNumber.swift; sourceTree = "<group>"; };
 		1E81F85376943DD1FF97FE212A22945D /* PFQueryConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFQueryConstants.m; path = Parse/Internal/Query/PFQueryConstants.m; sourceTree = "<group>"; };
 		1F90020E6E49A02587C99A4068CE10CC /* NSURLResponse+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLResponse+Haneke.swift"; path = "Haneke/NSURLResponse+Haneke.swift"; sourceTree = "<group>"; };
 		1FC7750753A513024FADE7A2B5CC3EDF /* PFMultiProcessFileLockController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFMultiProcessFileLockController.h; path = Parse/Internal/MultiProcessLock/PFMultiProcessFileLockController.h; sourceTree = "<group>"; };
@@ -769,6 +770,7 @@
 		32C93A1FBB2C0216F4497DC1473682F9 /* PFACL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFACL.h; path = Parse/PFACL.h; sourceTree = "<group>"; };
 		339003CF49BCFFC6709B99C5DEAD8849 /* PFSQLiteDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFSQLiteDatabase.m; path = Parse/Internal/LocalDataStore/SQLite/PFSQLiteDatabase.m; sourceTree = "<group>"; };
 		33EB3CEE5A03A38D0AA4BB03BB86FDBD /* PFObject+Synchronous.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PFObject+Synchronous.h"; path = "Parse/PFObject+Synchronous.h"; sourceTree = "<group>"; };
+		349E8990A87103C68DF283F1AB764AE6 /* PhoneNumberMetadata.json */ = {isa = PBXFileReference; includeInIndex = 1; name = PhoneNumberMetadata.json; path = PhoneNumberKit/Resources/PhoneNumberMetadata.json; sourceTree = "<group>"; };
 		34F868DD62506B079B6CA923513D2686 /* PFObject+Deprecated.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PFObject+Deprecated.h"; path = "Parse/PFObject+Deprecated.h"; sourceTree = "<group>"; };
 		353015F066B9860C4E26EF83F1777C51 /* PFFieldOperationDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFFieldOperationDecoder.h; path = Parse/Internal/FieldOperation/PFFieldOperationDecoder.h; sourceTree = "<group>"; };
 		35EACE92B3071D71C20F0CBCDC023B89 /* PFInstallation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFInstallation.m; path = Parse/PFInstallation.m; sourceTree = "<group>"; };
@@ -825,7 +827,6 @@
 		47C8FBE29B31DD95EF695A80C15E74C5 /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
 		48259A29FEB0312AEE8C3F21E2BC809D /* PFInstallationConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFInstallationConstants.h; path = Parse/Internal/Installation/Constants/PFInstallationConstants.h; sourceTree = "<group>"; };
 		485B20B332DF927BADBC132D661972D7 /* PFPinningObjectStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPinningObjectStore.h; path = Parse/Internal/Object/PinningStore/PFPinningObjectStore.h; sourceTree = "<group>"; };
-		48B2E4DFE2839EA7CF9E15F80BE7BD1F /* PhoneNumber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhoneNumber.swift; path = PhoneNumberKit/PhoneNumber.swift; sourceTree = "<group>"; };
 		48B7B73D82BC0A99FE1091442D8EC299 /* PFCloud.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCloud.h; path = Parse/PFCloud.h; sourceTree = "<group>"; };
 		48C871006DBCD95EE02D0205DD028405 /* NSDate+RelativeTime.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "NSDate+RelativeTime.xcconfig"; sourceTree = "<group>"; };
 		4994FD8D008438335ADD9051E6812BEF /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
@@ -856,8 +857,7 @@
 		568425889142C97C9863937D8F2D9DC7 /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
 		56D6EDBC0AFF5090C47A7BE330DECD2A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57062ADAA31977F673D4F14EA3197611 /* SVProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-umbrella.h"; sourceTree = "<group>"; };
-		57AF7F426B7F5287D835E2CDB6EC4354 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = PhoneNumberKit/Constants.swift; sourceTree = "<group>"; };
-		5872B0D4B563AB287F09F5FDBF2103DD /* RegularExpressions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RegularExpressions.swift; path = PhoneNumberKit/RegularExpressions.swift; sourceTree = "<group>"; };
+		577285CAD49871A8B5691CF805AE60B8 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = PhoneNumberKit/Constants.swift; sourceTree = "<group>"; };
 		58B11221068E79003BE849307B3B3A91 /* BFTask+Private.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "BFTask+Private.m"; path = "Parse/Internal/BFTask+Private.m"; sourceTree = "<group>"; };
 		591A05C0D6A41B647480EDEC26F9672B /* PFObjectConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectConstants.h; path = Parse/Internal/Object/Constants/PFObjectConstants.h; sourceTree = "<group>"; };
 		591B8AE4848D87480C682F511052FF44 /* PFCommandRunning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFCommandRunning.m; path = Parse/Internal/Commands/CommandRunner/PFCommandRunning.m; sourceTree = "<group>"; };
@@ -866,6 +866,7 @@
 		5A6FC3522633292D674E2D50328F0F16 /* PFMutableFileState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFMutableFileState.m; path = Parse/Internal/File/State/PFMutableFileState.m; sourceTree = "<group>"; };
 		5B012615F19E9E52F26D0CBF54F75659 /* PFUserDefaultsPersistenceGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFUserDefaultsPersistenceGroup.m; path = Parse/Internal/Persistence/Group/PFUserDefaultsPersistenceGroup.m; sourceTree = "<group>"; };
 		5BE38C22191ECF7CF0933BDDE8D952AD /* IHKeyboardAvoiding-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IHKeyboardAvoiding-prefix.pch"; sourceTree = "<group>"; };
+		5C3E03C324DE4D6A68680F49700C2D3F /* PhoneNumberKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhoneNumberKit.swift; path = PhoneNumberKit/PhoneNumberKit.swift; sourceTree = "<group>"; };
 		5D2188336C2F82205A1E19DC2647773C /* PFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFNetworkActivityIndicatorManager.m; path = Parse/PFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
 		5D7C838A618345821381DE91047207CC /* BFTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFTask.m; path = Bolts/Common/BFTask.m; sourceTree = "<group>"; };
 		5E7474A60E708734317CC379F8649733 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -922,6 +923,7 @@
 		79A7A5F17E0AE92A1D5DC90C1DD1084B /* PFPushManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPushManager.h; path = Parse/Internal/Push/Manager/PFPushManager.h; sourceTree = "<group>"; };
 		79AEED5D8111FBB80563FFC938C1E0DC /* PFLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFLogger.h; path = Parse/Internal/PFLogger.h; sourceTree = "<group>"; };
 		79AF3EE2FDCF8EBAB7344275236C8DB0 /* PFPushState_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPushState_Private.h; path = Parse/Internal/Push/State/PFPushState_Private.h; sourceTree = "<group>"; };
+		79CC6E8E50E792D9A4F9E02513939C75 /* MetadataManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MetadataManager.swift; path = PhoneNumberKit/MetadataManager.swift; sourceTree = "<group>"; };
 		7A0A6C07D4DE8E2A5AA46F5F2B106128 /* UIImage_Resize.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UIImage_Resize.framework; path = "UIImage-Resize.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CC1BDCD08EF14F3E443F818F0BCC5BC /* PFObjectSubclassingController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectSubclassingController.h; path = Parse/Internal/Object/Subclassing/PFObjectSubclassingController.h; sourceTree = "<group>"; };
 		7CFBF2A2C4A41B3C8975AC33DF76D592 /* PhoneNumberKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PhoneNumberKit-prefix.pch"; sourceTree = "<group>"; };
@@ -934,6 +936,7 @@
 		7DEB7833FC630E781B364405D78B1BEF /* BFTask+Exceptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "BFTask+Exceptions.h"; path = "Bolts/Common/BFTask+Exceptions.h"; sourceTree = "<group>"; };
 		7EC2DA00BE840FE6BF1CCFA2D2E7ACC6 /* PFRelationState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFRelationState.m; path = Parse/Internal/Relation/State/PFRelationState.m; sourceTree = "<group>"; };
 		7F712473880C990B847EDCBC49952055 /* SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.xcconfig; sourceTree = "<group>"; };
+		7F78AA03080EBD71857E30E04581B3DF /* PartialFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PartialFormatter.swift; path = PhoneNumberKit/PartialFormatter.swift; sourceTree = "<group>"; };
 		7F86DC526FE78E8CF66751B33A430111 /* BFCancellationTokenSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFCancellationTokenSource.h; path = Bolts/Common/BFCancellationTokenSource.h; sourceTree = "<group>"; };
 		8119EF75FE848B9D66D876D6629B20F8 /* PFURLConstructor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFURLConstructor.h; path = Parse/Internal/HTTPRequest/PFURLConstructor.h; sourceTree = "<group>"; };
 		81ACB9A61EEB363D0E2F9FEADF704E77 /* UIView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Haneke.swift"; path = "Haneke/UIView+Haneke.swift"; sourceTree = "<group>"; };
@@ -1045,11 +1048,13 @@
 		AF5AB9F2F7E61D75DB83A119C6DAF3A7 /* PFRESTConfigCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRESTConfigCommand.h; path = Parse/Internal/Commands/PFRESTConfigCommand.h; sourceTree = "<group>"; };
 		AF8175D0B73CB81DCAC6905750B78E2E /* PFAnonymousUtils+Deprecated.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PFAnonymousUtils+Deprecated.h"; path = "Parse/PFAnonymousUtils+Deprecated.h"; sourceTree = "<group>"; };
 		AF9084DC4315385E65A42A95853D35F5 /* PFACLState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFACLState.h; path = Parse/Internal/ACL/State/PFACLState.h; sourceTree = "<group>"; };
+		AFA214C7C6D5C933DB34D1CAAA23682F /* ParseManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParseManager.swift; path = PhoneNumberKit/ParseManager.swift; sourceTree = "<group>"; };
 		AFFEA0BB590F316EF46B0DA335CE3864 /* AFViewShaker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFViewShaker-umbrella.h"; sourceTree = "<group>"; };
 		B08483F9767CB27B7E9526BCD71B51F9 /* CSNotificationView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CSNotificationView-umbrella.h"; sourceTree = "<group>"; };
 		B0983D4BF0447DAE82ABA170A229F1F1 /* PFFile+Deprecated.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PFFile+Deprecated.h"; path = "Parse/PFFile+Deprecated.h"; sourceTree = "<group>"; };
 		B0A163B2E2E2C710854F31782931399A /* PFUserState_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFUserState_Private.h; path = Parse/Internal/User/State/PFUserState_Private.h; sourceTree = "<group>"; };
 		B1CCF282230C861E4153A7FC17996C78 /* PFUserState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFUserState.h; path = Parse/Internal/User/State/PFUserState.h; sourceTree = "<group>"; };
+		B28AA0F5BC1F6836CD57932E62C10B7D /* NSRegularExpression+Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSRegularExpression+Swift.swift"; path = "PhoneNumberKit/NSRegularExpression+Swift.swift"; sourceTree = "<group>"; };
 		B293BA2BC3EB4E7259D039D57B65ACFE /* PFQueryPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFQueryPrivate.h; path = Parse/Internal/Query/PFQueryPrivate.h; sourceTree = "<group>"; };
 		B32E0630B020776D1E8B020BE4111D09 /* CSNotificationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSNotificationView.m; path = CSNotificationView/CSNotificationView.m; sourceTree = "<group>"; };
 		B3E6F4688E66E0E809C33AA32308935F /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressAnimatedView.m; path = SVProgressHUD/SVProgressAnimatedView.m; sourceTree = "<group>"; };
@@ -1071,7 +1076,6 @@
 		B9F1632830169EC71E438AB53D19B8F4 /* PFSQLiteDatabase_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSQLiteDatabase_Private.h; path = Parse/Internal/LocalDataStore/SQLite/PFSQLiteDatabase_Private.h; sourceTree = "<group>"; };
 		B9F56C545330EB6E15AFB90E629EB680 /* PFUserAuthenticationDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFUserAuthenticationDelegate.h; path = Parse/PFUserAuthenticationDelegate.h; sourceTree = "<group>"; };
 		BA142C138466B32B5F496D8DCAF87A00 /* PFFieldOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFFieldOperation.h; path = Parse/Internal/FieldOperation/PFFieldOperation.h; sourceTree = "<group>"; };
-		BADD1A2174208A9CB34C0B721BE1AA64 /* Formatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Formatter.swift; path = PhoneNumberKit/Formatter.swift; sourceTree = "<group>"; };
 		BB6A24EC3FD5AD5863530633E27FE85B /* PFPushUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFPushUtilities.m; path = Parse/Internal/Push/Utilites/PFPushUtilities.m; sourceTree = "<group>"; };
 		BC6A96E91F1C4169868269145131CFB1 /* PFCategoryLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCategoryLoader.h; path = Parse/Internal/PFCategoryLoader.h; sourceTree = "<group>"; };
 		BC89E3A59262D23AC90C49CA2239E104 /* PFCommandCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCommandCache.h; path = Parse/Internal/PFCommandCache.h; sourceTree = "<group>"; };
@@ -1098,7 +1102,6 @@
 		C277E3F69FDF572287617B00E3C68A03 /* PFAnonymousUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFAnonymousUtils.m; path = Parse/PFAnonymousUtils.m; sourceTree = "<group>"; };
 		C2E43580D49473FC08912EC71368DBEF /* PFAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFAlertView.m; path = Parse/Internal/PFAlertView.m; sourceTree = "<group>"; };
 		C3020B258758E976B5936292634EE3F2 /* PFObjectFileCodingLogic.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFObjectFileCodingLogic.m; path = Parse/Internal/Object/Coder/File/PFObjectFileCodingLogic.m; sourceTree = "<group>"; };
-		C31476BB77632F20BBDCA363D21F0A37 /* Metadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Metadata.swift; path = PhoneNumberKit/Metadata.swift; sourceTree = "<group>"; };
 		C36B87EC8D1B3B3C9B85007F9B5E608D /* PFUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFUser.h; path = Parse/PFUser.h; sourceTree = "<group>"; };
 		C39E15A5C1BB1FBF727DB8A70C3F6E90 /* PFURLSessionUploadTaskDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFURLSessionUploadTaskDelegate.m; path = Parse/Internal/Commands/CommandRunner/URLSession/Session/TaskDelegate/PFURLSessionUploadTaskDelegate.m; sourceTree = "<group>"; };
 		C4184898596D3E332EA06A398C8C27D2 /* PFDefaultACLController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFDefaultACLController.m; path = Parse/Internal/ACL/DefaultACLController/PFDefaultACLController.m; sourceTree = "<group>"; };
@@ -1140,7 +1143,6 @@
 		D4E1E26CA9B318441FDCCF59E59711C0 /* PFEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFEncoder.h; path = Parse/Internal/PFEncoder.h; sourceTree = "<group>"; };
 		D549BFCCFE3F5E65F3E05DA7C37C8187 /* PFMutableObjectState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFMutableObjectState.m; path = Parse/Internal/Object/State/PFMutableObjectState.m; sourceTree = "<group>"; };
 		D623D54D03B78FF775CDB95DE58A607F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6BECC0322CE50447261957E42CCA880 /* PartialFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PartialFormatter.swift; path = PhoneNumberKit/PartialFormatter.swift; sourceTree = "<group>"; };
 		D7D642CF45C6DA21FE32C13DFDBD1BBF /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFAutoPurgingImageCache.h; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.h"; sourceTree = "<group>"; };
 		D801F2171A31310FF12CF41AC484B011 /* BFCancellationTokenSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFCancellationTokenSource.m; path = Bolts/Common/BFCancellationTokenSource.m; sourceTree = "<group>"; };
 		D8FFDB3DA8336C4E78D7F2B04D5E523C /* Pods-AuctionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AuctionApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1157,15 +1159,14 @@
 		DED32043F9AAEC6B9B52BCBA72B79F73 /* PFOfflineQueryController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFOfflineQueryController.m; path = Parse/Internal/Query/Controller/PFOfflineQueryController.m; sourceTree = "<group>"; };
 		DF0837677B71F69A1A4C0CDE0EE82552 /* Bolts-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bolts-prefix.pch"; sourceTree = "<group>"; };
 		DF5609BD9778EE1A861F317B3FD97A63 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		DFDD7451F762031EE95D743ECD6655BD /* MetadataTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MetadataTypes.swift; path = PhoneNumberKit/MetadataTypes.swift; sourceTree = "<group>"; };
 		E00748E0C3DCA3315B931B1B20A05E74 /* CSNotificationView_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSNotificationView_Private.h; path = CSNotificationView/CSNotificationView_Private.h; sourceTree = "<group>"; };
-		E0C475D44388988A20833657585C1709 /* PhoneNumberKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhoneNumberKit.swift; path = PhoneNumberKit/PhoneNumberKit.swift; sourceTree = "<group>"; };
 		E146DA8BD37A916D90BFC8678392D569 /* DiskFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskFetcher.swift; path = Haneke/DiskFetcher.swift; sourceTree = "<group>"; };
 		E27B05938F1A3C4DE7307E42CFB4D855 /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
 		E292C25366557988CDFD3699AD3A9A68 /* PFMultiProcessFileLock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFMultiProcessFileLock.h; path = Parse/Internal/MultiProcessLock/PFMultiProcessFileLock.h; sourceTree = "<group>"; };
 		E315F067ADB3070D5E5D68B0B3E1985D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		E33CC3156A013DB24966F52322E0F2B2 /* PFURLSession_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFURLSession_Private.h; path = Parse/Internal/Commands/CommandRunner/URLSession/Session/PFURLSession_Private.h; sourceTree = "<group>"; };
 		E3A9B6D05FB4F64DC62DBC1DF60FB867 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
-		E4129CB90E922AEFD2C46AED9031B2B7 /* PhoneNumberMetadata.json */ = {isa = PBXFileReference; includeInIndex = 1; name = PhoneNumberMetadata.json; path = PhoneNumberKit/Resources/PhoneNumberMetadata.json; sourceTree = "<group>"; };
 		E49684AFBE80F24363F0B828D71798A6 /* PFFileManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFFileManager.m; path = Parse/Internal/PFFileManager.m; sourceTree = "<group>"; };
 		E504BA29E1272868FDDA2CD6D9ADE75B /* PFObjectLocalIdStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFObjectLocalIdStore.m; path = Parse/Internal/Object/LocalIdStore/PFObjectLocalIdStore.m; sourceTree = "<group>"; };
 		E55CEFB16740087E4A16E8B42BD9908E /* PFCoreDataProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCoreDataProvider.h; path = Parse/Internal/PFCoreDataProvider.h; sourceTree = "<group>"; };
@@ -1184,7 +1185,6 @@
 		EA77D36DDED89E0D1233451E6307ADF4 /* PFAnonymousAuthenticationProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAnonymousAuthenticationProvider.h; path = Parse/Internal/User/AuthenticationProviders/Providers/Anonymous/PFAnonymousAuthenticationProvider.h; sourceTree = "<group>"; };
 		EA99AFCF109A38E0D04D89DDC5FA1462 /* Bolts.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Bolts.modulemap; sourceTree = "<group>"; };
 		EB7F0D4F3BE5C959BA919034BB2E84BF /* PFHTTPRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFHTTPRequest.h; path = Parse/Internal/HTTPRequest/PFHTTPRequest.h; sourceTree = "<group>"; };
-		EBB068A022828F736323F02BFF3C8E9D /* PhoneNumberParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhoneNumberParser.swift; path = PhoneNumberKit/PhoneNumberParser.swift; sourceTree = "<group>"; };
 		EBD938FA6E167006746E45FACDD625B5 /* Haneke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Haneke.framework; path = HanekeSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC3D8C120BA6C22603D7BBB140487091 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
 		EC91334581A69BA0689A83AB85A71402 /* PFPropertyInfo_Runtime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPropertyInfo_Runtime.h; path = Parse/Internal/PropertyInfo/PFPropertyInfo_Runtime.h; sourceTree = "<group>"; };
@@ -1207,7 +1207,6 @@
 		F3D213E1BBFA573034D9E80C6E4FBA29 /* UIImage-Resize-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage-Resize-prefix.pch"; sourceTree = "<group>"; };
 		F3F2D7125789DF98F5B21D40F159D98B /* PFReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFReachability.m; path = Parse/Internal/PFReachability.m; sourceTree = "<group>"; };
 		F422E37EC846F34AA5FC452931C49D74 /* PFGeoPointPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFGeoPointPrivate.h; path = Parse/Internal/PFGeoPointPrivate.h; sourceTree = "<group>"; };
-		F4ADD2748504FCB72B047D248424769F /* ParseOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParseOperation.swift; path = PhoneNumberKit/ParseOperation.swift; sourceTree = "<group>"; };
 		F4F4361F00C1EF2C2F85907B80F0504A /* PFSession_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSession_Private.h; path = Parse/Internal/Session/PFSession_Private.h; sourceTree = "<group>"; };
 		F507084B8CDAA8FBF2D2CC520327FDAA /* PFProduct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFProduct.h; path = Parse/PFProduct.h; sourceTree = "<group>"; };
 		F5C1E75E43DCB707D421082E42319FD6 /* PFObjectPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectPrivate.h; path = Parse/Internal/Object/PFObjectPrivate.h; sourceTree = "<group>"; };
@@ -1231,6 +1230,7 @@
 		FCA750F7BCC15DE5373CFBB31D6F26F2 /* UIImage+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Haneke.swift"; path = "Haneke/UIImage+Haneke.swift"; sourceTree = "<group>"; };
 		FE50EFA78AEFC56E6B35C339A127428F /* PhoneNumberKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PhoneNumberKit.framework; path = PhoneNumberKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE93104B320EDF88A8760A09FB28618F /* PFHash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFHash.h; path = Parse/Internal/PFHash.h; sourceTree = "<group>"; };
+		FED61789725B6199D1EFF7DFB1DBAE9B /* RegexManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RegexManager.swift; path = PhoneNumberKit/RegexManager.swift; sourceTree = "<group>"; };
 		FF1579B027F73463602B18A92835B8EB /* CSNativeBlurView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSNativeBlurView.h; path = CSNotificationView/CSNativeBlurView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1410,25 +1410,6 @@
 			name = Tasks;
 			sourceTree = "<group>";
 		};
-		151D25DF3BC5EF1EEFACE5AE3692D410 /* PhoneNumberKitCore */ = {
-			isa = PBXGroup;
-			children = (
-				57AF7F426B7F5287D835E2CDB6EC4354 /* Constants.swift */,
-				BADD1A2174208A9CB34C0B721BE1AA64 /* Formatter.swift */,
-				C31476BB77632F20BBDCA363D21F0A37 /* Metadata.swift */,
-				026901C8291DE4A0122DBDC273613B07 /* MetadataTypes.swift */,
-				0F729ABC76BE0EBA38D84A72FF48EAAD /* ParseManager.swift */,
-				F4ADD2748504FCB72B047D248424769F /* ParseOperation.swift */,
-				D6BECC0322CE50447261957E42CCA880 /* PartialFormatter.swift */,
-				48B2E4DFE2839EA7CF9E15F80BE7BD1F /* PhoneNumber.swift */,
-				E0C475D44388988A20833657585C1709 /* PhoneNumberKit.swift */,
-				EBB068A022828F736323F02BFF3C8E9D /* PhoneNumberParser.swift */,
-				5872B0D4B563AB287F09F5FDBF2103DD /* RegularExpressions.swift */,
-				524FAB045BD7C1E717E74F4714230710 /* Resources */,
-			);
-			name = PhoneNumberKitCore;
-			sourceTree = "<group>";
-		};
 		211BD7CA0159BE8860D74DC4267B9F04 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1534,14 +1515,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/CSNotificationView";
-			sourceTree = "<group>";
-		};
-		524FAB045BD7C1E717E74F4714230710 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				E4129CB90E922AEFD2C46AED9031B2B7 /* PhoneNumberMetadata.json */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		5A6F8731DEB0A294AF9485C074B83A7B /* Resources */ = {
@@ -1682,7 +1655,7 @@
 		83BA53FA0AF15B397F9CFB95B2FDD83A /* PhoneNumberKit */ = {
 			isa = PBXGroup;
 			children = (
-				151D25DF3BC5EF1EEFACE5AE3692D410 /* PhoneNumberKitCore */,
+				8F5D474C9BE45E952FC4AD52D4F4AE3C /* PhoneNumberKitCore */,
 				03BDCF4E069733851ACA8992C163F3E8 /* Support Files */,
 				46295F3C5475973B02ECB4753FF6D103 /* UIKit */,
 			);
@@ -2080,6 +2053,25 @@
 			path = Parse;
 			sourceTree = "<group>";
 		};
+		8F5D474C9BE45E952FC4AD52D4F4AE3C /* PhoneNumberKitCore */ = {
+			isa = PBXGroup;
+			children = (
+				577285CAD49871A8B5691CF805AE60B8 /* Constants.swift */,
+				10458CF2CD650199C2C5FEAF4FCD60D0 /* Formatter.swift */,
+				79CC6E8E50E792D9A4F9E02513939C75 /* MetadataManager.swift */,
+				DFDD7451F762031EE95D743ECD6655BD /* MetadataTypes.swift */,
+				B28AA0F5BC1F6836CD57932E62C10B7D /* NSRegularExpression+Swift.swift */,
+				AFA214C7C6D5C933DB34D1CAAA23682F /* ParseManager.swift */,
+				7F78AA03080EBD71857E30E04581B3DF /* PartialFormatter.swift */,
+				1E4F7929678F10B319ADCBCD3251494D /* PhoneNumber.swift */,
+				5C3E03C324DE4D6A68680F49700C2D3F /* PhoneNumberKit.swift */,
+				12097C0512EB84683315C5C881385EE9 /* PhoneNumberParser.swift */,
+				FED61789725B6199D1EFF7DFB1DBAE9B /* RegexManager.swift */,
+				F90495306C972285423428AB77A51C88 /* Resources */,
+			);
+			name = PhoneNumberKitCore;
+			sourceTree = "<group>";
+		};
 		A02FF0F80C6D7C5475B0C6D59F6117DF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -2318,6 +2310,14 @@
 			);
 			name = AFViewShaker;
 			path = AFViewShaker;
+			sourceTree = "<group>";
+		};
+		F90495306C972285423428AB77A51C88 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				349E8990A87103C68DF283F1AB764AE6 /* PhoneNumberMetadata.json */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2753,7 +2753,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F4E77E187323925C213C1CC2B08B8EE /* Build configuration list for PBXNativeTarget "PhoneNumberKit" */;
 			buildPhases = (
-				640CFF80D54D2F2DC72A71AA08382476 /* Sources */,
+				4707A08C331FA8B388823B2B3C0447EB /* Sources */,
 				761554F5306F577313F35D0C045A5B68 /* Frameworks */,
 				EF757B2E17FAF1F21EEAE31D8154A852 /* Resources */,
 				612DA4F2CDEDBCB2583206744F8261FC /* Headers */,
@@ -3024,6 +3024,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4707A08C331FA8B388823B2B3C0447EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAEA85B780C3FDDE65005C49FEA8B758 /* Constants.swift in Sources */,
+				7B06E08ED42EBCD19CD43953A12F273B /* Formatter.swift in Sources */,
+				ECD5762282E069E59D1F36067454E159 /* MetadataManager.swift in Sources */,
+				AD676AB8975C0D7A8FEBE67B64F4865B /* MetadataTypes.swift in Sources */,
+				4EDD8ED0619B6F6401D8B7950A83966E /* NSRegularExpression+Swift.swift in Sources */,
+				7BB9DE7BB1BC7AAA7142D3464A12627B /* ParseManager.swift in Sources */,
+				57F941EB815909EFF0E79BE085177AE9 /* PartialFormatter.swift in Sources */,
+				52BC57126E4B90E91A751C91F3108183 /* PhoneNumber.swift in Sources */,
+				AAFCB86872BC397A172DDAA4D0037391 /* PhoneNumberKit-dummy.m in Sources */,
+				9C23AFCC4B3B2C626AF1A40C3BBBE179 /* PhoneNumberKit.swift in Sources */,
+				B7F0F5D3348658506C589DE9A1171080 /* PhoneNumberParser.swift in Sources */,
+				9E8AE432453C6FB9202DFFF5654B63EB /* RegexManager.swift in Sources */,
+				31E4D363BC5C3521ACCF72841016FB4A /* TextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		54487AF939AFE90EFB4A6337471B8734 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3037,26 +3057,6 @@
 				8A69AB9332FB72A045E6871BE586305E /* BFTaskCompletionSource.m in Sources */,
 				C07EECEC3CB3EF605410685D8503E141 /* Bolts-dummy.m in Sources */,
 				80FA3FDA6D01CA18BF75DD0B815B4DCD /* Bolts.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		640CFF80D54D2F2DC72A71AA08382476 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1F2A842AF4A91C9DA197A86299BE81D5 /* Constants.swift in Sources */,
-				CA8BA557E522B6B8EBEB999A08BCE540 /* Formatter.swift in Sources */,
-				AA8FCAB82C2754366F331C15989ECD7A /* Metadata.swift in Sources */,
-				2F75596A392C1DAFCD0116133F48EBB5 /* MetadataTypes.swift in Sources */,
-				4B98D42F0524D116E7F88FBB91B2F3A4 /* ParseManager.swift in Sources */,
-				D80D6BFDD3ABFCD8C8801B35E3C5393C /* ParseOperation.swift in Sources */,
-				8A5187CADF9ABD90281F5FD3321BDF03 /* PartialFormatter.swift in Sources */,
-				7C0732AD5A99D1E40422D10A00155D8E /* PhoneNumber.swift in Sources */,
-				949EE65E8C949AFAA645E2904E3F0215 /* PhoneNumberKit-dummy.m in Sources */,
-				364CFD4752AA5C774A47653E22EA0851 /* PhoneNumberKit.swift in Sources */,
-				E9CED6F6EEC513B9D084EF33D08962E9 /* PhoneNumberParser.swift in Sources */,
-				829D6AF381017FF733654E806E76170C /* RegularExpressions.swift in Sources */,
-				676764B354686AE19D0A464C73F2FE9E /* TextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,9 +12,14 @@ import Foundation
 Parser. Contains parsing functions. 
 */
 class PhoneNumberParser {
-    let metadata = Metadata.sharedInstance
-    let regex = RegularExpressions.sharedInstance
-        
+    let metadata: MetadataManager
+    let regex: RegexManager
+    
+    init(regex: RegexManager, metadata: MetadataManager) {
+        self.regex = regex
+        self.metadata = metadata
+    }
+    
     // MARK: Normalizations
     
     /**
@@ -62,7 +67,7 @@ class PhoneNumberParser {
                     return 0
                 }
                 stripNationalPrefix(&potentialNationalNumber, metadata: metadata)
-                let potentialNationalNumberStr = String(describing: potentialNationalNumber.copy())
+                let potentialNationalNumberStr = potentialNationalNumber
                 if ((!regex.matchesEntirely(validNumberPattern, string: fullNumber) && regex.matchesEntirely(validNumberPattern, string: potentialNationalNumberStr )) || regex.testStringLengthAgainstPattern(possibleNumberPattern, string: fullNumber as String) == false) {
                     nationalNumber = potentialNationalNumberStr
                     if let countryCode = UInt64(defaultCountryCode) {
@@ -100,7 +105,8 @@ class PhoneNumberParser {
             }
             let stringRange = NSMakeRange(startPosition, i)
             let subNumber = nsFullNumber.substring(with: stringRange)
-            if let potentialCountryCode = UInt64(subNumber), metadata.metadataPerCode[potentialCountryCode] != nil {
+            if let potentialCountryCode = UInt64(subNumber)
+                , metadata.territoriesByCode[potentialCountryCode] != nil {
                     nationalNumber = nsFullNumber.substring(from: i)
                     return potentialCountryCode
             }
@@ -110,29 +116,14 @@ class PhoneNumberParser {
     
     // MARK: Validations
     
-    /**
-    Check number type (e.g +33 612-345-678 to .Mobile).
-    - Parameter phoneNumber: The number to check
-    - Returns: The type of the number
-    */
-    func checkNumberType(_ phoneNumber: PhoneNumber) -> PhoneNumberType {
-        guard let region = PhoneNumberKit().regionCodeForNumber(phoneNumber) else {
-            return .unknown
-        }
-        guard let metadata = metadata.fetchMetadataForCountry(region) else {
-            return .unknown
-        }
-        if phoneNumber.leadingZero {
-            let type = checkNumberType("0" + String(phoneNumber.nationalNumber), metadata: metadata)
+    func checkNumberType(_ nationalNumber: String, metadata: MetadataTerritory, leadingZero: Bool = false) -> PhoneNumberType {
+        if leadingZero {
+            let type = checkNumberType("0" + String(nationalNumber), metadata: metadata)
             if type != .unknown {
                 return type
             }
         }
-        let nationalNumber = String(phoneNumber.nationalNumber)
-        return checkNumberType(nationalNumber, metadata: metadata)
-    }
 
-    func checkNumberType(_ nationalNumber: String, metadata: MetadataTerritory) -> PhoneNumberType {
         guard let generalNumberDesc = metadata.generalDesc else {
             return .unknown
         }
@@ -199,15 +190,14 @@ class PhoneNumberParser {
     func parsePrefixAsIdd(_ number: inout String, iddPattern: String) -> Bool {
         if (regex.stringPositionByRegex(iddPattern, string: number) == 0) {
             do {
-                let nsString = number as NSString
                 guard let matched = try regex.regexMatches(iddPattern as String, string: number as String).first else {
                     return false
                 }
-                let matchedString = number.substringWithNSRange(matched.range)
+                let matchedString = number.substring(with: matched.range)
                 let matchEnd = matchedString.characters.count
-                let remainString: NSString = nsString.substring(from: matchEnd)
-                let capturingDigitPatterns = try NSRegularExpression(pattern: PhoneNumberPatterns.capturingDigitPattern, options:NSRegularExpression.Options.caseInsensitive)
-                let matchedGroups = capturingDigitPatterns.matches(in: remainString as String, options: [], range: NSMakeRange(0, remainString.length))
+                let remainString = (number as NSString).substring(from: matchEnd)
+                let capturingDigitPatterns = try NSRegularExpression(pattern: PhoneNumberPatterns.capturingDigitPattern, options: NSRegularExpression.Options.caseInsensitive)
+                let matchedGroups = capturingDigitPatterns.matches(in: remainString as String)
                 if let firstMatch = matchedGroups.first {
                     let digitMatched = remainString.substring(with: firstMatch.range) as NSString
                     if digitMatched.length > 0 {
@@ -239,9 +229,9 @@ class PhoneNumberParser {
             let matches = try regex.regexMatches(PhoneNumberPatterns.extnPattern, string: number)
             if let match = matches.first {
                 let adjustedRange = NSMakeRange(match.range.location + 1, match.range.length - 1)
-                let matchString = number.substringWithNSRange(adjustedRange)
+                let matchString = number.substring(with: adjustedRange)
                 let stringRange = NSMakeRange(0, match.range.location)
-                number = number.substringWithNSRange(stringRange)
+                number = number.substring(with: stringRange)
                 return matchString
             }
             return nil
@@ -290,17 +280,17 @@ class PhoneNumberParser {
             let matches = try regex.regexMatches(prefixPattern, string: number)
             if let firstMatch = matches.first {
                 let nationalNumberRule = metadata.generalDesc?.nationalNumberPattern
-                let firstMatchString = number.substringWithNSRange(firstMatch.range)
+                let firstMatchString = number.substring(with: firstMatch.range)
                 let numOfGroups = firstMatch.numberOfRanges - 1
                 var transformedNumber: String = String()
                 let firstRange = firstMatch.rangeAt(numOfGroups)
-                let firstMatchStringWithGroup = (firstRange.location != NSNotFound && firstRange.location < number.characters.count) ? number.substringWithNSRange(firstRange):  String()
+                let firstMatchStringWithGroup = (firstRange.location != NSNotFound && firstRange.location < number.characters.count) ? number.substring(with: firstRange):  String()
                 let firstMatchStringWithGroupHasValue = regex.hasValue(firstMatchStringWithGroup)
-                if let transformRule = metadata.nationalPrefixTransformRule, firstMatchStringWithGroupHasValue == true {
+                if let transformRule = metadata.nationalPrefixTransformRule , firstMatchStringWithGroupHasValue == true {
                     transformedNumber = regex.replaceFirstStringByRegex(prefixPattern, string: number, templateString: transformRule)
                 }
                 else {
-                    let index = number.characters.index(number.startIndex, offsetBy: firstMatchString.characters.count)
+                    let index = number.index(number.startIndex, offsetBy: firstMatchString.characters.count)
                     transformedNumber = number.substring(from: index)
                 }
                 if (regex.hasValue(nationalNumberRule) && regex.matchesEntirely(nationalNumberRule, string: number) && regex.matchesEntirely(nationalNumberRule, string: transformedNumber) == false){
