@@ -10,7 +10,7 @@ Inspired by Google's libphonenumber.
 [Migrating from PhoneNumberKit 0.x? See the migration guide.](https://github.com/marmelroy/PhoneNumberKit/blob/master/Documentation/OXMIGRATIONGUIDE.md)  
 ## Features
 
-              |  Features
+| |Features |
 --------------------------|------------------------------------------------------------
 :phone: | Validate, normalize and extract the elements of any phone number string.
 :100: | Simple Swift syntax and a lightweight readable codebase.
@@ -57,10 +57,10 @@ let phoneNumbersCustomDefaultRegion = phoneNumberKit.parse(rawNumberArray, withR
 
 PhoneNumber objects are immutable Swift structs with the following properties:
 ```swift
+phoneNumber.numberString
 phoneNumber.countryCode
 phoneNumber.nationalNumber
 phoneNumber.numberExtension
-phoneNumber.rawNumber
 phoneNumber.type // e.g Mobile or Fixed
 ```
 
@@ -109,5 +109,5 @@ github "marmelroy/PhoneNumberKit"
 ### Setting up with [CocoaPods](http://cocoapods.org/?q=PhoneNumberKit)
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-pod 'PhoneNumberKit', '~> 1.1'
+pod 'PhoneNumberKit', '~> 1.2'
 ```

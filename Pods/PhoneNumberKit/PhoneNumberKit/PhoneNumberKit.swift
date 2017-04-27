@@ -11,7 +11,7 @@ import Foundation
 import CoreTelephony
 #endif
     
-public class PhoneNumberKit: NSObject {
+public final class PhoneNumberKit: NSObject {
     
     // Manager objects
     let metadataManager = MetadataManager()
@@ -28,11 +28,11 @@ public class PhoneNumberKit: NSObject {
     
     /// Parses a number string, used to create PhoneNumber objects. Throws.
     ///
-    /// - parameter numberString: the raw number string.
-    /// - parameter region:       ISO 639 compliant region code.
-    /// - parameter ignoreType:   Avoids number type checking for faster performance.
-    ///
-    /// - returns: PhoneNumber object.
+    /// - Parameters:
+    ///   - numberString: the raw number string.
+    ///   - region: ISO 639 compliant region code.
+    ///   - ignoreType: Avoids number type checking for faster performance.
+    /// - Returns: PhoneNumber object.
     public func parse(_ numberString: String, withRegion region: String = PhoneNumberKit.defaultRegionCode(), ignoreType: Bool = false) throws -> PhoneNumber {
         return try parseManager.parse(numberString, withRegion: region, ignoreType: ignoreType)
     }
@@ -58,7 +58,6 @@ public class PhoneNumberKit: NSObject {
     ///
     /// - returns: Formatted representation of the PhoneNumber.
     public func format(_ phoneNumber: PhoneNumber, toType formatType:PhoneNumberFormat, withPrefix prefix: Bool = true) -> String {
-        let formatter = Formatter(phoneNumberKit: self)
         if formatType == .e164 {
             let formattedNationalNumber = phoneNumber.adjustedNationalNumber()
             if prefix == false {
@@ -66,6 +65,7 @@ public class PhoneNumberKit: NSObject {
             }
             return "+\(phoneNumber.countryCode)\(formattedNationalNumber)"
         } else {
+            let formatter = Formatter(phoneNumberKit: self)
             let regionMetadata = metadataManager.mainTerritoryByCode[phoneNumber.countryCode]
             let formattedNationalNumber = formatter.format(phoneNumber: phoneNumber, formatType: formatType, regionMetadata: regionMetadata)
             if formatType == .international && prefix == true {
@@ -149,9 +149,8 @@ public class PhoneNumberKit: NSObject {
         }
 #endif
         let currentLocale = Locale.current
-        if #available(iOS 10.0, *) {
-            let countryCode = currentLocale.regionCode
-            return countryCode?.uppercased() ?? ""
+        if #available(iOS 10.0, *), let countryCode = currentLocale.regionCode {
+            return countryCode.uppercased()
         } else {
 			if let countryCode = (currentLocale as NSLocale).object(forKey: .countryCode) as? String {
                 return countryCode.uppercased()
