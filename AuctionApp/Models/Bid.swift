@@ -8,6 +8,10 @@ import Parse
 
 class Bid: PFObject, PFSubclassing {
     
+    private lazy var __once: () = {
+            self.registerSubclass()
+        }()
+    
     @NSManaged var email: String
     @NSManaged var name: String
     @NSManaged var telephone: String
@@ -45,10 +49,8 @@ class Bid: PFObject, PFSubclassing {
     }
     
     override class func initialize() {
-        var onceToken : dispatch_once_t = 0;
-        dispatch_once(&onceToken) {
-            self.registerSubclass()
-        }
+        var onceToken : Int = 0;
+        _ = self.__once
     }
     
     class func parseClassName() -> String {
@@ -57,6 +59,6 @@ class Bid: PFObject, PFSubclassing {
 }
 
 enum BidType {
-    case Extra(Int)
-    case Custom(Int)
+    case extra(Int)
+    case custom(Int)
 }

@@ -20,7 +20,7 @@ Parsed phone number object
 */
 public struct PhoneNumber {
     public let countryCode: UInt64
-    private(set) public var leadingZero = false
+    fileprivate(set) public var leadingZero = false
     public let nationalNumber: UInt64
     public let numberExtension: String?
     public let rawNumber: String
@@ -33,7 +33,7 @@ public struct PhoneNumber {
     }
     public var isValidNumber: Bool {
         get {
-            return self.type != .Unknown
+            return self.type != .unknown
         }
     }
 }

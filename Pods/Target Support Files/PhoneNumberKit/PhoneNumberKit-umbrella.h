@@ -10,7 +10,6 @@
 #endif
 #endif
 
-#import "PhoneNumberKit.h"
 
 FOUNDATION_EXPORT double PhoneNumberKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char PhoneNumberKitVersionString[];
