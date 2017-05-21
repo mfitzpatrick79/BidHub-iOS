@@ -39,7 +39,7 @@ DEPENDENCIES:
   - HanekeSwift (from `https://github.com/Haneke/HanekeSwift.git`)
   - IHKeyboardAvoiding (>= 1.1)
   - NSDate+RelativeTime (>= 1.0)
-  - OneSignal (>= 2.0)
+  - OneSignal (< 3.0, >= 2.5.2)
   - Parse
   - PhoneNumberKit (>= 1.1.1)
   - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
@@ -78,6 +78,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: d65371a8e4482380deddb9fe60e14e59ddb30eb3
   UIImage-Resize: fa776860f10e6900bbaf53a73e494bdceaaccc77
 
-PODFILE CHECKSUM: 6fba83e671afe9a19d902ae18148520457dc31cd
+PODFILE CHECKSUM: 552a46890d32e72be08fd2b1299714e776e52746
 
 COCOAPODS: 1.2.1

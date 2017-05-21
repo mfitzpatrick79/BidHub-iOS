@@ -28,7 +28,7 @@
 		08663CD1D58A2FFA23CFECFEB0849144 /* PFACLPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E2BE464FF69CDAE7B004ED2DC90DDEB /* PFACLPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		086F986C1F0CA2A279A91E5E18483AC9 /* PFInstallationConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 79341090F1181846A9A3BB096A37FDAD /* PFInstallationConstants.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0960047AB5E5BAB7116079571F9F7CC2 /* PFOfflineStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AA4A7EFD9EC531154864A930661524 /* PFOfflineStore.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0969DD9EB4DE229B3DDD6119B52D48AA /* Pods-AuctionApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 61AFD134602F5617A69BE6754388470D /* Pods-AuctionApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0969DD9EB4DE229B3DDD6119B52D48AA /* Pods-AuctionApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A59F9B0DBFF7525892A4E1BE5606F06 /* Pods-AuctionApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A7A3630604A08D38237C037C9A11E05 /* PFAnalyticsUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBF4131CE0FDB0828B8DB8CC71EA4CC /* PFAnalyticsUtilities.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0AA3408D09489670A97AA25CD6A6A7D5 /* Bolts-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F22A33ECC97C8AC0A6D348332F9A96DB /* Bolts-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B63E254DF4447904E490149057D791F /* ParseModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 285B83593F024FAA0A50E350F92D7152 /* ParseModule.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -46,6 +46,7 @@
 		0EF758EA502D18AFF1737B199F7FE593 /* PFQueryState.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A3B257D9749E702388DA16540CC77F /* PFQueryState.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0F47FE4ECF380C12178B6F8797B6F8BC /* PFInstallation.h in Headers */ = {isa = PBXBuildFile; fileRef = BF232BD9D738677C82001B52DBCD5AF9 /* PFInstallation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0FE5F47C32F23F36FA313AA272BE9D21 /* PFAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E43580D49473FC08912EC71368DBEF /* PFAlertView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		11D0E9EB60321605DEDF452222D8A0BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CD36D11F25B08799BC73810314AE3C /* Foundation.framework */; };
 		11EFD916858BAE9F57C165F909C3E95A /* DiskFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E146DA8BD37A916D90BFC8678392D569 /* DiskFetcher.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		127D34C9295B3CC03F8C2ECECD684DB4 /* PFEventuallyQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8814F649E0F17105DF5135AC8BCAB58D /* PFEventuallyQueue.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		134630DB1AAC8217B3174B610C178278 /* PFPaymentTransactionObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = CB5287C4DBBD448352D660D0EE0290AB /* PFPaymentTransactionObserver.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -58,6 +59,7 @@
 		171FE4DE5A850C5E247E1C3B7D2B004C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CD36D11F25B08799BC73810314AE3C /* Foundation.framework */; };
 		179991B430D89A5CCBF54B957B573E4D /* PFQueryState.h in Headers */ = {isa = PBXBuildFile; fileRef = 02A835CFB1A5D3A9B233827F9B754B1F /* PFQueryState.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		19656D3D7B6F56F1E14A74B15BBB4C21 /* PFOfflineQueryLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = 99344A254AD4882761697476F8C3F200 /* PFOfflineQueryLogic.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1967D391E61278DEAAFF84CB19249C79 /* Pods-OneSignalNotificationServiceExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7475F0699F2BE98D54D18D3E144A4D0 /* Pods-OneSignalNotificationServiceExtension-dummy.m */; };
 		1A80AD5E72745636A3469BD021F2DD9C /* PFRESTConfigCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = AF5AB9F2F7E61D75DB83A119C6DAF3A7 /* PFRESTConfigCommand.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1B3F47733A58136F5BECDD0850BE8E6C /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B176A2BBE85AFF5F0A8E599151A485D /* AFNetworkReachabilityManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1BF4A138EE176CD37D70F3483038E73F /* CSNativeBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15262EE1CA5D1605E08600F6CA9C67CF /* CSNativeBlurView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -274,7 +276,7 @@
 		82CA6B855A724013545B6E02E8EE574F /* PFInternalUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 50739ED2B08BB7B8925C1280B72927CB /* PFInternalUtils.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		82D554EC9FB9A62D935B6555325F5898 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6578CDD798E2432A49401D8FEAEF3803 /* Security.framework */; };
 		86BBE6ADB1DF38BD88ADAA1BE3C889AF /* CSLayerStealingBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0930CA3FE1F121D4237448EA5E38AD93 /* CSLayerStealingBlurView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		86C44DBDCDF81F1569C15D66493C266B /* Pods-AuctionApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B693681B47419ED95DABA35C811AEEF2 /* Pods-AuctionApp-dummy.m */; };
+		86C44DBDCDF81F1569C15D66493C266B /* Pods-AuctionApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FD17A636B723CC72DBFF8F62810C88D1 /* Pods-AuctionApp-dummy.m */; };
 		86DA46F5F867D6AD3421B5780A60CB87 /* PFPushUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = F946EA3E0FC5CDC424B8E587A78AC619 /* PFPushUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		875D5C49447617479627FF93AAA4BCFC /* PFURLSessionUploadTaskDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 23051964A9BF0F30F40686AB88B3C6F3 /* PFURLSessionUploadTaskDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		876774BA661316FAFA117F768CCF90D9 /* PFRelationState_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = E83F7BAE1412528AACF8D238D50662BD /* PFRelationState_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -301,7 +303,7 @@
 		9001C79D0F88BF959F2697EC0C2B07F5 /* PFDefaultACLController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D0372BF32847FE0DCD5584BF9D883A6 /* PFDefaultACLController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9083484C38B61FE8C2BE79DD6BCBAC43 /* PFCommandRunningConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 326D97B6074AD06A4EAF03FDE1AF745E /* PFCommandRunningConstants.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		916EA96F65CD5C5865DFB3C5D91BEEAB /* PFACLState.h in Headers */ = {isa = PBXBuildFile; fileRef = AF9084DC4315385E65A42A95853D35F5 /* PFACLState.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9177DA20418F49A45EE327BAC0640A9B /* CSNotificationView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 45894F55B85A72A5ABFD6F19B8E76ACC /* CSNotificationView.bundle */; };
+		9177DA20418F49A45EE327BAC0640A9B /* CSNotificationView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F99E8FDB59B23FBB8DDEFD236954BEC6 /* CSNotificationView.bundle */; };
 		91AA46AAD0CFC9D964547D229A51A45D /* PFDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = ED30C654B0AB2953F50F7550CF86B9BF /* PFDevice.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		91F104500EC586A4C7570148E046A8E6 /* PFRESTCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 20020883EEC4D8752C536D867DA29C95 /* PFRESTCommand.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9221E9FC9346F8804DBD4542833FD10C /* PFFileUploadResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B274F6ED49B741576BFBA0DF2C7F1D /* PFFileUploadResult.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -387,6 +389,7 @@
 		B21E0B5192896414807632ABD8755507 /* PFURLSessionCommandRunner.h in Headers */ = {isa = PBXBuildFile; fileRef = FB83269E430DEC6F9705ABD10FD241C9 /* PFURLSessionCommandRunner.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B317C229688A1BD20CC5A7C6CB41F826 /* PFFilePersistenceGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = A77AA010044E353882C54778670B7CCD /* PFFilePersistenceGroup.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B48A64011E67D3A61D67CD73324E359E /* PFCoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 306F139A000E994EFD924CDCF2F050D2 /* PFCoreManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B560798328F02B27552DB78FAB29EBE6 /* Pods-OneSignalNotificationServiceExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E38F35C4D99532650FCFE7A3084FECED /* Pods-OneSignalNotificationServiceExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B560CF9DB378D206EDAFAF8DCF372F78 /* PFObjectController_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B9CE846CD5E787B445A8D97D8E90F607 /* PFObjectController_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B575D3EFA39A3376028CD8FA394B68F1 /* PFJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F6FEF2823F35F9440A45EB99C1E76FE1 /* PFJSONSerialization.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B5DA30D56E86AB94B5542009FC0DFE80 /* PFDefaultACLController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4184898596D3E332EA06A398C8C27D2 /* PFDefaultACLController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -647,6 +650,7 @@
 		02585463E9E7BBF0A55CADAA2799D806 /* CGSize+Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+Swift.swift"; path = "Haneke/CGSize+Swift.swift"; sourceTree = "<group>"; };
 		0276C2F3D6A809A1157440D772F2DAF4 /* PFPushPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPushPrivate.h; path = Parse/Internal/Push/PFPushPrivate.h; sourceTree = "<group>"; };
 		02A835CFB1A5D3A9B233827F9B754B1F /* PFQueryState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFQueryState.h; path = Parse/Internal/Query/State/PFQueryState.h; sourceTree = "<group>"; };
+		0328BE0CBFC6430B3C057C8523DC7C3F /* CSNotificationView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CSNotificationView.framework; path = CSNotificationView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C80D8B9CC53B81215AC2A043178B83 /* HanekeSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-umbrella.h"; sourceTree = "<group>"; };
 		03CEDF22CBAC25133B7E9C2273C9AB74 /* PFMutablePushState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFMutablePushState.h; path = Parse/Internal/Push/State/PFMutablePushState.h; sourceTree = "<group>"; };
 		0401D9C3017025AC27592B02C21E2797 /* AFViewShaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFViewShaker.m; path = AFViewShaker/AFViewShaker.m; sourceTree = "<group>"; };
@@ -663,11 +667,11 @@
 		0930CA3FE1F121D4237448EA5E38AD93 /* CSLayerStealingBlurView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSLayerStealingBlurView.m; path = CSNotificationView/CSLayerStealingBlurView.m; sourceTree = "<group>"; };
 		09449CD65C44A7B7BF675C289319BBC6 /* PFTaskQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFTaskQueue.h; path = Parse/Internal/PFTaskQueue.h; sourceTree = "<group>"; };
 		0956922BCEB223ADB847F4C3376ACF59 /* PFPurchase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFPurchase.m; path = Parse/PFPurchase.m; sourceTree = "<group>"; };
-		0A92EDD7D3690ADB98E3931095483B3D /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Bolts.framework; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB16DBCC5CF692C922A1EB444028E03 /* PFRESTConfigCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFRESTConfigCommand.m; path = Parse/Internal/Commands/PFRESTConfigCommand.m; sourceTree = "<group>"; };
 		0B0ED31E4D6E6FB94C11DABEE78E931E /* PFRESTObjectBatchCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRESTObjectBatchCommand.h; path = Parse/Internal/Commands/PFRESTObjectBatchCommand.h; sourceTree = "<group>"; };
 		0B1A7C999818060833C8CD5D43CAEA38 /* PFCachedQueryController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFCachedQueryController.m; path = Parse/Internal/Query/Controller/PFCachedQueryController.m; sourceTree = "<group>"; };
 		0B5BFF27B016D391F637F7E43E81E8FE /* PFThreadsafety.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFThreadsafety.h; path = Parse/Internal/ThreadSafety/PFThreadsafety.h; sourceTree = "<group>"; };
+		0BA19AC0BC82AE8B97A8857A7831B010 /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Bolts.framework; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA740F1A0B007A9555056A4794C1537 /* BFCancellationToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFCancellationToken.h; path = Bolts/Common/BFCancellationToken.h; sourceTree = "<group>"; };
 		0CBF4131CE0FDB0828B8DB8CC71EA4CC /* PFAnalyticsUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFAnalyticsUtilities.m; path = Parse/Internal/Analytics/Utilities/PFAnalyticsUtilities.m; sourceTree = "<group>"; };
 		0D01D3E036569130AEB7313C8F9208BB /* PFHTTPURLRequestConstructor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFHTTPURLRequestConstructor.m; path = Parse/Internal/HTTPRequest/PFHTTPURLRequestConstructor.m; sourceTree = "<group>"; };
@@ -686,8 +690,9 @@
 		12097C0512EB84683315C5C881385EE9 /* PhoneNumberParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhoneNumberParser.swift; path = PhoneNumberKit/PhoneNumberParser.swift; sourceTree = "<group>"; };
 		124AE79959FA3C90BE24C4DCC9B64617 /* PFMutableRelationState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFMutableRelationState.m; path = Parse/Internal/Relation/State/PFMutableRelationState.m; sourceTree = "<group>"; };
 		12AA0CFA08975032F23F0082EEFA94E0 /* PFObjectFileCodingLogic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectFileCodingLogic.h; path = Parse/Internal/Object/Coder/File/PFObjectFileCodingLogic.h; sourceTree = "<group>"; };
-		1325F42188F2BF6C71A0341E1CC1172A /* Pods-AuctionApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AuctionApp-frameworks.sh"; sourceTree = "<group>"; };
+		12B87DAF904B68D5C100069ECDB76297 /* Pods-AuctionApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AuctionApp-frameworks.sh"; sourceTree = "<group>"; };
 		1397169FAAE6DC650951A83963667390 /* PFSessionUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSessionUtilities.h; path = Parse/Internal/Session/Utilities/PFSessionUtilities.h; sourceTree = "<group>"; };
+		14004F36012ABFFDC18BD80B91EEA88D /* Pods-AuctionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AuctionApp.release.xcconfig"; sourceTree = "<group>"; };
 		146C3F292BB3B5BED4C094D51D12ED1A /* PFObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFObject.m; path = Parse/PFObject.m; sourceTree = "<group>"; };
 		147201379EFA2429BA2DF126233264AC /* PFPersistenceController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPersistenceController.h; path = Parse/Internal/Persistence/PFPersistenceController.h; sourceTree = "<group>"; };
 		1524A6866CB8AAF9444BF16B49ACF636 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -712,12 +717,12 @@
 		1C44F43F064AD430BE588D530957B21D /* TextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextField.swift; path = PhoneNumberKit/UI/TextField.swift; sourceTree = "<group>"; };
 		1C9C045694F0D525B55E815AD76E5545 /* CSNotificationView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CSNotificationView.xcconfig; sourceTree = "<group>"; };
 		1CBA375B2D8DDF1831CB5A9E81B562E6 /* NSDate+RelativeTime.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = "NSDate+RelativeTime.bundle"; sourceTree = "<group>"; };
-		1D0EC5319D2F7536FA3C85C5B7C3F5CA /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SVProgressHUD.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E2BE464FF69CDAE7B004ED2DC90DDEB /* PFACLPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFACLPrivate.h; path = Parse/Internal/ACL/PFACLPrivate.h; sourceTree = "<group>"; };
 		1E37D403D2DB4F12CB99AF458F4D5274 /* PFAnalyticsController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAnalyticsController.h; path = Parse/Internal/Analytics/Controller/PFAnalyticsController.h; sourceTree = "<group>"; };
 		1E4F7929678F10B319ADCBCD3251494D /* PhoneNumber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhoneNumber.swift; path = PhoneNumberKit/PhoneNumber.swift; sourceTree = "<group>"; };
 		1E81F85376943DD1FF97FE212A22945D /* PFQueryConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFQueryConstants.m; path = Parse/Internal/Query/PFQueryConstants.m; sourceTree = "<group>"; };
 		1F90020E6E49A02587C99A4068CE10CC /* NSURLResponse+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLResponse+Haneke.swift"; path = "Haneke/NSURLResponse+Haneke.swift"; sourceTree = "<group>"; };
+		1FA7C5A1C409E54DF509B79461E1DBCA /* Pods-OneSignalNotificationServiceExtension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OneSignalNotificationServiceExtension-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1FC7750753A513024FADE7A2B5CC3EDF /* PFMultiProcessFileLockController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFMultiProcessFileLockController.h; path = Parse/Internal/MultiProcessLock/PFMultiProcessFileLockController.h; sourceTree = "<group>"; };
 		20020883EEC4D8752C536D867DA29C95 /* PFRESTCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFRESTCommand.m; path = Parse/Internal/Commands/PFRESTCommand.m; sourceTree = "<group>"; };
 		200D6ABEDDF2EC3F6F119251AEF93CC0 /* SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
@@ -727,7 +732,6 @@
 		20C948BBF334A3159B355C935C8E7444 /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
 		21158C5F466F693ACDAFE6BAA595C9ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		216C5D9DD16EE1282CF4194FA9A681B4 /* PFUserPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFUserPrivate.h; path = Parse/Internal/User/PFUserPrivate.h; sourceTree = "<group>"; };
-		2196FBEE4D61FA9CA2AFCD0BC8206FB5 /* IHKeyboardAvoiding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IHKeyboardAvoiding.framework; path = IHKeyboardAvoiding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21ABC1DFB085C903F84151DDD966632E /* ParseClientConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ParseClientConfiguration.h; path = Parse/ParseClientConfiguration.h; sourceTree = "<group>"; };
 		21ACDAC4A36D157F54B9FD230E7D4DCA /* PFObjectController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFObjectController.m; path = Parse/Internal/Object/Controller/PFObjectController.m; sourceTree = "<group>"; };
 		22282AFF1F86B6A4BADE631EA1BF277A /* PFSQLiteDatabaseResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFSQLiteDatabaseResult.m; path = Parse/Internal/LocalDataStore/SQLite/PFSQLiteDatabaseResult.m; sourceTree = "<group>"; };
@@ -775,6 +779,7 @@
 		36587834B364092C25A9C72C665BF79D /* PFPaymentTransactionObserver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFPaymentTransactionObserver.m; path = Parse/Internal/Purchase/PaymentTransactionObserver/PFPaymentTransactionObserver.m; sourceTree = "<group>"; };
 		36D881D63112F154EBF1FF2534782BC7 /* PFUserFileCodingLogic.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFUserFileCodingLogic.m; path = Parse/Internal/User/Coder/File/PFUserFileCodingLogic.m; sourceTree = "<group>"; };
 		3769409E50A4B189553DFA742450DA47 /* BFCancellationToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFCancellationToken.m; path = Bolts/Common/BFCancellationToken.m; sourceTree = "<group>"; };
+		377360DB690F890234C16DD703AEB12A /* IHKeyboardAvoiding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IHKeyboardAvoiding.framework; path = IHKeyboardAvoiding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		378FEF7A18D470BEF6054341562A7876 /* Cache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cache.swift; path = Haneke/Cache.swift; sourceTree = "<group>"; };
 		3803BF7D148B4C511723CF0845A392CA /* AFViewShaker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFViewShaker.xcconfig; sourceTree = "<group>"; };
 		383B73DCE6E371BC3AC333C8816F139D /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
@@ -790,7 +795,6 @@
 		3B116A9F980C3863A9E06B1AE7EFAEFD /* NSDate+RelativeTime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDate+RelativeTime.h"; sourceTree = "<group>"; };
 		3B34DDF859A7DD6696FDD11951050B41 /* PFRESTUserCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFRESTUserCommand.m; path = Parse/Internal/Commands/PFRESTUserCommand.m; sourceTree = "<group>"; };
 		3B3774CF4344124ABA4B27F577342B95 /* PFPurchaseController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPurchaseController.h; path = Parse/Internal/Purchase/Controller/PFPurchaseController.h; sourceTree = "<group>"; };
-		3BAAE0F69EF5868DDA5CC699F6CC2EA8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BD78F88442370298FF691656EF1F616 /* PFAnalytics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFAnalytics.m; path = Parse/PFAnalytics.m; sourceTree = "<group>"; };
 		3BE686F7D4C5B85BE48CFB644061F9CC /* NSDate+RelativeTime.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RelativeTime.m"; sourceTree = "<group>"; };
 		3D2CB16DF28D7F94411F4AE1BC4C1C5E /* PFCurrentConfigController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFCurrentConfigController.m; path = Parse/Internal/Config/Controller/PFCurrentConfigController.m; sourceTree = "<group>"; };
@@ -799,7 +803,7 @@
 		3E658CA9B0B467D83F867600E52634F2 /* PFAnonymousUtils_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAnonymousUtils_Private.h; path = Parse/Internal/User/AuthenticationProviders/Providers/Anonymous/PFAnonymousUtils_Private.h; sourceTree = "<group>"; };
 		3EA4C44EA2453326AD75BE4DF906194A /* PFEventuallyQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFEventuallyQueue.h; path = Parse/Internal/PFEventuallyQueue.h; sourceTree = "<group>"; };
 		3FBC67BDC59434D8FC9BC89BE6DDC7FD /* PFFileState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFFileState.m; path = Parse/Internal/File/State/PFFileState.m; sourceTree = "<group>"; };
-		40D66B09FFF48F0AE82B7622E1D94513 /* Pods-AuctionApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AuctionApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		40CC434B51268A48C2E282104FED3E02 /* Pods-OneSignalNotificationServiceExtension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OneSignalNotificationServiceExtension-acknowledgements.plist"; sourceTree = "<group>"; };
 		4115C77B8DD4A6B173A3A1F5902A4026 /* PFCommandURLRequestConstructor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFCommandURLRequestConstructor.m; path = Parse/Internal/Commands/CommandRunner/URLRequestConstructor/PFCommandURLRequestConstructor.m; sourceTree = "<group>"; };
 		412B1EB4C3BEEF641C86E8FD0166EAAF /* PFQuery+Deprecated.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PFQuery+Deprecated.h"; path = "Parse/PFQuery+Deprecated.h"; sourceTree = "<group>"; };
 		41BEBD613B49EAADC6E66E1127E72BD8 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
@@ -813,7 +817,6 @@
 		44A3B257D9749E702388DA16540CC77F /* PFQueryState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFQueryState.m; path = Parse/Internal/Query/State/PFQueryState.m; sourceTree = "<group>"; };
 		4508E4505481EE98108F3738898E397C /* PFAnalyticsUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAnalyticsUtilities.h; path = Parse/Internal/Analytics/Utilities/PFAnalyticsUtilities.h; sourceTree = "<group>"; };
 		45203B5A20CC94EAACF4269EEA3C7EBE /* checkmark@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "checkmark@3x.png"; path = "CSNotificationView/Resources/checkmark@3x.png"; sourceTree = "<group>"; };
-		45894F55B85A72A5ABFD6F19B8E76ACC /* CSNotificationView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CSNotificationView.bundle; path = CSNotificationView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		467A16177C6A3E8358FD875684365239 /* PFKeyValueCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFKeyValueCache.m; path = Parse/Internal/KeyValueCache/PFKeyValueCache.m; sourceTree = "<group>"; };
 		46C65E621379828FB24389735514DA3F /* PFPush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPush.h; path = Parse/PFPush.h; sourceTree = "<group>"; };
 		46FF05C333B07DB97B7BCE6536FBF8B0 /* BFCancellationTokenRegistration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFCancellationTokenRegistration.h; path = Bolts/Common/BFCancellationTokenRegistration.h; sourceTree = "<group>"; };
@@ -825,25 +828,24 @@
 		48C871006DBCD95EE02D0205DD028405 /* NSDate+RelativeTime.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "NSDate+RelativeTime.xcconfig"; sourceTree = "<group>"; };
 		4994FD8D008438335ADD9051E6812BEF /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		4A51A166A6AABF9BA69D5A0198CE6100 /* UIImage+Resize.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		4A59F9B0DBFF7525892A4E1BE5606F06 /* Pods-AuctionApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AuctionApp-umbrella.h"; sourceTree = "<group>"; };
 		4B0748FE0E695B3340B87FE494A95D6B /* PFRESTPushCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFRESTPushCommand.m; path = Parse/Internal/Commands/PFRESTPushCommand.m; sourceTree = "<group>"; };
 		4CA0A17611679A68F0AD9450166F8049 /* PFOperationSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFOperationSet.m; path = Parse/Internal/Object/OperationSet/PFOperationSet.m; sourceTree = "<group>"; };
-		4DA23525535E02476C178BF0F61A24D3 /* NSDate_RelativeTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NSDate_RelativeTime.framework; path = "NSDate+RelativeTime.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DCBCD3A686818DEEEEA9952E4F15A22 /* PFObjectState_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectState_Private.h; path = Parse/Internal/Object/State/PFObjectState_Private.h; sourceTree = "<group>"; };
 		4E38966F7ECC037010EACE64F4828F48 /* BFExecutor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFExecutor.m; path = Bolts/Common/BFExecutor.m; sourceTree = "<group>"; };
 		4E4291E2F4050771DC61C2FB0F9F6E93 /* PFAnonymousAuthenticationProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFAnonymousAuthenticationProvider.m; path = Parse/Internal/User/AuthenticationProviders/Providers/Anonymous/PFAnonymousAuthenticationProvider.m; sourceTree = "<group>"; };
 		4E90AD3C078FC44F82E426DFB217FEDE /* PhoneNumberKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PhoneNumberKit-umbrella.h"; sourceTree = "<group>"; };
 		4EC4FB34E8E2D995CBF1FB200530C4C6 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWebView+AFNetworking.h"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
-		504D468636FF753B9392BA9A9163B5D3 /* Pods-AuctionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AuctionApp.release.xcconfig"; sourceTree = "<group>"; };
 		50739ED2B08BB7B8925C1280B72927CB /* PFInternalUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFInternalUtils.m; path = Parse/Internal/PFInternalUtils.m; sourceTree = "<group>"; };
 		512850A134D22BAEA28EE97D2B41EC8B /* PFPush.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFPush.m; path = Parse/PFPush.m; sourceTree = "<group>"; };
 		512BD0287B6069D25C05A0DBD186F57E /* AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-prefix.pch"; sourceTree = "<group>"; };
 		51E3EAD34646C03AF581519C681C4760 /* PFObjectEstimatedData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectEstimatedData.h; path = Parse/Internal/Object/EstimatedData/PFObjectEstimatedData.h; sourceTree = "<group>"; };
 		51EE4E7F5AD83A0B0683E008E266A339 /* PFErrorUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFErrorUtilities.m; path = Parse/Internal/PFErrorUtilities.m; sourceTree = "<group>"; };
-		52305AD1280D73267C0EF7C09AC40745 /* Pods-AuctionApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AuctionApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		52ACEF3C3E55973E557905B45EF3E903 /* PFPersistenceGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPersistenceGroup.h; path = Parse/Internal/Persistence/Group/PFPersistenceGroup.h; sourceTree = "<group>"; };
 		533593B567A421667A32129FBA778894 /* PFObjectState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFObjectState.m; path = Parse/Internal/Object/State/PFObjectState.m; sourceTree = "<group>"; };
 		5341D7A17E47B1AF5A701C2175C265E5 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
 		534934AB7D09AF5AA743A166A094344C /* PFSessionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSessionController.h; path = Parse/Internal/Session/Controller/PFSessionController.h; sourceTree = "<group>"; };
+		53BA41C317ACCF32524B8109D8830E2F /* PhoneNumberKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PhoneNumberKit.framework; path = PhoneNumberKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		541A68D81E3EAC1E0996B7901A7423EB /* PhoneNumberKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PhoneNumberKit.xcconfig; sourceTree = "<group>"; };
 		54550BCCD2E15B7A1A5E7EB0879D83DC /* PFMutableUserState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFMutableUserState.h; path = Parse/Internal/User/State/PFMutableUserState.h; sourceTree = "<group>"; };
 		555B9ED12C297BB5A020AC00AAB7FAA1 /* AFViewShaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFViewShaker.h; path = AFViewShaker/AFViewShaker.h; sourceTree = "<group>"; };
@@ -856,10 +858,12 @@
 		58B11221068E79003BE849307B3B3A91 /* BFTask+Private.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "BFTask+Private.m"; path = "Parse/Internal/BFTask+Private.m"; sourceTree = "<group>"; };
 		591A05C0D6A41B647480EDEC26F9672B /* PFObjectConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectConstants.h; path = Parse/Internal/Object/Constants/PFObjectConstants.h; sourceTree = "<group>"; };
 		591B8AE4848D87480C682F511052FF44 /* PFCommandRunning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFCommandRunning.m; path = Parse/Internal/Commands/CommandRunner/PFCommandRunning.m; sourceTree = "<group>"; };
+		5966066432979A39568A5DCB378B7CE7 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		59B11269705253BDC9A8BA8B99268EA4 /* PFInstallationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFInstallationController.m; path = Parse/Internal/Installation/Controller/PFInstallationController.m; sourceTree = "<group>"; };
 		59C66A5AE76836696988526F3A7267CB /* PFProductsRequestHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFProductsRequestHandler.h; path = Parse/Internal/Product/ProductsRequestHandler/PFProductsRequestHandler.h; sourceTree = "<group>"; };
 		5A6FC3522633292D674E2D50328F0F16 /* PFMutableFileState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFMutableFileState.m; path = Parse/Internal/File/State/PFMutableFileState.m; sourceTree = "<group>"; };
 		5B012615F19E9E52F26D0CBF54F75659 /* PFUserDefaultsPersistenceGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFUserDefaultsPersistenceGroup.m; path = Parse/Internal/Persistence/Group/PFUserDefaultsPersistenceGroup.m; sourceTree = "<group>"; };
+		5BC49264148ACA4E575383A5C2D20632 /* NSDate_RelativeTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NSDate_RelativeTime.framework; path = "NSDate+RelativeTime.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C3E03C324DE4D6A68680F49700C2D3F /* PhoneNumberKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhoneNumberKit.swift; path = PhoneNumberKit/PhoneNumberKit.swift; sourceTree = "<group>"; };
 		5D2188336C2F82205A1E19DC2647773C /* PFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFNetworkActivityIndicatorManager.m; path = Parse/PFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
 		5D7C838A618345821381DE91047207CC /* BFTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFTask.m; path = Bolts/Common/BFTask.m; sourceTree = "<group>"; };
@@ -867,10 +871,10 @@
 		5E97D3FF10F3E3CB5E3DA50AAD5E53FA /* UIImage+Resize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 		5EBB1298C7306AEAFC92D629084B8F9D /* PFURLSessionCommandRunner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFURLSessionCommandRunner.m; path = Parse/Internal/Commands/CommandRunner/URLSession/PFURLSessionCommandRunner.m; sourceTree = "<group>"; };
 		5ECBF1BCD73C467377D9F78AA3FFD71E /* CSNotificationView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CSNotificationView-dummy.m"; sourceTree = "<group>"; };
+		5F12D921DED274F3372F51823D76804A /* AFViewShaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AFViewShaker.framework; path = AFViewShaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F21FCC5F4C5633BE51C1F381F153FFC /* PFRelationPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRelationPrivate.h; path = Parse/Internal/Relation/PFRelationPrivate.h; sourceTree = "<group>"; };
 		5FB57F85B93CA90E3B30542C6B57CBEC /* PFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFNetworkActivityIndicatorManager.h; path = Parse/PFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
 		614CF4D5E535A466BFF80AA3C9E67488 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
-		61AFD134602F5617A69BE6754388470D /* Pods-AuctionApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AuctionApp-umbrella.h"; sourceTree = "<group>"; };
 		62D526B862F28F9A2E8CD941D55BD043 /* PFConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFConstants.h; path = Parse/PFConstants.h; sourceTree = "<group>"; };
 		63DC4195B8EDED2DB805281091B77CF4 /* PFAsyncTaskQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAsyncTaskQueue.h; path = Parse/Internal/PFAsyncTaskQueue.h; sourceTree = "<group>"; };
 		64163E308B77312116618A3DF2CCC3B6 /* ResourceBundle-CSNotificationView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-CSNotificationView-Info.plist"; sourceTree = "<group>"; };
@@ -883,8 +887,10 @@
 		68CCD28CB318565E0E7429725DAD6D95 /* PFFilePersistenceGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFFilePersistenceGroup.h; path = Parse/Internal/Persistence/Group/PFFilePersistenceGroup.h; sourceTree = "<group>"; };
 		68EEA35D17E279FB8522452DAF7E676C /* UIImage-Resize.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIImage-Resize.xcconfig"; sourceTree = "<group>"; };
 		6978FA3F69B4C8847657DA37A824317D /* PFObjectController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectController.h; path = Parse/Internal/Object/Controller/PFObjectController.h; sourceTree = "<group>"; };
+		69854EBD941AE33DE28B8B3C33EBC855 /* Pods-AuctionApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-AuctionApp.modulemap"; sourceTree = "<group>"; };
 		69EA5553D4AD83854D2C34862DE24F59 /* exclamationMark@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "exclamationMark@2x.png"; path = "CSNotificationView/Resources/exclamationMark@2x.png"; sourceTree = "<group>"; };
 		6A04ABA41ECD9A2E818461171E5450AA /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		6A105E4DF0888F17651843BEE08036D3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A75A7EDE5D13F81A8BEFD5FB003706B /* UIImage-Resize-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage-Resize-umbrella.h"; sourceTree = "<group>"; };
 		6AC8E15A9D530B8006179FD5FA482FB0 /* PFPropertyInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFPropertyInfo.m; path = Parse/Internal/PropertyInfo/PFPropertyInfo.m; sourceTree = "<group>"; };
 		6B5C7119DDF121B8F042A8DEF7929941 /* PFRESTCloudCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRESTCloudCommand.h; path = Parse/Internal/Commands/PFRESTCloudCommand.h; sourceTree = "<group>"; };
@@ -903,6 +909,7 @@
 		708EED1CD3B315BFD05120135AD31269 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIRefreshControl+AFNetworking.m"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		70E0DD8F6CF568B42FACBEC14E56C44B /* NSFileManager+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSFileManager+Haneke.swift"; path = "Haneke/NSFileManager+Haneke.swift"; sourceTree = "<group>"; };
 		711831B4894FB6DEE5349FC01038A1BC /* PFUserController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFUserController.m; path = Parse/Internal/User/Controller/PFUserController.m; sourceTree = "<group>"; };
+		71339A2B8E43AE0CC02D68A2D05D74BA /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OneSignalNotificationServiceExtension.framework; path = "Pods-OneSignalNotificationServiceExtension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73AD737D47058DAD10514838FADEC8EC /* ParseModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ParseModule.m; path = Parse/Internal/ParseModule.m; sourceTree = "<group>"; };
 		744689F2DF17C5AE0EFE18A4984E67D7 /* PFObjectSubclassInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectSubclassInfo.h; path = Parse/Internal/Object/Subclassing/PFObjectSubclassInfo.h; sourceTree = "<group>"; };
 		751586586804580AAD0D6DF489B1ECBA /* PFObjectFileCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFObjectFileCoder.m; path = Parse/Internal/Object/Coder/File/PFObjectFileCoder.m; sourceTree = "<group>"; };
@@ -918,7 +925,6 @@
 		79AEED5D8111FBB80563FFC938C1E0DC /* PFLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFLogger.h; path = Parse/Internal/PFLogger.h; sourceTree = "<group>"; };
 		79AF3EE2FDCF8EBAB7344275236C8DB0 /* PFPushState_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPushState_Private.h; path = Parse/Internal/Push/State/PFPushState_Private.h; sourceTree = "<group>"; };
 		79CC6E8E50E792D9A4F9E02513939C75 /* MetadataManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MetadataManager.swift; path = PhoneNumberKit/MetadataManager.swift; sourceTree = "<group>"; };
-		7A0A6C07D4DE8E2A5AA46F5F2B106128 /* UIImage_Resize.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UIImage_Resize.framework; path = "UIImage-Resize.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A105CDB8CAC60BE5DEF18F6CBAEBBFE /* IHKeyboardAvoiding.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IHKeyboardAvoiding.xcconfig; sourceTree = "<group>"; };
 		7CC1BDCD08EF14F3E443F818F0BCC5BC /* PFObjectSubclassingController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectSubclassingController.h; path = Parse/Internal/Object/Subclassing/PFObjectSubclassingController.h; sourceTree = "<group>"; };
 		7CFBF2A2C4A41B3C8975AC33DF76D592 /* PhoneNumberKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PhoneNumberKit-prefix.pch"; sourceTree = "<group>"; };
@@ -933,6 +939,7 @@
 		7F712473880C990B847EDCBC49952055 /* SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.xcconfig; sourceTree = "<group>"; };
 		7F78AA03080EBD71857E30E04581B3DF /* PartialFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PartialFormatter.swift; path = PhoneNumberKit/PartialFormatter.swift; sourceTree = "<group>"; };
 		7F86DC526FE78E8CF66751B33A430111 /* BFCancellationTokenSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFCancellationTokenSource.h; path = Bolts/Common/BFCancellationTokenSource.h; sourceTree = "<group>"; };
+		80D0310C88A3C667D097669BC54D5A8C /* Pods-AuctionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AuctionApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8119EF75FE848B9D66D876D6629B20F8 /* PFURLConstructor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFURLConstructor.h; path = Parse/Internal/HTTPRequest/PFURLConstructor.h; sourceTree = "<group>"; };
 		81ACB9A61EEB363D0E2F9FEADF704E77 /* UIView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Haneke.swift"; path = "Haneke/UIView+Haneke.swift"; sourceTree = "<group>"; };
 		8203BE5D12402DCE5351116E7A390908 /* PFLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFLogging.h; path = Parse/Internal/PFLogging.h; sourceTree = "<group>"; };
@@ -942,6 +949,7 @@
 		835CF3642884A2ABA420975430AAD75E /* PFMutableACLState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFMutableACLState.h; path = Parse/Internal/ACL/State/PFMutableACLState.h; sourceTree = "<group>"; };
 		84E80C813E991FF97D40DD5B75263480 /* PFPushChannelsController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFPushChannelsController.m; path = Parse/Internal/Push/ChannelsController/PFPushChannelsController.m; sourceTree = "<group>"; };
 		84FCED5E33A6E01F1C9684793D6EB2EC /* PFCloud.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFCloud.m; path = Parse/PFCloud.m; sourceTree = "<group>"; };
+		85260CB98CF6D45C2FA3BD187529DB46 /* Haneke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Haneke.framework; path = HanekeSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85529FAF491BA85E6454F31020E1B45E /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVRadialGradientLayer.h; path = SVProgressHUD/SVRadialGradientLayer.h; sourceTree = "<group>"; };
 		8583D1575208051721B357E7E771FB56 /* SVProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SVProgressHUD.modulemap; sourceTree = "<group>"; };
 		858F1CCF16C22ACE5674DC5692D9127D /* PFSessionUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFSessionUtilities.m; path = Parse/Internal/Session/Utilities/PFSessionUtilities.m; sourceTree = "<group>"; };
@@ -949,8 +957,10 @@
 		8649BF6FE3E832E9DA0CD61063A87ABD /* Parse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Parse.xcconfig; sourceTree = "<group>"; };
 		864CADF24C8B9A36EE6A51F947BF6D6A /* PFPushController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPushController.h; path = Parse/Internal/Push/Controller/PFPushController.h; sourceTree = "<group>"; };
 		8679075C857FF679EF63BA73D47D3EEB /* PFMutablePushState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFMutablePushState.m; path = Parse/Internal/Push/State/PFMutablePushState.m; sourceTree = "<group>"; };
+		86C4168ECB5A445D09A4D5A9B587A355 /* Pods-OneSignalNotificationServiceExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-OneSignalNotificationServiceExtension.modulemap"; sourceTree = "<group>"; };
 		86F9E0FE67D28EB252C6C0675D026D08 /* PFObjectFileCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectFileCoder.h; path = Parse/Internal/Object/Coder/File/PFObjectFileCoder.h; sourceTree = "<group>"; };
 		87094711F53B188E38C8992E4EE2A989 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
+		878E9112B5065D3EE403C150C9F55525 /* Pods-OneSignalNotificationServiceExtension-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OneSignalNotificationServiceExtension-resources.sh"; sourceTree = "<group>"; };
 		87C1B930F33EA64BA6F23B1934108D96 /* Bolts.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Bolts.m; path = Bolts/Common/Bolts.m; sourceTree = "<group>"; };
 		88114E925F5636246F195B8C2CF63B34 /* PFRESTAnalyticsCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRESTAnalyticsCommand.h; path = Parse/Internal/Commands/PFRESTAnalyticsCommand.h; sourceTree = "<group>"; };
 		8814F649E0F17105DF5135AC8BCAB58D /* PFEventuallyQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFEventuallyQueue.m; path = Parse/Internal/PFEventuallyQueue.m; sourceTree = "<group>"; };
@@ -958,6 +968,7 @@
 		881FC6478088F0B415105AE08BB95193 /* PFGeoPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFGeoPoint.h; path = Parse/PFGeoPoint.h; sourceTree = "<group>"; };
 		893A68488D292DF890BFA1AA76162CA9 /* BFTaskCompletionSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFTaskCompletionSource.m; path = Bolts/Common/BFTaskCompletionSource.m; sourceTree = "<group>"; };
 		8A2D48870D94989DDC579320BBC18F11 /* PFCurrentInstallationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCurrentInstallationController.h; path = Parse/Internal/Installation/CurrentInstallationController/PFCurrentInstallationController.h; sourceTree = "<group>"; };
+		8A71C55C8AB81D90094E8AC2C0AF1EDF /* Pods-AuctionApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AuctionApp-resources.sh"; sourceTree = "<group>"; };
 		8AB4153A7AB18F7FFE00B0808C37B63E /* PFProduct.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFProduct.m; path = Parse/PFProduct.m; sourceTree = "<group>"; };
 		8AE34E7F6521EF1FD42D97EBA7C4D94A /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"; sourceTree = "<group>"; };
 		8B176A2BBE85AFF5F0A8E599151A485D /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
@@ -985,7 +996,9 @@
 		92A67C7FACBBF6FF081CE80172214CF6 /* PFUserAuthenticationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFUserAuthenticationController.h; path = Parse/Internal/User/AuthenticationProviders/Controller/PFUserAuthenticationController.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94E84D4FB6B3001D927D6923E07FB876 /* PFObjectFilePersistenceController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectFilePersistenceController.h; path = Parse/Internal/Object/FilePersistence/PFObjectFilePersistenceController.h; sourceTree = "<group>"; };
+		94F9B33D4824D8BB4587F8DAF0804636 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SVProgressHUD.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9525688982EB35224A388FE49D18B2D4 /* PFPushState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPushState.h; path = Parse/Internal/Push/State/PFPushState.h; sourceTree = "<group>"; };
+		952B483D336453F314E239DF3642FF22 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		953E371D93C19DD931420B872BBC0817 /* PFObjectLocalIdStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectLocalIdStore.h; path = Parse/Internal/Object/LocalIdStore/PFObjectLocalIdStore.h; sourceTree = "<group>"; };
 		961F323168D25164C56D4A0D64795788 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		962B657B936EFDD5D049D47571922BE0 /* PFPersistenceController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFPersistenceController.m; path = Parse/Internal/Persistence/PFPersistenceController.m; sourceTree = "<group>"; };
@@ -1012,7 +1025,6 @@
 		9D9830237402864618A9E1746EC8382D /* ParseManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ParseManager.m; path = Parse/Internal/ParseManager.m; sourceTree = "<group>"; };
 		9DD5169D52F096369A63C6E3678B7992 /* PFBase64Encoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFBase64Encoder.m; path = Parse/Internal/PFBase64Encoder.m; sourceTree = "<group>"; };
 		9E300D86F97574E486B25D5EF9708004 /* PFURLSessionJSONDataTaskDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFURLSessionJSONDataTaskDelegate.h; path = Parse/Internal/Commands/CommandRunner/URLSession/Session/TaskDelegate/PFURLSessionJSONDataTaskDelegate.h; sourceTree = "<group>"; };
-		9E86DDBBEA3943BD0B2DC4C830F88BD3 /* Pods_AuctionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AuctionApp.framework; path = "Pods-AuctionApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F07EBD25D3CC28C6F2CC47ACEDD5118 /* PFRESTObjectCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRESTObjectCommand.h; path = Parse/Internal/Commands/PFRESTObjectCommand.h; sourceTree = "<group>"; };
 		9F3350E53919735AE62EFF4B4726801C /* PFDateFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFDateFormatter.m; path = Parse/Internal/PFDateFormatter.m; sourceTree = "<group>"; };
 		9F8A561DEFA52B94638C45EEBD564C0B /* PFAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAlertView.h; path = Parse/Internal/PFAlertView.h; sourceTree = "<group>"; };
@@ -1025,24 +1037,20 @@
 		A25C9F03142EDC80D88FBB1DD701CD3E /* Bolts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Bolts.h; path = Bolts/Common/Bolts.h; sourceTree = "<group>"; };
 		A318165BA59923B336961F134F617D50 /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Log.swift; path = Haneke/Log.swift; sourceTree = "<group>"; };
 		A32EFF91FF9DFF89AA167165B42DC60D /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+AFNetworking.h"; path = "UIKit+AFNetworking/UIButton+AFNetworking.h"; sourceTree = "<group>"; };
-		A37404D74A75BE97F227FFAEE2991CD0 /* AFViewShaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AFViewShaker.framework; path = AFViewShaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3CCE1B190100232163DCAE5B5615236 /* PFPin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFPin.m; path = Parse/Internal/LocalDataStore/Pin/PFPin.m; sourceTree = "<group>"; };
 		A3D6CA6059DC70EDCF995C3F40FC0D13 /* AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.xcconfig; sourceTree = "<group>"; };
-		A4784BBC8EC20CC4939401EF67654175 /* Pods-AuctionApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-AuctionApp.modulemap"; sourceTree = "<group>"; };
 		A4A444D0E93D3566F684254E04A06544 /* PFURLConstructor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFURLConstructor.m; path = Parse/Internal/HTTPRequest/PFURLConstructor.m; sourceTree = "<group>"; };
 		A4CD36D11F25B08799BC73810314AE3C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		A4FE494496FFFF28FFAD653D7ED54492 /* PFMulticastDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFMulticastDelegate.m; path = Parse/Internal/PFMulticastDelegate.m; sourceTree = "<group>"; };
 		A5F057709B5D8C4DCABBDC377052D401 /* PFCurrentUserController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFCurrentUserController.m; path = Parse/Internal/User/CurrentUserController/PFCurrentUserController.m; sourceTree = "<group>"; };
 		A618DC0B5EEDDEEAAFF6731A847D2A1E /* PFKeychainStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFKeychainStore.m; path = Parse/Internal/PFKeychainStore.m; sourceTree = "<group>"; };
 		A77AA010044E353882C54778670B7CCD /* PFFilePersistenceGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFFilePersistenceGroup.m; path = Parse/Internal/Persistence/Group/PFFilePersistenceGroup.m; sourceTree = "<group>"; };
-		A9C44EB29B6D9C1C3D0D487FB064C990 /* Parse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Parse.framework; path = Parse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA27C9D164B82ACB23490E35B2D865F6 /* CSNotificationView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CSNotificationView-prefix.pch"; sourceTree = "<group>"; };
 		AA7D8C68913D23A38659815179BF663C /* CSNotificationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSNotificationView.h; path = CSNotificationView/CSNotificationView.h; sourceTree = "<group>"; };
 		AAF2DE0C2D60C650EB5284BB99E5E9FA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB93B4D3B69F93AFA036A32CF626E447 /* PhoneNumberKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PhoneNumberKit-dummy.m"; sourceTree = "<group>"; };
 		ABFB36B6DF6ACDFE91282BE507B72CBD /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
 		AC7BCA99E7DEA3FBEE3B7EBCD1F1B2D5 /* PFSubclassing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSubclassing.h; path = Parse/PFSubclassing.h; sourceTree = "<group>"; };
-		AD68AD900297CAC8E0FCBCB6D4E52A98 /* Pods-AuctionApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AuctionApp-resources.sh"; sourceTree = "<group>"; };
 		AF5AB9F2F7E61D75DB83A119C6DAF3A7 /* PFRESTConfigCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRESTConfigCommand.h; path = Parse/Internal/Commands/PFRESTConfigCommand.h; sourceTree = "<group>"; };
 		AF8175D0B73CB81DCAC6905750B78E2E /* PFAnonymousUtils+Deprecated.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PFAnonymousUtils+Deprecated.h"; path = "Parse/PFAnonymousUtils+Deprecated.h"; sourceTree = "<group>"; };
 		AF9084DC4315385E65A42A95853D35F5 /* PFACLState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFACLState.h; path = Parse/Internal/ACL/State/PFACLState.h; sourceTree = "<group>"; };
@@ -1065,7 +1073,6 @@
 		B5ADC2DEABB70E695AAB7C26E53F47C6 /* Fetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetcher.swift; path = Haneke/Fetcher.swift; sourceTree = "<group>"; };
 		B63FE659129746D1DE231293711DBEB4 /* PFUserAuthenticationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFUserAuthenticationController.m; path = Parse/Internal/User/AuthenticationProviders/Controller/PFUserAuthenticationController.m; sourceTree = "<group>"; };
 		B641DF207B38452717E228D04EE8737E /* PFURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFURLSession.h; path = Parse/Internal/Commands/CommandRunner/URLSession/Session/PFURLSession.h; sourceTree = "<group>"; };
-		B693681B47419ED95DABA35C811AEEF2 /* Pods-AuctionApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AuctionApp-dummy.m"; sourceTree = "<group>"; };
 		B69750213D7E917EC8EB5782DEE06851 /* HanekeSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HanekeSwift-dummy.m"; sourceTree = "<group>"; };
 		B70D8B4C043318605B5C37F7DB52AFE1 /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
 		B82CEB8A0E3077649F0EF7BA94AB5FA9 /* PFPush+Deprecated.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PFPush+Deprecated.h"; path = "Parse/PFPush+Deprecated.h"; sourceTree = "<group>"; };
@@ -1092,7 +1099,6 @@
 		C02A7C1A59688A1EC190F5925F308F47 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
 		C03382CC251FD844277AB15FFC651865 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		C0338BE98282166790C238847DE609FE /* Parse-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Parse-prefix.pch"; sourceTree = "<group>"; };
-		C1023C49EC818A7F06108690D0AADC7A /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AFNetworking.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1260F2DB912D21DF86B7A625D0445EE /* PFACLState_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFACLState_Private.h; path = Parse/Internal/ACL/State/PFACLState_Private.h; sourceTree = "<group>"; };
 		C14DF13D25A5A94A3496C083FFDD6BDB /* PFRESTFileCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFRESTFileCommand.m; path = Parse/Internal/Commands/PFRESTFileCommand.m; sourceTree = "<group>"; };
 		C16DE26F81182C728F291B5D4B31E360 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
@@ -1106,6 +1112,7 @@
 		C39E15A5C1BB1FBF727DB8A70C3F6E90 /* PFURLSessionUploadTaskDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFURLSessionUploadTaskDelegate.m; path = Parse/Internal/Commands/CommandRunner/URLSession/Session/TaskDelegate/PFURLSessionUploadTaskDelegate.m; sourceTree = "<group>"; };
 		C4184898596D3E332EA06A398C8C27D2 /* PFDefaultACLController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFDefaultACLController.m; path = Parse/Internal/ACL/DefaultACLController/PFDefaultACLController.m; sourceTree = "<group>"; };
 		C584F9FDCCCBB967BEF4549743518F07 /* HanekeSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-prefix.pch"; sourceTree = "<group>"; };
+		C5938C9BC511D6BC83F384E9EBEE2CF4 /* Pods-AuctionApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AuctionApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C5DB3D5DE36B439573F07CDB0CB75CF5 /* PFObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObject.h; path = Parse/PFObject.h; sourceTree = "<group>"; };
 		C5F9BE3D4B10999E4C56280A068E8434 /* PFUserState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFUserState.m; path = Parse/Internal/User/State/PFUserState.m; sourceTree = "<group>"; };
 		C602A7177BD806B0FAA445FEB7CF6689 /* PFTaskQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFTaskQueue.m; path = Parse/Internal/PFTaskQueue.m; sourceTree = "<group>"; };
@@ -1117,6 +1124,7 @@
 		C7F31CA5219D71AE9B1AF0773204E0AC /* PFSessionController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFSessionController.m; path = Parse/Internal/Session/Controller/PFSessionController.m; sourceTree = "<group>"; };
 		C7F700018973A3887ECF94D2317F737B /* PFFile_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFFile_Private.h; path = Parse/Internal/File/PFFile_Private.h; sourceTree = "<group>"; };
 		C8897224711A08A35DF246F29E14A8C7 /* PFUserDefaultsPersistenceGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFUserDefaultsPersistenceGroup.h; path = Parse/Internal/Persistence/Group/PFUserDefaultsPersistenceGroup.h; sourceTree = "<group>"; };
+		C8B262C8E3ABF07624B8CE9DF6483735 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AFNetworking.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C946991234DF17217E937703CF2DEFC4 /* PFCommandCache_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCommandCache_Private.h; path = Parse/Internal/PFCommandCache_Private.h; sourceTree = "<group>"; };
 		C94BBCB8C4B457EBEF720985F3EEDF79 /* PFOfflineObjectController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFOfflineObjectController.h; path = Parse/Internal/Object/Controller/OfflineController/PFOfflineObjectController.h; sourceTree = "<group>"; };
 		C9E03E4DE6F0F58BF11BD9896324E405 /* PFCommandRunning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCommandRunning.h; path = Parse/Internal/Commands/CommandRunner/PFCommandRunning.h; sourceTree = "<group>"; };
@@ -1146,28 +1154,31 @@
 		D4E1E26CA9B318441FDCCF59E59711C0 /* PFEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFEncoder.h; path = Parse/Internal/PFEncoder.h; sourceTree = "<group>"; };
 		D549BFCCFE3F5E65F3E05DA7C37C8187 /* PFMutableObjectState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFMutableObjectState.m; path = Parse/Internal/Object/State/PFMutableObjectState.m; sourceTree = "<group>"; };
 		D623D54D03B78FF775CDB95DE58A607F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7475F0699F2BE98D54D18D3E144A4D0 /* Pods-OneSignalNotificationServiceExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OneSignalNotificationServiceExtension-dummy.m"; sourceTree = "<group>"; };
 		D7D642CF45C6DA21FE32C13DFDBD1BBF /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFAutoPurgingImageCache.h; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.h"; sourceTree = "<group>"; };
 		D801F2171A31310FF12CF41AC484B011 /* BFCancellationTokenSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFCancellationTokenSource.m; path = Bolts/Common/BFCancellationTokenSource.m; sourceTree = "<group>"; };
-		D8FFDB3DA8336C4E78D7F2B04D5E523C /* Pods-AuctionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AuctionApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D9A416FC851E5154C38E817B5D01B35F /* PFUserConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFUserConstants.m; path = Parse/Internal/User/Constants/PFUserConstants.m; sourceTree = "<group>"; };
 		D9E9460AE768F83935EAFF95DFABC4A7 /* PFLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFLogger.m; path = Parse/Internal/PFLogger.m; sourceTree = "<group>"; };
 		DA129D7A3E58567FFDA8B38F3853C0CD /* PFGeoPoint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFGeoPoint.m; path = Parse/PFGeoPoint.m; sourceTree = "<group>"; };
+		DAAF06D0F51CB0E7E5F591366AD2B823 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		DB2E8E03812E7B2D6F2CF1FFC0905298 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVRadialGradientLayer.m; path = SVProgressHUD/SVRadialGradientLayer.m; sourceTree = "<group>"; };
 		DC7D49A70FA0CA4CE07FDF475DBE9075 /* PFQueryState_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFQueryState_Private.h; path = Parse/Internal/Query/State/PFQueryState_Private.h; sourceTree = "<group>"; };
 		DC8346A635C057E34F76328735B92764 /* PFHTTPURLRequestConstructor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFHTTPURLRequestConstructor.h; path = Parse/Internal/HTTPRequest/PFHTTPURLRequestConstructor.h; sourceTree = "<group>"; };
 		DE06AFF2F7A5CDF946E4DD42F7835426 /* PFRole.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFRole.m; path = Parse/PFRole.m; sourceTree = "<group>"; };
 		DE5B16D05E8A93AF4652B911165EC097 /* PFOfflineStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFOfflineStore.h; path = Parse/Internal/LocalDataStore/OfflineStore/PFOfflineStore.h; sourceTree = "<group>"; };
-		DE9DEDD5C46FD4F9589E06E84863748C /* CSNotificationView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CSNotificationView.framework; path = CSNotificationView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA368C96E875CC664B02A33F411A663 /* KeyboardAvoiding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardAvoiding.swift; path = Sources/KeyboardAvoiding.swift; sourceTree = "<group>"; };
 		DEB348F714DCAE844DB850C9DD7F66A5 /* PFConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFConfig.h; path = Parse/PFConfig.h; sourceTree = "<group>"; };
 		DED32043F9AAEC6B9B52BCBA72B79F73 /* PFOfflineQueryController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFOfflineQueryController.m; path = Parse/Internal/Query/Controller/PFOfflineQueryController.m; sourceTree = "<group>"; };
 		DF0837677B71F69A1A4C0CDE0EE82552 /* Bolts-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bolts-prefix.pch"; sourceTree = "<group>"; };
+		DF4515107C91F31AB056066705535BAA /* Parse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Parse.framework; path = Parse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFDD7451F762031EE95D743ECD6655BD /* MetadataTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MetadataTypes.swift; path = PhoneNumberKit/MetadataTypes.swift; sourceTree = "<group>"; };
 		E00748E0C3DCA3315B931B1B20A05E74 /* CSNotificationView_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSNotificationView_Private.h; path = CSNotificationView/CSNotificationView_Private.h; sourceTree = "<group>"; };
 		E146DA8BD37A916D90BFC8678392D569 /* DiskFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskFetcher.swift; path = Haneke/DiskFetcher.swift; sourceTree = "<group>"; };
 		E27B05938F1A3C4DE7307E42CFB4D855 /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
 		E292C25366557988CDFD3699AD3A9A68 /* PFMultiProcessFileLock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFMultiProcessFileLock.h; path = Parse/Internal/MultiProcessLock/PFMultiProcessFileLock.h; sourceTree = "<group>"; };
+		E2FB592B9801E65C0423A43E7AB5B870 /* Pods-AuctionApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AuctionApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		E33CC3156A013DB24966F52322E0F2B2 /* PFURLSession_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFURLSession_Private.h; path = Parse/Internal/Commands/CommandRunner/URLSession/Session/PFURLSession_Private.h; sourceTree = "<group>"; };
+		E38F35C4D99532650FCFE7A3084FECED /* Pods-OneSignalNotificationServiceExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OneSignalNotificationServiceExtension-umbrella.h"; sourceTree = "<group>"; };
 		E49684AFBE80F24363F0B828D71798A6 /* PFFileManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFFileManager.m; path = Parse/Internal/PFFileManager.m; sourceTree = "<group>"; };
 		E504BA29E1272868FDDA2CD6D9ADE75B /* PFObjectLocalIdStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFObjectLocalIdStore.m; path = Parse/Internal/Object/LocalIdStore/PFObjectLocalIdStore.m; sourceTree = "<group>"; };
 		E55CEFB16740087E4A16E8B42BD9908E /* PFCoreDataProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCoreDataProvider.h; path = Parse/Internal/PFCoreDataProvider.h; sourceTree = "<group>"; };
@@ -1186,7 +1197,6 @@
 		EA77D36DDED89E0D1233451E6307ADF4 /* PFAnonymousAuthenticationProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAnonymousAuthenticationProvider.h; path = Parse/Internal/User/AuthenticationProviders/Providers/Anonymous/PFAnonymousAuthenticationProvider.h; sourceTree = "<group>"; };
 		EA99AFCF109A38E0D04D89DDC5FA1462 /* Bolts.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Bolts.modulemap; sourceTree = "<group>"; };
 		EB7F0D4F3BE5C959BA919034BB2E84BF /* PFHTTPRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFHTTPRequest.h; path = Parse/Internal/HTTPRequest/PFHTTPRequest.h; sourceTree = "<group>"; };
-		EBD938FA6E167006746E45FACDD625B5 /* Haneke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Haneke.framework; path = HanekeSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC3D8C120BA6C22603D7BBB140487091 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
 		EC91334581A69BA0689A83AB85A71402 /* PFPropertyInfo_Runtime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPropertyInfo_Runtime.h; path = Parse/Internal/PropertyInfo/PFPropertyInfo_Runtime.h; sourceTree = "<group>"; };
 		ED19B0CAD810C5B0B97F3C2B49104601 /* PFSQLiteDatabaseController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSQLiteDatabaseController.h; path = Parse/Internal/LocalDataStore/SQLite/PFSQLiteDatabaseController.h; sourceTree = "<group>"; };
@@ -1194,6 +1204,7 @@
 		ED23E8917B860578079ED394679D792E /* PFMutableQueryState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFMutableQueryState.m; path = Parse/Internal/Query/State/PFMutableQueryState.m; sourceTree = "<group>"; };
 		ED30C654B0AB2953F50F7550CF86B9BF /* PFDevice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFDevice.m; path = Parse/Internal/PFDevice.m; sourceTree = "<group>"; };
 		EDD0E7326D085C0A4EFAB526E7BE66AE /* PFInternalUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFInternalUtils.h; path = Parse/Internal/PFInternalUtils.h; sourceTree = "<group>"; };
+		EE48888409F3890CF061283F04D8C483 /* Pods_AuctionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AuctionApp.framework; path = "Pods-AuctionApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9D7D02CDEE845FBB9327D722406807 /* AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworking-dummy.m"; sourceTree = "<group>"; };
 		EF36BFCE871F872E010582F8823D0658 /* PFMutableRelationState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFMutableRelationState.h; path = Parse/Internal/Relation/State/PFMutableRelationState.h; sourceTree = "<group>"; };
 		F0319D1161B89E15D304D2D64D2249AF /* PFMutableObjectState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFMutableObjectState.h; path = Parse/Internal/Object/State/PFMutableObjectState.h; sourceTree = "<group>"; };
@@ -1222,6 +1233,7 @@
 		F856589D0060DE38EE3F4C8DD7E38254 /* PFPinningEventuallyQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPinningEventuallyQueue.h; path = Parse/Internal/PFPinningEventuallyQueue.h; sourceTree = "<group>"; };
 		F8B04982F32D35A9E898A47C9B68E76B /* PFBaseState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFBaseState.m; path = Parse/Internal/PFBaseState.m; sourceTree = "<group>"; };
 		F946EA3E0FC5CDC424B8E587A78AC619 /* PFPushUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPushUtilities.h; path = Parse/Internal/Push/Utilites/PFPushUtilities.h; sourceTree = "<group>"; };
+		F99E8FDB59B23FBB8DDEFD236954BEC6 /* CSNotificationView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CSNotificationView.bundle; path = CSNotificationView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA23A053C073B3F825CCECD82816397F /* PFUser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFUser.m; path = Parse/PFUser.m; sourceTree = "<group>"; };
 		FB539418C6B6BB30C2514625A6BD8403 /* HanekeSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HanekeSwift.xcconfig; sourceTree = "<group>"; };
 		FB83269E430DEC6F9705ABD10FD241C9 /* PFURLSessionCommandRunner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFURLSessionCommandRunner.h; path = Parse/Internal/Commands/CommandRunner/URLSession/PFURLSessionCommandRunner.h; sourceTree = "<group>"; };
@@ -1229,11 +1241,12 @@
 		FBF895178E16886009E254253D50EA08 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC554DF482ABACAD15FCB1368C774DA9 /* PFCommandURLRequestConstructor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCommandURLRequestConstructor.h; path = Parse/Internal/Commands/CommandRunner/URLRequestConstructor/PFCommandURLRequestConstructor.h; sourceTree = "<group>"; };
 		FCA750F7BCC15DE5373CFBB31D6F26F2 /* UIImage+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Haneke.swift"; path = "Haneke/UIImage+Haneke.swift"; sourceTree = "<group>"; };
+		FD17A636B723CC72DBFF8F62810C88D1 /* Pods-AuctionApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AuctionApp-dummy.m"; sourceTree = "<group>"; };
 		FE1F60469DF883DA315D11C35525F5C7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
-		FE50EFA78AEFC56E6B35C339A127428F /* PhoneNumberKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PhoneNumberKit.framework; path = PhoneNumberKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE93104B320EDF88A8760A09FB28618F /* PFHash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFHash.h; path = Parse/Internal/PFHash.h; sourceTree = "<group>"; };
 		FED61789725B6199D1EFF7DFB1DBAE9B /* RegexManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RegexManager.swift; path = PhoneNumberKit/RegexManager.swift; sourceTree = "<group>"; };
 		FF1579B027F73463602B18A92835B8EB /* CSNativeBlurView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSNativeBlurView.h; path = CSNotificationView/CSNativeBlurView.h; sourceTree = "<group>"; };
+		FFBC1D4E8B724E0A03629F603F18BE4E /* UIImage_Resize.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UIImage_Resize.framework; path = "UIImage-Resize.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1296,6 +1309,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4313A0E86A8CB357E79CD8D643510E3F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99D3AE535077689CE6A8B455649C15E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11D0E9EB60321605DEDF452222D8A0BB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1393,14 +1414,6 @@
 			path = "../Target Support Files/PhoneNumberKit";
 			sourceTree = "<group>";
 		};
-		06E1B989BFA2F7680CA4E76D37CB1C54 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				AD10772EC6DE4623ED5D8478FC025D3C /* Pods-AuctionApp */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
 		150A0BE305E94A5B5EA1EFEBA417086E /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1474,26 +1487,6 @@
 			name = UIKit;
 			sourceTree = "<group>";
 		};
-		4B7653D6831296869FE9C85D7D6DAE26 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C1023C49EC818A7F06108690D0AADC7A /* AFNetworking.framework */,
-				A37404D74A75BE97F227FFAEE2991CD0 /* AFViewShaker.framework */,
-				0A92EDD7D3690ADB98E3931095483B3D /* Bolts.framework */,
-				45894F55B85A72A5ABFD6F19B8E76ACC /* CSNotificationView.bundle */,
-				DE9DEDD5C46FD4F9589E06E84863748C /* CSNotificationView.framework */,
-				EBD938FA6E167006746E45FACDD625B5 /* Haneke.framework */,
-				2196FBEE4D61FA9CA2AFCD0BC8206FB5 /* IHKeyboardAvoiding.framework */,
-				4DA23525535E02476C178BF0F61A24D3 /* NSDate_RelativeTime.framework */,
-				A9C44EB29B6D9C1C3D0D487FB064C990 /* Parse.framework */,
-				FE50EFA78AEFC56E6B35C339A127428F /* PhoneNumberKit.framework */,
-				9E86DDBBEA3943BD0B2DC4C830F88BD3 /* Pods_AuctionApp.framework */,
-				1D0EC5319D2F7536FA3C85C5B7C3F5CA /* SVProgressHUD.framework */,
-				7A0A6C07D4DE8E2A5AA46F5F2B106128 /* UIImage_Resize.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		4E80A64E1267B121C368F26C87851FEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1517,12 +1510,47 @@
 			path = "../Target Support Files/CSNotificationView";
 			sourceTree = "<group>";
 		};
+		598ACA06B8E0DCF700FAC588E66062D3 /* Pods-OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				952B483D336453F314E239DF3642FF22 /* Info.plist */,
+				86C4168ECB5A445D09A4D5A9B587A355 /* Pods-OneSignalNotificationServiceExtension.modulemap */,
+				1FA7C5A1C409E54DF509B79461E1DBCA /* Pods-OneSignalNotificationServiceExtension-acknowledgements.markdown */,
+				40CC434B51268A48C2E282104FED3E02 /* Pods-OneSignalNotificationServiceExtension-acknowledgements.plist */,
+				D7475F0699F2BE98D54D18D3E144A4D0 /* Pods-OneSignalNotificationServiceExtension-dummy.m */,
+				878E9112B5065D3EE403C150C9F55525 /* Pods-OneSignalNotificationServiceExtension-resources.sh */,
+				E38F35C4D99532650FCFE7A3084FECED /* Pods-OneSignalNotificationServiceExtension-umbrella.h */,
+				DAAF06D0F51CB0E7E5F591366AD2B823 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				5966066432979A39568A5DCB378B7CE7 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
+			);
+			name = "Pods-OneSignalNotificationServiceExtension";
+			path = "Target Support Files/Pods-OneSignalNotificationServiceExtension";
+			sourceTree = "<group>";
+		};
 		5A6F8731DEB0A294AF9485C074B83A7B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				0FE65A46960931970252D668D759ABD9 /* en.lproj */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		5D984B2C9F96AE67B27470738B396E62 /* Pods-AuctionApp */ = {
+			isa = PBXGroup;
+			children = (
+				6A105E4DF0888F17651843BEE08036D3 /* Info.plist */,
+				69854EBD941AE33DE28B8B3C33EBC855 /* Pods-AuctionApp.modulemap */,
+				C5938C9BC511D6BC83F384E9EBEE2CF4 /* Pods-AuctionApp-acknowledgements.markdown */,
+				E2FB592B9801E65C0423A43E7AB5B870 /* Pods-AuctionApp-acknowledgements.plist */,
+				FD17A636B723CC72DBFF8F62810C88D1 /* Pods-AuctionApp-dummy.m */,
+				12B87DAF904B68D5C100069ECDB76297 /* Pods-AuctionApp-frameworks.sh */,
+				8A71C55C8AB81D90094E8AC2C0AF1EDF /* Pods-AuctionApp-resources.sh */,
+				4A59F9B0DBFF7525892A4E1BE5606F06 /* Pods-AuctionApp-umbrella.h */,
+				80D0310C88A3C667D097669BC54D5A8C /* Pods-AuctionApp.debug.xcconfig */,
+				14004F36012ABFFDC18BD80B91EEA88D /* Pods-AuctionApp.release.xcconfig */,
+			);
+			name = "Pods-AuctionApp";
+			path = "Target Support Files/Pods-AuctionApp";
 			sourceTree = "<group>";
 		};
 		60AABA3891E5B57BF15206F749EB785D /* Resources */ = {
@@ -1580,6 +1608,15 @@
 			path = "UIImage-Resize";
 			sourceTree = "<group>";
 		};
+		6A7B8A9B84C87CF6A0E749E73C233F86 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5D984B2C9F96AE67B27470738B396E62 /* Pods-AuctionApp */,
+				598ACA06B8E0DCF700FAC588E66062D3 /* Pods-OneSignalNotificationServiceExtension */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 		707500AC317715C5C512F9CED1DA4E3E /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -1612,14 +1649,35 @@
 			path = "../Target Support Files/SVProgressHUD";
 			sourceTree = "<group>";
 		};
+		7493DAEB36F62DFEACDD71681D901C81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8B262C8E3ABF07624B8CE9DF6483735 /* AFNetworking.framework */,
+				5F12D921DED274F3372F51823D76804A /* AFViewShaker.framework */,
+				0BA19AC0BC82AE8B97A8857A7831B010 /* Bolts.framework */,
+				F99E8FDB59B23FBB8DDEFD236954BEC6 /* CSNotificationView.bundle */,
+				0328BE0CBFC6430B3C057C8523DC7C3F /* CSNotificationView.framework */,
+				85260CB98CF6D45C2FA3BD187529DB46 /* Haneke.framework */,
+				377360DB690F890234C16DD703AEB12A /* IHKeyboardAvoiding.framework */,
+				5BC49264148ACA4E575383A5C2D20632 /* NSDate_RelativeTime.framework */,
+				DF4515107C91F31AB056066705535BAA /* Parse.framework */,
+				53BA41C317ACCF32524B8109D8830E2F /* PhoneNumberKit.framework */,
+				EE48888409F3890CF061283F04D8C483 /* Pods_AuctionApp.framework */,
+				71339A2B8E43AE0CC02D68A2D05D74BA /* Pods_OneSignalNotificationServiceExtension.framework */,
+				94F9B33D4824D8BB4587F8DAF0804636 /* SVProgressHUD.framework */,
+				FFBC1D4E8B724E0A03629F603F18BE4E /* UIImage_Resize.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				A8913D6D1DC992121F4308610F185BA3 /* Frameworks */,
 				24E5C6E528A7BC1A0A3956D2C1214D9E /* Pods */,
-				4B7653D6831296869FE9C85D7D6DAE26 /* Products */,
-				06E1B989BFA2F7680CA4E76D37CB1C54 /* Targets Support Files */,
+				7493DAEB36F62DFEACDD71681D901C81 /* Products */,
+				6A7B8A9B84C87CF6A0E749E73C233F86 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2141,24 +2199,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		AD10772EC6DE4623ED5D8478FC025D3C /* Pods-AuctionApp */ = {
-			isa = PBXGroup;
-			children = (
-				3BAAE0F69EF5868DDA5CC699F6CC2EA8 /* Info.plist */,
-				A4784BBC8EC20CC4939401EF67654175 /* Pods-AuctionApp.modulemap */,
-				40D66B09FFF48F0AE82B7622E1D94513 /* Pods-AuctionApp-acknowledgements.markdown */,
-				52305AD1280D73267C0EF7C09AC40745 /* Pods-AuctionApp-acknowledgements.plist */,
-				B693681B47419ED95DABA35C811AEEF2 /* Pods-AuctionApp-dummy.m */,
-				1325F42188F2BF6C71A0341E1CC1172A /* Pods-AuctionApp-frameworks.sh */,
-				AD68AD900297CAC8E0FCBCB6D4E52A98 /* Pods-AuctionApp-resources.sh */,
-				61AFD134602F5617A69BE6754388470D /* Pods-AuctionApp-umbrella.h */,
-				D8FFDB3DA8336C4E78D7F2B04D5E523C /* Pods-AuctionApp.debug.xcconfig */,
-				504D468636FF753B9392BA9A9163B5D3 /* Pods-AuctionApp.release.xcconfig */,
-			);
-			name = "Pods-AuctionApp";
-			path = "Target Support Files/Pods-AuctionApp";
-			sourceTree = "<group>";
-		};
 		B19B08D6877EA38428EA088D75CCAB82 /* NSURLSession */ = {
 			isa = PBXGroup;
 			children = (
@@ -2344,6 +2384,14 @@
 				1D9BC534C5EC7D45CB82D66E1DA19C03 /* CSNotificationView-umbrella.h in Headers */,
 				89DD24BBC80CF7D7CA8A4F17FF36B42D /* CSNotificationView.h in Headers */,
 				D669E99F982767DFF1E6A1B1050FC379 /* CSNotificationView_Private.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32CC3B6C41FB72F15EE0AE1C87D2E83C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B560798328F02B27552DB78FAB29EBE6 /* Pods-OneSignalNotificationServiceExtension-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2695,7 +2743,7 @@
 			);
 			name = IHKeyboardAvoiding;
 			productName = IHKeyboardAvoiding;
-			productReference = 2196FBEE4D61FA9CA2AFCD0BC8206FB5 /* IHKeyboardAvoiding.framework */;
+			productReference = 377360DB690F890234C16DD703AEB12A /* IHKeyboardAvoiding.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		1549D7A377E7481D7D7D823EF6769022 /* SVProgressHUD */ = {
@@ -2713,7 +2761,7 @@
 			);
 			name = SVProgressHUD;
 			productName = SVProgressHUD;
-			productReference = 1D0EC5319D2F7536FA3C85C5B7C3F5CA /* SVProgressHUD.framework */;
+			productReference = 94F9B33D4824D8BB4587F8DAF0804636 /* SVProgressHUD.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2A09EC59BBF8F179734298F81D57F7B9 /* UIImage-Resize */ = {
@@ -2730,7 +2778,7 @@
 			);
 			name = "UIImage-Resize";
 			productName = "UIImage-Resize";
-			productReference = 7A0A6C07D4DE8E2A5AA46F5F2B106128 /* UIImage_Resize.framework */;
+			productReference = FFBC1D4E8B724E0A03629F603F18BE4E /* UIImage_Resize.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		6EE458AB7C9239893E5C6E840C0BF9B5 /* Parse */ = {
@@ -2749,7 +2797,24 @@
 			);
 			name = Parse;
 			productName = Parse;
-			productReference = A9C44EB29B6D9C1C3D0D487FB064C990 /* Parse.framework */;
+			productReference = DF4515107C91F31AB056066705535BAA /* Parse.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		745A2536ABC9981AD547B885DBBC3C73 /* Pods-OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B8484BCBB9BF0FF6FC51657FFDF22D3 /* Build configuration list for PBXNativeTarget "Pods-OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				4FFF30A74222236548450440B772FF4C /* Sources */,
+				99D3AE535077689CE6A8B455649C15E3 /* Frameworks */,
+				32CC3B6C41FB72F15EE0AE1C87D2E83C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-OneSignalNotificationServiceExtension";
+			productName = "Pods-OneSignalNotificationServiceExtension";
+			productReference = 71339A2B8E43AE0CC02D68A2D05D74BA /* Pods_OneSignalNotificationServiceExtension.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8C5BD10883BD185426DD737247F56DEC /* PhoneNumberKit */ = {
@@ -2767,7 +2832,7 @@
 			);
 			name = PhoneNumberKit;
 			productName = PhoneNumberKit;
-			productReference = FE50EFA78AEFC56E6B35C339A127428F /* PhoneNumberKit.framework */;
+			productReference = 53BA41C317ACCF32524B8109D8830E2F /* PhoneNumberKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8FB7A778D93C9B30AF7470FDBDA9C0B8 /* CSNotificationView-CSNotificationView */ = {
@@ -2784,7 +2849,7 @@
 			);
 			name = "CSNotificationView-CSNotificationView";
 			productName = "CSNotificationView-CSNotificationView";
-			productReference = 45894F55B85A72A5ABFD6F19B8E76ACC /* CSNotificationView.bundle */;
+			productReference = F99E8FDB59B23FBB8DDEFD236954BEC6 /* CSNotificationView.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		AE4759774042D8E013517E82C6F7A058 /* HanekeSwift */ = {
@@ -2801,7 +2866,7 @@
 			);
 			name = HanekeSwift;
 			productName = HanekeSwift;
-			productReference = EBD938FA6E167006746E45FACDD625B5 /* Haneke.framework */;
+			productReference = 85260CB98CF6D45C2FA3BD187529DB46 /* Haneke.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B9788685473D98B025E254C9297EB884 /* CSNotificationView */ = {
@@ -2820,7 +2885,7 @@
 			);
 			name = CSNotificationView;
 			productName = CSNotificationView;
-			productReference = DE9DEDD5C46FD4F9589E06E84863748C /* CSNotificationView.framework */;
+			productReference = 0328BE0CBFC6430B3C057C8523DC7C3F /* CSNotificationView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		CBBCECA8F04D9F15E6A3146D9559ED53 /* AFViewShaker */ = {
@@ -2837,7 +2902,7 @@
 			);
 			name = AFViewShaker;
 			productName = AFViewShaker;
-			productReference = A37404D74A75BE97F227FFAEE2991CD0 /* AFViewShaker.framework */;
+			productReference = 5F12D921DED274F3372F51823D76804A /* AFViewShaker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		CF671F7E57B92905F1CC91D036D6B4A7 /* AFNetworking */ = {
@@ -2854,7 +2919,7 @@
 			);
 			name = AFNetworking;
 			productName = AFNetworking;
-			productReference = C1023C49EC818A7F06108690D0AADC7A /* AFNetworking.framework */;
+			productReference = C8B262C8E3ABF07624B8CE9DF6483735 /* AFNetworking.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		DB9F1A11771271F4367C019D55F9B84B /* Pods-AuctionApp */ = {
@@ -2882,7 +2947,7 @@
 			);
 			name = "Pods-AuctionApp";
 			productName = "Pods-AuctionApp";
-			productReference = 9E86DDBBEA3943BD0B2DC4C830F88BD3 /* Pods_AuctionApp.framework */;
+			productReference = EE48888409F3890CF061283F04D8C483 /* Pods_AuctionApp.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E5C2A5644E0C04F43E88637BF90E2473 /* NSDate+RelativeTime */ = {
@@ -2900,7 +2965,7 @@
 			);
 			name = "NSDate+RelativeTime";
 			productName = "NSDate+RelativeTime";
-			productReference = 4DA23525535E02476C178BF0F61A24D3 /* NSDate_RelativeTime.framework */;
+			productReference = 5BC49264148ACA4E575383A5C2D20632 /* NSDate_RelativeTime.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F957EABCA56BD8F5B626798CC7B344D3 /* Bolts */ = {
@@ -2917,7 +2982,7 @@
 			);
 			name = Bolts;
 			productName = Bolts;
-			productReference = 0A92EDD7D3690ADB98E3931095483B3D /* Bolts.framework */;
+			productReference = 0BA19AC0BC82AE8B97A8857A7831B010 /* Bolts.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -2937,7 +3002,7 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 4B7653D6831296869FE9C85D7D6DAE26 /* Products */;
+			productRefGroup = 7493DAEB36F62DFEACDD71681D901C81 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -2952,6 +3017,7 @@
 				6EE458AB7C9239893E5C6E840C0BF9B5 /* Parse */,
 				8C5BD10883BD185426DD737247F56DEC /* PhoneNumberKit */,
 				DB9F1A11771271F4367C019D55F9B84B /* Pods-AuctionApp */,
+				745A2536ABC9981AD547B885DBBC3C73 /* Pods-OneSignalNotificationServiceExtension */,
 				1549D7A377E7481D7D7D823EF6769022 /* SVProgressHUD */,
 				2A09EC59BBF8F179734298F81D57F7B9 /* UIImage-Resize */,
 			);
@@ -3044,6 +3110,14 @@
 				B7F0F5D3348658506C589DE9A1171080 /* PhoneNumberParser.swift in Sources */,
 				9E8AE432453C6FB9202DFFF5654B63EB /* RegexManager.swift in Sources */,
 				31E4D363BC5C3521ACCF72841016FB4A /* TextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FFF30A74222236548450440B772FF4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1967D391E61278DEAAFF84CB19249C79 /* Pods-OneSignalNotificationServiceExtension-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3550,6 +3624,43 @@
 			};
 			name = Release;
 		};
+		4411F83A387B3BDC3D9D7E9C5C269234 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5966066432979A39568A5DCB378B7CE7 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_OneSignalNotificationServiceExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		4B1C810B41554368E2F840FED04B0C44 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3803BF7D148B4C511723CF0845A392CA /* AFViewShaker.xcconfig */;
@@ -3645,6 +3756,43 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6C1F6529CF0733C3581C6E907B8E54AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAAF06D0F51CB0E7E5F591366AD2B823 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_OneSignalNotificationServiceExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -4121,7 +4269,7 @@
 		};
 		DDAB8A3F51DC131868308FD30F7B5324 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 504D468636FF753B9392BA9A9163B5D3 /* Pods-AuctionApp.release.xcconfig */;
+			baseConfigurationReference = 14004F36012ABFFDC18BD80B91EEA88D /* Pods-AuctionApp.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -4192,7 +4340,7 @@
 		};
 		E686DBCBFF3C78338ACEC3B4560E2C06 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8FFDB3DA8336C4E78D7F2B04D5E523C /* Pods-AuctionApp.debug.xcconfig */;
+			baseConfigurationReference = 80D0310C88A3C667D097669BC54D5A8C /* Pods-AuctionApp.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -4414,6 +4562,15 @@
 			buildConfigurations = (
 				E686DBCBFF3C78338ACEC3B4560E2C06 /* Debug */,
 				DDAB8A3F51DC131868308FD30F7B5324 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B8484BCBB9BF0FF6FC51657FFDF22D3 /* Build configuration list for PBXNativeTarget "Pods-OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C1F6529CF0733C3581C6E907B8E54AC /* Debug */,
+				4411F83A387B3BDC3D9D7E9C5C269234 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

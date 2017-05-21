@@ -27,8 +27,8 @@ class DataManager: NSObject {
         query!.addAscendingOrder("programNumber")
         query!.findObjectsInBackground { (results, error) -> Void in
             if error != nil{
-                print("Error!! \(error)", terminator: "")
-                completion([Item](), error as! NSError)
+                print("Error!! \(String(describing: error))", terminator: "")
+                completion([Item](), error as NSError?)
             }else{
                 if let itemsUW = results as? [Item] {
                     self.allItems = itemsUW
@@ -48,17 +48,16 @@ class DataManager: NSObject {
         })
     }
     
-    func bidOn(_ item:Item, amount: Int, completion: @escaping (Bool, _ errorCode: String) -> ()){
+    func bidOn(_ item:Item, maxBid: Int, completion: @escaping (Bool, _ errorCode: String) -> ()){
         
         let user = PFUser.current()
         
-        Bid(email: user!.email!, name: user!["fullname"] as! String, telephone: user!["telephone"] as! String, amount: amount, itemId: item.objectId!)
+        Bid(email: user!.email!, name: user!["fullname"] as! String, telephone: user!["telephone"] as! String, maxBid: maxBid, itemId: item.objectId!)
         .saveInBackground { (success, error) -> Void in
             
             if error != nil {
-                
-                if let errorString:String = error!.userInfo["error"] as? String{
-                    completion(false, errorString)
+                if (error?.localizedDescription != nil) {
+                    completion(false, (error?.localizedDescription)!)
                 }else{
                     completion(false, "")
                 }
@@ -75,7 +74,7 @@ class DataManager: NSObject {
                 completion(true, "")
             })
             
-            let channel = "a\(item.objectId)"
+            let channel = "a\(String(describing: item.objectId))"
             PFPush.subscribeToChannel(inBackground: channel, block: { (success, error) -> Void in
                 
             })

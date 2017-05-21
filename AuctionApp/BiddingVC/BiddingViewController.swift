@@ -7,7 +7,7 @@ import UIKit
 import IHKeyboardAvoiding
 
 protocol BiddingViewControllerDelegate {
-    func biddingViewControllerDidBid(_ viewController: BiddingViewController, onItem: Item, amount: Int)
+    func biddingViewControllerDidBid(_ viewController: BiddingViewController, onItem: Item, maxBid: Int)
     func biddingViewControllerDidCancel(_ viewController: BiddingViewController)
 }
 
@@ -51,14 +51,14 @@ class BiddingViewController: UIViewController {
                     let openingBid = itemUW.price - itemUW.priceIncrement
                     setupForSingle(openingBid)
                 }else{
-                    setupForSingle(itemUW.currentPrice.last!)
+                    setupForSingle(itemUW.price)
                 }
             case .single:
                 if itemUW.currentWinners.isEmpty{
                     let openingBid = itemUW.price - itemUW.priceIncrement
                     setupForSingle(openingBid)
                 }else{
-                    setupForSingle(itemUW.currentPrice.first!)
+                    setupForSingle(itemUW.price)
                 }
             }
             
@@ -72,9 +72,9 @@ class BiddingViewController: UIViewController {
             customBidTextField.textColor = UIColor(red: 33/225, green: 161/225, blue: 219/225, alpha: 1)
             customBidTextField.textAlignment = .center
             
-            IHKeyboardAvoiding.setBuffer(20)
-            IHKeyboardAvoiding.setPadding(20)
-            IHKeyboardAvoiding.setAvoiding(view, withTarget: popUpContainer)
+            //IHKeyboardAvoiding.setBuffer(20)
+            //IHKeyboardAvoiding.setPadding(20)
+            //IHKeyboardAvoiding.setAvoidingView(view, withTarget: popUpContainer)
             
             animateIn()
         }
@@ -121,21 +121,21 @@ class BiddingViewController: UIViewController {
     func setupForMultiple() {
         self.customBidTextField.alpha = 1.0
         self.predifinedButtonsContainerView.alpha = 0.0
-        self.customBidButton.setTitle("Bid", for: UIControlState())
+        self.customBidButton.setTitle("Max Bid", for: UIControlState())
         state = .custom
     }
 
     func didSelectAmount(_ bidType: BidType) {
         
-        var amount = 0
+        var maxBid = 0
         switch bidType {
         case .custom(let total):
-            amount = total
+            maxBid = total
         case .extra(let aditional):
-            amount = startPrice + aditional
+            maxBid = startPrice + aditional
         }
         
-        let bidAlert = UIAlertController(title: "Confirm $\(amount) Bid", message: "You didn't think we'd let you bid $\(amount) without confirming it, did you?", preferredStyle: UIAlertControllerStyle.alert)
+        let bidAlert = UIAlertController(title: "Confirm $\(maxBid) Bid", message: "You didn't think we'd let you bid $\(maxBid) without confirming it, did you?", preferredStyle: UIAlertControllerStyle.alert)
         
         bidAlert.addAction(UIAlertAction(title: "Bid", style: .default, handler: { (action: UIAlertAction!) in
             if self.delegate != nil {
@@ -145,7 +145,7 @@ class BiddingViewController: UIViewController {
                         self.popUpContainer.transform = CGAffineTransform.identity.scaledBy(x: 0.01, y: 0.01);
                         self.darkView.alpha = 0
                         }, completion: { (finished: Bool) -> Void in
-                            self.delegate!.biddingViewControllerDidBid(self, onItem: itemUW, amount: amount)
+                            self.delegate!.biddingViewControllerDidBid(self, onItem: itemUW, maxBid: maxBid)
                     })
                     
                     
@@ -165,8 +165,8 @@ class BiddingViewController: UIViewController {
         
         switch state {
         case .custom:
-            if let amount = Int(customBidTextField.text!){
-                didSelectAmount(.custom(amount))
+            if let maxBid = Int(customBidTextField.text!){
+                didSelectAmount(.custom(maxBid))
             }else{
                 didTapBackground("" as AnyObject)
             }

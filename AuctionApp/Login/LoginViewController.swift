@@ -4,7 +4,9 @@
 //
 
 import UIKit
+import UserNotifications
 import AFViewShaker
+import OneSignal
 import PhoneNumberKit
 import Parse
 
@@ -31,7 +33,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         viewShaker = AFViewShaker(viewsArray: [nameTextField, emailTextField, telephoneTextField])
     }
 
@@ -53,14 +54,20 @@ class LoginViewController: UIViewController {
             user.signUpInBackground {
                 (succeeded, error) in
                 if succeeded == true {
-                    self.registerForPush()
+                    OneSignal.syncHashedEmail(user.email)
+                    OneSignal.promptForPushNotifications(userResponse: { accepted in
+                        print("User accepted notifications: \(accepted)")
+                    })
                     self.performSegue(withIdentifier: "loginToItemSegue", sender: nil)
                 } else {
-                    let errorString = error!.userInfo["error"] as! NSString
-                    print("Error Signing up: \(errorString)", terminator: "")
+                    let errorString = error?.localizedDescription
+                    print("Error Signing up: \(String(describing: errorString))", terminator: "")
                     PFUser.logInWithUsername(inBackground: user.username!, password: user.password!, block: { (user, error) -> Void in
                         if error == nil {
-                            self.registerForPush()
+                            OneSignal.syncHashedEmail(user?.email)
+                            OneSignal.promptForPushNotifications(userResponse: { accepted in
+                                print("User accepted notifications: \(accepted)")
+                            })
                             self.performSegue(withIdentifier: "loginToItemSegue", sender: nil)
                         }else{
                             print("Error logging in ", terminator: "")
@@ -74,21 +81,5 @@ class LoginViewController: UIViewController {
             //Can't login with nothing set
             viewShaker?.shake()
         }
-    }
-    
-    func registerForPush() {
-        let user = PFUser.current()
-        let currentInstalation = PFInstallation.current()
-        currentInstalation?["email"] = user!.email
-        currentInstalation?.saveInBackground(block: nil)
-
-        
-        let application = UIApplication.shared
-        
-        if application.responds(to: #selector(UIApplication.registerUserNotificationSettings(_:))) {
-            let settings = UIUserNotificationSettings(types: [UIUserNotificationType.alert, UIUserNotificationType.sound, UIUserNotificationType.badge], categories: nil)
-            application.registerUserNotificationSettings(settings)
-            application.registerForRemoteNotifications()
-        }        
     }
 }

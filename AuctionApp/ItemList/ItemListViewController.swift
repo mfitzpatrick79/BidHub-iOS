@@ -43,7 +43,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         colorView.backgroundColor = UIColor.white
         tableView.addSubview(colorView)
         
-        //Refresh Control
+        // Refresh Control
         let refreshView = UIView(frame: CGRect(x: 0, y: 10, width: 0, height: 0))
         tableView.insertSubview(refreshView, aboveSubview: colorView)
         
@@ -60,12 +60,11 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         reloadData(false, initialLoad: true)
         
         let user = PFUser.current()
-        print("Logged in as: \(user!.email)", terminator: "")
-        
+        print("Logged in as: \(String(describing: user!.email))", terminator: "")
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        NotificationCenter.default.addObserver(self, selector: #selector(ItemListViewController.pushRecieved(_:)), name: NSNotification.Name(rawValue: "pushRecieved"), object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(ItemListViewController.pushRecieved(_:)), name: NSNotification.Name(rawValue: "pushRecieved"), object: nil)
         timer = Timer.scheduledTimer(timeInterval: 30.0, target: self, selector: #selector(ItemListViewController.reloadItems), userInfo: nil, repeats: true)
         timer?.tolerance = 10.0
     }
@@ -76,20 +75,17 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     
-    func pushRecieved(_ notification: Notification){
-        
-        if let aps = notification.object?["aps"] as? [AnyHashable: Any]{
-            if let alert = aps["alert"] as? String {
-                CSNotificationView.show(in: self, tintColor: UIColor.white, font: UIFont(name: "Avenir-Light", size: 14)!, textAlignment: .center, image: nil, message: alert, duration: 5.0)
-                
-            }
-        }
-        reloadData()
-        
-        
-    }
+//    func pushRecieved(_ notification: Notification){
+//        if let aps = notification.object?["aps"] as? [AnyHashable: Any] {
+//            if let alert = aps["alert"] as? String {
+//                CSNotificationView.show(in: self, tintColor: UIColor.white, font: UIFont(name: "Avenir-Light", size: 14)!, textAlignment: .center, image: nil, message: alert, duration: 5.0)
+//                
+//            }
+//        }
+//        reloadData()
+//    }
     
-    //Hack for selectors and default parameters
+    /// Hack for selectors and default parameters
     func reloadItems(){
         reloadData()
     }
@@ -101,7 +97,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         DataManager().sharedInstance.getItems{ (items, error) in
             
             if error != nil {
-                //Error Case
+                // Error Case
                 if !silent {
                     self.showError("Error getting Items")
                 }
@@ -135,7 +131,6 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemTableViewCell", for: indexPath) as! ItemTableViewCell
-        
         return configureCellForIndexPath(cell, indexPath: indexPath)
     }
     
@@ -153,13 +148,10 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         cell.itemFmvLabel.text = item.fairMarketValue
         
         if item.quantity > 1 {
-            var bidsString = item.currentPrice.map({bidPrice in "$\(bidPrice)"}).joined(separator: ", ")
-            if bidsString.characters.count == 0 {
-                bidsString = "(none yet)"
-            }
+            let bidsString = "$\(item.price)"
             
             cell.itemDescriptionLabel.text =
-                "\(item.quantity) available! Highest \(item.quantity) bidders win. Current highest bids are \(bidsString)" +
+                "\(item.quantity) available! Highest \(item.quantity) bidders win. Current high bid is \(bidsString)" +
                 "\n\n" + cell.itemDescriptionLabel.text!
         }
         cell.delegate = self;
@@ -170,10 +162,10 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         
         switch (item.winnerType) {
         case .single:
-            price = item.currentPrice.first
+            price = item.price
         case .multiple:
-            price = item.currentPrice.first
-            lowPrice = item.currentPrice.last
+            price = item.price
+            lowPrice = item.price
         }
         
         let bidString = (item.numberOfBids == 1) ? "Bid":"Bids"
@@ -208,7 +200,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
             cell.bidNowButton.isHidden = true
         }else{
             if(item.openTime.timeIntervalSinceNow < 0.0){
-                //open
+                // open
                 cell.dateLabel.text = "Bidding closes \((item.closeTime as NSDate).relativeTime().lowercased())."
                 cell.bidNowButton.isHidden = false
             }else{
@@ -220,7 +212,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
-    ///Cell Delegate
+    /// Cell Delegate
     func cellDidPressBid(_ item: Item) {
         let bidVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "BiddingViewController") as? BiddingViewController
         if let biddingVC = bidVC {
@@ -232,7 +224,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
 
-    // Image Detail Zoom
+    /// Image Detail Zoom
     func cellImageTapped(_ item: Item) {
         zoomImageView.frame = view.bounds
         zoomImageView.clipsToBounds = false
@@ -255,6 +247,8 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         let backButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(ItemListViewController.pressedClose(_:)))
         navigationItem.leftBarButtonItem = nil
         navigationItem.rightBarButtonItem = backButton
+        navigationItem.rightBarButtonItem?.tintColor = UIColor.white
+
         segmentControl.isHidden = true
         
         zoomOverlay.addSubview(zoomImageView)
@@ -308,7 +302,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         navigationItem.rightBarButtonItem = nil
     }
 
-    ///Actions
+    /// Actions
     @IBAction func logoutPressed(_ sender: AnyObject) {
         PFUser.logOut()
         performSegue(withIdentifier: "logoutSegue", sender: nil)
@@ -336,11 +330,10 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         self.tableView.reloadData()
     }
     
-    func bidOnItem(_ item: Item, amount: Int) {
-        
+    func bidOnItem(_ item: Item, maxBid: Int) {
         SVProgressHUD.show()
         
-        DataManager().sharedInstance.bidOn(item, amount: amount) { (success, errorString) -> () in
+        DataManager().sharedInstance.bidOn(item, maxBid: maxBid) { (success, errorString) -> () in
             if success {
                 print("Woohoo", terminator: "")
                 self.items = DataManager().sharedInstance.allItems
@@ -353,14 +346,10 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
             }
         }
     }
-    
-    
+
     func showError(_ errorString: String) {
-        
         if let _: AnyClass = NSClassFromString("UIAlertController") {
-            
-            
-            //make and use a UIAlertController
+            // make and use a UIAlertController
             let alertView = UIAlertController(title: "Error", message: errorString, preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "Ok", style: .default, handler: { (action) -> Void in
@@ -371,18 +360,13 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
             self.present(alertView, animated: true, completion: nil)
         }
         else {
-            
-            //make and use a UIAlertView
-            
+            // make and use a UIAlertView
             let alertView = UIAlertView(title: "Error", message: errorString, delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "Ok")
             alertView.show()
         }
     }
     
-    
-    
-    ///Search Bar
-    
+    /// Search Bar
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
             filterTable(.all)
@@ -396,15 +380,13 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         searchBar.resignFirstResponder()
     }
     
-    ///Bidding VC
-    
-    func biddingViewControllerDidBid(_ viewController: BiddingViewController, onItem: Item, amount: Int){
+    /// Bidding VC
+    func biddingViewControllerDidBid(_ viewController: BiddingViewController, onItem: Item, maxBid: Int){
         viewController.view.removeFromSuperview()
-        bidOnItem(onItem, amount: amount)
+        bidOnItem(onItem, maxBid: maxBid)
     }
     
     func biddingViewControllerDidCancel(_ viewController: BiddingViewController){
         viewController.view.removeFromSuperview()
     }
 }
-
