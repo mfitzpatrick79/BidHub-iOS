@@ -97,6 +97,7 @@ enum FilterType: CustomStringConvertible {
     case noBids
     case myItems
     case search(searchTerm: String)
+    case category(filterValue: String)
     
     var description: String {
         switch self{
@@ -106,6 +107,8 @@ enum FilterType: CustomStringConvertible {
                 return "NoBids"
             case .myItems:
                 return "My Items"
+            case .category:
+                return "Filtering"
             case .search:
                 return "Searching"
         }
@@ -131,6 +134,8 @@ enum FilterType: CustomStringConvertible {
                 })
             case .search(let searchTerm):
                 return NSPredicate(format: "(artist CONTAINS[c] %@) || (title CONTAINS[c] %@) || (itemDesctiption CONTAINS[c] %@) || (media CONTAINS[c] %@) || (programNumberString CONTAINS[c] %@)", searchTerm, searchTerm, searchTerm, searchTerm, searchTerm)
+            case .category(let filterValue):
+                return NSPredicate(format: "category CONTAINS[c] %@", filterValue)
         }
     }
 }

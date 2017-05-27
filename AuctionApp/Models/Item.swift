@@ -92,6 +92,32 @@ class Item: PFObject, PFSubclassing {
         }
     }
     
+    var category:String {
+        get {
+            if let category =  self["category"] as? String{
+                return category
+            }else{
+                return ""
+            }
+        }
+        set {
+            self["category"] = newValue
+        }
+    }
+    
+    var itemCallout:String {
+        get {
+            if let callout =  self["callout"] as? String{
+                return callout
+            }else{
+                return ""
+            }
+        }
+        set {
+            self["callout"] = newValue
+        }
+    }
+    
     var programNumber:Int {
         get {
             if let itemProgramNumber =  self["programNumber"] as? Int{

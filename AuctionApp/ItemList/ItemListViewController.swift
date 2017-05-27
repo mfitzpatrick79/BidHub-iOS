@@ -64,7 +64,6 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     override func viewDidAppear(_ animated: Bool) {
-//        NotificationCenter.default.addObserver(self, selector: #selector(ItemListViewController.pushRecieved(_:)), name: NSNotification.Name(rawValue: "pushRecieved"), object: nil)
         timer = Timer.scheduledTimer(timeInterval: 30.0, target: self, selector: #selector(ItemListViewController.reloadItems), userInfo: nil, repeats: true)
         timer?.tolerance = 10.0
     }
@@ -73,17 +72,6 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         NotificationCenter.default.removeObserver(self)
         timer?.invalidate()
     }
-    
-    
-//    func pushRecieved(_ notification: Notification){
-//        if let aps = notification.object?["aps"] as? [AnyHashable: Any] {
-//            if let alert = aps["alert"] as? String {
-//                CSNotificationView.show(in: self, tintColor: UIColor.white, font: UIFont(name: "Avenir-Light", size: 14)!, textAlignment: .center, image: nil, message: alert, duration: 5.0)
-//                
-//            }
-//        }
-//        reloadData()
-//    }
     
     /// Hack for selectors and default parameters
     func reloadItems(){
@@ -144,6 +132,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         cell.itemArtistLabel.text = item.artist
         cell.itemMediaLabel.text = item.media
         cell.itemSizeLabel.text = item.size
+        cell.itemCalloutLabel.text = item.itemCallout
         cell.itemDescriptionLabel.text = item.itemDesctiption
         cell.itemFmvLabel.text = item.fairMarketValue
         

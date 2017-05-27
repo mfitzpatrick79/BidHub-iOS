@@ -19,6 +19,7 @@ class ItemTableViewCell: UITableViewCell {
     @IBOutlet var shadowView: UIView!
     @IBOutlet var moreInfoLabel: UILabel!
     @IBOutlet var moreInfoView: UIView!
+    @IBOutlet var itemCalloutLabel: UILabel!
     @IBOutlet var itemDescriptionLabel: UILabel!
     @IBOutlet var itemProgramNumberLabel: UILabel!
     @IBOutlet var itemTitleLabel: UILabel!
