@@ -486,12 +486,14 @@
                                                             <exclude reference="LTC-rl-YLD"/>
                                                         </mask>
                                                         <mask key="constraints">
+                                                            <exclude reference="kCR-qT-jwR"/>
                                                             <exclude reference="r4l-1K-5PN"/>
+                                                            <exclude reference="uyY-Xt-NW0"/>
                                                         </mask>
                                                     </variation>
                                                     <variation key="heightClass=regular">
                                                         <mask key="constraints">
-                                                            <include reference="r4l-1K-5PN"/>
+                                                            <exclude reference="r4l-1K-5PN"/>
                                                         </mask>
                                                     </variation>
                                                 </view>
@@ -549,12 +551,13 @@
                             </connections>
                         </barButtonItem>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="xS6-9N-35y">
-                            <rect key="frame" x="57" y="7" width="261" height="30"/>
+                            <rect key="frame" x="60" y="7" width="255" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="All"/>
                                 <segment title="No Bids"/>
                                 <segment title="My Bids"/>
+                                <segment title="Show..."/>
                             </segments>
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -568,6 +571,7 @@
                         <outlet property="tableView" destination="Bpr-7P-qwO" id="gMj-36-EiN"/>
                         <segue destination="L1S-fT-33x" kind="presentation" identifier="logoutSegue" id="gOo-he-U5Z"/>
                         <segue destination="d7m-zO-Df7" kind="custom" identifier="toBiddingVC" customClass="InsetBlurModalSeque" id="kOc-6B-j1b"/>
+                        <segue destination="Krt-BP-4rZ" kind="custom" identifier="toCategoryVC" customClass="InsetBlurModalSeque" id="e9X-Kt-C50"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5u-9l-V98" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -765,7 +769,84 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2236" y="118.29085457271366"/>
+            <point key="canvasLocation" x="2252" y="633"/>
+        </scene>
+        <!--Category View Controller-->
+        <scene sceneID="RQE-qg-Gmb">
+            <objects>
+                <viewController storyboardIdentifier="CategoryViewController" id="Krt-BP-4rZ" customClass="CategoryViewController" customModule="Auction" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a6m-Gn-Pl2"/>
+                        <viewControllerLayoutGuide type="bottom" id="OGk-m7-huH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7BR-t7-fa7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1xE-Eu-Gq1" userLabel="Dark View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s7O-cX-PD4">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.36470588240000001" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Krt-BP-4rZ" id="qcU-71-YMA"/>
+                                    <outlet property="delegate" destination="Krt-BP-4rZ" id="cge-fP-KXE"/>
+                                </connections>
+                            </pickerView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iP3-Qb-aAt">
+                                <rect key="frame" x="0.0" y="451" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.36470588240000001" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <barButtonItem title="Cancel" id="pFO-xN-kgs">
+                                        <connections>
+                                            <action selector="didPressCancel:" destination="Krt-BP-4rZ" id="GYb-jB-VKE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ebf-o4-k2I"/>
+                                    <barButtonItem title="Done" id="vF2-1b-tar">
+                                        <connections>
+                                            <action selector="didPressDone:" destination="Krt-BP-4rZ" id="JVW-I4-bVO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" red="0.94901960780000005" green="0.42745098040000001" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1xE-Eu-Gq1" secondAttribute="trailing" id="3Nr-MW-aTU"/>
+                            <constraint firstItem="1xE-Eu-Gq1" firstAttribute="top" secondItem="7BR-t7-fa7" secondAttribute="top" id="B0q-8N-qW3"/>
+                            <constraint firstItem="1xE-Eu-Gq1" firstAttribute="leading" secondItem="7BR-t7-fa7" secondAttribute="leading" id="I7B-PT-e91"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="s7O-cX-PD4" secondAttribute="trailing" constant="-16" id="Low-KG-PcF"/>
+                            <constraint firstItem="s7O-cX-PD4" firstAttribute="leading" secondItem="7BR-t7-fa7" secondAttribute="leadingMargin" constant="-16" id="e9b-Ji-AkO"/>
+                            <constraint firstItem="1xE-Eu-Gq1" firstAttribute="bottom" secondItem="OGk-m7-huH" secondAttribute="top" id="kSj-pB-22K"/>
+                            <constraint firstItem="OGk-m7-huH" firstAttribute="top" secondItem="s7O-cX-PD4" secondAttribute="bottom" id="yBQ-pk-Vtr"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="PKl-cW-eyR" appends="YES" id="xRa-nS-rW0"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="pFO-xN-kgs" id="BwB-BY-A6n"/>
+                        <outlet property="categoryPicker" destination="s7O-cX-PD4" id="0x6-Ec-zK3"/>
+                        <outlet property="darkView" destination="1xE-Eu-Gq1" id="KuW-22-PsS"/>
+                        <outlet property="doneButton" destination="vF2-1b-tar" id="Z2U-7F-QWT"/>
+                        <outlet property="toolbar" destination="iP3-Qb-aAt" id="zrL-4g-GTc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BUz-Vy-7FM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="PKl-cW-eyR">
+                    <connections>
+                        <action selector="didTapBackground:" destination="Krt-BP-4rZ" id="1JX-NU-cLP"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2252" y="-175.86206896551727"/>
         </scene>
     </scenes>
     <resources>

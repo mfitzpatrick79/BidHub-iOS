@@ -67,6 +67,12 @@ class LoginViewController: UIViewController {
                             OneSignal.syncHashedEmail(user?.email)
                             OneSignal.promptForPushNotifications(userResponse: { accepted in
                                 print("User accepted notifications: \(accepted)")
+                                
+                                // Write user email to installation table for push targetting
+                                let user = PFUser.current()
+                                let currentInstalation = PFInstallation.current()
+                                currentInstalation?["email"] = user!.email
+                                currentInstalation?.saveInBackground(block: nil)
                             })
                             self.performSegue(withIdentifier: "loginToItemSegue", sender: nil)
                         }else{

@@ -92,12 +92,12 @@ class Item: PFObject, PFSubclassing {
         }
     }
     
-    var category:String {
+    var category:[String] {
         get {
-            if let category =  self["category"] as? String{
-                return category
+            if let array = self["category"] as? [String] {
+                return array
             }else{
-                return ""
+                return [String]()
             }
         }
         set {
@@ -284,6 +284,10 @@ class Item: PFObject, PFSubclassing {
             let user = PFUser.current()
             return allBidders.contains(user!.email!)
         }
+    }
+    
+    func isInCategory(cat: String) -> Bool {
+        return category.contains(cat)
     }
     
     class func parseClassName() -> String {

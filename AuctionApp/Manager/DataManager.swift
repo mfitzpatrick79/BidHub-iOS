@@ -135,7 +135,12 @@ enum FilterType: CustomStringConvertible {
             case .search(let searchTerm):
                 return NSPredicate(format: "(artist CONTAINS[c] %@) || (title CONTAINS[c] %@) || (itemDesctiption CONTAINS[c] %@) || (media CONTAINS[c] %@) || (programNumberString CONTAINS[c] %@)", searchTerm, searchTerm, searchTerm, searchTerm, searchTerm)
             case .category(let filterValue):
-                return NSPredicate(format: "category CONTAINS[c] %@", filterValue)
+                return NSPredicate(block: { (object, bindings) -> Bool in
+                    if let item = object as? Item {
+                        return item.isInCategory(cat: filterValue)
+                    }
+                    return false
+                })
         }
     }
 }

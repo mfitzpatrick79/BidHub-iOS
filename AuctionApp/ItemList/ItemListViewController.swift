@@ -16,7 +16,7 @@ extension String {
     }
 }
 
-class ItemListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UIScrollViewDelegate, ItemTableViewCellDelegate, BiddingViewControllerDelegate {
+class ItemListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UIScrollViewDelegate, ItemTableViewCellDelegate, BiddingViewControllerDelegate, CategoryViewControllerDelegate {
     
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var segmentControl: UISegmentedControl!
@@ -35,8 +35,9 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        SVProgressHUD.setForegroundColor(UIColor(red: 100/225, green: 128/225, blue: 67/225, alpha: 1.0))
-        SVProgressHUD.setRingThickness(2.0)
+        SVProgressHUD.setBackgroundColor(UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0))
+        SVProgressHUD.setForegroundColor(UIColor(red: 242/255, green: 109/255, blue: 59/255, alpha: 1.0))
+        SVProgressHUD.setRingThickness(5.0)
         
         
         let colorView:UIView = UIView(frame: CGRect(x: 0, y: -1000, width: view.frame.size.width, height: 1000))
@@ -111,11 +112,9 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         return items.count
     }
     
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemTableViewCell", for: indexPath) as! ItemTableViewCell
@@ -302,14 +301,16 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         searchBar.text = ""
         let segment = sender as! UISegmentedControl
         switch(segment.selectedSegmentIndex) {
-        case 0:
-            filterTable(.all)
-        case 1:
-            filterTable(.noBids)
-        case 2:
-            filterTable(.myItems)
-        default:
-            filterTable(.all)
+            case 0:
+                filterTable(.all)
+            case 1:
+                filterTable(.noBids)
+            case 2:
+                filterTable(.myItems)
+            case 3:
+                didPressCategoryFilterTrigger()
+            default:
+                filterTable(.all)
         }
     }
     
@@ -354,6 +355,17 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
             alertView.show()
         }
     }
+
+    /// Category Filtering
+    func didPressCategoryFilterTrigger() {
+        let catVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CategoryViewController") as? CategoryViewController
+        if let categoryVC = catVC {
+            categoryVC.delegate = self
+            addChildViewController(categoryVC)
+            view.addSubview(categoryVC.view)
+            categoryVC.didMove(toParentViewController: self)
+        }
+    }
     
     /// Search Bar
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -377,5 +389,17 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     
     func biddingViewControllerDidCancel(_ viewController: BiddingViewController){
         viewController.view.removeFromSuperview()
+    }
+    
+    /// Category VC
+    func categoryViewControllerDidFilter(_ viewController: CategoryViewController, onCategory: String){
+        viewController.view.removeFromSuperview()
+        filterTable(.category(filterValue: onCategory))
+    }
+    
+    func categoryViewControllerDidCancel(_ viewController: CategoryViewController){
+        viewController.view.removeFromSuperview()
+        self.segmentControl.selectedSegmentIndex = 0
+        segmentBarValueChanged(self.segmentControl)
     }
 }
