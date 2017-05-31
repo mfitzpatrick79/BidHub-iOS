@@ -149,11 +149,11 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         var lowPrice: Int?
         
         switch (item.winnerType) {
-        case .single:
-            price = item.price
-        case .multiple:
-            price = item.price
-            lowPrice = item.price
+            case .single:
+                price = item.price
+            case .multiple:
+                price = item.price
+                lowPrice = item.price
         }
         
         let bidString = (item.numberOfBids == 1) ? "Bid":"Bids"
