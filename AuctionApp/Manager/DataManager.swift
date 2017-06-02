@@ -74,8 +74,8 @@ class DataManager: NSObject {
                 completion(true, "")
             })
             
-            let channel = "a\(String(describing: item.objectId))"
-            PFPush.subscribeToChannel(inBackground: channel, block: { (success, error) -> Void in
+            let channel = item.objectId
+            PFPush.subscribeToChannel(inBackground: channel!, block: { (success, error) -> Void in
                 
             })
         }

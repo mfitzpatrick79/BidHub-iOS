@@ -41,20 +41,20 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         
         
         let colorView:UIView = UIView(frame: CGRect(x: 0, y: -1000, width: view.frame.size.width, height: 1000))
-        colorView.backgroundColor = UIColor.white
+        colorView.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0)
         tableView.addSubview(colorView)
         
         // Refresh Control
         let refreshView = UIView(frame: CGRect(x: 0, y: 10, width: 0, height: 0))
         tableView.insertSubview(refreshView, aboveSubview: colorView)
         
-        refreshControl.tintColor = UIColor(red: 100/225, green: 128/225, blue: 67/225, alpha: 1.0)
+        refreshControl.tintColor = UIColor(red: 242/255, green: 109/255, blue: 59/255, alpha: 1.0)
         refreshControl.addTarget(self, action: #selector(ItemListViewController.reloadItems), for: .valueChanged)
         refreshView.addSubview(refreshControl)
         
         sizingCell = tableView.dequeueReusableCell(withIdentifier: "ItemTableViewCell") as? ItemTableViewCell
         
-        tableView.estimatedRowHeight = 392
+        tableView.estimatedRowHeight = 635
         tableView.rowHeight = UITableViewAutomaticDimension
         
         self.tableView.alpha = 0.0
