@@ -22,6 +22,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet var segmentControl: UISegmentedControl!
     @IBOutlet var tableView: UITableView!
     
+    var window: UIWindow?
     var refreshControl: UIRefreshControl = UIRefreshControl()
     var items:[Item] = [Item]()
     var timer:Timer?
@@ -88,10 +89,16 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
             if error != nil {
                 // Error Case
                 if !silent {
-                    self.showError("Error getting Items")
+                    if (error?.code == 209) {
+                        PFUser.logOut()
+                        let frame = UIScreen.main.bounds
+                        self.window = UIWindow(frame: frame)
+                        //Necessary pop of view controllers after executing the previous code.
+                        let loginVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+                        self.window?.rootViewController=loginVC
+                    }
                 }
                 print("Error getting items", terminator: "")
-                
             }else{
                 self.items = items
                 self.filterTable(self.filterType)
