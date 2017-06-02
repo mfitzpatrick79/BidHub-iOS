@@ -164,17 +164,17 @@ class BiddingViewController: UIViewController {
     @IBAction func customAmountPressed(_ sender: AnyObject) {
         
         switch state {
-        case .custom:
-            if let maxBid = Int(customBidTextField.text!){
-                didSelectAmount(.custom(maxBid))
-            }else{
-                didTapBackground("" as AnyObject)
-            }
-        case .standard:
-            UIView.animate(withDuration: 0.5, animations: { () -> Void in
-                self.setupForMultiple()
-                self.customBidTextField.becomeFirstResponder()
-            })
+            case .custom:
+                if let maxBid = Int(customBidTextField.text!){
+                    didSelectAmount(.custom(maxBid))
+                }else{
+                    didTapBackground("" as AnyObject)
+                }
+            case .standard:
+                UIView.animate(withDuration: 0.5, animations: { () -> Void in
+                    self.setupForMultiple()
+                    self.customBidTextField.becomeFirstResponder()
+                })
         }
     }
 

@@ -15,9 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        //Parse.setApplicationId("NSTu2o0vGr9UJ0JYM5iPXSYGoDoQQ3ulrERXUEG0", clientKey: "D3H1F21LuG2lOzf8xf9jRmlOE8aPjrA7pJXffx0L")
-        //PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
-
         // Override point for customization after application launch.
         let configuration = ParseClientConfiguration {
             $0.applicationId = "NSTu2o0vGr9UJ0JYM5iPXSYGoDoQQ3ulrERXUEG0"
@@ -34,6 +31,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if currentUser != nil {
             let itemVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as? UINavigationController
             window?.rootViewController=itemVC
+
+            // Write user email to installation table for push targetting
+            let currentInstalation = PFInstallation.current()
+            currentInstalation?["email"] = currentUser!.email
+            currentInstalation?.saveInBackground(block: nil)
         } else {
             //Prompt User to Login
             let loginVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
