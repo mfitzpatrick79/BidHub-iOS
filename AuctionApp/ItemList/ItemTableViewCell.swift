@@ -4,10 +4,11 @@
 //
 
 import UIKit
+import Parse
 
 protocol ItemTableViewCellDelegate {
-    func cellDidPressBid(item: Item)
-    func cellImageTapped(item: Item)
+    func cellDidPressBid(_ item: Item)
+    func cellImageTapped(_ item: Item)
 }
 
 class ItemTableViewCell: UITableViewCell {
@@ -18,6 +19,7 @@ class ItemTableViewCell: UITableViewCell {
     @IBOutlet var shadowView: UIView!
     @IBOutlet var moreInfoLabel: UILabel!
     @IBOutlet var moreInfoView: UIView!
+    @IBOutlet var itemCalloutLabel: UILabel!
     @IBOutlet var itemDescriptionLabel: UILabel!
     @IBOutlet var itemProgramNumberLabel: UILabel!
     @IBOutlet var itemTitleLabel: UILabel!
@@ -49,13 +51,13 @@ class ItemTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        itemImageView.contentMode = .ScaleAspectFill
+        itemImageView.contentMode = .scaleAspectFill
         itemImageView.clipsToBounds = true
         alreadyLoaded = false
 
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ItemTableViewCell.didTapImage))
         itemImageView.addGestureRecognizer(tapGestureRecognizer)
-        itemImageView.userInteractionEnabled = true
+        itemImageView.isUserInteractionEnabled = true
 
         itemProgramNumberLabel.layer.cornerRadius = itemProgramNumberLabel.frame.size.height/2
         itemProgramNumberLabel.layer.masksToBounds = true
@@ -81,18 +83,18 @@ class ItemTableViewCell: UITableViewCell {
     
     func setWinning(){
         headerBackground.backgroundColor = winningBackgroundColor
-        moreInfoView.hidden = false
+        moreInfoView.isHidden = false
         moreInfoView.backgroundColor = winningBackgroundColor
         if let itemUW = item {
             switch(itemUW.winnerType){
-                case .Multiple:
-                    let user = PFUser.currentUser()
-                    if let index = itemUW.currentWinners.indexOf(user.email){
+                case .multiple:
+                    let user = PFUser.current()
+                    if let index = itemUW.currentWinners.index(of: user!.email!){
                         moreInfoLabel.text = "YOUR BID IS #\(index + 1)"
                     }else{
                         fallthrough
                     }
-                case .Single:
+                case .single:
                     moreInfoLabel.text = "YOUR BID IS WINNING. NICE!"
             }
         }
@@ -100,19 +102,19 @@ class ItemTableViewCell: UITableViewCell {
     
     func setOutbid(){
         headerBackground.backgroundColor = outbidBackgroundColor
-        moreInfoView.hidden = false
+        moreInfoView.isHidden = false
         moreInfoView.backgroundColor = outbidBackgroundColor
         moreInfoLabel.text = "YOU'VE BEEN OUTBID. TRY HARDER?"
     }
     
     func setDefault(){
         headerBackground.backgroundColor = defaultBackgroundColor
-        moreInfoView.hidden = true
+        moreInfoView.isHidden = true
         moreInfoView.backgroundColor = defaultBackgroundColor
     }
     
     
-    @IBAction func bidNowPressed(sender: AnyObject) {
+    @IBAction func bidNowPressed(_ sender: AnyObject) {
         callDelegateWithBid()
     }
 

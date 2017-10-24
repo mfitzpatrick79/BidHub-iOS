@@ -7,13 +7,13 @@ import UIKit
 import IHKeyboardAvoiding
 
 protocol BiddingViewControllerDelegate {
-    func biddingViewControllerDidBid(viewController: BiddingViewController, onItem: Item, amount: Int)
-    func biddingViewControllerDidCancel(viewController: BiddingViewController)
+    func biddingViewControllerDidBid(_ viewController: BiddingViewController, onItem: Item, maxBid: Int)
+    func biddingViewControllerDidCancel(_ viewController: BiddingViewController)
 }
 
 private enum BiddingViewControllerState{
-    case Custom
-    case Standard
+    case custom
+    case standard
 }
 
 class BiddingViewController: UIViewController {
@@ -29,7 +29,7 @@ class BiddingViewController: UIViewController {
     var delegate: BiddingViewControllerDelegate?
     var item: Item?
     var startPrice = 0
-    private var state :BiddingViewControllerState = .Standard
+    fileprivate var state :BiddingViewControllerState = .standard
     
     var incrementOne = 0
     var incrementFive = 0
@@ -46,43 +46,45 @@ class BiddingViewController: UIViewController {
             incrementTen  = 5*itemUW.priceIncrement
             
             switch(itemUW.winnerType){
-            case .Multiple:
+            case .multiple:
                 if itemUW.currentWinners.isEmpty{
-                    setupForSingle(itemUW.price)
+                    let openingBid = itemUW.price - itemUW.priceIncrement
+                    setupForSingle(openingBid)
                 }else{
-                    setupForSingle(itemUW.currentPrice.last!)
+                    setupForSingle(itemUW.price)
                 }
-            case .Single:
+            case .single:
                 if itemUW.currentWinners.isEmpty{
-                    setupForSingle(itemUW.price)
+                    let openingBid = itemUW.price - itemUW.priceIncrement
+                    setupForSingle(openingBid)
                 }else{
-                    setupForSingle(itemUW.currentPrice.first!)
+                    setupForSingle(itemUW.price)
                 }
             }
             
-            popUpContainer.backgroundColor = UIColor.whiteColor()
+            popUpContainer.backgroundColor = UIColor.white
             popUpContainer.layer.cornerRadius = 5.0
             
             customBidButton.titleLabel?.font = UIFont(name: "Avenir-Light", size: 18.0)!
-            customBidButton.setTitleColor(UIColor(red: 33/225, green: 161/225, blue: 219/225, alpha: 1), forState: .Normal)
+            customBidButton.setTitleColor(UIColor(red: 33/225, green: 161/225, blue: 219/225, alpha: 1), for: UIControlState())
             
             customBidTextField.font = UIFont(name: "Avenir-Light", size: 24.0)
             customBidTextField.textColor = UIColor(red: 33/225, green: 161/225, blue: 219/225, alpha: 1)
-            customBidTextField.textAlignment = .Center
+            customBidTextField.textAlignment = .center
             
-            IHKeyboardAvoiding.setBuffer(20)
-            IHKeyboardAvoiding.setPadding(20)
-            IHKeyboardAvoiding.setAvoidingView(view, withTarget: popUpContainer)
+            //IHKeyboardAvoiding.setBuffer(20)
+            //IHKeyboardAvoiding.setPadding(20)
+            //IHKeyboardAvoiding.setAvoidingView(view, withTarget: popUpContainer)
             
             animateIn()
         }
     }
 
-    @IBAction func didTapBackground(sender: AnyObject) {
+    @IBAction func didTapBackground(_ sender: AnyObject) {
         if delegate != nil {
             
-            UIView.animateWithDuration(0.2, animations: { () -> Void in
-                self.popUpContainer.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.01, 0.01);
+            UIView.animate(withDuration: 0.2, animations: { () -> Void in
+                self.popUpContainer.transform = CGAffineTransform.identity.scaledBy(x: 0.01, y: 0.01);
                 self.darkView.alpha = 0
             }, completion: { (finished: Bool) -> Void in
                 self.delegate!.biddingViewControllerDidCancel(self)
@@ -90,28 +92,28 @@ class BiddingViewController: UIViewController {
             
         }
     }
-    func setupForSingle(startAmount: Int) {
+    func setupForSingle(_ startAmount: Int) {
         
         startPrice = startAmount
         
-        let bidAttrs = [NSFontAttributeName : UIFont(name: "Avenir-Light", size: 14.0)! , NSForegroundColorAttributeName: UIColor.grayColor()] as NSDictionary
-        let otherAttrs = [NSFontAttributeName : UIFont(name: "Avenir-Light", size: 24.0)!, NSForegroundColorAttributeName: UIColor(red: 33/225, green: 161/225, blue: 219/225, alpha: 1)]
+        let bidAttrs = [NSFontAttributeName : UIFont(name: "Avenir-Light", size: 14.0)! , NSForegroundColorAttributeName: UIColor.gray] as NSDictionary
+        let otherAttrs = [NSFontAttributeName : UIFont(name: "Avenir-Light", size: 22.0)!, NSForegroundColorAttributeName: UIColor(red: 33/225, green: 161/225, blue: 219/225, alpha: 1)]
         
-        plusOneButton.titleLabel?.textAlignment = .Center
-        plusFiveButton.titleLabel?.textAlignment = .Center
-        plusTenButton.titleLabel?.textAlignment = .Center
+        plusOneButton.titleLabel?.textAlignment = .center
+        plusFiveButton.titleLabel?.textAlignment = .center
+        plusTenButton.titleLabel?.textAlignment = .center
 
         let one = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs as! [String: NSObject])
-        one.appendAttributedString(NSMutableAttributedString(string: "$\(startAmount + incrementOne)", attributes: otherAttrs))
-        plusOneButton.setAttributedTitle(one, forState: .Normal)
+        one.append(NSMutableAttributedString(string: "$\(startAmount + incrementOne)", attributes: otherAttrs))
+        plusOneButton.setAttributedTitle(one, for: UIControlState())
         
         let five = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs as! [String: NSObject])
-        five.appendAttributedString(NSMutableAttributedString(string: "$\(startAmount + incrementFive)", attributes: otherAttrs))
-        plusFiveButton.setAttributedTitle(five, forState: .Normal)
+        five.append(NSMutableAttributedString(string: "$\(startAmount + incrementFive)", attributes: otherAttrs))
+        plusFiveButton.setAttributedTitle(five, for: UIControlState())
         
         let ten = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs as! [String: NSObject])
-        ten.appendAttributedString(NSMutableAttributedString(string: "$\(startAmount + incrementTen)", attributes: otherAttrs))
-        plusTenButton.setAttributedTitle(ten, forState: .Normal)
+        ten.append(NSMutableAttributedString(string: "$\(startAmount + incrementTen)", attributes: otherAttrs))
+        plusTenButton.setAttributedTitle(ten, for: UIControlState())
         
    
     }
@@ -119,74 +121,85 @@ class BiddingViewController: UIViewController {
     func setupForMultiple() {
         self.customBidTextField.alpha = 1.0
         self.predifinedButtonsContainerView.alpha = 0.0
-        self.customBidButton.setTitle("Bid", forState: .Normal)
-        state = .Custom
+        self.customBidButton.setTitle("Max Bid", for: UIControlState())
+        state = .custom
     }
 
-    func didSelectAmount(bidType: BidType) {
+    func didSelectAmount(_ bidType: BidType) {
         
-        var amount = 0
+        var maxBid = 0
         switch bidType {
-        case .Custom(let total):
-            amount = total
-        case .Extra(let aditional):
-            amount = startPrice + aditional
+        case .custom(let total):
+            maxBid = total
+        case .extra(let aditional):
+            maxBid = startPrice + aditional
         }
         
-        if delegate != nil {
-            if let itemUW = item {
-                
-                UIView.animateWithDuration(0.2, animations: { () -> Void in
-                    self.popUpContainer.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.01, 0.01);
-                    self.darkView.alpha = 0
-                }, completion: { (finished: Bool) -> Void in
-                    self.delegate!.biddingViewControllerDidBid(self, onItem: itemUW, amount: amount)
-                })
-                
-                
+        let bidAlert = UIAlertController(title: "Confirm $\(maxBid) Bid", message: "You didn't think we'd let you bid $\(maxBid) without confirming it, did you?", preferredStyle: UIAlertControllerStyle.alert)
+        
+        bidAlert.addAction(UIAlertAction(title: "Bid", style: .default, handler: { (action: UIAlertAction!) in
+            if self.delegate != nil {
+                if let itemUW = self.item {
+                    
+                    UIView.animate(withDuration: 0.2, animations: { () -> Void in
+                        self.popUpContainer.transform = CGAffineTransform.identity.scaledBy(x: 0.01, y: 0.01);
+                        self.darkView.alpha = 0
+                        }, completion: { (finished: Bool) -> Void in
+                            self.delegate!.biddingViewControllerDidBid(self, onItem: itemUW, maxBid: maxBid)
+                    })
+                    
+                    
+                }
             }
-        }
+        }))
+        
+        bidAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+            //self.didTapBackground(bidAlert)
+        }))
+        
+        present(bidAlert, animated: true, completion: nil)
+        
     }
     
-    @IBAction func customAmountPressed(sender: AnyObject) {
+    @IBAction func customAmountPressed(_ sender: AnyObject) {
         
         switch state {
-        case .Custom:
-            if let amount = Int(customBidTextField.text!){
-                didSelectAmount(.Custom(amount))
-            }else{
-                didTapBackground("")
-            }
-        case .Standard:
-            UIView.animateWithDuration(0.5, animations: { () -> Void in
-                self.setupForMultiple()
-                self.customBidTextField.becomeFirstResponder()
-            })
+            case .custom:
+                if let maxBid = Int(customBidTextField.text!){
+                    didSelectAmount(.custom(maxBid))
+                }else{
+                    didTapBackground("" as AnyObject)
+                }
+            case .standard:
+                UIView.animate(withDuration: 0.5, animations: { () -> Void in
+                    self.setupForMultiple()
+                    self.customBidTextField.becomeFirstResponder()
+                })
         }
     }
 
-    @IBAction func bidOneDollarPressed(sender: AnyObject) {
-        didSelectAmount(.Extra(incrementOne))
+    @IBAction func bidOnePressed(_ sender: AnyObject) {
+        didSelectAmount(.extra(incrementOne))
     }
 
-    @IBAction func bidFiveDollarPressed(sender: AnyObject) {
-        didSelectAmount(.Extra(incrementFive))
+    @IBAction func bidFivePressed(_ sender: AnyObject) {
+        didSelectAmount(.extra(incrementFive))
     }
     
-    @IBAction func bidTenDollarPressed(sender: AnyObject) {
-        didSelectAmount(.Extra(incrementTen))
+    @IBAction func bidTenPressed(_ sender: AnyObject) {
+        didSelectAmount(.extra(incrementTen))
     }
     
     func animateIn(){
-        popUpContainer.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.01, 0.01);
+        popUpContainer.transform = CGAffineTransform.identity.scaledBy(x: 0.01, y: 0.01);
         
-        UIView.animateWithDuration(0.5,
+        UIView.animate(withDuration: 0.5,
             delay: 0.0,
             usingSpringWithDamping: 0.6,
             initialSpringVelocity: 0.0,
-            options: UIViewAnimationOptions.CurveLinear,
+            options: UIViewAnimationOptions.curveLinear,
             animations: {
-                self.popUpContainer.transform = CGAffineTransformIdentity
+                self.popUpContainer.transform = CGAffineTransform.identity
                 self.darkView.alpha = 1.0
                 
             },

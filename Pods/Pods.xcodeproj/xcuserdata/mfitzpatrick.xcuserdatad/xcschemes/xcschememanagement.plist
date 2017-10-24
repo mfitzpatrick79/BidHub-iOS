@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>CSNotificationView-CSNotificationView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -39,7 +44,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Parse.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PhoneNumberKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-AuctionApp.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-OneSignalNotificationServiceExtension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,52 +77,72 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0419D4084456EDBC1192A6DE08D7A061</key>
+		<key>033B2F5EFC98402794E5FA4A2E42BD9F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1C3436CEA5C3D39764C5F54374794ECB</key>
+		<key>1549D7A377E7481D7D7D823EF6769022</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1CA1DB34897F0BE98D5A4437E43DF828</key>
+		<key>2A09EC59BBF8F179734298F81D57F7B9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2189A727627A385231CCBFC87D36327A</key>
+		<key>6EE458AB7C9239893E5C6E840C0BF9B5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2C2B1953A91633859BF7AD238FF567A0</key>
+		<key>745A2536ABC9981AD547B885DBBC3C73</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4F47B5C04B192BB70F7FBF623E4BA3C0</key>
+		<key>8C5BD10883BD185426DD737247F56DEC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7881ED5CFC738EB1BC788CAC055682D0</key>
+		<key>8FB7A778D93C9B30AF7470FDBDA9C0B8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B2469C4EA993E8CA31E57B40FF8A84BE</key>
+		<key>AE4759774042D8E013517E82C6F7A058</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DDFD5E397CBD3E44AB508DE6B196680D</key>
+		<key>B9788685473D98B025E254C9297EB884</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E2AD14F013E068A960C97896601A9A9A</key>
+		<key>CBBCECA8F04D9F15E6A3146D9559ED53</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DB9F1A11771271F4367C019D55F9B84B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E5C2A5644E0C04F43E88637BF90E2473</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F957EABCA56BD8F5B626798CC7B344D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

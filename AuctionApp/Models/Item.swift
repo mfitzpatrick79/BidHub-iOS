@@ -4,10 +4,11 @@
 //
 
 import UIKit
+import Parse
 
 enum ItemWinnerType {
-    case Single
-    case Multiple
+    case single
+    case multiple
 }
 
 class Item: PFObject, PFSubclassing {
@@ -22,19 +23,6 @@ class Item: PFObject, PFSubclassing {
             }else{
                 return 5
             }
-        }
-    }
-    
-    var currentPrice:[Int] {
-        get {
-            if let array = self["currentPrice"] as? [Int] {
-                return array
-            }else{
-                return [Int]()
-            }
-        }
-        set {
-            self["currentPrice"] = newValue
         }
     }
     
@@ -104,12 +92,51 @@ class Item: PFObject, PFSubclassing {
         }
     }
     
+    var category:[String] {
+        get {
+            if let array = self["category"] as? [String] {
+                return array
+            }else{
+                return [String]()
+            }
+        }
+        set {
+            self["category"] = newValue
+        }
+    }
+    
+    var itemCallout:String {
+        get {
+            if let callout =  self["callout"] as? String{
+                return callout
+            }else{
+                return ""
+            }
+        }
+        set {
+            self["callout"] = newValue
+        }
+    }
+    
     var programNumber:Int {
         get {
-            if let programNumberString =  self["programNumber"] as? Int{
-                return programNumberString
+            if let itemProgramNumber =  self["programNumber"] as? Int{
+                return itemProgramNumber
             }else{
                 return -1
+            }
+        }
+        set {
+            self["programNumber"] = newValue
+        }
+    }
+
+    var programNumberString:String {
+        get {
+            if let itemProgramNumberString = self["programNumber"] as? Int{
+                return String(itemProgramNumberString)
+            }else{
+                return ""
             }
         }
         set {
@@ -208,22 +235,22 @@ class Item: PFObject, PFSubclassing {
         }
     }
 
-    var openTime: NSDate {
+    var openTime: Date {
         get {
-            if let open =  self["opentime"] as? NSDate{
+            if let open =  self["opentime"] as? Date{
                 return open
             }else{
-                return NSDate()
+                return Date()
             }
         }
     }
     
-    var closeTime: NSDate {
+    var closeTime: Date {
         get {
-            if let close =  self["closetime"] as? NSDate{
+            if let close =  self["closetime"] as? Date{
                 return close
             }else{
-                return NSDate()
+                return Date()
             }
         }
     }
@@ -231,46 +258,39 @@ class Item: PFObject, PFSubclassing {
     var winnerType: ItemWinnerType {
         get {
             if quantity > 1 {
-                return .Multiple
+                return .multiple
             }else{
-                return .Single
+                return .single
             }
         }
     }
 
     var minimumBid: Int {
         get {
-            if !currentPrice.isEmpty {
-                return currentPrice.minElement()!
-            }else{
-                return price
-            }
+            return price
         }
     }
     
     var isWinning: Bool {
         get {
-            let user = PFUser.currentUser()
-            return currentWinners.contains(user.email)
+            let user = PFUser.current()
+            return currentWinners.contains(user!.email!)
         }
     }
     
     
     var hasBid: Bool {
         get {
-            let user = PFUser.currentUser()
-            return allBidders.contains(user.email)
+            let user = PFUser.current()
+            return allBidders.contains(user!.email!)
         }
     }
     
-    override class func initialize() {
-        var onceToken : dispatch_once_t = 0;
-        dispatch_once(&onceToken) {
-            self.registerSubclass()
-        }
+    func isInCategory(cat: String) -> Bool {
+        return category.contains(cat)
     }
     
-    class func parseClassName() -> String! {
+    class func parseClassName() -> String {
         return "Item"
     }
 }
