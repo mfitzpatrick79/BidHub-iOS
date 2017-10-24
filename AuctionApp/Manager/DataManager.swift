@@ -10,7 +10,7 @@ class DataManager: NSObject {
  
     var allItems: [Item] = [Item]()
 
-    var timer:NSTimer?
+    var timer:Timer?
     
     var sharedInstance : DataManager {
         struct Static {
@@ -21,14 +21,14 @@ class DataManager: NSObject {
     }
     
     
-    func getItems(completion: ([Item], NSError?) -> ()){
+    func getItems(_ completion: @escaping ([Item], NSError?) -> ()){
         let query = Item.query()
         query!.limit = 1000
         query!.addAscendingOrder("programNumber")
-        query!.findObjectsInBackgroundWithBlock { (results, error) -> Void in
+        query!.findObjectsInBackground { (results, error) -> Void in
             if error != nil{
-                print("Error!! \(error)", terminator: "")
-                completion([Item](), error)
+                print("Error!! \(String(describing: error))", terminator: "")
+                completion([Item](), error as NSError?)
             }else{
                 if let itemsUW = results as? [Item] {
                     self.allItems = itemsUW
@@ -38,51 +38,50 @@ class DataManager: NSObject {
         }
     }
     
-    func searchForQuery(query: String) -> ([Item]) {
-        return applyFilter(.Search(searchTerm: query))
+    func searchForQuery(_ query: String) -> ([Item]) {
+        return applyFilter(.search(searchTerm: query))
     }
     
-    func applyFilter(filter: FilterType) -> ([Item]) {
+    func applyFilter(_ filter: FilterType) -> ([Item]) {
         return allItems.filter({ (item) -> Bool in
-            return filter.predicate.evaluateWithObject(item)
+            return filter.predicate.evaluate(with: item)
         })
     }
     
-    func bidOn(item:Item, amount: Int, completion: (Bool, errorCode: String) -> ()){
+    func bidOn(_ item:Item, maxBid: Int, completion: @escaping (Bool, _ errorCode: String) -> ()){
         
-        let user = PFUser.currentUser()
+        let user = PFUser.current()
         
-        Bid(email: user!.email!, name: user!["fullname"] as! String, telephone: user!["telephone"] as! String, amount: amount, itemId: item.objectId!)
-        .saveInBackgroundWithBlock { (success, error) -> Void in
+        Bid(email: user!.email!, name: user!["fullname"] as! String, telephone: user!["telephone"] as! String, maxBid: maxBid, itemId: item.objectId!)
+        .saveInBackground { (success, error) -> Void in
             
             if error != nil {
-                
-                if let errorString:String = error!.userInfo["error"] as? String{
-                    completion(false, errorCode: errorString)
+                if (error?.localizedDescription != nil) {
+                    completion(false, (error?.localizedDescription)!)
                 }else{
-                    completion(false, errorCode: "")
+                    completion(false, "")
                 }
                 return
             }
             
             let newItemQuery: PFQuery = Item.query()!
             newItemQuery.whereKey("objectId", equalTo: item.objectId!)
-            newItemQuery.getFirstObjectInBackgroundWithBlock({ (item, error) -> Void in
+            newItemQuery.getFirstObjectInBackground(block: { (item, error) -> Void in
                 
                 if let itemUW = item as? Item {
                     self.replaceItem(itemUW)
                 }
-                completion(true, errorCode: "")
+                completion(true, "")
             })
             
-            let channel = "a\(item.objectId)"
-            PFPush.subscribeToChannelInBackground(channel, block: { (success, error) -> Void in
+            let channel = item.objectId
+            PFPush.subscribeToChannel(inBackground: channel!, block: { (success, error) -> Void in
                 
             })
         }
     }
     
-    func replaceItem(item: Item) {
+    func replaceItem(_ item: Item) {
         allItems = allItems.map { (oldItem) -> Item in
             if oldItem.objectId == item.objectId {
                 return item
@@ -94,44 +93,54 @@ class DataManager: NSObject {
 
 
 enum FilterType: CustomStringConvertible {
-    case All
-    case NoBids
-    case MyItems
-    case Search(searchTerm: String)
+    case all
+    case noBids
+    case myItems
+    case search(searchTerm: String)
+    case category(filterValue: String)
     
     var description: String {
         switch self{
-            case .All:
+            case .all:
                 return "All"
-            case .NoBids:
+            case .noBids:
                 return "NoBids"
-            case .MyItems:
+            case .myItems:
                 return "My Items"
-            case .Search:
+            case .category:
+                return "Filtering"
+            case .search:
                 return "Searching"
         }
     }
     
     var predicate: NSPredicate {
         switch self {
-            case .All:
+            case .all:
                 return NSPredicate(value: true)
-            case .NoBids:
+            case .noBids:
                 return NSPredicate(block: { (object, bindings) -> Bool in
                     if let item = object as? Item {
                         return item.numberOfBids == 0
                     }
                     return false
                 })
-            case .MyItems:
+            case .myItems:
                 return NSPredicate(block: { (object, bindings) -> Bool in
                     if let item = object as? Item {
                         return item.hasBid
                     }
                     return false
                 })
-            case .Search(let searchTerm):
+            case .search(let searchTerm):
                 return NSPredicate(format: "(artist CONTAINS[c] %@) || (title CONTAINS[c] %@) || (itemDesctiption CONTAINS[c] %@) || (media CONTAINS[c] %@) || (programNumberString CONTAINS[c] %@)", searchTerm, searchTerm, searchTerm, searchTerm, searchTerm)
+            case .category(let filterValue):
+                return NSPredicate(block: { (object, bindings) -> Bool in
+                    if let item = object as? Item {
+                        return item.isInCategory(cat: filterValue)
+                    }
+                    return false
+                })
         }
     }
 }

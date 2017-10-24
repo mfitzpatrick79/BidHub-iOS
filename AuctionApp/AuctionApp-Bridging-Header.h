@@ -6,6 +6,6 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <AFViewShaker/AFViewShaker.h>
 #import <AFNetworking/UIImageView+AFNetworking.h>
-#import <IHKeyboardAvoiding/IHKeyboardAvoiding.h>
+#import <IHKeyboardAvoiding/IHKeyboardAvoiding-umbrella.h>
 #import <CSNotificationView/CSNotificationView.h>
-#import <PhoneNumberKit/PhoneNumberKit.h>
+#import <PhoneNumberKit/PhoneNumberKit-umbrella.h>

@@ -12,12 +12,12 @@ class Bid: PFObject, PFSubclassing {
     @NSManaged var name: String
     @NSManaged var telephone: String
     
-    var amount: Int {
+    var maxBid: Int {
         get {
-            return self["amt"] as! Int
+            return self["maxBid"] as! Int
         }
         set {
-            self["amt"] = newValue
+            self["maxBid"] = newValue
         }
     }
     
@@ -29,26 +29,25 @@ class Bid: PFObject, PFSubclassing {
             self["item"] = newValue
         }
     }
-    
+
+    var winner: Bool {
+        get {
+            return (self["winner"] as? Bool)!
+        }
+    }
+
     //Needed
     override init(){
         super.init()
     }
     
-    init(email: String, name: String, telephone: String, amount: Int, itemId: String) {
+    init(email: String, name: String, telephone: String, maxBid: Int, itemId: String) {
         super.init()
         self.email = email
         self.name = name
         self.telephone = telephone
-        self.amount = amount
+        self.maxBid = maxBid
         self.itemId = itemId
-    }
-    
-    override class func initialize() {
-        var onceToken : dispatch_once_t = 0;
-        dispatch_once(&onceToken) {
-            self.registerSubclass()
-        }
     }
     
     class func parseClassName() -> String {
@@ -57,6 +56,6 @@ class Bid: PFObject, PFSubclassing {
 }
 
 enum BidType {
-    case Extra(Int)
-    case Custom(Int)
+    case extra(Int)
+    case custom(Int)
 }

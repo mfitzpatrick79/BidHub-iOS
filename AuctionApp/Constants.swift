@@ -5,7 +5,7 @@
 
 import UIKit
 
-let Device = UIDevice.currentDevice()
+let Device = UIDevice.current
 
 private let iosVersion = NSString(string: Device.systemVersion).doubleValue
 
