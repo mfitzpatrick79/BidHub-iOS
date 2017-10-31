@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vrS-ky-ioH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vrS-ky-ioH">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Heavy</string>
+            <string>Avenir-Light</string>
+            <string>Avenir-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="un1-64-FSE">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="L1S-fT-33x" customClass="LoginViewController" customModule="Auction" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="L1S-fT-33x" customClass="LoginViewController" customModule="Save_Venice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Fp-1z-G0X"/>
                         <viewControllerLayoutGuide type="bottom" id="e6A-1h-DoS"/>
@@ -23,14 +29,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mfa-summer-party-splash-2017" translatesAutoresizingMaskIntoConstraints="NO" id="rzw-Pv-l6j">
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="rzw-Pv-l6j">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6Q-Wi-ymT">
+                            <view alpha="0.84999999999999998" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f6Q-Wi-ymT">
                                 <rect key="frame" x="0.0" y="87" width="320" height="180"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First and Last Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gUk-KS-LZe">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First and Last Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gUk-KS-LZe">
                                         <rect key="frame" x="16" y="20" width="288" height="33"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="no" returnKeyType="next"/>
@@ -40,7 +46,7 @@
                                             <outlet property="nextField" destination="dgC-2i-XYA" id="jK7-Kq-7tt"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dgC-2i-XYA">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dgC-2i-XYA">
                                         <rect key="frame" x="16" y="73" width="288" height="33"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
@@ -50,7 +56,7 @@
                                             <outlet property="nextField" destination="fa9-za-p0L" id="hbf-2G-n0n"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Telephone" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fa9-za-p0L" userLabel="Telephone Text Field" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Telephone" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fa9-za-p0L" userLabel="Telephone Text Field" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
                                         <rect key="frame" x="16" y="126" width="288" height="33"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" returnKeyType="go"/>
@@ -76,9 +82,9 @@
                                     <constraint firstItem="gUk-KS-LZe" firstAttribute="top" secondItem="f6Q-Wi-ymT" secondAttribute="top" constant="20" id="q1I-gy-rDj"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pz4-RU-3Ta">
+                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pz4-RU-3Ta">
                                 <rect key="frame" x="0.0" y="267" width="320" height="45"/>
-                                <color key="backgroundColor" red="0.94901960784313721" green="0.42745098039215684" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.54509803921568623" green="0.070588235294117646" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -115,16 +121,11 @@
                             <constraint firstItem="WAF-Cq-zq8" firstAttribute="leading" secondItem="Ftf-Tk-HqV" secondAttribute="leading" id="58y-sk-xDk"/>
                             <constraint firstItem="Pz4-RU-3Ta" firstAttribute="top" secondItem="f6Q-Wi-ymT" secondAttribute="bottom" id="5er-9d-9fT"/>
                             <constraint firstAttribute="trailing" secondItem="WAF-Cq-zq8" secondAttribute="trailing" id="5zI-Pn-k0N"/>
-                            <constraint firstItem="8Xg-1j-CC8" firstAttribute="top" secondItem="3Fp-1z-G0X" secondAttribute="bottom" constant="9" id="Fjw-6p-J9S"/>
-                            <constraint firstItem="f6Q-Wi-ymT" firstAttribute="top" secondItem="8Xg-1j-CC8" secondAttribute="bottom" id="Lff-4E-dR4"/>
-                            <constraint firstAttribute="trailing" secondItem="8Xg-1j-CC8" secondAttribute="trailing" id="RqK-8N-2uA"/>
                             <constraint firstItem="f6Q-Wi-ymT" firstAttribute="leading" secondItem="Ftf-Tk-HqV" secondAttribute="leading" id="UnR-sL-TWv"/>
                             <constraint firstItem="e6A-1h-DoS" firstAttribute="top" secondItem="WAF-Cq-zq8" secondAttribute="bottom" id="cWP-iY-Ihv"/>
                             <constraint firstItem="WAF-Cq-zq8" firstAttribute="top" secondItem="Pz4-RU-3Ta" secondAttribute="bottom" id="e4q-NW-Gpo"/>
                             <constraint firstAttribute="trailing" secondItem="Pz4-RU-3Ta" secondAttribute="trailing" id="jJB-df-SG3"/>
-                            <constraint firstItem="f6Q-Wi-ymT" firstAttribute="top" secondItem="8Xg-1j-CC8" secondAttribute="bottom" id="lCg-3M-8e5"/>
                             <constraint firstAttribute="trailing" secondItem="f6Q-Wi-ymT" secondAttribute="trailing" id="n2A-in-S1k"/>
-                            <constraint firstItem="8Xg-1j-CC8" firstAttribute="leading" secondItem="Ftf-Tk-HqV" secondAttribute="leading" id="o4p-pa-KeH"/>
                         </constraints>
                     </view>
                     <connections>
@@ -143,10 +144,10 @@
             <objects>
                 <navigationController id="vrS-ky-ioH" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ueS-5j-mNt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.95294117647058818" green="0.15686274509803921" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.94901960780000005" green="0.42745098040000001" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.5450980392" green="0.070588235289999995" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.5450980392" green="0.070588235289999995" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="DqX-rp-Oxg" kind="relationship" relationship="rootViewController" id="i1f-IL-bol"/>
@@ -159,7 +160,7 @@
         <!--Item List View Controller-->
         <scene sceneID="lJQ-CL-qtf">
             <objects>
-                <viewController id="DqX-rp-Oxg" customClass="ItemListViewController" customModule="Auction" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DqX-rp-Oxg" customClass="ItemListViewController" customModule="Save_Venice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="28g-CM-SiM"/>
                         <viewControllerLayoutGuide type="bottom" id="cVI-NQ-4Jz"/>
@@ -176,7 +177,7 @@
                                 <searchBar key="tableHeaderView" contentMode="redraw" text="" placeholder="Search" id="Kz2-GN-CoT">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <color key="barTintColor" red="0.94901960780000005" green="0.42745098040000001" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="barTintColor" red="0.5450980392" green="0.070588235289999995" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     <scopeButtonTitles>
                                         <string>Title</string>
@@ -187,8 +188,8 @@
                                     </connections>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemTableViewCell" rowHeight="635" id="O6g-Ig-KSM" customClass="ItemTableViewCell" customModule="Auction" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="66" width="320" height="635"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemTableViewCell" rowHeight="635" id="O6g-Ig-KSM" customClass="ItemTableViewCell" customModule="Save_Venice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="78" width="320" height="635"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O6g-Ig-KSM" id="ja8-Zf-ZQG">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="635"/>
@@ -539,7 +540,7 @@
                             </connections>
                         </barButtonItem>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="xS6-9N-35y">
-                            <rect key="frame" x="51" y="7" width="255" height="30"/>
+                            <rect key="frame" x="45" y="7" width="255" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="All"/>
@@ -569,7 +570,7 @@
         <!--Bidding View Controller-->
         <scene sceneID="zz1-wr-W1T">
             <objects>
-                <viewController storyboardIdentifier="BiddingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d7m-zO-Df7" customClass="BiddingViewController" customModule="Auction" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BiddingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d7m-zO-Df7" customClass="BiddingViewController" customModule="Save_Venice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TWS-3N-bAU"/>
                         <viewControllerLayoutGuide type="bottom" id="F9e-hx-T5a"/>
@@ -762,7 +763,7 @@
         <!--Category View Controller-->
         <scene sceneID="RQE-qg-Gmb">
             <objects>
-                <viewController storyboardIdentifier="CategoryViewController" id="Krt-BP-4rZ" customClass="CategoryViewController" customModule="Auction" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CategoryViewController" id="Krt-BP-4rZ" customClass="CategoryViewController" customModule="Save_Venice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a6m-Gn-Pl2"/>
                         <viewControllerLayoutGuide type="bottom" id="OGk-m7-huH"/>
@@ -802,7 +803,7 @@
                                     </barButtonItem>
                                 </items>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="barTintColor" red="0.94901960780000005" green="0.42745098040000001" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.5450980392" green="0.070588235289999995" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -838,9 +839,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Background" width="375" height="667"/>
         <image name="HSLogOutIcon" width="18" height="22"/>
         <image name="bidNowButtonSmall" width="80" height="30"/>
-        <image name="mfa-logo-2017" width="640" height="99"/>
-        <image name="mfa-summer-party-splash-2017" width="640" height="1136"/>
     </resources>
 </document>
