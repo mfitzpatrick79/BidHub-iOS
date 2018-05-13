@@ -96,22 +96,22 @@ class BiddingViewController: UIViewController {
         
         startPrice = startAmount
         
-        let bidAttrs = [NSFontAttributeName : UIFont(name: "Avenir-Light", size: 14.0)! , NSForegroundColorAttributeName: UIColor.gray] as NSDictionary
-        let otherAttrs = [NSFontAttributeName : UIFont(name: "Avenir-Light", size: 22.0)!, NSForegroundColorAttributeName: UIColor(red: 33/225, green: 161/225, blue: 219/225, alpha: 1)]
+        let bidAttrs = [NSAttributedStringKey.font : UIFont(name: "Avenir-Light", size: 14.0)! , NSAttributedStringKey.foregroundColor: UIColor.gray]
+        let otherAttrs = [NSAttributedStringKey.font : UIFont(name: "Avenir-Light", size: 22.0)!, NSAttributedStringKey.foregroundColor: UIColor(red: 33/225, green: 161/225, blue: 219/225, alpha: 1)]
         
         plusOneButton.titleLabel?.textAlignment = .center
         plusFiveButton.titleLabel?.textAlignment = .center
         plusTenButton.titleLabel?.textAlignment = .center
 
-        let one = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs as! [String: NSObject])
+        let one = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs)
         one.append(NSMutableAttributedString(string: "$\(startAmount + incrementOne)", attributes: otherAttrs))
         plusOneButton.setAttributedTitle(one, for: UIControlState())
         
-        let five = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs as! [String: NSObject])
+        let five = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs)
         five.append(NSMutableAttributedString(string: "$\(startAmount + incrementFive)", attributes: otherAttrs))
         plusFiveButton.setAttributedTitle(five, for: UIControlState())
         
-        let ten = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs as! [String: NSObject])
+        let ten = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs)
         ten.append(NSMutableAttributedString(string: "$\(startAmount + incrementTen)", attributes: otherAttrs))
         plusTenButton.setAttributedTitle(ten, for: UIControlState())
         

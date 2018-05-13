@@ -76,7 +76,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     /// Hack for selectors and default parameters
-    func reloadItems(){
+    @objc func reloadItems(){
         reloadData()
     }
     
@@ -272,7 +272,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         zoomOverlay.addGestureRecognizer(doubleTap)
     }
     
-    func handleZoomImageDoubleTap(_ recognizer: UITapGestureRecognizer) {
+    @objc func handleZoomImageDoubleTap(_ recognizer: UITapGestureRecognizer) {
         if (zoomOverlay.zoomScale > zoomOverlay.minimumZoomScale) {
             zoomOverlay.setZoomScale(zoomOverlay.minimumZoomScale, animated: true)
         } else {
@@ -280,7 +280,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    func pressedClose(_ sender: UIButton!) {
+    @objc func pressedClose(_ sender: UIButton!) {
         self.segmentControl.isHidden = false
         
         if let viewWithTag = self.view.viewWithTag(420) {
@@ -345,22 +345,15 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func showError(_ errorString: String) {
-        if let _: AnyClass = NSClassFromString("UIAlertController") {
-            // make and use a UIAlertController
-            let alertView = UIAlertController(title: "Error", message: errorString, preferredStyle: .alert)
-            
-            let okAction = UIAlertAction(title: "Ok", style: .default, handler: { (action) -> Void in
-                print("Ok Pressed", terminator: "")
-            })
-            
-            alertView.addAction(okAction)
-            self.present(alertView, animated: true, completion: nil)
-        }
-        else {
-            // make and use a UIAlertView
-            let alertView = UIAlertView(title: "Error", message: errorString, delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "Ok")
-            alertView.show()
-        }
+        // make and use a UIAlertController
+        let alertView = UIAlertController(title: "Error", message: errorString, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: { (action) -> Void in
+            print("Ok Pressed", terminator: "")
+        })
+        
+        alertView.addAction(okAction)
+        self.present(alertView, animated: true, completion: nil)
     }
 
     /// Category Filtering

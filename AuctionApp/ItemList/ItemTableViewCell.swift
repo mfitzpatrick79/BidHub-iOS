@@ -77,7 +77,7 @@ class ItemTableViewCell: UITableViewCell {
         }
     }
 
-    func didTapImage(){
+    @objc func didTapImage(){
         delegate?.cellImageTapped(item!)
     }
     
