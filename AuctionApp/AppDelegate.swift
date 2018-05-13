@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let configuration = ParseClientConfiguration {
             $0.applicationId = "NSTu2o0vGr9UJ0JYM5iPXSYGoDoQQ3ulrERXUEG0"
             $0.clientKey = "D3H1F21LuG2lOzf8xf9jRmlOE8aPjrA7pJXffx0L"
-            $0.server = "https://save-venice-app.herokuapp.com/parse"
+            $0.server = "https://parse.fitz.guru/parse"
             //$0.localDatastoreEnabled = true // If you need to enable local data store
         }
         Parse.initialize(with: configuration)
