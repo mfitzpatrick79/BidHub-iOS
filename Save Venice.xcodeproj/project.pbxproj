@@ -404,7 +404,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 637EEC4B1A1A6D250091C60B /* Build configuration list for PBXProject "AuctionApp" */;
+			buildConfigurationList = 637EEC4B1A1A6D250091C60B /* Build configuration list for PBXProject "Save Venice" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -802,7 +802,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		637EEC4B1A1A6D250091C60B /* Build configuration list for PBXProject "AuctionApp" */ = {
+		637EEC4B1A1A6D250091C60B /* Build configuration list for PBXProject "Save Venice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				637EEC6D1A1A6D250091C60B /* Debug */,
