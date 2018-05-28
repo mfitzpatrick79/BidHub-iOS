@@ -28,18 +28,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" ambiguous="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOw-cF-mjQ">
-                                <rect key="frame" x="8" y="85" width="359" height="662"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOw-cF-mjQ">
+                                <rect key="frame" x="0.0" y="85" width="375" height="670"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oe5-Pg-PvR" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="351" height="662"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oe5-Pg-PvR" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="4500"/>
                                         <subviews>
-                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qST-5z-haQ" userLabel="EULA Text">
-                                                <rect key="frame" x="-2" y="1" width="348" height="959"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qST-5z-haQ" userLabel="EULA Text">
+                                                <rect key="frame" x="8" y="-2" width="360" height="4500"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                                 </accessibility>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="359" id="dhf-qE-OhZ"/>
+                                                    <constraint firstAttribute="height" constant="4500" id="hQC-at-fDb"/>
+                                                </constraints>
                                                 <attributedString key="attributedText">
                                                     <fragment>
                                                         <mutableString key="content">This End-User License Agreement (this “EULA”) is a legal agreement between you (“Licensee”) and The Union League, LLC (“Licensor”), the author of MFA Summer Party Auction App, including all HTML files, XML files, Java files, graphics files, animation files, data files, technology, development tools, scripts and programs, both in object code and source code (the “Software”), the deliverables provided pursuant to this EULA, which may include associated media, printed materials, and “online” or electronic documentation.
@@ -83,14 +86,19 @@ In the event this EULA is terminated, you must cease use of the Software and des
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="qST-5z-haQ" firstAttribute="centerY" secondItem="oe5-Pg-PvR" secondAttribute="centerY" id="L1L-1c-mOg"/>
+                                            <constraint firstItem="qST-5z-haQ" firstAttribute="centerX" secondItem="oe5-Pg-PvR" secondAttribute="centerX" id="iPX-Nd-RFD"/>
+                                            <constraint firstAttribute="bottom" secondItem="qST-5z-haQ" secondAttribute="bottom" id="wla-3g-WT7"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="oe5-Pg-PvR" secondAttribute="bottom" id="2qb-X5-Jpb"/>
-                                    <constraint firstItem="oe5-Pg-PvR" firstAttribute="centerY" secondItem="wOw-cF-mjQ" secondAttribute="centerY" id="8PH-y2-6xY"/>
-                                    <constraint firstItem="oe5-Pg-PvR" firstAttribute="leading" secondItem="wOw-cF-mjQ" secondAttribute="leading" id="MmJ-a8-Htk"/>
-                                    <constraint firstItem="oe5-Pg-PvR" firstAttribute="top" secondItem="wOw-cF-mjQ" secondAttribute="top" id="W1X-d7-Spi"/>
-                                    <constraint firstAttribute="trailing" secondItem="oe5-Pg-PvR" secondAttribute="trailing" id="sCv-9A-Epq"/>
+                                    <constraint firstAttribute="trailing" secondItem="oe5-Pg-PvR" secondAttribute="trailing" id="FQU-aC-9wa"/>
+                                    <constraint firstItem="oe5-Pg-PvR" firstAttribute="leading" secondItem="wOw-cF-mjQ" secondAttribute="leading" id="JEt-qn-fSu"/>
+                                    <constraint firstAttribute="bottom" secondItem="oe5-Pg-PvR" secondAttribute="bottom" id="ZH3-Av-1d5"/>
+                                    <constraint firstItem="oe5-Pg-PvR" firstAttribute="width" secondItem="wOw-cF-mjQ" secondAttribute="width" id="bkc-Ka-DPf"/>
+                                    <constraint firstItem="oe5-Pg-PvR" firstAttribute="top" secondItem="wOw-cF-mjQ" secondAttribute="top" id="iBa-n1-vYe"/>
                                 </constraints>
                             </scrollView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5RF-6v-V4n">
@@ -114,16 +122,16 @@ In the event this EULA is terminated, you must cease use of the Software and des
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="wU6-lc-6bv" firstAttribute="leading" secondItem="SOE-vK-dq7" secondAttribute="leading" constant="16" id="2XV-b7-lBC"/>
-                            <constraint firstItem="wOw-cF-mjQ" firstAttribute="leading" secondItem="SOE-vK-dq7" secondAttribute="leadingMargin" constant="-8" id="9IN-3j-IgT"/>
-                            <constraint firstItem="5RF-6v-V4n" firstAttribute="top" secondItem="wOw-cF-mjQ" secondAttribute="bottom" constant="16" id="Oez-uz-awg"/>
-                            <constraint firstItem="wU6-lc-6bv" firstAttribute="top" secondItem="SOE-vK-dq7" secondAttribute="top" constant="48" id="Omr-R1-MDr"/>
-                            <constraint firstAttribute="trailing" secondItem="5RF-6v-V4n" secondAttribute="trailing" id="Upc-HL-mYd"/>
-                            <constraint firstAttribute="trailing" secondItem="wU6-lc-6bv" secondAttribute="trailing" constant="16" id="XYO-LD-g9N"/>
-                            <constraint firstItem="wOw-cF-mjQ" firstAttribute="centerX" secondItem="wU6-lc-6bv" secondAttribute="centerX" id="akx-M8-f8f"/>
-                            <constraint firstItem="wOw-cF-mjQ" firstAttribute="top" secondItem="wU6-lc-6bv" secondAttribute="bottom" constant="8" symbolic="YES" id="bCX-gc-n6g"/>
-                            <constraint firstAttribute="bottom" secondItem="5RF-6v-V4n" secondAttribute="bottom" id="c4L-vs-fze"/>
-                            <constraint firstItem="5RF-6v-V4n" firstAttribute="leading" secondItem="SOE-vK-dq7" secondAttribute="leading" id="siF-rb-wuj"/>
+                            <constraint firstItem="5RF-6v-V4n" firstAttribute="leading" secondItem="SOE-vK-dq7" secondAttribute="leading" id="21z-AR-idp"/>
+                            <constraint firstAttribute="trailing" secondItem="5RF-6v-V4n" secondAttribute="trailing" id="6SO-pR-Bdd"/>
+                            <constraint firstItem="wOw-cF-mjQ" firstAttribute="top" secondItem="wU6-lc-6bv" secondAttribute="bottom" constant="8" id="91o-fD-RSk"/>
+                            <constraint firstAttribute="trailing" secondItem="wOw-cF-mjQ" secondAttribute="trailing" id="BNf-TS-5Yl"/>
+                            <constraint firstItem="wU6-lc-6bv" firstAttribute="trailing" secondItem="SOE-vK-dq7" secondAttribute="trailingMargin" id="L50-GL-uCP"/>
+                            <constraint firstItem="5RF-6v-V4n" firstAttribute="top" secondItem="wOw-cF-mjQ" secondAttribute="bottom" constant="8" id="LYF-xB-1tx"/>
+                            <constraint firstAttribute="bottom" secondItem="5RF-6v-V4n" secondAttribute="bottom" id="QIO-0N-WUu"/>
+                            <constraint firstItem="wU6-lc-6bv" firstAttribute="leading" secondItem="SOE-vK-dq7" secondAttribute="leadingMargin" id="QVR-7S-x4f"/>
+                            <constraint firstItem="wU6-lc-6bv" firstAttribute="top" secondItem="EuT-nT-bpf" secondAttribute="bottom" constant="4" id="Xvf-Or-bjQ"/>
+                            <constraint firstItem="wOw-cF-mjQ" firstAttribute="leading" secondItem="SOE-vK-dq7" secondAttribute="leading" id="dVY-5P-Uij"/>
                         </constraints>
                     </view>
                     <connections>

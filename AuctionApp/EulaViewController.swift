@@ -24,7 +24,6 @@ class EulaViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: 700)
     }
     
     @IBAction func didPressCancel(_ sender: AnyObject) {
