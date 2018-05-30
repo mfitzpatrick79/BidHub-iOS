@@ -37,7 +37,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         SVProgressHUD.setBackgroundColor(UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0))
-        SVProgressHUD.setForegroundColor(UIColor(red: 242/255, green: 109/255, blue: 59/255, alpha: 1.0))
+        SVProgressHUD.setForegroundColor(UIColor(red: 215/255, green: 67/255, blue: 49/255, alpha: 1.0))
         SVProgressHUD.setRingThickness(5.0)
         
         
@@ -49,7 +49,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         let refreshView = UIView(frame: CGRect(x: 0, y: 10, width: 0, height: 0))
         tableView.insertSubview(refreshView, aboveSubview: colorView)
         
-        refreshControl.tintColor = UIColor(red: 242/255, green: 109/255, blue: 59/255, alpha: 1.0)
+        refreshControl.tintColor = UIColor(red: 215/255, green: 67/255, blue: 49/255, alpha: 1.0)
         refreshControl.addTarget(self, action: #selector(ItemListViewController.reloadItems), for: .valueChanged)
         refreshView.addSubview(refreshControl)
         

@@ -32,16 +32,15 @@
                                 <rect key="frame" x="0.0" y="85" width="375" height="670"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oe5-Pg-PvR" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="4500"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="4000"/>
                                         <subviews>
-                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qST-5z-haQ" userLabel="EULA Text">
-                                                <rect key="frame" x="8" y="-2" width="360" height="4500"/>
+                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qST-5z-haQ" userLabel="EULA Text">
+                                                <rect key="frame" x="9" y="0.0" width="359" height="4021"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                                 </accessibility>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="359" id="dhf-qE-OhZ"/>
-                                                    <constraint firstAttribute="height" constant="4500" id="hQC-at-fDb"/>
+                                                    <constraint firstAttribute="height" constant="4021" id="AS8-XM-hgG"/>
                                                 </constraints>
                                                 <attributedString key="attributedText">
                                                     <fragment>
@@ -87,9 +86,10 @@ In the event this EULA is terminated, you must cease use of the Software and des
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="qST-5z-haQ" firstAttribute="centerY" secondItem="oe5-Pg-PvR" secondAttribute="centerY" id="L1L-1c-mOg"/>
-                                            <constraint firstItem="qST-5z-haQ" firstAttribute="centerX" secondItem="oe5-Pg-PvR" secondAttribute="centerX" id="iPX-Nd-RFD"/>
-                                            <constraint firstAttribute="bottom" secondItem="qST-5z-haQ" secondAttribute="bottom" id="wla-3g-WT7"/>
+                                            <constraint firstItem="qST-5z-haQ" firstAttribute="leading" secondItem="oe5-Pg-PvR" secondAttribute="leading" constant="9" id="0V6-gW-NWF"/>
+                                            <constraint firstAttribute="bottom" secondItem="qST-5z-haQ" secondAttribute="bottom" constant="-21" id="Amd-yO-uls"/>
+                                            <constraint firstItem="qST-5z-haQ" firstAttribute="top" secondItem="oe5-Pg-PvR" secondAttribute="top" id="B12-Gv-Tf7"/>
+                                            <constraint firstItem="qST-5z-haQ" firstAttribute="width" secondItem="oe5-Pg-PvR" secondAttribute="width" id="Xua-JJ-WEZ"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -157,11 +157,8 @@ In the event this EULA is terminated, you must cease use of the Software and des
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="rzw-Pv-l6j">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                            </imageView>
                             <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6Q-Wi-ymT" userLabel="Input Field View">
-                                <rect key="frame" x="0.0" y="69" width="375" height="155"/>
+                                <rect key="frame" x="0.0" y="167" width="375" height="155"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First and Last Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gUk-KS-LZe">
                                         <rect key="frame" x="8" y="8" width="359" height="33"/>
@@ -211,7 +208,7 @@ In the event this EULA is terminated, you must cease use of the Software and des
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hM6-ye-7km" userLabel="EULA Agreement View">
-                                <rect key="frame" x="0.0" y="232" width="375" height="97"/>
+                                <rect key="frame" x="0.0" y="330" width="375" height="97"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Uoz-sD-8Ei">
                                         <rect key="frame" x="8" y="28" width="51" height="31"/>
@@ -247,7 +244,7 @@ In the event this EULA is terminated, you must cease use of the Software and des
                                 </constraints>
                             </view>
                             <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pz4-RU-3Ta">
-                                <rect key="frame" x="0.0" y="337" width="375" height="45"/>
+                                <rect key="frame" x="0.0" y="435" width="375" height="45"/>
                                 <color key="backgroundColor" red="0.84313725490000002" green="0.26274509800000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="3Rj-bS-pt1"/>
@@ -262,10 +259,10 @@ In the event this EULA is terminated, you must cease use of the Software and des
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAF-Cq-zq8" userLabel="Welcome Message View">
-                                <rect key="frame" x="0.0" y="390" width="375" height="380"/>
+                                <rect key="frame" x="0.0" y="494" width="375" height="276"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="pMg-Ux-qk2" userLabel="welcomeMessage">
-                                        <rect key="frame" x="10" y="0.0" width="355" height="380"/>
+                                        <rect key="frame" x="10" y="0.0" width="355" height="276"/>
                                         <string key="text">Welcome to amazing art for an exceptional cause. See the works in-person at the 2017 Save Venice Ball, starting at 7pm on November 3rd. To see the works and begin bidding, register now! Support Venice by bidding high and bidding often!</string>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -280,28 +277,31 @@ In the event this EULA is terminated, you must cease use of the Software and des
                                     <constraint firstItem="pMg-Ux-qk2" firstAttribute="top" secondItem="WAF-Cq-zq8" secondAttribute="top" id="pRB-QG-sRV"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mfaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Kyg-ly-Dni">
+                                <rect key="frame" x="10" y="109" width="354" height="58"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.85098039215686272" green="0.73333333333333328" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hM6-ye-7km" firstAttribute="top" secondItem="f6Q-Wi-ymT" secondAttribute="bottom" constant="8" id="4Sp-me-u8j"/>
-                            <constraint firstItem="hM6-ye-7km" firstAttribute="top" secondItem="Ftf-Tk-HqV" secondAttribute="top" constant="232" id="7zp-84-Rnl"/>
+                            <constraint firstItem="hM6-ye-7km" firstAttribute="top" secondItem="Ftf-Tk-HqV" secondAttribute="top" constant="330" id="7zp-84-Rnl"/>
                             <constraint firstItem="Pz4-RU-3Ta" firstAttribute="top" secondItem="hM6-ye-7km" secondAttribute="bottom" constant="8" id="AAv-vk-L5y"/>
                             <constraint firstItem="hM6-ye-7km" firstAttribute="leading" secondItem="Ftf-Tk-HqV" secondAttribute="leading" id="AMg-Oe-iua"/>
                             <constraint firstItem="Pz4-RU-3Ta" firstAttribute="top" secondItem="hM6-ye-7km" secondAttribute="bottom" constant="8" id="E5B-Vm-VJM"/>
-                            <constraint firstAttribute="trailing" secondItem="rzw-Pv-l6j" secondAttribute="trailing" id="Hy1-p0-rB7"/>
                             <constraint firstItem="e6A-1h-DoS" firstAttribute="top" secondItem="WAF-Cq-zq8" secondAttribute="bottom" constant="8" id="OR7-lg-d9K"/>
-                            <constraint firstAttribute="bottom" secondItem="rzw-Pv-l6j" secondAttribute="bottom" id="QnU-vN-xqu"/>
+                            <constraint firstItem="f6Q-Wi-ymT" firstAttribute="top" secondItem="Kyg-ly-Dni" secondAttribute="bottom" id="REg-Tu-m5m"/>
                             <constraint firstItem="WAF-Cq-zq8" firstAttribute="leading" secondItem="Ftf-Tk-HqV" secondAttribute="leading" id="Skp-qo-hlo"/>
                             <constraint firstAttribute="trailing" secondItem="f6Q-Wi-ymT" secondAttribute="trailing" id="Uy2-X2-zPH"/>
-                            <constraint firstItem="f6Q-Wi-ymT" firstAttribute="top" secondItem="3Fp-1z-G0X" secondAttribute="bottom" constant="25" id="Ygy-2n-SuW"/>
+                            <constraint firstItem="f6Q-Wi-ymT" firstAttribute="top" secondItem="3Fp-1z-G0X" secondAttribute="bottom" constant="123" id="Ygy-2n-SuW"/>
                             <constraint firstItem="f6Q-Wi-ymT" firstAttribute="leading" secondItem="Ftf-Tk-HqV" secondAttribute="leading" id="cAd-M9-IwT"/>
                             <constraint firstAttribute="trailing" secondItem="hM6-ye-7km" secondAttribute="trailing" id="cf0-mg-V2r"/>
-                            <constraint firstItem="WAF-Cq-zq8" firstAttribute="top" secondItem="Pz4-RU-3Ta" secondAttribute="bottom" constant="8" id="m6V-ay-Mx4"/>
-                            <constraint firstItem="rzw-Pv-l6j" firstAttribute="top" secondItem="Ftf-Tk-HqV" secondAttribute="top" id="nXI-qk-oNe"/>
+                            <constraint firstItem="Kyg-ly-Dni" firstAttribute="centerX" secondItem="f6Q-Wi-ymT" secondAttribute="centerX" id="el7-6q-0eS"/>
+                            <constraint firstItem="Kyg-ly-Dni" firstAttribute="top" secondItem="3Fp-1z-G0X" secondAttribute="bottom" constant="65" id="kAy-h2-9pg"/>
+                            <constraint firstItem="WAF-Cq-zq8" firstAttribute="top" secondItem="Pz4-RU-3Ta" secondAttribute="bottom" constant="14" id="m6V-ay-Mx4"/>
                             <constraint firstAttribute="trailing" secondItem="Pz4-RU-3Ta" secondAttribute="trailing" id="rjT-z7-VKm"/>
-                            <constraint firstItem="rzw-Pv-l6j" firstAttribute="leading" secondItem="Ftf-Tk-HqV" secondAttribute="leading" id="tTH-h8-0bl"/>
                             <constraint firstAttribute="trailing" secondItem="WAF-Cq-zq8" secondAttribute="trailing" id="vU9-3I-AOV"/>
                             <constraint firstItem="Pz4-RU-3Ta" firstAttribute="leading" secondItem="Ftf-Tk-HqV" secondAttribute="leading" id="zbJ-FU-M91"/>
+                            <constraint firstItem="Kyg-ly-Dni" firstAttribute="leading" secondItem="Ftf-Tk-HqV" secondAttribute="leadingMargin" constant="-6" id="zkL-5w-dGn"/>
                         </constraints>
                     </view>
                     <connections>
@@ -326,7 +326,7 @@ In the event this EULA is terminated, you must cease use of the Software and des
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.5450980392" green="0.070588235289999995" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.5450980392" green="0.070588235289999995" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.84313725490000002" green="0.26274509800000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="DqX-rp-Oxg" kind="relationship" relationship="rootViewController" id="i1f-IL-bol"/>
@@ -349,14 +349,14 @@ In the event this EULA is terminated, you must cease use of the Software and des
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="352" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Bpr-7P-qwO">
-                                <rect key="frame" x="0.0" y="24" width="375" height="754"/>
+                                <rect key="frame" x="0.0" y="24" width="375" height="788"/>
                                 <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" text="" placeholder="Search" id="Kz2-GN-CoT">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <color key="barTintColor" red="0.5450980392" green="0.070588235289999995" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="barTintColor" red="0.84313725490000002" green="0.26274509800000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     <scopeButtonTitles>
                                         <string>Title</string>
@@ -707,7 +707,7 @@ In the event this EULA is terminated, you must cease use of the Software and des
                             <constraint firstItem="Bpr-7P-qwO" firstAttribute="top" secondItem="28g-CM-SiM" secondAttribute="bottom" constant="-64" id="2SY-vC-c3a"/>
                             <constraint firstItem="Bpr-7P-qwO" firstAttribute="leading" secondItem="ZSd-he-TKT" secondAttribute="leading" id="4ti-BN-RfF"/>
                             <constraint firstAttribute="trailing" secondItem="Bpr-7P-qwO" secondAttribute="trailing" id="NYf-bA-dpH"/>
-                            <constraint firstItem="cVI-NQ-4Jz" firstAttribute="top" secondItem="Bpr-7P-qwO" secondAttribute="bottom" id="tI6-Lc-LwF"/>
+                            <constraint firstItem="cVI-NQ-4Jz" firstAttribute="top" secondItem="Bpr-7P-qwO" secondAttribute="bottom" constant="-34" id="tI6-Lc-LwF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="R85-G7-v1w">
@@ -743,7 +743,7 @@ In the event this EULA is terminated, you must cease use of the Software and des
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5u-9l-V98" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1420" y="135.38230884557723"/>
+            <point key="canvasLocation" x="1420" y="135.22167487684729"/>
         </scene>
         <!--Bidding View Controller-->
         <scene sceneID="zz1-wr-W1T">
@@ -981,7 +981,7 @@ In the event this EULA is terminated, you must cease use of the Software and des
                                     </barButtonItem>
                                 </items>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="barTintColor" red="0.5450980392" green="0.070588235289999995" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.84313725490000002" green="0.26274509800000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1017,8 +1017,8 @@ In the event this EULA is terminated, you must cease use of the Software and des
         </scene>
     </scenes>
     <resources>
-        <image name="Background" width="414" height="682"/>
         <image name="HSLogOutIcon" width="18" height="22"/>
         <image name="bidNowButtonSmall" width="80" height="30"/>
+        <image name="mfaLogo" width="331" height="40"/>
     </resources>
 </document>
