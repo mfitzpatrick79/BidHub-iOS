@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOw-cF-mjQ">
-                                <rect key="frame" x="0.0" y="85" width="375" height="670"/>
+                                <rect key="frame" x="0.0" y="82" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oe5-Pg-PvR" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="4000"/>
@@ -102,7 +102,7 @@ In the event this EULA is terminated, you must cease use of the Software and des
                                 </constraints>
                             </scrollView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5RF-6v-V4n">
-                                <rect key="frame" x="0.0" y="763" width="375" height="49"/>
+                                <rect key="frame" x="0.0" y="729" width="375" height="49"/>
                                 <items>
                                     <barButtonItem width="42" systemItem="fixedSpace" id="8xu-RG-5Ty"/>
                                     <barButtonItem title="Cancel" id="fRq-1c-bAj">
@@ -122,16 +122,16 @@ In the event this EULA is terminated, you must cease use of the Software and des
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="5RF-6v-V4n" firstAttribute="leading" secondItem="SOE-vK-dq7" secondAttribute="leading" id="21z-AR-idp"/>
-                            <constraint firstAttribute="trailing" secondItem="5RF-6v-V4n" secondAttribute="trailing" id="6SO-pR-Bdd"/>
-                            <constraint firstItem="wOw-cF-mjQ" firstAttribute="top" secondItem="wU6-lc-6bv" secondAttribute="bottom" constant="8" id="91o-fD-RSk"/>
+                            <constraint firstItem="wOw-cF-mjQ" firstAttribute="top" secondItem="wU6-lc-6bv" secondAttribute="bottom" constant="5" id="91o-fD-RSk"/>
                             <constraint firstAttribute="trailing" secondItem="wOw-cF-mjQ" secondAttribute="trailing" id="BNf-TS-5Yl"/>
+                            <constraint firstItem="wOw-cF-mjQ" firstAttribute="leading" secondItem="5RF-6v-V4n" secondAttribute="leading" id="FC4-dp-7p6"/>
                             <constraint firstItem="wU6-lc-6bv" firstAttribute="trailing" secondItem="SOE-vK-dq7" secondAttribute="trailingMargin" id="L50-GL-uCP"/>
-                            <constraint firstItem="5RF-6v-V4n" firstAttribute="top" secondItem="wOw-cF-mjQ" secondAttribute="bottom" constant="8" id="LYF-xB-1tx"/>
-                            <constraint firstAttribute="bottom" secondItem="5RF-6v-V4n" secondAttribute="bottom" id="QIO-0N-WUu"/>
+                            <constraint firstItem="wOw-cF-mjQ" firstAttribute="bottom" secondItem="5RF-6v-V4n" secondAttribute="top" id="NIY-TW-Im9"/>
                             <constraint firstItem="wU6-lc-6bv" firstAttribute="leading" secondItem="SOE-vK-dq7" secondAttribute="leadingMargin" id="QVR-7S-x4f"/>
                             <constraint firstItem="wU6-lc-6bv" firstAttribute="top" secondItem="EuT-nT-bpf" secondAttribute="bottom" constant="4" id="Xvf-Or-bjQ"/>
                             <constraint firstItem="wOw-cF-mjQ" firstAttribute="leading" secondItem="SOE-vK-dq7" secondAttribute="leading" id="dVY-5P-Uij"/>
+                            <constraint firstItem="5RF-6v-V4n" firstAttribute="width" secondItem="SOE-vK-dq7" secondAttribute="width" id="gCz-zy-iyA"/>
+                            <constraint firstItem="H5P-Ey-cje" firstAttribute="top" secondItem="5RF-6v-V4n" secondAttribute="bottom" id="xhi-un-X81"/>
                         </constraints>
                     </view>
                     <connections>
@@ -163,7 +163,7 @@ In the event this EULA is terminated, you must cease use of the Software and des
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First and Last Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gUk-KS-LZe">
                                         <rect key="frame" x="8" y="8" width="359" height="33"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="no" returnKeyType="next"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="no" returnKeyType="next" textContentType="name"/>
                                         <connections>
                                             <action selector="textFieldShouldReturn:" destination="L1S-fT-33x" eventType="primaryActionTriggered" id="VWM-ln-fnb"/>
                                             <outlet property="delegate" destination="L1S-fT-33x" id="sAt-Aa-DBe"/>
@@ -173,7 +173,7 @@ In the event this EULA is terminated, you must cease use of the Software and des
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dgC-2i-XYA">
                                         <rect key="frame" x="8" y="61" width="359" height="33"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                         <connections>
                                             <action selector="textFieldShouldReturn:" destination="L1S-fT-33x" eventType="editingDidEnd" id="bf5-Jo-z5n"/>
                                             <outlet property="delegate" destination="L1S-fT-33x" id="Wnh-rl-Ty8"/>
@@ -183,9 +183,8 @@ In the event this EULA is terminated, you must cease use of the Software and des
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Telephone" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fa9-za-p0L" userLabel="Telephone Text Field" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
                                         <rect key="frame" x="8" y="114" width="359" height="33"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" returnKeyType="go"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" returnKeyType="done" textContentType="tel"/>
                                         <connections>
-                                            <action selector="loginPressed:" destination="L1S-fT-33x" eventType="editingDidEnd" id="LAo-dX-uuf"/>
                                             <outlet property="delegate" destination="L1S-fT-33x" id="QcO-43-cON"/>
                                             <outlet property="nextField" destination="gUk-KS-LZe" id="tog-Ko-C1O"/>
                                         </connections>
@@ -218,8 +217,11 @@ In the event this EULA is terminated, you must cease use of the Software and des
                                         </connections>
                                     </switch>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvu-vC-a4a">
-                                        <rect key="frame" x="65" y="0.0" width="199" height="30"/>
-                                        <state key="normal" title="End User License Agreement"/>
+                                        <rect key="frame" x="65" y="0.0" width="225" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="End User License Agreement »">
+                                            <color key="titleColor" red="0.84313725490000002" green="0.26274509800000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="eulaLinkTriggerPressed" destination="L1S-fT-33x" eventType="touchUpInside" id="2nk-yx-Iph"/>
                                         </connections>
@@ -288,17 +290,17 @@ In the event this EULA is terminated, you must cease use of the Software and des
                             <constraint firstItem="Pz4-RU-3Ta" firstAttribute="top" secondItem="hM6-ye-7km" secondAttribute="bottom" constant="8" id="AAv-vk-L5y"/>
                             <constraint firstItem="hM6-ye-7km" firstAttribute="leading" secondItem="Ftf-Tk-HqV" secondAttribute="leading" id="AMg-Oe-iua"/>
                             <constraint firstItem="Pz4-RU-3Ta" firstAttribute="top" secondItem="hM6-ye-7km" secondAttribute="bottom" constant="8" id="E5B-Vm-VJM"/>
-                            <constraint firstItem="e6A-1h-DoS" firstAttribute="top" secondItem="WAF-Cq-zq8" secondAttribute="bottom" constant="8" id="OR7-lg-d9K"/>
                             <constraint firstItem="f6Q-Wi-ymT" firstAttribute="top" secondItem="Kyg-ly-Dni" secondAttribute="bottom" id="REg-Tu-m5m"/>
                             <constraint firstItem="WAF-Cq-zq8" firstAttribute="leading" secondItem="Ftf-Tk-HqV" secondAttribute="leading" id="Skp-qo-hlo"/>
                             <constraint firstAttribute="trailing" secondItem="f6Q-Wi-ymT" secondAttribute="trailing" id="Uy2-X2-zPH"/>
-                            <constraint firstItem="f6Q-Wi-ymT" firstAttribute="top" secondItem="3Fp-1z-G0X" secondAttribute="bottom" constant="123" id="Ygy-2n-SuW"/>
+                            <constraint firstItem="e6A-1h-DoS" firstAttribute="top" secondItem="WAF-Cq-zq8" secondAttribute="bottom" constant="8" id="X55-8P-pfI"/>
                             <constraint firstItem="f6Q-Wi-ymT" firstAttribute="leading" secondItem="Ftf-Tk-HqV" secondAttribute="leading" id="cAd-M9-IwT"/>
                             <constraint firstAttribute="trailing" secondItem="hM6-ye-7km" secondAttribute="trailing" id="cf0-mg-V2r"/>
                             <constraint firstItem="Kyg-ly-Dni" firstAttribute="centerX" secondItem="f6Q-Wi-ymT" secondAttribute="centerX" id="el7-6q-0eS"/>
-                            <constraint firstItem="Kyg-ly-Dni" firstAttribute="top" secondItem="3Fp-1z-G0X" secondAttribute="bottom" constant="65" id="kAy-h2-9pg"/>
                             <constraint firstItem="WAF-Cq-zq8" firstAttribute="top" secondItem="Pz4-RU-3Ta" secondAttribute="bottom" constant="14" id="m6V-ay-Mx4"/>
+                            <constraint firstItem="f6Q-Wi-ymT" firstAttribute="top" secondItem="3Fp-1z-G0X" secondAttribute="bottom" constant="123" id="rgR-rj-Vf3"/>
                             <constraint firstAttribute="trailing" secondItem="Pz4-RU-3Ta" secondAttribute="trailing" id="rjT-z7-VKm"/>
+                            <constraint firstItem="Kyg-ly-Dni" firstAttribute="top" secondItem="3Fp-1z-G0X" secondAttribute="bottom" constant="65" id="uPa-gk-pPP"/>
                             <constraint firstAttribute="trailing" secondItem="WAF-Cq-zq8" secondAttribute="trailing" id="vU9-3I-AOV"/>
                             <constraint firstItem="Pz4-RU-3Ta" firstAttribute="leading" secondItem="Ftf-Tk-HqV" secondAttribute="leading" id="zbJ-FU-M91"/>
                             <constraint firstItem="Kyg-ly-Dni" firstAttribute="leading" secondItem="Ftf-Tk-HqV" secondAttribute="leadingMargin" constant="-6" id="zkL-5w-dGn"/>
@@ -725,6 +727,7 @@ In the event this EULA is terminated, you must cease use of the Software and des
                                 <segment title="All"/>
                                 <segment title="No Bids"/>
                                 <segment title="My Bids"/>
+                                <segment title="Show..."/>
                             </segments>
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -758,7 +761,7 @@ In the event this EULA is terminated, you must cease use of the Software and des
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ykj-tY-tXb">
-                                <rect key="frame" x="0.0" y="24" width="375" height="754"/>
+                                <rect key="frame" x="0.0" y="24" width="375" height="788"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzR-jC-dOl">
@@ -906,7 +909,7 @@ In the event this EULA is terminated, you must cease use of the Software and des
                             <constraint firstItem="Ykj-tY-tXb" firstAttribute="top" secondItem="TWS-3N-bAU" secondAttribute="bottom" constant="-20" id="UIb-qI-pV3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dzR-jC-dOl" secondAttribute="trailing" constant="4" id="fum-DZ-mQ6"/>
                             <constraint firstItem="dzR-jC-dOl" firstAttribute="leading" secondItem="lDY-Fl-Dnp" secondAttribute="leadingMargin" constant="4" id="lXh-Tj-iHJ"/>
-                            <constraint firstItem="F9e-hx-T5a" firstAttribute="top" secondItem="Ykj-tY-tXb" secondAttribute="bottom" id="o2Y-h3-IKP"/>
+                            <constraint firstItem="F9e-hx-T5a" firstAttribute="top" secondItem="Ykj-tY-tXb" secondAttribute="bottom" constant="-34" id="o2Y-h3-IKP"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -936,7 +939,7 @@ In the event this EULA is terminated, you must cease use of the Software and des
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2252" y="633"/>
+            <point key="canvasLocation" x="2252" y="632.51231527093603"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="RQE-qg-Gmb">
@@ -955,7 +958,7 @@ In the event this EULA is terminated, you must cease use of the Software and des
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s7O-cX-PD4">
-                                <rect key="frame" x="0.0" y="562" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="596" width="375" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.0" green="0.36470588240000001" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -964,7 +967,7 @@ In the event this EULA is terminated, you must cease use of the Software and des
                                 </connections>
                             </pickerView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iP3-Qb-aAt">
-                                <rect key="frame" x="0.0" y="596" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="562" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.42745098040000001" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
@@ -992,7 +995,7 @@ In the event this EULA is terminated, you must cease use of the Software and des
                             <constraint firstAttribute="trailingMargin" secondItem="s7O-cX-PD4" secondAttribute="trailing" constant="-16" id="Low-KG-PcF"/>
                             <constraint firstItem="s7O-cX-PD4" firstAttribute="leading" secondItem="7BR-t7-fa7" secondAttribute="leadingMargin" constant="-16" id="e9b-Ji-AkO"/>
                             <constraint firstItem="1xE-Eu-Gq1" firstAttribute="bottom" secondItem="OGk-m7-huH" secondAttribute="top" id="kSj-pB-22K"/>
-                            <constraint firstItem="OGk-m7-huH" firstAttribute="top" secondItem="s7O-cX-PD4" secondAttribute="bottom" id="yBQ-pk-Vtr"/>
+                            <constraint firstItem="OGk-m7-huH" firstAttribute="top" secondItem="s7O-cX-PD4" secondAttribute="bottom" constant="-34" id="yBQ-pk-Vtr"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="PKl-cW-eyR" appends="YES" id="xRa-nS-rW0"/>

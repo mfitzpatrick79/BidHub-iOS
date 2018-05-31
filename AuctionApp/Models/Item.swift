@@ -212,7 +212,7 @@ class Item: PFObject, PFSubclassing {
     var fairMarketValue:String {
         get {
             if let fmv = self["fmv"] as? String {
-                return "Fair Market Value: " + fmv
+                return "Est. Fair Market Value: " + fmv
             }else{
                 return ""
             }

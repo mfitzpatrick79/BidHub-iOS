@@ -12,6 +12,7 @@
 		0F741D3B1EDB5FD700E56274 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F741D3A1EDB5FD700E56274 /* CategoryViewController.swift */; };
 		0FBD57351CFBFF530020DABB /* NSDate+RelativeTime.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0FBD57341CFBFF530020DABB /* NSDate+RelativeTime.bundle */; };
 		1D32202F20BB4974003B1B65 /* EulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D32202E20BB4974003B1B65 /* EulaViewController.swift */; };
+		1DD2FE7520BF83EE00028BFA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2FE7420BF83EE00028BFA /* Launch Screen.storyboard */; };
 		5A5B2462AB5000211FF7CD13 /* Pods_AuctionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F9F3E6FD2D6A6457DE2805 /* Pods_AuctionApp.framework */; };
 		634C33461A1A7C6C0002E9AD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634C33441A1A7C6C0002E9AD /* Bolts.framework */; };
 		634C33471A1A7C6C0002E9AD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634C33451A1A7C6C0002E9AD /* Parse.framework */; };
@@ -31,7 +32,6 @@
 		637EEC561A1A6D250091C60B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637EEC551A1A6D250091C60B /* AppDelegate.swift */; };
 		637EEC5B1A1A6D250091C60B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637EEC591A1A6D250091C60B /* Main.storyboard */; };
 		637EEC5D1A1A6D250091C60B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 637EEC5C1A1A6D250091C60B /* Images.xcassets */; };
-		637EEC601A1A6D250091C60B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637EEC5E1A1A6D250091C60B /* LaunchScreen.xib */; };
 		63EA13071A1ABCBE002BDFDF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EA13061A1ABCBE002BDFDF /* LoginViewController.swift */; };
 		63EA13091A1ABCD1002BDFDF /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EA13081A1ABCD1002BDFDF /* ItemListViewController.swift */; };
 		63EE70431A1AC1B500B3EE74 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE70421A1AC1B500B3EE74 /* DataManager.swift */; };
@@ -85,6 +85,7 @@
 		0FBD57341CFBFF530020DABB /* NSDate+RelativeTime.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "NSDate+RelativeTime.bundle"; sourceTree = "<group>"; };
 		0FDBDD481FA330BE00A0FA57 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		1D32202E20BB4974003B1B65 /* EulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EulaViewController.swift; sourceTree = "<group>"; };
+		1DD2FE7420BF83EE00028BFA /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		21F9F3E6FD2D6A6457DE2805 /* Pods_AuctionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuctionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B64373DE521A638A0B7C9C7 /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		634C33441A1A7C6C0002E9AD /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -108,7 +109,6 @@
 		637EEC551A1A6D250091C60B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		637EEC5A1A1A6D250091C60B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		637EEC5C1A1A6D250091C60B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		637EEC5F1A1A6D250091C60B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		637EEC6A1A1A6D250091C60B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		637EEC6B1A1A6D250091C60B /* AuctionAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionAppTests.swift; sourceTree = "<group>"; };
 		63EA13061A1ABCBE002BDFDF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Login/LoginViewController.swift; sourceTree = "<group>"; };
@@ -244,10 +244,10 @@
 				637EEC551A1A6D250091C60B /* AppDelegate.swift */,
 				637EEC591A1A6D250091C60B /* Main.storyboard */,
 				637EEC5C1A1A6D250091C60B /* Images.xcassets */,
-				637EEC5E1A1A6D250091C60B /* LaunchScreen.xib */,
 				637EEC531A1A6D250091C60B /* Supporting Files */,
 				634C335C1A1A7CF40002E9AD /* AuctionApp-Bridging-Header.h */,
 				0FBD57341CFBFF530020DABB /* NSDate+RelativeTime.bundle */,
+				1DD2FE7420BF83EE00028BFA /* Launch Screen.storyboard */,
 			);
 			path = AuctionApp;
 			sourceTree = "<group>";
@@ -445,8 +445,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				637EEC5B1A1A6D250091C60B /* Main.storyboard in Resources */,
-				637EEC601A1A6D250091C60B /* LaunchScreen.xib in Resources */,
 				637EEC5D1A1A6D250091C60B /* Images.xcassets in Resources */,
+				1DD2FE7520BF83EE00028BFA /* Launch Screen.storyboard in Resources */,
 				0FBD57351CFBFF530020DABB /* NSDate+RelativeTime.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -575,14 +575,6 @@
 				637EEC5A1A1A6D250091C60B /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		637EEC5E1A1A6D250091C60B /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				637EEC5F1A1A6D250091C60B /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -762,7 +754,7 @@
 					"$(PROJECT_DIR)/AuctionApp",
 				);
 				INFOPLIST_FILE = AuctionApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FitzGuru.MfaAuction;
 				PRODUCT_NAME = "MFA Auction";
@@ -793,7 +785,7 @@
 					"$(PROJECT_DIR)/AuctionApp",
 				);
 				INFOPLIST_FILE = AuctionApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FitzGuru.MfaAuction;
 				PRODUCT_NAME = "MFA Auction";
