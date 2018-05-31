@@ -24,8 +24,8 @@ class CategoryViewController: UIViewController, UIPickerViewDataSource, UIPicker
     
     var delegate: CategoryViewControllerDelegate?
 
-    var categoryNames = ["Art - All", "Art - Paintings", "Art - Photography", "Art - Prints, Drawings, & Other", "Experiences - All", "Experiences - Fashion", "Experiences - Sports", "Experiences - Travel"]
-    var categoryValues = ["art", "painting", "photo", "pdo", "other", "fashion", "sport", "travel"]
+    var categoryNames = ["Art - All", "Art - Paintings", "Art - Photography", "Art - Prints, Drawings, & Other", "Experiences"]
+    var categoryValues = ["art", "painting", "photo", "pdo", "other"]
  
     /// UIPickerViewDataSource Methods
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

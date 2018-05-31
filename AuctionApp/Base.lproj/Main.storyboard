@@ -226,8 +226,12 @@ In the event this EULA is terminated, you must cease use of the Software and des
                                             <action selector="eulaLinkTriggerPressed" destination="L1S-fT-33x" eventType="touchUpInside" id="2nk-yx-Iph"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By clicking here and registering for the MFA Auction App, I agree to terms set forth above" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cRC-8s-C2R" userLabel="Agreement Text">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cRC-8s-C2R" userLabel="Agreement Text">
                                         <rect key="frame" x="65" y="28" width="302" height="61"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                        </accessibility>
+                                        <string key="text">By clicking here and registering for the MFA Auction App, I agree to terms set forth above and acknowledge that all bids are final.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -265,6 +269,9 @@ In the event this EULA is terminated, you must cease use of the Software and des
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="pMg-Ux-qk2" userLabel="welcomeMessage">
                                         <rect key="frame" x="10" y="0.0" width="355" height="276"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                        </accessibility>
                                         <string key="text">Welcome to amazing art for an exceptional cause. These items were selected by MFA curators and patrons to support the contemporary artists and raise funds for the innovative programs at the MFA, Boston. See the works in person at the Summer Party, starting 9pm June 9, 2018. Bid high and often before the Auction ends at 11pm!</string>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -328,7 +335,7 @@ In the event this EULA is terminated, you must cease use of the Software and des
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.5450980392" green="0.070588235289999995" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.84313725490000002" green="0.26274509800000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.85098039219999999" green="0.73333333329999995" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="DqX-rp-Oxg" kind="relationship" relationship="rootViewController" id="i1f-IL-bol"/>
@@ -358,7 +365,7 @@ In the event this EULA is terminated, you must cease use of the Software and des
                                 <searchBar key="tableHeaderView" contentMode="redraw" text="" placeholder="Search" id="Kz2-GN-CoT">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <color key="barTintColor" red="0.84313725490000002" green="0.26274509800000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="barTintColor" red="0.85098039219999999" green="0.73333333329999995" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     <scopeButtonTitles>
                                         <string>Title</string>
@@ -966,9 +973,8 @@ In the event this EULA is terminated, you must cease use of the Software and des
                                     <outlet property="delegate" destination="Krt-BP-4rZ" id="cge-fP-KXE"/>
                                 </connections>
                             </pickerView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iP3-Qb-aAt">
-                                <rect key="frame" x="0.0" y="562" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iP3-Qb-aAt">
+                                <rect key="frame" x="0.0" y="596" width="375" height="44"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.42745098040000001" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <barButtonItem title="Cancel" id="pFO-xN-kgs">
@@ -984,17 +990,20 @@ In the event this EULA is terminated, you must cease use of the Software and des
                                     </barButtonItem>
                                 </items>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="barTintColor" red="0.84313725490000002" green="0.26274509800000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.85098039219999999" green="0.73333333329999995" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="iP3-Qb-aAt" firstAttribute="trailing" secondItem="s7O-cX-PD4" secondAttribute="trailing" id="33N-30-DPF"/>
                             <constraint firstAttribute="trailing" secondItem="1xE-Eu-Gq1" secondAttribute="trailing" id="3Nr-MW-aTU"/>
                             <constraint firstItem="1xE-Eu-Gq1" firstAttribute="top" secondItem="7BR-t7-fa7" secondAttribute="top" id="B0q-8N-qW3"/>
                             <constraint firstItem="1xE-Eu-Gq1" firstAttribute="leading" secondItem="7BR-t7-fa7" secondAttribute="leading" id="I7B-PT-e91"/>
                             <constraint firstAttribute="trailingMargin" secondItem="s7O-cX-PD4" secondAttribute="trailing" constant="-16" id="Low-KG-PcF"/>
+                            <constraint firstItem="iP3-Qb-aAt" firstAttribute="leading" secondItem="s7O-cX-PD4" secondAttribute="leading" id="P5m-OT-vtF"/>
                             <constraint firstItem="s7O-cX-PD4" firstAttribute="leading" secondItem="7BR-t7-fa7" secondAttribute="leadingMargin" constant="-16" id="e9b-Ji-AkO"/>
                             <constraint firstItem="1xE-Eu-Gq1" firstAttribute="bottom" secondItem="OGk-m7-huH" secondAttribute="top" id="kSj-pB-22K"/>
+                            <constraint firstItem="iP3-Qb-aAt" firstAttribute="top" secondItem="s7O-cX-PD4" secondAttribute="top" id="mWZ-32-dxg"/>
                             <constraint firstItem="OGk-m7-huH" firstAttribute="top" secondItem="s7O-cX-PD4" secondAttribute="bottom" constant="-34" id="yBQ-pk-Vtr"/>
                         </constraints>
                         <connections>
