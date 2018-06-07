@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, OSPermissionObserver, OSS
         
         let notificationReceivedBlock: OSHandleNotificationReceivedBlock = { notification in
             
-            print("Received Notification: \(notification!.payload.notificationID)")
+            print("Received Notification: \(String(describing: notification!.payload.notificationID))")
             print("launchURL = \(notification?.payload.launchURL ?? "None")")
             print("content_available = \(notification?.payload.contentAvailable ?? false)")
         }
@@ -59,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, OSPermissionObserver, OSS
             // This block gets called when the user reacts to a notification received
             let payload: OSNotificationPayload? = result?.notification.payload
             
-            print("Message = \(payload!.body)")
+            print("Message = \(String(describing: payload!.body))")
             print("badge number = \(payload?.badge ?? 0)")
             print("notification sound = \(payload?.sound ?? "None")")
             
@@ -135,14 +135,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, OSPermissionObserver, OSS
             }
         }
         // prints out all properties
-        print("PermissionStateChanges: \n\(stateChanges)")
+        print("PermissionStateChanges: \n\(String(describing: stateChanges))")
     }
     
     func onOSSubscriptionChanged(_ stateChanges: OSSubscriptionStateChanges!) {
         if !stateChanges.from.subscribed && stateChanges.to.subscribed {
             print("Subscribed for OneSignal push notifications!")
         }
-        print("SubscriptionStateChange: \n\(stateChanges)")
+        print("SubscriptionStateChange: \n\(String(describing: stateChanges))")
     }
 
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
