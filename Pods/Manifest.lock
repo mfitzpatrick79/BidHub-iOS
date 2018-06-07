@@ -20,7 +20,7 @@ PODS:
   - HanekeSwift (1.1)
   - IHKeyboardAvoiding (4.2)
   - "NSDate+RelativeTime (1.0.1)"
-  - OneSignal (2.8.4)
+  - OneSignal (2.8.5)
   - Parse (1.17.1):
     - Parse/Core (= 1.17.1)
   - Parse/Core (1.17.1):
@@ -41,7 +41,7 @@ DEPENDENCIES:
   - HanekeSwift (from `https://github.com/Haneke/HanekeSwift.git`)
   - IHKeyboardAvoiding (>= 1.1)
   - "NSDate+RelativeTime (>= 1.0)"
-  - OneSignal (< 3.0, >= 2.5.2)
+  - OneSignal (< 3.0, >= 2.6.2)
   - Parse
   - PhoneNumberKit (>= 1.1.1)
   - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
@@ -86,12 +86,12 @@ SPEC CHECKSUMS:
   HanekeSwift: cb662a1f22b10ff3ff1d7b5030ae451da5d93831
   IHKeyboardAvoiding: 9fbf816b7c3c84911964802ff110d12caf40ebef
   "NSDate+RelativeTime": 1b03a562615a4496a826e322096e5792e6706612
-  OneSignal: 7218a5a787f6685de81bdb487e696439e8c8f59b
+  OneSignal: 42dae269c7eca517aee34963820e1eb922390031
   Parse: d3edaf8c7c722cb33cb83ba7821d015ae32d362d
   PhoneNumberKit: 62003f40ff75315fd3738286558bc365365ac222
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   UIImage-Resize: fa776860f10e6900bbaf53a73e494bdceaaccc77
 
-PODFILE CHECKSUM: 552a46890d32e72be08fd2b1299714e776e52746
+PODFILE CHECKSUM: a34ff5fa9cef21afe00fb28ec90868d3a22a9701
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.5.3
