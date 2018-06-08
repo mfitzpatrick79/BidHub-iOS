@@ -84,6 +84,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         if initialLoad {
             SVProgressHUD.show()
         }
+        
         DataManager().sharedInstance.getItems{ (items, error) in
             
             if error != nil {
