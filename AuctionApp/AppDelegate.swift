@@ -10,7 +10,7 @@ import OneSignal
 import Parse
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, OSPermissionObserver, OSSubscriptionObserver {
 
     var window: UIWindow?
 
@@ -45,40 +45,66 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
 
         // OneSignal Notifications
+        // For debugging
+        // OneSignal.setLogLevel(.LL_VERBOSE, visualLevel: .LL_NONE)
+        
         let notificationReceivedBlock: OSHandleNotificationReceivedBlock = { notification in
-            print("Received Notification: \(notification!.payload.notificationID)")
+            
+            print("Received Notification: \(String(describing: notification!.payload.notificationID))")
+            print("launchURL = \(notification?.payload.launchURL ?? "None")")
+            print("content_available = \(notification?.payload.contentAvailable ?? false)")
         }
         
         let notificationOpenedBlock: OSHandleNotificationActionBlock = { result in
             // This block gets called when the user reacts to a notification received
-            let payload: OSNotificationPayload = result!.notification.payload
+            let payload: OSNotificationPayload? = result?.notification.payload
             
-            var fullMessage = payload.body
-            print("Message = \(String(describing: fullMessage))")
+            print("Message = \(String(describing: payload!.body))")
+            print("badge number = \(payload?.badge ?? 0)")
+            print("notification sound = \(payload?.sound ?? "None")")
             
-            if payload.additionalData != nil {
-                if payload.title != nil {
-                    let messageTitle = payload.title
-                    print("Message Title = \(messageTitle!)")
+            if let additionalData = result!.notification.payload!.additionalData {
+                print("additionalData = \(additionalData)")
+
+                if let actionSelected = payload?.actionButtons {
+                    print("actionSelected = \(actionSelected)")
                 }
                 
-                let additionalData = payload.additionalData
-                if additionalData?["actionSelected"] != nil {
-                    fullMessage = fullMessage! + "\nPressed ButtonID: \(String(describing: additionalData!["actionSelected"]))"
+                // DEEP LINK from action buttons
+                if let actionID = result?.action.actionID {
+                    // For presenting a ViewController from push notification action button
+//                    let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//                    let instantiateItemListViewController : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "RedViewControllerID") as UIViewController
+//                    let instantiatedGreenViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "GreenViewControllerID") as UIViewController
+//                    self.window = UIWindow(frame: UIScreen.main.bounds)
+                    
+                    print("actionID = \(actionID)")
+                    
+//                    if actionID == "id2" {
+//                        print("do something when button 2 is pressed")
+//                        self.window?.rootViewController = instantiateRedViewController
+//                        self.window?.makeKeyAndVisible()
+//
+//
+//                    } else if actionID == "id1" {
+//                        print("do something when button 1 is pressed")
+//                        self.window?.rootViewController = instantiatedGreenViewController
+//                        self.window?.makeKeyAndVisible()
+//
+//                    }
                 }
             }
         }
         
-        let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false,
-                                     kOSSettingsKeyInAppLaunchURL: true]
+        let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false, kOSSettingsKeyInAppLaunchURL: true, ]
         
-        OneSignal.initWithLaunchOptions(launchOptions,
-                                        appId: "f047cf97-a1e9-4f4e-8629-2b4958977a4b",
-                                        handleNotificationReceived: notificationReceivedBlock, 
-                                        handleNotificationAction: notificationOpenedBlock, 
-                                        settings: onesignalInitSettings)
+        OneSignal.initWithLaunchOptions(launchOptions, appId: "f047cf97-a1e9-4f4e-8629-2b4958977a4b", handleNotificationReceived: notificationReceivedBlock, handleNotificationAction: notificationOpenedBlock, settings: onesignalInitSettings)
         
         OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification
+        
+        // Add your AppDelegate as an obsserver
+        OneSignal.add(self as OSPermissionObserver)
+        OneSignal.add(self as OSSubscriptionObserver)
         
         return true
     }
@@ -97,6 +123,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         currentInstalation?.setDeviceTokenFrom(deviceToken)
         currentInstalation?.saveInBackground(block: nil)
+    }
+
+    func onOSPermissionChanged(_ stateChanges: OSPermissionStateChanges!) {
+        // Example of detecting answering the permission prompt
+        if stateChanges.from.status == OSNotificationPermission.notDetermined {
+            if stateChanges.to.status == OSNotificationPermission.authorized {
+                print("Thanks for accepting notifications!")
+            } else if stateChanges.to.status == OSNotificationPermission.denied {
+                print("Notifications not accepted. You can turn them on later under your iOS settings.")
+            }
+        }
+        // prints out all properties
+        print("PermissionStateChanges: \n\(String(describing: stateChanges))")
+    }
+    
+    func onOSSubscriptionChanged(_ stateChanges: OSSubscriptionStateChanges!) {
+        if !stateChanges.from.subscribed && stateChanges.to.subscribed {
+            print("Subscribed for OneSignal push notifications!")
+        }
+        print("SubscriptionStateChange: \n\(String(describing: stateChanges))")
     }
 
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {

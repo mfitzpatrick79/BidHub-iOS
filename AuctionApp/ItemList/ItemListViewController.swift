@@ -37,7 +37,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         SVProgressHUD.setBackgroundColor(UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0))
-        SVProgressHUD.setForegroundColor(UIColor(red: 242/255, green: 109/255, blue: 59/255, alpha: 1.0))
+        SVProgressHUD.setForegroundColor(UIColor(red: 215/255, green: 67/255, blue: 49/255, alpha: 1.0))
         SVProgressHUD.setRingThickness(5.0)
         
         
@@ -49,7 +49,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         let refreshView = UIView(frame: CGRect(x: 0, y: 10, width: 0, height: 0))
         tableView.insertSubview(refreshView, aboveSubview: colorView)
         
-        refreshControl.tintColor = UIColor(red: 242/255, green: 109/255, blue: 59/255, alpha: 1.0)
+        refreshControl.tintColor = UIColor(red: 215/255, green: 67/255, blue: 49/255, alpha: 1.0)
         refreshControl.addTarget(self, action: #selector(ItemListViewController.reloadItems), for: .valueChanged)
         refreshView.addSubview(refreshControl)
         
@@ -76,7 +76,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     /// Hack for selectors and default parameters
-    func reloadItems(){
+    @objc func reloadItems(){
         reloadData()
     }
     
@@ -84,6 +84,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         if initialLoad {
             SVProgressHUD.show()
         }
+        
         DataManager().sharedInstance.getItems{ (items, error) in
             
             if error != nil {
@@ -272,7 +273,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         zoomOverlay.addGestureRecognizer(doubleTap)
     }
     
-    func handleZoomImageDoubleTap(_ recognizer: UITapGestureRecognizer) {
+    @objc func handleZoomImageDoubleTap(_ recognizer: UITapGestureRecognizer) {
         if (zoomOverlay.zoomScale > zoomOverlay.minimumZoomScale) {
             zoomOverlay.setZoomScale(zoomOverlay.minimumZoomScale, animated: true)
         } else {
@@ -280,7 +281,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    func pressedClose(_ sender: UIButton!) {
+    @objc func pressedClose(_ sender: UIButton!) {
         self.segmentControl.isHidden = false
         
         if let viewWithTag = self.view.viewWithTag(420) {
@@ -345,22 +346,15 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func showError(_ errorString: String) {
-        if let _: AnyClass = NSClassFromString("UIAlertController") {
-            // make and use a UIAlertController
-            let alertView = UIAlertController(title: "Error", message: errorString, preferredStyle: .alert)
-            
-            let okAction = UIAlertAction(title: "Ok", style: .default, handler: { (action) -> Void in
-                print("Ok Pressed", terminator: "")
-            })
-            
-            alertView.addAction(okAction)
-            self.present(alertView, animated: true, completion: nil)
-        }
-        else {
-            // make and use a UIAlertView
-            let alertView = UIAlertView(title: "Error", message: errorString, delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "Ok")
-            alertView.show()
-        }
+        // make and use a UIAlertController
+        let alertView = UIAlertController(title: "Error", message: errorString, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: { (action) -> Void in
+            print("Ok Pressed", terminator: "")
+        })
+        
+        alertView.addAction(okAction)
+        self.present(alertView, animated: true, completion: nil)
     }
 
     /// Category Filtering

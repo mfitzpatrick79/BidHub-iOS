@@ -1,8 +1,8 @@
 <p align="center">
-  <img alt="Reusable" src="https://github.com/IdleHandsApps/IHKeyboardAvoiding/blob/gh-pages/Icon-40.png" />
+<img alt="IHKeyboardAvoiding" src="https://github.com/IdleHandsApps/IHKeyboardAvoiding/blob/master/KeyboardAvoiding/KeyboardAvoiding/Assets.xcassets/AppIcon.appiconset/Icon-76.png" />
 </p>
 
-IHKeyboardAvoiding Swift [![Language: Swift 3.0](https://img.shields.io/badge/Swift-3.0-orange.svg)](https://swift.org)
+IHKeyboardAvoiding [![Language: Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg)](https://swift.org)
 ------------------------------
 
 An elegant solution for keeping any UIView visible when the keyboard is being shown
@@ -66,7 +66,14 @@ Enable tap to dismiss the keyboard by simply changing any UIView to be an instan
 
 ## Buy now and get this free gift :)
 
-A drop in nav controller with cool parallax transitions https://github.com/IdleHandsApps/IHParallaxNavigationController
+Button styles that are centralied and reusable, and hooked up to InterfaceBuilder
+https://github.com/IdleHandsApps/DesignableButton
+
+A fully automatic status bar overlay for No Internet Connection messages
+https://github.com/IdleHandsApps/StatusBarOverlay
+
+An extension to easily set your UINavigationBar transparent and hide the shadow
+https://github.com/IdleHandsApps/UINavigationBar-Transparent
 
 ## IHKeyboardAvoiding vs UIScrollView solutions - Fight, fight!
 UIScrollView pros:
