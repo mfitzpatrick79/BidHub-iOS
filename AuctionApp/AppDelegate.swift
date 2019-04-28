@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, OSPermissionObserver, OSS
 
         // OneSignal Notifications
         // For debugging
-        OneSignal.setLogLevel(.LL_VERBOSE, visualLevel: .LL_NONE)
+        // OneSignal.setLogLevel(.LL_VERBOSE, visualLevel: .LL_NONE)
         
         let notificationReceivedBlock: OSHandleNotificationReceivedBlock = { notification in
             
