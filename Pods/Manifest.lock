@@ -18,18 +18,18 @@ PODS:
   - Bolts/Tasks (1.9.0)
   - CSNotificationView (0.5.4)
   - HanekeSwift (1.1)
-  - IHKeyboardAvoiding (4.2)
+  - IHKeyboardAvoiding (4.6)
   - "NSDate+RelativeTime (1.0.1)"
-  - OneSignal (2.8.5)
-  - Parse (1.17.1):
-    - Parse/Core (= 1.17.1)
-  - Parse/Core (1.17.1):
+  - OneSignal (2.10.0)
+  - Parse (1.17.2):
+    - Parse/Core (= 1.17.2)
+  - Parse/Core (1.17.2):
     - Bolts/Tasks (~> 1.9)
-  - PhoneNumberKit (2.1.0):
-    - PhoneNumberKit/PhoneNumberKitCore (= 2.1.0)
-    - PhoneNumberKit/UIKit (= 2.1.0)
-  - PhoneNumberKit/PhoneNumberKitCore (2.1.0)
-  - PhoneNumberKit/UIKit (2.1.0):
+  - PhoneNumberKit (2.6.0):
+    - PhoneNumberKit/PhoneNumberKitCore (= 2.6.0)
+    - PhoneNumberKit/UIKit (= 2.6.0)
+  - PhoneNumberKit/PhoneNumberKitCore (2.6.0)
+  - PhoneNumberKit/UIKit (2.6.0):
     - PhoneNumberKit/PhoneNumberKitCore
   - SVProgressHUD (2.2.5)
   - UIImage-Resize (1.0.1)
@@ -69,29 +69,29 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AFNetworking:
-    :commit: 746f6c3a1e2c3a3dfbac1c3d18c08a5d121c8df3
+    :commit: 685e31a31bb1ebce3fdb5a752e392dfd8263e169
     :git: https://github.com/AFNetworking/AFNetworking.git
   HanekeSwift:
-    :commit: a6dfc25c343d2fcdeefd8cbf251a3d7b755adc3a
+    :commit: 51efaca931f04f63f0cfbb77f35d55b1c286f847
     :git: https://github.com/Haneke/HanekeSwift.git
   SVProgressHUD:
-    :commit: 7f676d51905ede045ca5dcaf82d4ba0d9f96addf
+    :commit: e2a6aaa12321962cbe9fbecc370475f369c6566c
     :git: https://github.com/SVProgressHUD/SVProgressHUD.git
 
 SPEC CHECKSUMS:
-  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AFNetworking: ef6403a1383e5a6fa4ca961d7d524b1898ce0a84
   AFViewShaker: fc201fa4c0030e3f4875b9f84ac0763828518b00
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   CSNotificationView: 0792f5220163c2befaf1a9716aa3d5a7d6bd4fb1
   HanekeSwift: cb662a1f22b10ff3ff1d7b5030ae451da5d93831
-  IHKeyboardAvoiding: 9fbf816b7c3c84911964802ff110d12caf40ebef
+  IHKeyboardAvoiding: 2a664fdb5f964359fa7ec8fc5c9aebb447583ff8
   "NSDate+RelativeTime": 1b03a562615a4496a826e322096e5792e6706612
-  OneSignal: 42dae269c7eca517aee34963820e1eb922390031
-  Parse: d3edaf8c7c722cb33cb83ba7821d015ae32d362d
-  PhoneNumberKit: 62003f40ff75315fd3738286558bc365365ac222
+  OneSignal: 0f5ff711d9f25da54885e4ab06ef0abc221a46ef
+  Parse: 3b31a3dd1777b07ee7f0caee32fafbff544483a5
+  PhoneNumberKit: 167ee1f0bbb6efce7c62559e620eae745595532f
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   UIImage-Resize: fa776860f10e6900bbaf53a73e494bdceaaccc77
 
 PODFILE CHECKSUM: a34ff5fa9cef21afe00fb28ec90868d3a22a9701
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

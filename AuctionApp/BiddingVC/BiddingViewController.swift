@@ -66,7 +66,7 @@ class BiddingViewController: UIViewController {
             popUpContainer.layer.cornerRadius = 5.0
             
             customBidButton.titleLabel?.font = UIFont(name: "Avenir-Light", size: 18.0)!
-            customBidButton.setTitleColor(UIColor(red: 33/225, green: 161/225, blue: 219/225, alpha: 1), for: UIControlState())
+            customBidButton.setTitleColor(UIColor(red: 33/225, green: 161/225, blue: 219/225, alpha: 1), for: UIControl.State())
             
             customBidTextField.font = UIFont(name: "Avenir-Light", size: 24.0)
             customBidTextField.textColor = UIColor(red: 33/225, green: 161/225, blue: 219/225, alpha: 1)
@@ -96,8 +96,8 @@ class BiddingViewController: UIViewController {
         
         startPrice = startAmount
         
-        let bidAttrs = [NSAttributedStringKey.font : UIFont(name: "Avenir-Light", size: 14.0)! , NSAttributedStringKey.foregroundColor: UIColor.gray]
-        let otherAttrs = [NSAttributedStringKey.font : UIFont(name: "Avenir-Light", size: 22.0)!, NSAttributedStringKey.foregroundColor: UIColor(red: 33/225, green: 161/225, blue: 219/225, alpha: 1)]
+        let bidAttrs = [NSAttributedString.Key.font : UIFont(name: "Avenir-Light", size: 14.0)! , NSAttributedString.Key.foregroundColor: UIColor.gray]
+        let otherAttrs = [NSAttributedString.Key.font : UIFont(name: "Avenir-Light", size: 22.0)!, NSAttributedString.Key.foregroundColor: UIColor(red: 33/225, green: 161/225, blue: 219/225, alpha: 1)]
         
         plusOneButton.titleLabel?.textAlignment = .center
         plusFiveButton.titleLabel?.textAlignment = .center
@@ -105,15 +105,15 @@ class BiddingViewController: UIViewController {
 
         let one = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs)
         one.append(NSMutableAttributedString(string: "$\(startAmount + incrementOne)", attributes: otherAttrs))
-        plusOneButton.setAttributedTitle(one, for: UIControlState())
+        plusOneButton.setAttributedTitle(one, for: UIControl.State())
         
         let five = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs)
         five.append(NSMutableAttributedString(string: "$\(startAmount + incrementFive)", attributes: otherAttrs))
-        plusFiveButton.setAttributedTitle(five, for: UIControlState())
+        plusFiveButton.setAttributedTitle(five, for: UIControl.State())
         
         let ten = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs)
         ten.append(NSMutableAttributedString(string: "$\(startAmount + incrementTen)", attributes: otherAttrs))
-        plusTenButton.setAttributedTitle(ten, for: UIControlState())
+        plusTenButton.setAttributedTitle(ten, for: UIControl.State())
         
    
     }
@@ -121,7 +121,7 @@ class BiddingViewController: UIViewController {
     func setupForMultiple() {
         self.customBidTextField.alpha = 1.0
         self.predifinedButtonsContainerView.alpha = 0.0
-        self.customBidButton.setTitle("Max Bid", for: UIControlState())
+        self.customBidButton.setTitle("Max Bid", for: UIControl.State())
         state = .custom
     }
 
@@ -135,7 +135,7 @@ class BiddingViewController: UIViewController {
             maxBid = startPrice + aditional
         }
         
-        let bidAlert = UIAlertController(title: "Confirm $\(maxBid) Bid", message: "You didn't think we'd let you bid $\(maxBid) without confirming it, did you?", preferredStyle: UIAlertControllerStyle.alert)
+        let bidAlert = UIAlertController(title: "Confirm $\(maxBid) Bid", message: "You didn't think we'd let you bid $\(maxBid) without confirming it, did you?", preferredStyle: UIAlertController.Style.alert)
         
         bidAlert.addAction(UIAlertAction(title: "Bid", style: .default, handler: { (action: UIAlertAction!) in
             if self.delegate != nil {
@@ -197,7 +197,7 @@ class BiddingViewController: UIViewController {
             delay: 0.0,
             usingSpringWithDamping: 0.6,
             initialSpringVelocity: 0.0,
-            options: UIViewAnimationOptions.curveLinear,
+            options: UIView.AnimationOptions.curveLinear,
             animations: {
                 self.popUpContainer.transform = CGAffineTransform.identity
                 self.darkView.alpha = 1.0

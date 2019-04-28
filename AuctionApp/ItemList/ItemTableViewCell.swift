@@ -89,7 +89,7 @@ class ItemTableViewCell: UITableViewCell {
             switch(itemUW.winnerType){
                 case .multiple:
                     let user = PFUser.current()
-                    if let index = itemUW.currentWinners.index(of: user!.email!){
+                    if let index = itemUW.currentWinners.firstIndex(of: user!.email!){
                         moreInfoLabel.text = "YOUR BID IS #\(index + 1)"
                     }else{
                         fallthrough

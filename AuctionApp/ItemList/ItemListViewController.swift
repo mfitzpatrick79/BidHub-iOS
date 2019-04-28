@@ -10,11 +10,11 @@ import Haneke
 import NSDate_RelativeTime
 import Parse
 
-extension String {
-    subscript (i: Int) -> String {
-        return String(Array(self.characters)[i])
-    }
-}
+//extension String {
+//    subscript (i: Int) -> String {
+//        return String(Array(self.characters)[i])
+//    }
+//}
 
 class ItemListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UIScrollViewDelegate, ItemTableViewCellDelegate, BiddingViewControllerDelegate, CategoryViewControllerDelegate {
     
@@ -56,7 +56,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         sizingCell = tableView.dequeueReusableCell(withIdentifier: "ItemTableViewCell") as? ItemTableViewCell
         
         tableView.estimatedRowHeight = 635
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         
         self.tableView.alpha = 0.0
         reloadData(false, initialLoad: true)
@@ -121,7 +121,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -214,9 +214,9 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         if let biddingVC = bidVC {
             biddingVC.delegate = self
             biddingVC.item = item
-            addChildViewController(biddingVC)
+            addChild(biddingVC)
             view.addSubview(biddingVC.view)
-            biddingVC.didMove(toParentViewController: self)
+            biddingVC.didMove(toParent: self)
         }
     }
 
@@ -240,7 +240,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         zoomOverlay.minimumZoomScale = 1.0
         zoomOverlay.maximumZoomScale = 6.0
         
-        let backButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(ItemListViewController.pressedClose(_:)))
+        let backButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(ItemListViewController.pressedClose(_:)))
         navigationItem.leftBarButtonItem = nil
         navigationItem.rightBarButtonItem = backButton
         navigationItem.rightBarButtonItem?.tintColor = UIColor.white
@@ -289,7 +289,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         }
         
         let btnName = UIButton()
-        btnName.setImage(UIImage(named: "HSLogOutIcon"), for: UIControlState())
+        btnName.setImage(UIImage(named: "HSLogOutIcon"), for: UIControl.State())
         btnName.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         btnName.addTarget(self, action: #selector(ItemListViewController.logoutPressed(_:)), for: .touchUpInside)
         
@@ -362,9 +362,9 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         let catVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CategoryViewController") as? CategoryViewController
         if let categoryVC = catVC {
             categoryVC.delegate = self
-            addChildViewController(categoryVC)
+            addChild(categoryVC)
             view.addSubview(categoryVC.view)
-            categoryVC.didMove(toParentViewController: self)
+            categoryVC.didMove(toParent: self)
         }
     }
     

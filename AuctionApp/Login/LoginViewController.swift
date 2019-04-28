@@ -40,7 +40,7 @@ class LoginViewController: UIViewController, EulaViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         disableLoginButton()
-        viewShaker = AFViewShaker(viewsArray: [nameTextField, emailTextField, telephoneTextField])
+        viewShaker = AFViewShaker(viewsArray: [nameTextField!, emailTextField!, telephoneTextField!])
     }
 
     @IBAction func textFieldShouldReturn(_ textField: UITextField) {
@@ -60,10 +60,10 @@ class LoginViewController: UIViewController, EulaViewControllerDelegate {
         let EulaVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "EulaViewController") as? EulaViewController
         if let eulaVC = EulaVC {
             eulaVC.delegate = self
-            addChildViewController(eulaVC)
+            addChild(eulaVC)
             view.endEditing(true)
             view.addSubview(eulaVC.view)
-            eulaVC.didMove(toParentViewController: self)
+            eulaVC.didMove(toParent: self)
         }
     }
 
@@ -98,8 +98,8 @@ class LoginViewController: UIViewController, EulaViewControllerDelegate {
             }
             
         } else if !eulaToggle.isOn {
-            let alertController = UIAlertController(title: "Please Accept Terms", message: "To register or login you must accept the terms of the MFA Auction App End User License Agreement.", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+            let alertController = UIAlertController(title: "Please Accept Terms", message: "To register or login you must accept the terms of the MFA Auction App End User License Agreement.", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
             self.present(alertController, animated: true, completion: nil)
         } else {
             //Can't login with nothing set
@@ -109,9 +109,9 @@ class LoginViewController: UIViewController, EulaViewControllerDelegate {
 
     /// OneSignal Push Registration
     func promptForPush(user: PFUser) {
-        let alertController = UIAlertController(title: "Enable Push Notifications?", message: "Get the most out of your auction experience - we'll send you notifications when bidding is about to open, when you've been outbid, and when bidding is about to end.", preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "No thanks", style: UIAlertActionStyle.cancel, handler: { action in                     self.performSegue(withIdentifier: "loginToItemSegue", sender: nil) }))
-        alertController.addAction(UIAlertAction(title: "Register", style: UIAlertActionStyle.default, handler: { action in self.doPushRegistration(user: user) }))
+        let alertController = UIAlertController(title: "Enable Push Notifications?", message: "Get the most out of your auction experience - we'll send you notifications when bidding is about to open, when you've been outbid, and when bidding is about to end.", preferredStyle: UIAlertController.Style.alert)
+        alertController.addAction(UIAlertAction(title: "No thanks", style: UIAlertAction.Style.cancel, handler: { action in                     self.performSegue(withIdentifier: "loginToItemSegue", sender: nil) }))
+        alertController.addAction(UIAlertAction(title: "Register", style: UIAlertAction.Style.default, handler: { action in self.doPushRegistration(user: user) }))
         self.present(alertController, animated: true, completion: nil)
     }
     

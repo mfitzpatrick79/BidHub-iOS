@@ -88,7 +88,7 @@ class CategoryViewController: UIViewController, UIPickerViewDataSource, UIPicker
             delay: 0.0,
             usingSpringWithDamping: 0.6,
             initialSpringVelocity: 0.0,
-            options: UIViewAnimationOptions.curveLinear,
+            options: UIView.AnimationOptions.curveLinear,
             animations: {
                 self.darkView.alpha = 1.0
             },

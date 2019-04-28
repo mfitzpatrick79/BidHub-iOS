@@ -21,9 +21,9 @@ See OneSignal's [iOS Native SDK API](https://documentation.onesignal.com/docs/io
 See this repository's [release tags](https://github.com/OneSignal/OneSignal-iOS-SDK/releases) for a complete change log of every released version.
 
 #### Support
-Please visit this repository's [Github issue tracker](https://github.com/OneSignal/OneSignal-iOS-SDK/issues) for feature requests and bug reports related specificly to the SDK.
+Please visit this repository's [Github issue tracker](https://github.com/OneSignal/OneSignal-iOS-SDK/issues) for feature requests and bug reports related specifically to the SDK.
 For account issues and support please contact OneSignal support from the [OneSignal.com](https://onesignal.com) dashboard.
 
 #### Supports:
 * Swift and Objective-C Projects
-* Supports iOS 7 to iOS 11.3
+* Supports iOS 7 to iOS 12.2
